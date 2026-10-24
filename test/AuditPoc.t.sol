@@ -35,7 +35,7 @@ contract AuditPocTest is V2FactoryFixture {
     // PoC nay khong the khai thac duoc vi khong co bao sinh de lam stockUsed > stockAmount.
     // -----------------------------------------------------------------------
     function testPoc_GraduationAtomicNoUnderflow() public {
-        uint256 spent = curve.buy(type(uint256).max, 1, address(this), block.timestamp);
+        (uint256 spent,) = curve.buy(type(uint256).max, 1, address(this), block.timestamp);
         assertEq(uint256(curve.status()), uint256(Curve.Status.Graduated));
         assertEq(curve.realStockReserve(), 0);
         assertEq(curve.tokenReserve(), 0);
