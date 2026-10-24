@@ -73,7 +73,7 @@ contract AuditFuzzTest is V2FactoryFixture {
     }
 
     function _recordFee(Ledger memory g, uint256 fee) private view {
-        uint256 protocolFee = fee * _request().protocolBps / 10000;
+        uint256 protocolFee = fee * _defaults().protocolBps / 10000;
         uint256 creatorFee = fee * _request().creatorBps / 10000;
         g.accruedTo[0] += protocolFee;
         g.accruedTo[1] += creatorFee;
