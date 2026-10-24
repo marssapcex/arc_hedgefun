@@ -13,6 +13,7 @@ import {Currency} from "v4-core/src/types/Currency.sol";
 import {HedgeFunBondingCurve as Curve} from "../src/v2/HedgeFunBondingCurve.sol";
 import {HedgeFunV2TradeRouter as Router} from "../src/v2/HedgeFunV2TradeRouter.sol";
 import {HedgeFunV2Treasury} from "../src/v2/HedgeFunV2Treasury.sol";
+import {HedgeFunTreasuryBase} from "../src/HedgeFunTreasuryBase.sol";
 import {V2FactoryFixture} from "./utils/V2FactoryFixture.sol";
 
 using stdStorage for StdStorage;
@@ -201,7 +202,7 @@ contract AuditFuzzTest is V2FactoryFixture {
             else if (action == 4 && curve.status() == Curve.Status.Active) {
                 // Force graduation at step 24 (mid-sequence) like adversarial suite
                 if (i == 24) {
-                    uint256 spent = curve.buy(type(uint256).max, 1, address(this), block.timestamp);
+                    (uint256 spent,) = curve.buy(type(uint256).max, 1, address(this), block.timestamp);
                     assertEq(uint256(curve.status()), uint256(Curve.Status.Graduated));
                     g.paid += spent;
                     _recordFee(g, spent * _request().taxBps / 10000);
@@ -226,7 +227,7 @@ contract AuditFuzzTest is V2FactoryFixture {
     // -----------------------------------------------------------------------
     function testFuzz_GraduationStockUsedBound(uint256 seed) public {
         // Buy enough to reach Ready then graduate
-        uint256 spent = curve.buy(type(uint256).max, 1, address(this), block.timestamp);
+        (uint256 spent,) = curve.buy(type(uint256).max, 1, address(this), block.timestamp);
         assertEq(uint256(curve.status()), uint256(Curve.Status.Graduated));
 
         // After graduation, reserve is zero and factory holds stock+token
@@ -262,7 +263,7 @@ contract AuditFuzzTest is V2FactoryFixture {
         assertEq(treasury.buybackAnchorAt(), originalAt, "anchor time must not change");
 
         // buyback should fail (no mature TWAP / no liquidity served) and not move anchor
-        vm.expectRevert(HedgeFunV2Treasury.NotDue.selector);
+        vm.expectRevert(HedgeFunTreasuryBase.NotDue.selector);
         treasury.buyback();
         assertEq(treasury.buybackAnchorSqrtP(), originalAnchor, "anchor must not change after failed buyback");
         assertEq(treasury.buybackStock(), 1 ether, "buyback stock preserved on failed buyback");

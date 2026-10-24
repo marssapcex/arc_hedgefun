@@ -7,6 +7,7 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
 import {HedgeFunBondingCurve as Curve} from "../src/v2/HedgeFunBondingCurve.sol";
 import {HedgeFunV2Treasury} from "../src/v2/HedgeFunV2Treasury.sol";
+import {HedgeFunTreasuryBase} from "../src/HedgeFunTreasuryBase.sol";
 import {V2FactoryFixture} from "./utils/V2FactoryFixture.sol";
 
 using stdStorage for StdStorage;
@@ -67,7 +68,7 @@ contract AuditPocTest is V2FactoryFixture {
         assertEq(treasury.buybackAnchorAt(), treasury.buybackAnchorAt(), "anchor time stable");
 
         // Failed buyback must not raise anchor
-        vm.expectRevert(HedgeFunV2Treasury.NotDue.selector);
+        vm.expectRevert(HedgeFunTreasuryBase.NotDue.selector);
         treasury.buyback();
         assertEq(treasury.buybackAnchorSqrtP(), originalAnchor, "anchor not raised by failed buyback");
     }
