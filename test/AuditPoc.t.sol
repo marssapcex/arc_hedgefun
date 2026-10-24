@@ -9,7 +9,7 @@ import {HedgeFunBondingCurve as Curve} from "../src/v2/HedgeFunBondingCurve.sol"
 import {HedgeFunV2Treasury} from "../src/v2/HedgeFunV2Treasury.sol";
 import {V2FactoryFixture} from "./utils/V2FactoryFixture.sol";
 
-using StdStorage for StdStorage;
+using stdStorage for StdStorage;
 
 /// Proof-of-concept contracts for arc_hedgefun audit.
 /// Chua tim duoc bug an cap tien thuc su. Cac PoC duoi day xac minh cac van de

@@ -15,7 +15,7 @@ import {HedgeFunV2TradeRouter as Router} from "../src/v2/HedgeFunV2TradeRouter.s
 import {HedgeFunV2Treasury} from "../src/v2/HedgeFunV2Treasury.sol";
 import {V2FactoryFixture} from "./utils/V2FactoryFixture.sol";
 
-using StdStorage for StdStorage;
+using stdStorage for StdStorage;
 
 /// Fuzz suite cho audit arc_hedgefun.
 /// Muc tieu: xac nhan conservation (khong tao/mat tai nguyen tu khong), khong underflow tai graduation,
