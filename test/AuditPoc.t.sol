@@ -67,7 +67,7 @@ contract AuditPocTest is V2FactoryFixture {
         assertEq(treasury.buybackAnchorAt(), treasury.buybackAnchorAt(), "anchor time stable");
 
         // Failed buyback must not raise anchor
-        vm.expectRevert(HedgeFunTreasuryBase.NotDue.selector);
+        vm.expectRevert(HedgeFunV2Treasury.NotDue.selector);
         treasury.buyback();
         assertEq(treasury.buybackAnchorSqrtP(), originalAnchor, "anchor not raised by failed buyback");
     }

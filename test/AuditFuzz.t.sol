@@ -262,7 +262,7 @@ contract AuditFuzzTest is V2FactoryFixture {
         assertEq(treasury.buybackAnchorAt(), originalAt, "anchor time must not change");
 
         // buyback should fail (no mature TWAP / no liquidity served) and not move anchor
-        vm.expectRevert(HedgeFunTreasuryBase.NotDue.selector);
+        vm.expectRevert(HedgeFunV2Treasury.NotDue.selector);
         treasury.buyback();
         assertEq(treasury.buybackAnchorSqrtP(), originalAnchor, "anchor must not change after failed buyback");
         assertEq(treasury.buybackStock(), 1 ether, "buyback stock preserved on failed buyback");
