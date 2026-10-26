@@ -1,0 +1,13 @@
+{
+  "name": "index-rebalance-audit-poc",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "poc": "node run_evm_poc.js"
+  },
+  "dependencies": {
+    "ethers": "6.17.0",
+    "ganache": "7.9.2",
+    "solc": "0.8.20"
+  }
+}

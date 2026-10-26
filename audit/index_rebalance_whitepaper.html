@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Security Assessment — Index Rebalance Weight-Tolerance Finding</title>
+<style>
+:root{--ink:#152234;--muted:#52657b;--navy:#10243a;--blue:#1769aa;--cyan:#dff4f5;--paper:#fff;--bg:#eef3f8;--line:#d9e2ec;--red:#9f2d2d;--redbg:#fff0ee;--amber:#8a5b00;--amberbg:#fff6df;--green:#176548;--greenbg:#e8f7f0;--mono:#101923;--shadow:0 16px 45px #17324d12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.68 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.page{max-width:1180px;margin:0 auto;padding:34px 24px 80px}.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#10243a,#183e5b 68%,#176b7b);color:white;border-radius:22px;padding:58px 64px 52px;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid #ffffff22;border-radius:50%;right:-80px;top:-150px;box-shadow:0 0 0 40px #ffffff08,0 0 0 90px #ffffff06}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#9dd8e4;font-weight:750}.hero h1{max-width:820px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,5vw,56px);line-height:1.09;letter-spacing:-.025em;margin:16px 0}.hero .sub{max-width:760px;color:#d4e3ec;font-size:18px}.meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:#d3e3ec;font-size:13px}.pill{display:inline-block;border:1px solid #ffffff48;border-radius:999px;padding:5px 11px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.pill.prelim{background:#ffebc4;color:#694700;border:0}.notice{margin:22px 0;background:var(--amberbg);border:1px solid #eed38a;border-left:5px solid #d49c22;border-radius:12px;padding:18px 22px;color:#624711}.notice strong{color:#4a3505}.danger{background:var(--redbg);border-color:#f0c4bd;border-left-color:#bd4940;color:#6c2722}.danger strong{color:#6c1f1a}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin:22px 0}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px 26px;box-shadow:0 6px 22px #17324d08}.span-12{grid-column:span 12}.span-8{grid-column:span 8}.span-7{grid-column:span 7}.span-6{grid-column:span 6}.span-5{grid-column:span 5}.span-4{grid-column:span 4}.card h2,.section h2{font-family:Georgia,"Times New Roman",serif;line-height:1.2;font-size:27px;margin:0 0 15px;color:#142e47}.card h3{font-size:17px;margin:22px 0 8px;color:#193d5b}.section{margin:46px 0 18px}.section h2{font-size:32px;margin-bottom:8px}.lead{font-size:18px;color:#314a62;max-width:880px}.kicker{color:var(--blue);text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:800;margin-bottom:7px}.stat{font-size:30px;font-weight:800;color:#143c5e;letter-spacing:-.03em}.small{font-size:13px;color:var(--muted)}.tag{display:inline-block;padding:3px 9px;border-radius:999px;background:#e9f2f9;color:#24577c;font-size:11px;font-weight:750;margin:2px 3px 2px 0}.tag.red{background:#ffebe8;color:#963c32}.tag.green{background:var(--greenbg);color:var(--green)}.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.toc a{padding:7px 11px;border-radius:8px;background:#ffffff12;border:1px solid #ffffff2a;color:white;font-size:12px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px;margin:14px 0}th,td{text-align:left;vertical-align:top;padding:12px 13px;border-bottom:1px solid var(--line)}th{background:#f2f6fa;color:#294660;font-size:11px;text-transform:uppercase;letter-spacing:.07em}td code,code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f1f5f8;padding:2px 5px;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}.code{background:var(--mono);color:#d7e7f4;border-radius:12px;padding:18px 20px;overflow:auto;font:12.5px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre}.math{background:#f3f8fc;border:1px solid #d6e4f0;border-radius:12px;padding:19px 22px;margin:14px 0;font:15px/1.8 ui-monospace,SFMono-Regular,Menlo,monospace;color:#173b59;overflow:auto}.callout{padding:16px 19px;border-radius:11px;background:#edf7fb;border-left:4px solid #4198ae;margin:16px 0}.callout.good{background:var(--greenbg);border-color:#419675}.callout.warn{background:var(--amberbg);border-color:#d49c22}.callout.red{background:var(--redbg);border-color:#bd4940}.checklist{list-style:none;padding:0}.checklist li{position:relative;padding:7px 0 7px 29px}.checklist li:before{content:"✓";position:absolute;left:0;top:7px;color:#19744d;font-weight:900}.checklist li.fail:before{content:"!";color:#b1453e}.log{background:#101923;color:#c9e2d5;padding:18px 20px;border-radius:11px;font:12px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;overflow:auto;white-space:pre-wrap}.equation{font-size:19px;line-height:1.9;text-align:center;padding:22px 12px;color:#193c59;font-family:Georgia,"Times New Roman",serif}.foot{margin-top:54px;padding:25px 8px;border-top:1px solid var(--line);color:#64778a;font-size:12px}.source-note{font-size:12px;color:#63788d}.badge-row{display:flex;gap:7px;flex-wrap:wrap}.rule{border:0;border-top:1px solid var(--line);margin:24px 0}.steps{counter-reset:step;list-style:none;padding:0}.steps li{counter-increment:step;padding:9px 0 9px 45px;position:relative}.steps li:before{content:counter(step);position:absolute;left:0;top:7px;width:28px;height:28px;border-radius:50%;background:#e5f0f7;color:#1e5c81;display:grid;place-items:center;font-weight:800;font-size:12px}.fine{font-size:12px;color:#718196}.metric-row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:9px 0}.metric-row:last-child{border:0}.metric-row b{color:#123f63}.nowrap{white-space:nowrap}
+@media(max-width:800px){.hero{padding:38px 26px}.span-8,.span-7,.span-6,.span-5,.span-4{grid-column:span 12}.page{padding:16px 12px 50px}.card{padding:21px}.section h2{font-size:27px}}
+@media print{body{background:white;font-size:11pt}.page{max-width:none;padding:0}.hero{border-radius:0;box-shadow:none;padding:35px;color:white;print-color-adjust:exact}.card{box-shadow:none;break-inside:avoid}.notice,.danger,.callout{print-color-adjust:exact}.toc{display:none}a{color:inherit}.section{break-before:page}.foot{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="hero">
+  <div class="eyebrow">Smart Contract Security · Technical Disclosure Draft</div>
+  <h1>Weight-Tolerance &amp; Fee-Accounting Arbitrage in Index Rebalancing</h1>
+  <div class="sub">A mathematical review of the Factory / Index code supplied by the requester, with reproducible reduced-harness tests and an explicit statement of what has—and has not—been validated against deployed contracts.</div>
+  <div class="meta"><span>Prepared 27 October 2026</span><span>Scope: supplied Solidity excerpts</span><span class="pill prelim">Preliminary · not fork-confirmed</span></div>
+  <nav class="toc" aria-label="Contents"><a href="#summary">Summary</a><a href="#finding">Finding</a><a href="#math">Math proof</a><a href="#poc">PoC &amp; logs</a><a href="#exposure">Exposure</a><a href="#limits">Validation limits</a><a href="#fix">Remediation</a></nav>
+</header>
+
+<div class="notice danger"><strong>Important evidence qualification.</strong> The EVM PoC currently available in this workspace executes a reduced Solidity harness that copies the relevant callback, fee and invariant logic. It is <strong>not</strong> an execution of the deployed Index bytecode and was <strong>not</strong> run against a mainnet fork. Accordingly, this document does not claim a fork-confirmed exploit, verified affected pool, or realized loss. Calling the existing harness a “real mainnet PoC” would be inaccurate.</div>
+
+<section id="summary" class="grid">
+  <article class="card span-7"><div class="kicker">Executive summary</div><h2>What the supplied code appears to permit</h2><p>The generic public <code>rebalance()</code> path can treat protocol-token input as the fee being checked, while still including the entire input in the reserve invariant calculation. If the selected token weights differ by at most <code>0.01 ether</code>, the reserve check switches to a constant-product test even though the weights are not equal. The supplied code therefore admits a state transition that reduces the true weighted invariant and can yield positive marked-to-market proceeds under the stated price conditions.</p><div class="badge-row"><span class="tag red">Permissionless entry point</span><span class="tag">Conditional on pool state</span><span class="tag">No ABDK precision required</span></div></article>
+  <article class="card span-5"><div class="kicker">Assessment status</div><h2>Evidence at a glance</h2><div class="metric-row"><span>Source-level arithmetic</span><b>Reproduced</b></div><div class="metric-row"><span>Reduced EVM harness</span><b>Passed</b></div><div class="metric-row"><span>Broad randomized model</span><b>Passed</b></div><div class="metric-row"><span>Full Index deployment test</span><b>Not performed</b></div><div class="metric-row"><span>Mainnet fork / live pool</span><b>Not performed</b></div></article>
+</section>
+
+<section id="finding" class="section"><div class="kicker">01 · Finding</div><h2>Near-equal weights are checked as equal; protocol input is counted as fee</h2><p class="lead">The concern is the interaction of two branches in the user-provided <code>Index</code> source—not a claim that ABDKMath64x64 itself is broken.</p>
+<div class="grid">
+  <article class="card span-6"><h3>A. Tolerance selects the wrong invariant</h3><p>The supplied <code>_ensureReserves()</code> uses an equal-weight product check whenever the absolute weight difference is at most <code>0.01 ether</code>.</p><pre class="code">if (
+    w1_int &gt; w2_int
+        ? w1_int - w2_int &lt;= 0.01 ether
+        : w2_int - w1_int &lt;= 0.01 ether
+) {
+    if (Math.mulDiv(R1_new, R2_new, R2_original) &lt; R1_original) {
+        revert Index__SameWeightReservesViolation();
+    }
+} else {
+    // weighted logarithmic invariant check
+}</pre><p>Factory permits weights <code>2.50</code> and <code>2.51</code>; their difference is exactly the inclusive threshold. Their relative difference is <code>0.4%</code>, so they are not mathematically equal.</p></article>
+  <article class="card span-6"><h3>B. Generic fee check can reuse the input</h3><p>In generic <code>rebalance()</code>, the reported fee is the increase in the protocol-token balance. If protocol token is also <code>tokenIn</code>, that increase is the trade input itself.</p><pre class="code">uint256 fee = getBalance(tokens[0]) - balanceProtocolToken;
+uint256 minFee =
+    (deltaIn * balanceProtocolToken
+        * getCurrentWeight(_tokenIn) * swapFee())
+    / (balanceInBefore
+        * getCurrentWeight(tokens[0])
+        * (1000 + swapFee()));
+
+if (fee &lt; minFee) revert Index__InsufficientFee();</pre><p>The generic path then checks reserves using full <code>balanceIn</code>. Unlike <code>rebalanceProtocolTokenIn()</code>, it does not subtract the calculated fee from input before applying the invariant.</p></article>
+</div>
+<div class="callout warn"><strong>Access conditions:</strong> the attacker needs an unlocked target pool, a compatible weight pair, liquidity, and a means to realize the output value. The caller supplies the callback contract; no owner/admin call is part of the described path. A pool owner can lock rebalancing, so a locked pool is not exposed while the lock is active.</div>
+</section>
+
+<section id="math" class="section"><div class="kicker">02 · Mathematical argument</div><h2>Why the product check can pass while weighted K falls</h2>
+<article class="card">
+<p>Let protocol/input weight be <em>a</em>, output weight be <em>b=a+δ</em>, with reserves <em>P</em> and <em>O</em>. The true normalized weighted invariant is:</p>
+<div class="equation">ln K = (a ln P + b ln O + Σ<sub>j≠pair</sub> w<sub>j</sub> ln R<sub>j</sub>) / W, &nbsp; W = 50 ether</div>
+<p>With input <em>x</em>, the largest integer output used in the regression is <code>y = O − ceil(P·O/(P+x))</code>. Ignoring the sub-unit floor margin for the real-valued derivation, the equal-product boundary satisfies:</p>
+<div class="math">(P + x)(O − y) = P·O<br>ln((P + x)/P) + ln((O − y)/O) = 0</div>
+<p>The true weighted change on the pair is therefore:</p>
+<div class="math">Δ ln K = [a ln(1 + x/P) + b ln(1 − y/O)] / W<br>≈ [(a − b) ln(1 + x/P)] / W<br>= [−δ ln(1 + x/P)] / W &lt; 0 &nbsp; when δ &gt; 0</div>
+<p>The actual code uses integer <code>Math.mulDiv</code> and floors. The regression selects an output for which the exact integer condition passes; the independent high-precision model then measures the weighted-log change. The concrete case decreases normalized <code>ln K</code> by approximately <code>3.9960 × 10⁻⁷</code>.</p>
+<hr class="rule">
+<h3>Fee algebra when tokenIn is protocol token</h3>
+<p>Assume reserve accounting has <code>reserve = 0</code>, so <code>balanceInBefore = balanceProtocolBefore = P</code>, and <code>weightIn = weightProtocol = a</code>. For input <em>x</em> and swap fee <em>f</em>:</p>
+<div class="math">fee measured by generic rebalance = Δ protocol balance = x<br>minFee = floor(x · P · a · f / (P · a · (1000 + f)))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= floor(x · f / (1000 + f))<br>⇒ measured fee x ≥ minFee, but the invariant still sees the full input x.</div>
+<p>This derives directly from the supplied expression. The numeric check alone is not evidence of loss; the critical fact is that full input remains in the invariant calculation while the equal-weight approximation accepts a weighted-invariant decrease.</p>
+</article>
+</section>
+
+<section class="section"><div class="kicker">03 · Concrete regression vector</div><h2>Illustrative, not a deployed-pool transaction</h2>
+<div class="grid">
+<article class="card span-7"><div class="table-wrap"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
+<tr><td>Weights (protocol, output, third)</td><td><code>2.50, 2.51, 44.99</code> (sum = 50)</td></tr>
+<tr><td>Protocol / output reserves</td><td><code>B = 10²⁴</code> raw units each</td></tr>
+<tr><td>Swap fee for direct vector</td><td><code>10</code> (minimum configured rate; constructor transition details apply)</td></tr>
+<tr><td>Protocol input, x</td><td><code>2 × 10²¹</code> raw units</td></tr>
+<tr><td>Output, y</td><td><code>1,996,007,984,031,936,127,744</code> raw units</td></tr>
+<tr><td>Integer product result</td><td><code>floor((B+x)(B−y)/B) = B</code></td></tr>
+<tr><td>Fee measured / minimum</td><td><code>x</code> / <code>19,801,980,198,019,801,980</code></td></tr>
+<tr><td>Marked proceeds at initial weighted spot</td><td><code>3,992,015,968,063,872,254.976</code> raw input-token units</td></tr>
+<tr><td>Normalized weighted Δ ln K</td><td>Approximately <code>−3.9960053 × 10⁻⁷</code></td></tr>
+</tbody></table></div></article>
+<article class="card span-5"><div class="kicker">Upper-bound analysis</div><h3>Best-case extraction fraction</h3><p>For equal starting reserves and price ratio <code>b/a</code>, the constant-product output has marked profit:</p><div class="math">profit/P = z(q−z)/(1+z)<br>q = δ/a; z = x/P<br>z* = √(1+q)−1<br>max profit/P = (√(1+q)−1)²</div><p>With the most permissive pair <code>a=2.50</code>, <code>δ=0.01</code>, the theoretical maximum is about <strong>3.992 × 10⁻⁶ of protocol-side reserve value</strong>, before liquidation costs. This is bounded arbitrage, not a full-pool drain.</p></article>
+</div>
+</section>
+
+<section id="poc" class="section"><div class="kicker">04 · PoC and execution record</div><h2>What ran—and what did not</h2>
+<div class="notice"><strong>Do not present these logs as a mainnet-fork result.</strong> They are real execution logs from the local reduced EVM harness and mathematical fuzzers. They validate the copied logic and test vector; they do not prove deployed runtime bytecode, pool discovery, or funds at risk.</div>
+<div class="grid">
+<article class="card span-6"><h3>Local EVM harness</h3><p>The Solidity test uses mock ERC-20s, a reduced Index rebalance harness, and a mock zero-fee lender. Compilation: Solidity 0.8.20, optimizer enabled, 200 runs, via-IR. The flashloan case additionally simulates a separate constant-product liquidation venue with a 10 bps swap fee.</p><div class="log">EVM PoC PASS: 2 direct regressions, 1 atomic zero-fee flashloan regression, and 1,100 seeded fuzz executions
+The 500-config EVM sweep varies valid weights, the &lt;0.01 weight gap, both reserves, fee rates 10..20000, and trade sizes; no separate fee-token transfer is made on the protocol-input route.</div><p class="small">The atomic model repays the lender in full and leaves about <code>1.988019960107720677</code> protocol tokens after the simulated 10 bps liquidation. It assumes a zero-fee lender as a test condition; it does not call Balancer Vault.</p></article>
+<article class="card span-6"><h3>Independent arithmetic fuzz</h3><p>Python uses integer-exact reserve and fee predicates plus high-precision Decimal logarithms. Two sweeps cover 500,000 cases for protocol-token input. An additional script checks another third-token-fee route.</p><div class="log">PASS: 250,000 fuzzed protocol-input swaps; every accepted trade in the sampled interval had positive marked proceeds and decreased weighted ln(K)
+PASS: 250,000 additional configurations spanning weights, epsilon gaps, independent balances, fee rates and near-optimal sizes
+  protocol weight = 2.50..24.49
+  gap = 0.0001..0.01
+  reserves = 10^24..~10^27 raw units, independently varied
+  fee = 10..20,000
+  analytic max at q=0.004: x/P ≈ 0.001998004
+  max proceeds/P ≈ 0.000003992020</div><p class="small">The fee range reaches 20,000 because the supplied constructor starts its transition at 20,000 before moving to the requested factory fee. This is model coverage, not a claim that a live pool currently has that rate.</p></article>
+</div>
+<details class="card"><summary style="cursor:pointer;font-weight:750;color:#193d5b">Expanded captured arithmetic log</summary><pre class="log" style="margin-top:14px">PASS: 250,000 fuzzed protocol-input swaps; every accepted trade in the sampled interval had positive marked proceeds and decreased weighted ln(K)
+weights: protocol=2.50, output=2.51, third token=44.99; TOTAL_WEIGHT=50
+balances: protocol=1000000000000000000000000, output=1000000000000000000000000; starting marginal price ratio=251/250
+concrete: dx=2000000000000000000000, dy=1996007984031936127744, measured fee=2000000000000000000000 (exactly dx; no separate fee transfer)
+marked profit=3992015968063872254.976 input-token units; weighted delta_lnK=-3.9960053253461120362505181447780314340176578811528992301507740450554E-7
+PASS: 250,000 additional configurations spanning weights, epsilon gaps, independent balances, fee rates and near-optimal sizes
+  third-token weight always valid; protocol weight=2.50..24.49; gap=0.0001..0.01; fee=10..20000
+  minimum sampled marked proceeds=10555637359115.300967626367271118944477463564436886190128556005595 raw input units; most negative sampled delta_lnK=-3.9670018012940670904598144937279275209658013266442042644784240391384E-7
+  analytic max at q=0.004: x/P=0.001998003990027916263144850309474842543529560767002175953110587538174; max proceeds/P=0.000003992019944167473710299381050314912940878465995648093778824923652605187</pre></details>
+<h3>Reproduction of the artifacts in this workspace</h3>
+<pre class="code">cd audit &amp;&amp; npm install &amp;&amp; npm run poc
+cd .. &amp;&amp; python3 audit/protocol_input_fuzz.py
+python3 audit/index_rebalance_math_fuzz.py</pre>
+<div class="badge-row"><a class="tag" href="test/IndexNearEqualWeightExploit.t.sol">Solidity harness</a><a class="tag" href="run_evm_poc.js">EVM runner</a><a class="tag" href="protocol_input_fuzz.py">Parametric fuzz</a><a class="tag" href="index_rebalance_math_fuzz.py">Second-path fuzz</a><a class="tag" href="REPORT.md">Technical report</a></div>
+</section>
+
+<section id="exposure" class="section"><div class="kicker">05 · Deployment evidence &amp; potential exposure</div><h2>TVL is not the vulnerable balance</h2>
+<div class="grid">
+<article class="card span-6"><h3>What the supplied screenshots show</h3><ul>
+<li>DefiLlama page labelled Bundles (BUN), displaying TVL around <strong>$273,140</strong> at the shown point.</li>
+<li>Explorer screenshots show verified Factory source/compiler information and transactions labelled “Create Index”.</li>
+</ul><div class="table-wrap"><table><thead><tr><th>Label in screenshots</th><th>Transcribed address</th><th>Verification status here</th></tr></thead><tbody>
+<tr><td>SwapFactory</td><td><code>0xAcff9eee0a5522000E7141b77107359A6462E8d2</code></td><td>Screenshot only</td></tr>
+<tr><td>IndexFactory</td><td><code>0x661F8b1Ef3d24E99C461E0523Fd441Ed8d49bF19</code></td><td>Screenshot only</td></tr>
+<tr><td>BUN token</td><td><code>0x695f775551fb0D28b64101c9507c06F334b4bA86</code></td><td>Screenshot only</td></tr>
+</tbody></table></div><p class="source-note">Evidence provenance: screenshots supplied by the requester. Addresses are transcribed, not independently queried or checksum-validated in this environment. This report did not retrieve explorer pages, verify runtime bytecode, or enumerate deployed Index addresses.</p></article>
+<article class="card span-6"><h3>Why no reliable total-loss number is available</h3><p>Protocol TVL includes multiple products/positions and may include index-token valuations. The bug only applies to pools whose live weights, token balances, fee state, reserve accounting and exit liquidity meet the required conditions. A screenshot of total TVL cannot establish those facts.</p><p>Applying the theoretical factor to all $273,140 would give roughly <strong>$1.09</strong>, but that is only an intentionally overbroad arithmetic ceiling if every dollar were eligible protocol-side reserve. It is <strong>not</strong> a verified impact estimate or bounty valuation; actual exposure could be lower or zero for a pool without the required configuration/market.</p></article>
+</div>
+<div class="callout warn"><strong>Flashloan interpretation:</strong> a zero lender fee removes a capital constraint, not the exit-market cost. The local test models 10 bps at the separate liquidation venue. Actual market depth, route fees, price impact, token behavior and same-Vault reentrancy restrictions must be measured on an authorized fork before estimating net extractable value.</div>
+</section>
+
+<section id="limits" class="section"><div class="kicker">06 · False-positive analysis &amp; confidence</div><h2>Why the math is concerning—and why deployment confirmation still matters</h2>
+<div class="grid">
+<article class="card span-6"><h3>Evidence against a mere rounding alarm</h3><ul class="checklist">
+<li>The threshold comparison is inclusive; a gap exactly equal to <code>0.01 ether</code> enters the equal-weight branch.</li>
+<li>The Factory constraints allow the illustrative weights and total weight.</li>
+<li>The fee algebra simplifies exactly for <code>tokenIn == protocolToken</code>; it is not a floating-point approximation.</li>
+<li>The chosen output satisfies the exact integer product-floor predicate.</li>
+<li>The weighted-log loss is independent of ABDKMath64x64 because the test enters the product branch.</li>
+<li>The reduced EVM test executes callback transfers, fee check, and lender repayment; arithmetic fuzz independently checks profitability and invariant direction.</li>
+</ul></article>
+<article class="card span-6"><h3>Remaining uncertainty / possible disconfirmation</h3><ul class="checklist">
+<li class="fail">No full `Index` source file was present in the repository checkout; the EVM harness is reduced, not the deployed contract.</li>
+<li class="fail">No archive RPC or mainnet fork was used; deployed factory/index bytecode and current pool states remain unchecked.</li>
+<li class="fail">No actual external market was queried; marked profit depends on a price consistent with the stated weighted marginal price and sufficient exit liquidity.</li>
+<li class="fail">The screenshots do not prove that any live pool currently has the test weights, balances, unlocked state, or fee conditions.</li>
+</ul><div class="callout red"><strong>Conclusion:</strong> strong source-level mathematical evidence for the supplied snippet; deployed exploitability and bounty-sized impact remain unconfirmed. This must not be submitted as a fork PoC until the exact deployed implementation passes an authorized fork test.</div></article>
+</div>
+</section>
+
+<section id="fix" class="section"><div class="kicker">07 · Remediation</div><h2>Recommended changes</h2>
+<article class="card">
+<ol class="steps">
+<li><strong>Do not substitute a different invariant based on an absolute tolerance.</strong> Always check the actual weighted invariant, or use a rigorously bounded conservative approximation that cannot accept a decrease.</li>
+<li><strong>Prevent fee/input aliasing.</strong> In generic <code>rebalance()</code>, reject protocol-token input/output and require callers to use the dedicated protocol-token functions, or compute and subtract the fee from effective input before invariant validation.</li>
+<li><strong>Round in the pool’s favor.</strong> Use conservative output/input rounding and test one-wei and extreme-ratio states; avoid relying only on a fee inequality that can be satisfied by the swap input itself.</li>
+<li><strong>Add stateful invariant fuzzing.</strong> Fuzz sequences over all token pairs, transitions, reserves, fee states and protocol-token directions. Assert weighted K never decreases after fees and accounting are applied.</li>
+<li><strong>Validate on an authorized fork before closing.</strong> Pin a block, verify implementation/source hashes, choose a real affected pool, and have the protocol reproduce the finding with a non-broadcast test transaction.</li>
+</ol>
+</article>
+</section>
+
+<footer class="foot"><strong>Disclosure draft · 27 October 2026.</strong> The requester represented that public disclosure is patched or authorized; that status was not independently verified. Prepared from the Solidity excerpts and screenshots supplied in this conversation, plus local reduced-harness tests. No mainnet transaction was sent. No deployed contract, live pool, or realized loss is represented as independently verified. This document is a technical report, not a guarantee of bounty eligibility or a valuation of funds at risk.</footer>
+</div>
+</body>
+</html>
