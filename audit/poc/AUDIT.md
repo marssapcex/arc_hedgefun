@@ -56,6 +56,23 @@ Con số "dư 40 raw unit trên 40e6" là mức thất thoát làm tròn lớn n
 được, và nó khớp với ghi chú ở `V2StakingIncome.sol:20-22`: phần dư toàn cục nhỏ
 hơn `totalStaked/1e45`, không phải tiền của ai.
 
+## 2b. Hình KyberSwap nhắm vào vault của pool đã tốt nghiệp — 4 PoC, không vỡ
+
+Bóc hợp đồng exploit KyberSwap Elastic: `audit/poc/KYBER_TEARDOWN.md`. Bất biến của
+vụ đó, áp lên `V2LiquidityVault` (2 position trong 1 pool, một full-range và một
+single-sided sát spot), kiểm bằng `KyberShapePoC.t.sol` trên `PoolManager` thật:
+
+| PoC | bất biến | kết quả |
+| --- | --- | --- |
+| `testFuzz_roundTripThroughSurplusRangeLeaksNothing` | đẩy giá qua range surplus rồi bán ngược: L active chỉ có thể là `L_seed` hoặc `L_seed + surplus`, không có L thứ ba; pool không mất token; idle balance của vault không đổi | PASS 500 |
+| `testFuzz_repeatedCrossingsNeverAccumulateValue` | 8 lần vượt range liên tiếp: kẻ tấn công luôn lỗ cả hai token | PASS 500 |
+| `test_collectFeesIsBoundedByRealFeesAndIdempotent` | thu về ≤ 0.3% × notional + 2 wei; gọi lần hai = 0 | PASS |
+| `testFuzz_donatedAssetsAreNotCollectable` | donation vào vault không thành phí, không bị burn | PASS 500 |
+
+Vì sao không dính: vault không tự tính L hay phí; thu nhập được hỏi bằng
+`modifyLiquidity(liquidityDelta: 0)` và bị buộc `delta == feeDelta && >= 0`. Không
+có con số nội bộ nào để bơm phồng, khác với `reinvestL` mà KyberSwap tự tính.
+
 ## 3. Suite có sẵn của repo chạy được trong harness (không phải công của vòng này, nhưng là bằng chứng môi trường)
 
 | suite | kết quả |
@@ -90,9 +107,9 @@ Ba điểm tôi đã kiểm tra tới nơi tới chốn và kết luận là hà
 
 Đây là giới hạn của sandbox, không phải kết luận "an toàn":
 
-- **Toàn bộ đường V4**: `HedgeFunHook` (thuế, cửa sổ snipe, ring TWAP, split
-  protocol/creator/treasury), `V2LiquidityVault` (seed + collectFees + surplus),
-  `_swapTokenPool`/`_buybackLimitSqrtP`. Cần `PoolManager` thật + suite lớn hơn
+- **`HedgeFunHook`** (thuế, cửa sổ snipe, ring TWAP, `pots` write-down index,
+  split protocol/creator/treasury), `_swapTokenPool`/`_buybackLimitSqrtP`.
+  `V2LiquidityVault` thì đã có PoC ở mục 2b. Cần `PoolManager` thật + suite lớn hơn
   trần 1.2 MB của solc-js. Các tấn công đáng thử ở đây: cấy mẫu ring rồi gọi
   `buyback`, và sandwich trong biên `maxBuybackImpactBps`.
 - **Các suite dust/cycle** (`V2DustProgressFuzz`, `V2CycleDustFuzz`, 134 file):
