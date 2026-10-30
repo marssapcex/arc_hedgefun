@@ -1386,54 +1386,87 @@ function maiaCp(value, turn) {
 // ==MAIA-CORE-END==
     // ----------------------------------------------------------------- engine
     // Maia-3 (CSSLab, AGPL-3.0) instead of Stockfish: a transformer that
-    // predicts the move a human of a given rating would play. It looks at the
-    // board once and scores all 4352 from-to pairs — no search, no 100MB+ NNUE
-    // download — so the arrows suggest what a 1500 player would do, not the
-    // engine's best line.
+    // predicts what a human of a given rating plays. It reads the board once
+    // and scores all 4352 from-to pairs — no search, and no 113MB NNUE.
+    //
+    // It climbs sizes instead of starting at the top: the 5M model (~22MB) is
+    // up in seconds so arrows appear at once, then 23M and 79M are fetched in
+    // the background and swapped in when each loads. The highest size that ever
+    // loaded is remembered, so a second visit starts at 79M straight away.
     //
     // The ONNX export runs on onnxruntime-web inside a module worker built from
-    // blobs, the same way the old engine loaded: nothing here is fetched by the
-    // page, so chess.com's script policy stays out of it.
+    // blobs, the way the old engine loaded: the page's script policy stays out.
 
     const MAIA_MODELS = [
-        { file: 'maia3_79m_int32.onnx', label: '79M', mb: 313 },
+        { file: 'maia3_5m_int32.onnx', label: '5M', mb: 22 },
         { file: 'maia3_23m_int32.onnx', label: '23M', mb: 92 },
-        { file: 'maia3_5m_int32.onnx', label: '5M', mb: 22 }
+        { file: 'maia3_79m_int32.onnx', label: '79M', mb: 313 }
     ];
+    const MAIA_TOP = MAIA_MODELS.length - 1;
     const MAIA_HF = 'https://huggingface.co/cstr/maia3-onnx-int32/resolve/main/';
     const MAIA_ELOS = [800, 1100, 1500, 1800, 2100, 2400];
+    const MAIA_TIER_KEY = 'maia3-tier';
     const ORT_VERSION = '1.31.1';
     const ORT_DIST = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@' + ORT_VERSION + '/dist/';
-    const ORT_LOAD_MS = 300000;
+    const ORT_LOAD_MS = 240000;
 
     let maiaWorker = null, maiaReady = false, maiaLoading = false, maiaFailed = false;
-    let maiaModelIdx = 0;              // index into MAIA_MODELS of the size in use
+    let maiaTier = -1;                 // MAIA_MODELS index in the worker
+    let maiaUpgrading = false;
     let maiaElo = 1500;                // the human strength the arrows aim at
     let maiaGen = 0;                   // bumped when an answer must no longer land
     let maiaRun = 0;
     let maiaBusy = false;
-    let maiaReq = null;                // the request in flight: { id, gen, entries, turn }
+    let maiaReq = null;                // { id, gen, entries, turn, fen, t0 }
     let maiaNames = null;              // tensor names the model declares
     let maiaLastFen = null;
+    let maiaLastMs = 0;
     let maiaCrashed = false;           // one automatic rebuild after a dead worker
+    let maiaRuntimeUrls = null;
     let pendingFen = null;             // the position waiting for the engine
     let engineFlip = false;
     let searchTurn = 'w';
     let searchBoard960 = null;         // Maia has no 960 castling, kept for the arrows
 
+    let maiaLabel = () => maiaTier >= 0 ? 'Maia-3 ' + MAIA_MODELS[maiaTier].label : 'Maia-3';
+
+    // What the analyzer is doing, in one line, where the buttons are
+    function setStatus(text, title) {
+        let el = document.getElementById('sa-status');
+        if (el) {
+            el.textContent = text;
+            el.title = title || text;
+        }
+        try { console.debug('[Maia3] ' + text + (title && title !== text ? ' — ' + title : '')); } catch (e) { }
+    }
+
     // Runs inside the worker: load the model once, then answer one position at a time.
     // ==MAIA-WORKER-START==
     function maiaEngineMain() {
-        let session = null, eloType = 'int32';
-        let say = (msg, transfer) => self.postMessage(msg, transfer || []);
-        let elo = (v, name) => eloType === 'int64'
-            ? new ort.Tensor('int64', BigInt64Array.from(v.map(BigInt)), [1])
-            : new ort.Tensor('int32', Int32Array.from(v), [1]);
+        let session = null, eloType = 'int32', eloShape = 1, tokenDim = 96, say =
+            (msg, transfer) => self.postMessage(msg, transfer || []);
+
+        let meta = name => {
+            let md = session.inputMetadata || session.inputMetadataMap;
+            if (!md) return null;
+            let m = md[name] || (Array.isArray(md) ? md.find(x => x && x.name === name) : null);
+            return m || null;
+        };
         let feed = (d) => {
             let f = {};
-            f[d.names.tokens] = new ort.Tensor('float32', d.tokens, [1, 64, 96]);
-            f[d.names.self] = elo([d.elo[0]], d.names.self);
-            f[d.names.oppo] = elo([d.elo[1]], d.names.oppo);
+            let tokens = d.tokens;
+            if (tokenDim > 96) {
+                // a 97th column (the ponder clock) exports as a zero slice
+                tokens = new Float32Array(64 * tokenDim);
+                for (let sq = 0; sq < 64; sq++)
+                    for (let t = 0; t < 96; t++) tokens[sq * tokenDim + t] = d.tokens[sq * 96 + t];
+            }
+            f[d.names.tokens] = new ort.Tensor('float32', tokens, [1, 64, tokenDim]);
+            let elo = v => eloType === 'int64'
+                ? new ort.Tensor('int64', BigInt64Array.from(v.map(BigInt)), eloShape ? [1] : [])
+                : new ort.Tensor('int32', Int32Array.from(v), eloShape ? [1] : []);
+            f[d.names.self] = elo([d.elo[0]]);
+            f[d.names.oppo] = elo([d.elo[1]]);
             return f;
         };
         self.onmessage = async e => {
@@ -1450,21 +1483,36 @@ function maiaCp(value, turn) {
                     session = await ort.InferenceSession.create(new Uint8Array(b.model), {
                         graphOptimizationLevel: 'all'
                     });
-                    say({ ready: true, inputs: session.inputNames, outputs: session.outputNames });
+                    // the export decides the token width: 96 planes, or 97 with the clock
+                    try {
+                        let m = meta(session.inputNames[0]);
+                        let dims = m && (m.dimensions || m.dims || (m.shape));
+                        if (dims && +dims[2] > tokenDim) tokenDim = +dims[2];
+                    } catch (err) { }
+                    say({
+                        ready: true,
+                        inputs: session.inputNames,
+                        outputs: session.outputNames,
+                        tokenDim
+                    });
                     return;
                 }
                 if (d.run) {
-                    let out;
-                    try {
-                        out = await session.run(feed(d));
-                    } catch (err) {
-                        // some Maia exports keep the Elo inputs at int64
-                        eloType = eloType === 'int32' ? 'int64' : 'int32';
-                        out = await session.run(feed(d));
+                    // an export may want int32 or int64 Elo, as [1] or as a scalar
+                    let out = null, last = null;
+                    for (let shape of [1, 0]) {
+                        for (let type of ['int32', 'int64']) {
+                            eloType = type;
+                            eloShape = shape;
+                            try { out = await session.run(feed(d)); last = null; break; }
+                            catch (err) { last = err; }
+                        }
+                        if (out) break;
                     }
+                    if (!out) throw last || new Error('run failed');
                     let policy = out[d.names.policy].data;
                     let value = out[d.names.value].data;
-                    say({ run: d.run, policy, value }, [policy.buffer, value.buffer]);
+                    say({ run: d.run, policy, value, tokenDim }, [policy.buffer, value.buffer]);
                 }
             } catch (err) {
                 say({ error: String((err && err.message) || err) });
@@ -1485,120 +1533,210 @@ function maiaCp(value, turn) {
         };
     }
 
-    async function cachedBytes(key, url) {
-        let bytes = await idbGet(key);
-        if (bytes) return bytes;
-        bytes = await fetchBytes(url);
-        await idbPut(key, bytes);
-        return bytes;
-    }
-
-    // A worker whose module imports onnxruntime from a blob, so no request
-    // leaves the page and the runtime's own wasm comes from a blob too.
-    function maiaStart(libUrl, glueUrl, wasmUrl, modelBytes) {
-        let src = 'import * as ort from ' + JSON.stringify(libUrl) + ';\n'
-            + 'globalThis.ort = ort;\n(' + maiaEngineMain.toString() + ')();';
-        let url = URL.createObjectURL(new Blob([src], { type: 'text/javascript' }));
-        let w = new Worker(url, { type: 'module' });
-        maiaWorker = w;
+    // Bytes with a progress callback: the page's fetch first, then the
+    // userscript request that is allowed past chess.com's connect-src.
+    function gmDownload(url, onBytes) {
         return new Promise((resolve, reject) => {
-            let timer = setTimeout(() => fail('engine load timed out'), ORT_LOAD_MS);
-            let fail = msg => {
-                clearTimeout(timer);
-                try { w.terminate(); } catch (e) { }
-                if (maiaWorker !== w) return;
-                maiaWorker = null;
-                maiaReady = false;
-                maiaBusy = false;
-                reject(new Error(msg));
-            };
-            w.onerror = () => {
-                let wasReady = maiaReady && maiaWorker === w;
-                fail('engine worker failed');
-                // a worker that dies mid-game gets one rebuilt session
-                if (wasReady && iv && !maiaCrashed) {
-                    maiaCrashed = true;
-                    setTimeout(() => { maiaModelIdx = 0; maiaFailed = false; ensureEngine(); }, 2000);
-                }
-            };
-            w.onmessage = e => {
-                let d = e.data || {};
-                if (maiaWorker !== w) return;             // a replaced worker stays quiet
-                if (d.error) {
-                    // the session is still fine: report the failed position, keep going
-                    if (maiaReady) {
-                        // the session lives on, but this position failed: drop it
-                        // rather than retry it forever, the next move tries again
-                        let b = document.getElementById("sa-btn");
-                        if (b) b.innerHTML = "Maia-3: " + String(d.error).slice(0, 50);
-                        maiaBusy = false;
-                        maiaReq = null;
-                        pendingFen = null;
-                        return;
-                    }
-                    return fail(d.error);
-                }
-                if (d.ready) {
-                    clearTimeout(timer);
-                    maiaNames = maiaPickNames(d.inputs || [], d.outputs || []);
-                    maiaReady = true;
-                    resolve();
-                    return;
-                }
-                if (d.run) maiaAnswer(d);
-            };
-            w.postMessage({ boot: { model: modelBytes, mjs: glueUrl, wasm: wasmUrl } }, [modelBytes]);
+            let api = typeof GM_xmlhttpRequest === 'function' ? GM_xmlhttpRequest : GM.xmlHttpRequest;
+            api({
+                method: 'GET',
+                url,
+                responseType: 'arraybuffer',
+                onprogress: e => onBytes(e.loaded || 0, e.total || 0),
+                onload: r => (r.status >= 200 && r.status < 300) ? resolve(r.response) : reject(new Error('HTTP ' + r.status)),
+                onerror: () => reject(new Error('network error')),
+                ontimeout: () => reject(new Error('timeout'))
+            });
         });
     }
 
-    async function ensureEngine() {
-        if (maiaWorker || maiaLoading || maiaFailed || !iv) return;
-        maiaLoading = true;
-        let btn = document.getElementById("sa-btn");
+    async function fetchBytesProgress(url, onBytes) {
         try {
-            // the runtime itself, once, in ~15MB instead of a wasm engine
-            let lib = URL.createObjectURL(new Blob([await fetchText(ORT_DIST + 'ort.wasm.min.mjs')], { type: 'text/javascript' }));
-            let glue = URL.createObjectURL(new Blob([await fetchText(ORT_DIST + 'ort-wasm-simd-threaded.mjs')], { type: 'text/javascript' }));
-            let wasm = URL.createObjectURL(new Blob([await fetchBytes(ORT_DIST + 'ort-wasm-simd-threaded.wasm')], { type: 'application/wasm' }));
-            while (!maiaReady && maiaModelIdx < MAIA_MODELS.length) {
-                let m = MAIA_MODELS[maiaModelIdx];
-                if (btn) btn.innerHTML = "Loading Maia-3 " + m.label + "… (one-time ~" + m.mb + "MB)";
-                let bytes = await cachedBytes('maia-' + m.file, MAIA_HF + m.file);
-                if (!iv) return;                          // the analyzer was switched off
-                if (maiaReady) break;
-                try {
-                    await maiaStart(lib, glue, wasm, bytes);
-                } catch (e) {
-                    maiaModelIdx++;                       // a size this browser cannot run
-                }
+            let r = await fetch(url);
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            let total = +(r.headers && r.headers.get ? r.headers.get('content-length') : 0) || 0;
+            let reader = r.body && r.body.getReader ? r.body.getReader() : null;
+            if (!reader) {
+                let buf = await r.arrayBuffer();
+                onBytes(buf.byteLength, buf.byteLength || total);
+                return buf;
             }
-            if (!maiaReady) throw new Error('no model would load');
+            let chunks = [], got = 0;
+            for (; ;) {
+                let step = await reader.read();
+                if (step.done) break;
+                chunks.push(step.value);
+                got += step.value.byteLength;
+                onBytes(got, total);
+            }
+            let out = new Uint8Array(got), at = 0;
+            for (let c of chunks) { out.set(c, at); at += c.byteLength; }
+            return out.buffer;
         } catch (err) {
-            maiaFailed = true;
-            let b = document.getElementById("sa-btn");
-            if (b) b.innerHTML = "Maia-3 failed: " + String(err.message || err).slice(0, 60);
-            return;
+            if (!hasGM) throw err;
+            return gmDownload(url, onBytes);
+        }
+    }
+
+    async function cachedBytes(key, file, label) {
+        let bytes = await idbGet(key);
+        if (bytes) return bytes;
+        let mb = (MAIA_MODELS.find(m => m.file === file) || {}).mb || 0;
+        bytes = await fetchBytesProgress(MAIA_HF + file, (got, total) =>
+            setStatus('downloading ' + label + ' ' + (total ? Math.round(got * 100 / total) + '%' : (got / 1048576).toFixed(0) + 'MB'),
+                'first run only: ' + (total ? (total / 1048576).toFixed(0) : mb) + 'MB, then cached'));
+        try { idbPut(key, bytes); } catch (e) { }
+        return bytes;
+    }
+
+    // The runtime itself, once: ~15MB instead of a wasm engine
+    async function maiaRuntime() {
+        if (maiaRuntimeUrls) return maiaRuntimeUrls;
+        setStatus('runtime 1/3');
+        let lib = await fetchText(ORT_DIST + 'ort.wasm.min.mjs');
+        setStatus('runtime 2/3');
+        let glue = await fetchText(ORT_DIST + 'ort-wasm-simd-threaded.mjs');
+        setStatus('runtime 3/3');
+        let wasm = await fetchBytes(ORT_DIST + 'ort-wasm-simd-threaded.wasm');
+        maiaRuntimeUrls = {
+            lib: URL.createObjectURL(new Blob([lib], { type: 'text/javascript' })),
+            glue: URL.createObjectURL(new Blob([glue], { type: 'text/javascript' })),
+            wasm: URL.createObjectURL(new Blob([wasm], { type: 'application/wasm' }))
+        };
+        return maiaRuntimeUrls;
+    }
+
+    // Open a worker on one model size; resolves with a ready worker
+    function maiaOpen(rt, bytes) {
+        let src = 'import * as ort from ' + JSON.stringify(rt.lib) + ';\n'
+            + 'globalThis.ort = ort;\n(' + maiaEngineMain.toString() + ')();';
+        let worker = new Worker(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })), { type: 'module' });
+        return new Promise((resolve, reject) => {
+            let timer = setTimeout(() => { close(); reject(new Error('load timed out')); }, ORT_LOAD_MS);
+            let close = () => { clearTimeout(timer); try { worker.terminate(); } catch (e) { } };
+            worker.onerror = () => { close(); reject(new Error('worker failed to start')); };
+            worker.onmessage = e => {
+                let d = e.data || {};
+                if (d.error) { close(); return reject(new Error(d.error)); }
+                if (!d.ready) return;
+                clearTimeout(timer);
+                resolve({ worker, names: maiaPickNames(d.inputs || [], d.outputs || []) });
+            };
+            worker.postMessage({ boot: { model: bytes, mjs: rt.glue, wasm: rt.wasm } }, [bytes]);
+        });
+    }
+
+    // Download + open one size, then swap it in
+    async function maiaBoot(tier) {
+        let m = MAIA_MODELS[tier];
+        let rt = await maiaRuntime();
+        let bytes = await cachedBytes('maia-' + m.file, m.file, 'Maia-3 ' + m.label);
+        if (!iv) return false;
+        setStatus('starting Maia-3 ' + m.label);
+        let opened = await maiaOpen(rt, bytes);
+        if (!iv) { try { opened.worker.terminate(); } catch (e) { } return false; }
+
+        let old = maiaWorker;
+        maiaWorker = opened.worker;
+        maiaNames = opened.names;
+        maiaTier = tier;
+        maiaReady = true;
+        maiaFailed = false;
+        maiaBusy = false;
+        maiaReq = null;
+        maiaGen++;
+        try { localStorage.setItem(MAIA_TIER_KEY, String(tier)); } catch (e) { }
+
+        let w = maiaWorker;
+        w.onmessage = e => {
+            if (maiaWorker !== w) return;         // a replaced worker stays quiet
+            let d = e.data || {};
+            if (d.error) return maiaOops(d.error);
+            if (d.run) maiaAnswer(d);
+        };
+        w.onerror = () => {
+            if (maiaWorker !== w) return;
+            maiaReady = false;
+            maiaWorker = null;
+            maiaBusy = false;
+            try { w.terminate(); } catch (e) { }
+            setStatus('engine stopped');
+            // one rebuild after a death mid-game
+            if (iv && !maiaCrashed) {
+                maiaCrashed = true;
+                setTimeout(() => { maiaTier = -1; maiaFailed = false; ensureEngine(); }, 2000);
+            }
+        };
+        if (old) { try { old.terminate(); } catch (e) { } }
+        return true;
+    }
+
+    // A failed position: report it, keep the session, wait for the next move
+    function maiaOops(msg) {
+        maiaBusy = false;
+        maiaReq = null;
+        pendingFen = null;
+        setStatus('Maia-3: ' + String(msg).slice(0, 70));
+    }
+
+    async function ensureEngine() {
+        if (maiaReady || maiaLoading || maiaFailed || !iv) return;
+        maiaLoading = true;
+        let start = 0;
+        try { start = Math.min(+localStorage.getItem(MAIA_TIER_KEY) || 0, MAIA_TOP); } catch (e) { }
+        try {
+            for (let tier = start; tier <= MAIA_TOP && !maiaReady; tier++) {
+                try { await maiaBoot(tier); }
+                catch (err) { setStatus('Maia-3 ' + MAIA_MODELS[tier].label + ': ' + String(err.message || err).slice(0, 60)); }
+                if (!iv) break;
+            }
+            if (!maiaReady) {
+                maiaFailed = true;
+                setStatus('no Maia-3 model would load', 'check the browser console for [Maia3] lines');
+                return;
+            }
         } finally {
             maiaLoading = false;
         }
-        if (btn && iv) btn.innerHTML = "Stop Analyzer";
+        if (maiaTier < MAIA_TOP) maiaUpgrade();
         pump();
     }
 
+    // Fetch the bigger sizes in the background and swap each in when it loads
+    async function maiaUpgrade() {
+        if (maiaUpgrading) return;
+        maiaUpgrading = true;
+        try {
+            while (iv && maiaTier >= 0 && maiaTier < MAIA_TOP) {
+                let next = maiaTier + 1;
+                let was = maiaTier;
+                try { await maiaBoot(next); }
+                catch (err) { setStatus('Maia-3 ' + MAIA_MODELS[next].label + ': ' + String(err.message || err).slice(0, 60)); }
+                if (maiaTier === was) break;      // that size failed, stop climbing
+                if (maiaLastFen) { pendingFen = maiaLastFen; pump(); }
+            }
+        } finally {
+            maiaUpgrading = false;
+        }
+    }
+
     function pump() {
-        if (!maiaReady || maiaBusy || !pendingFen) return;
+        if (!maiaReady || maiaBusy || !pendingFen || !maiaNames) return;
         let fen = pendingFen;
         pendingFen = null;
         let [placement, turn, castling] = fen.split(' ');
-        let entries = maiaEntries(placement, turn, castling);
+        let entries;
+        try { entries = maiaEntries(placement, turn, castling); }
+        catch (err) { setStatus('move list failed: ' + String(err.message || err).slice(0, 50)); return; }
         if (!entries.length) {
             moves = []; ponder = "";
             render(engineFlip);
+            setStatus(maiaLabel() + ': no legal moves', fen);
             return;
         }
         maiaBusy = true;
         searchTurn = turn;
-        let req = { id: ++maiaRun, gen: maiaGen, entries, turn, fen };
+        let req = { id: ++maiaRun, gen: maiaGen, entries, turn, fen, t0: Date.now() };
         maiaReq = req;
         let tokens = maiaTokens(placement, turn);
         maiaWorker.postMessage({ run: req.id, tokens, elo: [maiaElo, maiaElo], names: maiaNames }, [tokens.buffer]);
@@ -1617,10 +1755,14 @@ function maiaCp(value, turn) {
             pump();
             return;
         }
+        maiaLastMs = Date.now() - req.t0;
         moves = maiaProbs(d.policy, req.entries, 3).map(m => m.uci);
         ponder = "";
-        setScore(maiaCp(d.value, req.turn), null, engineFlip);
+        let cp = maiaCp(d.value, req.turn);
+        setScore(cp, null, engineFlip);
         render(engineFlip);
+        setStatus(maiaLabel() + ' (' + maiaLastMs + 'ms) · ' + (cp > 0 ? '+' : '') + (cp / 100).toFixed(1)
+            + ' · ' + moves.length + ' arrows @' + maiaElo, req.fen);
         pump();
     }
 
@@ -1629,13 +1771,13 @@ function maiaCp(value, turn) {
         // Maia-3 knows standard chess only; variants keep their board reads but
         // get no arrows rather than wrong ones
         if (variant !== 'chess') {
-            let btn = document.getElementById("sa-btn");
-            if (btn) btn.innerHTML = "Maia-3: standard chess only";
+            setStatus('Maia-3: standard chess only (' + variant + ')');
             return;
         }
         maiaLastFen = fen;
         pendingFen = fen;
         ensureEngine();
+        pump();
     }
 
     // Nothing valid to analyze: end the wait so stale arrows don't return
@@ -1658,7 +1800,7 @@ function maiaCp(value, turn) {
         pendingFen = null;
     }
 
-    // How human the arrows are: an Elo the model samples its policy at
+    // How human the arrows are: the Elo the model samples its policy at
     function updateEloUI() {
         let btn = document.getElementById("sa-elo-btn");
         if (btn) btn.innerHTML = "Elo: " + maiaElo + " [E]";
@@ -2080,6 +2222,7 @@ function maiaCp(value, turn) {
             stopEngine();
             document.getElementById("sa-arrows")?.remove();
             btn.innerHTML = "Start Analyzer (Hotkey: A)";
+            setStatus("stopped");
             if (autoMoveEnabled) {
                 toggleAutoMove();
             }
@@ -2089,15 +2232,19 @@ function maiaCp(value, turn) {
         // A fresh start retries everything, including a model that gave up
         maiaFailed = false;
         maiaCrashed = false;
-        maiaModelIdx = 0;
         maiaGen++;
         btn.innerHTML = "Stop Analyzer";
         moves = []; ponder = "";
-        let fen = "", flipped = null;
+        let fen = "", flipped = null, tickErr = "";
 
-        iv = setInterval(() => {
+        // Nothing here may fail silently: whatever goes wrong lands on the
+        // status line beside the buttons, and in the console as [Maia3].
+        function tick() {
             let pos = readBoard();
-            if (!pos) return;
+            if (!pos) {
+                setStatus("no board found on this page");
+                return;
+            }
             // a variant no engine here plays gets no arrows rather than wrong ones,
             // and so does a board still being set up
             if (pos.note) {
@@ -2108,6 +2255,7 @@ function maiaCp(value, turn) {
                     moves = []; ponder = "";
                     document.getElementById("sa-arrows")?.remove();
                     btn.innerHTML = note;
+                    setStatus(note);
                 }
                 return;
             }
@@ -2136,8 +2284,27 @@ function maiaCp(value, turn) {
             moves = []; ponder = "";
             render(pos.flipped);
             let playable = playableFen(fen, rules);
-            if (playable) analyzeWorker(playable, pos.flipped, rules.uci, !!start);
-            else idleEngine();
+            if (!playable) {
+                idleEngine();
+                setStatus("board not readable as chess: " + posFen,
+                    "usually a board caught mid-animation; arrows return on the next move");
+                return;
+            }
+            if (!maiaReady) setStatus(maiaLoading ? "engine starting" : "position ok, starting engine", playable);
+            analyzeWorker(playable, pos.flipped, rules.uci, !!start);
+        }
+
+        iv = setInterval(() => {
+            try {
+                tick();
+            } catch (err) {
+                let msg = String((err && err.message) || err);
+                if (msg !== tickErr) {
+                    tickErr = msg;
+                    setStatus("analyzer error: " + msg.slice(0, 60));
+                    try { console.error('[Maia3] analyzer tick failed', err); } catch (e) { }
+                }
+            }
         }, 30);
     }
 
@@ -3460,6 +3627,7 @@ function maiaCp(value, turn) {
         let wrap = document.getElementById("sa-wrap");
         let eloBtn = `<button id="sa-elo-btn" style="background:#262421;color:#94a3b8;border:1px solid #3d3b38;border-radius:8px;padding:8px 12px;font:12px sans-serif;font-weight:600;cursor:pointer;white-space:nowrap;">Elo: 1500 [E]</button>`;
         let autoBtn = `<button id="sa-automove-btn" style="background:#262421;color:#94a3b8;border:1px solid #3d3b38;border-radius:8px;padding:8px 12px;font:12px sans-serif;font-weight:600;cursor:pointer;white-space:nowrap;">Auto: OFF [B]</button>`;
+        let statusEl = `<span id="sa-status" style="flex:0 1 auto;min-width:0;max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#94a3b8;font:11px ui-monospace,monospace;align-self:center;">not started</span>`;
         if (!wrap) {
             let variantsBoard = SITE === 'chesscom' && document.querySelector('.TheBoard-layers');
             if (SITE === 'chesscom' && !variantsBoard) {
@@ -3467,18 +3635,21 @@ function maiaCp(value, turn) {
                 if (!host) return;
                 host.insertAdjacentHTML('afterbegin', `<div id="sa-wrap" style="display:flex;gap:8px;padding:10px;background:var(--globalBackgroundDark);border-radius:5px;margin-bottom:10px;">
                     <button id="sa-btn" class="ui_v5-button-component ui_v5-button-primary" style="flex:1">Start Analyzer (Hotkey: A)</button>
-                    ${eloBtn}${autoBtn}
+                    ${statusEl}${eloBtn}${autoBtn}
                 </div>`);
             } else if (variantsBoard || (SITE === 'endgame' ? findBoardEG() : SITE === 'lichess' && document.querySelector('cg-board'))) {
                 document.body.insertAdjacentHTML('beforeend', `<div id="sa-wrap" style="position:fixed;bottom:12px;left:12px;z-index:99999;display:flex;gap:8px;">
                     <button id="sa-btn" style="background:#262421;color:#e0e0e0;border:1px solid #3d3b38;border-radius:8px;padding:8px 14px;font:13px sans-serif;cursor:pointer">Start Analyzer (Hotkey: A)</button>
-                    ${eloBtn}${autoBtn}
+                    ${statusEl}${eloBtn}${autoBtn}
                 </div>`);
             } else {
                 return;
             }
             wrap = document.getElementById("sa-wrap");
             document.getElementById("sa-btn").onclick = e => toggle(e.currentTarget);
+        }
+        if (!document.getElementById("sa-status")) {
+            wrap.insertAdjacentHTML('beforeend', statusEl);
         }
         if (!document.getElementById("sa-elo-btn")) {
             wrap.insertAdjacentHTML('beforeend', eloBtn);
