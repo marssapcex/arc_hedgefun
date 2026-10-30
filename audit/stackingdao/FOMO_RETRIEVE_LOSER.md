@@ -58,6 +58,35 @@ Test khẳng định 4 điều:
 3. `get-owner` của cả 3 NFT trả `none` — NFT của 3 người chơi, **kể cả NFT của người thắng**, bị đốt bởi người không sở hữu;
 4. `retrieve-winner` của người thắng trả `(err u1)` (transfer thất bại vì contract chỉ còn 2.25 < 2.52).
 
+## 2b. Attacker có thực sự kiếm được tiền không? **Có** — và không cần vốn
+
+PoC thứ hai (`fomo_scale_test.ts`, N = 5 claim) chứng minh 3 điều:
+
+```
+paid in          6500000     (5 claim: 1.1 … 1.5 stSTX)
+sweep result     (ok (list 406250 406250 406250 406250 406250))
+attacker got     2031250     <- MỘT giao dịch, ví attacker = 0 stSTX lúc đầu, 0 claim
+left in contract 4468750
+winner prize     4550000     <- nhiều hơn số còn lại => người thắng không nhận được
+```
+
+- **Một tx duy nhất**: attacker deploy một contract 5 dòng, gọi `retrieve-loser(0..4)` trong cùng tx. Vì Clarity lấy `tx-sender` = người ký chứ không phải contract gọi, tiền về thẳng ví attacker, contract trung gian không giữ một xu.
+- **Lời ròng**: bỏ ra 0, thu 2.03 stSTX = **31.25% toàn bộ quỹ** (trong khi quỹ "loser" chỉ 25%) — phần dư 6.25% lấy từ 70% của người thắng. Gas vài xu.
+- **Không cần điều kiện về quyền**: không whitelist, không admin call, không cần sở hữu NFT, không cần vốn, không cần là người chơi. Ví mới tinh là đủ.
+- **Tiền lấy từ đâu**: từ stSTX của chính những người đã mua claim, đang nằm trong contract `fomo`. Đây là trộm tiền người dùng, không phải "tự làm mình thiệt".
+
+### Điều kiện duy nhất (và tại sao nó gần như luôn đúng)
+
+1. Ván đã bắt đầu — admin gọi `start-game` một lần khi mở ván.
+2. `has-game-ended` — 144 burn block (~24h) không ai claim. **Tự động**, không ai cần bấm.
+3. Số dư thật của contract đủ lớn để trả phần đã phóng đại. Vì `total-treasure` mặc định 100 stSTX là tiền ảo (mục 3), điều kiện này thành: quỹ thật phải xấp xỉ
+
+   `B ≥ 100·(N+1)/(3N−5)` stSTX  →  ~100 stSTX khi N=3, ~35 stSTX khi N lớn.
+
+   Dưới ngưỡng đó `retrieve-loser` revert `(err u1)` và attacker **không lấy được gì** — PoC thứ hai chứng minh đúng nhánh này: quỹ thật 3.6 stSTX, `treasure` ghi 103.6 stSTX, lệnh gọi trả `(err u1)`, attacker nhận 0. Nhưng khi đó người thắng và người chơi cũng không rút được: ván hỏng sẵn.
+
+Tóm lại: có điều kiện về **thời điểm** (ván đã đóng) và **độ lớn của quỹ**, nhưng không có điều kiện nào về **danh tính hay vốn**. Với một ván FOMO thật (quỹ hàng trăm stSTX, hàng chục đến hàng trăm claim) thì cả ba điều kiện đều thoả, và attacker lấy ~31% quỹ trong một tx.
+
 ## 3. Hai lỗi phụ cùng file
 
 - **Quỹ khởi tạo 100 stSTX là tiền ảo.** `(define-data-var total-treasure uint u100000000)` nhưng contract không hề được nạp 100 stSTX. Lần chạy đầu tiên của tôi (giữ nguyên giá trị mặc định): `treasure = 103 600 000` trong khi số dư contract chỉ `3 600 000` ⇒ mọi lệnh trả thưởng đều revert `(err u1)` cho tới khi người chơi nạp vào > 100 stSTX. `retrieve-winner`/`retrieve-loser` tính trên một con số không có thật.
@@ -95,7 +124,7 @@ Test khẳng định 4 điều:
 ```bash
 cd /home/user/arc_hedgefun
 ./audit/stackingdao/prepare.sh /tmp/sdao2      # clone + vá Clarinet cho offline, ~11s
-cd /tmp/sdao2 && npx vitest run tests/poc/fomo_poc_test.ts
+cd /tmp/sdao2 && npx vitest run tests/poc/     # 3 test, tất cả xanh
 ```
 
 `prepare.sh` làm đúng 3 việc với repo gốc, không đụng vào logic:

@@ -52,8 +52,8 @@ npm i --no-save --no-audit --no-fund @rollup/rollup-linux-x64-gnu
 
 # 5. PoC
 mkdir -p tests/poc
-cp "$HERE/fomo_poc_test.ts" tests/poc/fomo_poc_test.ts
+cp "$HERE"/fomo_*.ts tests/poc/
 
 echo
 echo "chạy:"
-echo "  cd $DIR && npx vitest run tests/poc/fomo_poc_test.ts"
+echo "  cd $DIR && npx vitest run tests/poc/"
