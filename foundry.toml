@@ -50,6 +50,44 @@ remappings = [
   "solmate/=lib/v4-core/lib/solmate/",
 ]
 
+# Audit PoCs (audit/poc/harness). `src` is empty and contracts come in through the
+# `hedgefun/` remapping, so a PoC run compiles only the contracts it touches
+# instead of all 337 files -- which the sandbox's wasm solc cannot fit.
+#   FOUNDRY_PROFILE=poc forge test
+[profile.poc]
+# Compiles one file at a time instead of the whole repo.
+#
+# The point of this profile is that `forge test` can run a single suite here in
+# a few seconds, on a machine where the full 337-file project does not fit in
+# solc's memory. `src` is empty, so a contract only enters the build when
+# something imports it; the `hedgefun/` remapping below makes `src/**` the
+# importable tree and `audit/poc/import-test.sh` rewrites a repo test to use it.
+src = "audit/poc/empty"
+test = "audit/poc/harness/test"
+script = "audit/poc/empty"
+out = "audit/poc/harness/out"
+cache_path = "audit/poc/harness/cache"
+libs = ["lib"]
+solc_version = "0.8.26"
+optimizer = true
+optimizer_runs = 1
+bytecode_hash = "none"
+evm_version = "cancun"
+remappings = [
+  # audit/poc/forge-std is a directory of symlinks to lib/forge-std/src, except
+  # safeconsole.sol: 13k generated logging helpers that Test.sol imports but
+  # never calls, and nothing in this repo calls either. Dropping its 408KB is
+  # the difference between compiling and hitting solc's heap limit.
+  "forge-std/=audit/poc/forge-std/",
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "v4-core/=lib/v4-core/",
+  "solmate/=lib/v4-core/lib/solmate/",
+  "hedgefun/=src/",
+  # test/utils imports script/ helpers by relative path; the poc dirs are the
+  # test directory, so give that tree a root-anchored name to import through.
+  "repo-script/=script/",
+]
+
 # ffi ONLY here, never globally: `FOUNDRY_PROFILE=emergency forge test --mc Emergency` lets test/Emergency.t.sol take its
 # calldata from emergency/build.py and assert it byte-equal to abi.encodeCall. Everything else is inherited.
 [profile.emergency]

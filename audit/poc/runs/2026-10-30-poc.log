@@ -1,0 +1,32 @@
+Compiling 40 files with Solc 0.8.26
+Solc 0.8.26 finished in 6.13s
+Compiler run successful!
+
+Ran 1 test for audit/poc/harness/test/Smoke.t.sol:SmokeTest
+[PASS] testHarnessCompilesAndRuns() (gas: 2598)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 267.61µs (38.07µs CPU time)
+
+Ran 6 tests for audit/poc/harness/test/StakingPoC.t.sol:StakingPoC
+[PASS] testFuzz_claimsNeverExceedFunding(uint256,uint256) (runs: 1000, μ: 1371171, ~: 1393156)
+[PASS] testFuzz_entitlementsAddUp(uint256,uint256,uint256) (runs: 1000, μ: 386839, ~: 387176)
+[PASS] testFuzz_leaveAndReturnCannotMintRewards(uint256) (runs: 1000, μ: 432329, ~: 432339)
+[PASS] testFuzz_weiFundingCannotRestartTheClock(uint256,uint256) (runs: 1000, μ: 303451, ~: 303821)
+[PASS] test_lateStakerCannotTakeEarlierStream() (gas: 389367)
+[PASS] test_manyTinyStakesDriftIsDust() (gas: 4205036)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 2.15s (2.14s CPU time)
+
+Ran 7 tests for audit/poc/harness/test/CurvePoC.t.sol:CurvePoC
+[PASS] testFuzz_capQuoteNeverChargesMoreThanOffered(uint256,uint256) (runs: 1000, μ: 4087580, ~: 4087580)
+[PASS] testFuzz_graduationIsExactAndLeavesFeesClaimable(uint256,uint256,uint256) (runs: 1000, μ: 4895006, ~: 4427523)
+[PASS] testFuzz_openingBurnOnlyInsideWindowAndNeverForExempt(uint256,uint256,uint256) (runs: 1000, μ: 4271011, ~: 4275688)
+[PASS] testFuzz_quoteNeverChargesMoreThanOffered(uint256,uint256,uint256,uint256,uint256) (runs: 1000, μ: 4081509, ~: 4081672)
+[PASS] testFuzz_roundTripNeverProfits(uint256,uint256,uint256,uint256) (runs: 1000, μ: 4464821, ~: 4463309)
+[PASS] testFuzz_saleNeverExceedsReserve(uint256,uint256,uint256,uint256) (runs: 1000, μ: 4430451, ~: 4435484)
+[PASS] test_dustCycleCannotDrainTheCurve(uint256) (runs: 1000, μ: 154749298, ~: 154749307)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 111.13s (112.31s CPU time)
+
+Ran 3 test suites in 111.13s (113.28s CPU time): 14 tests passed, 0 failed, 0 skipped (14 total tests)
+
+real	1m57.852s
+user	3m48.827s
+sys	0m0.977s

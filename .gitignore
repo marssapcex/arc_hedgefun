@@ -3,3 +3,7 @@ cache/
 broadcast/
 deploy/*.dryrun.json
 .env
+
+# audit harness build products (the poc profile writes here, not to the repo root)
+audit/poc/harness/out/
+audit/poc/harness/cache/
