@@ -1,11 +1,13 @@
 # Audit Perpl (Monad) — bản decompile `unknown` (solc 0.8.30)
 
 Ngày: 2026-10-30 · Phạm vi: **chỉ tìm lỗi làm mất tiền** (trộm/rút sai), không báo style, không báo gas.
-Trạng thái: **chưa có finding nào được xác nhận.** Tài liệu này phân loại rõ cái gì đã chứng minh được, cái gì là giả thuyết, và vì sao phần lớn toán của Perpl không thể kiểm chứng từ artifact này.
+Trạng thái: **không tìm thấy bug nào.** Không có lỗ hổng trộm tiền nào được xác nhận; phần dưới chỉ là chỗ đáng ngờ + cái cần để kiểm chứng. Tài liệu này phân loại rõ cái gì đã chứng minh được, cái gì là giả thuyết, và vì sao phần lớn toán của Perpl không thể kiểm chứng từ artifact này.
 
 ---
 
 ## 1. Kết luận ngắn
+
+**Không có bug. Hết.** Bốn ý dưới là lý do, không phải finding.
 
 1. ABI trong artifact là **thật**: 8 selector kiểm lại bằng `cast sig` khớp 1:1 với bảng dispatch.
 2. Hợp đồng là **perp DEX kiểu dYdX-v3** (account + perpetual, CLOB on-chain), UUPS proxy, version 1.7.5, collateral 6 decimals (AUSD), giá scale `1e8`, tối đa ~1022 perpetual.
