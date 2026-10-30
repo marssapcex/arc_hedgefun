@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# Dựng lại môi trường để chạy PoC StackingDAO offline.
+# Reproduce the StackingDAO PoCs offline.
 #
 #   ./audit/stackingdao/prepare.sh /home/user/sdao
 #
-# Vì sao phải patch: Clarinet.toml của repo khai báo 20 contract mainnet trong
-# `[[project.requirements]]` và simnet cố tải chúng từ api.hiro.so. Sandbox này
-# không gọi được api.hiro.so, nên phải bỏ requirement + bỏ các contract chỉ dùng
-# cho việc đọc số liệu on-chain. Trong code Clarity chỉ thay đúng một thứ:
-# principal mainnet của pox-4 -> .pox-4-mock (nhánh `is-in-mainnet` vốn không
-# bao giờ chạy trong simnet, nên hành vi không đổi).
+# Why the script patches the repo at all: the upstream Clarinet.toml declares 20
+# mainnet contracts under [[project.requirements]], and simnet tries to fetch them
+# from api.hiro.so. This sandbox cannot reach that host, so the requirements are
+# dropped, together with the contracts that only exist to read on-chain data.
+# Only one thing in the Clarity code itself is changed: the mainnet pox-4
+# principal becomes .pox-4-mock. The `is-in-mainnet` branch never runs in simnet,
+# so behaviour is unchanged.
 set -euo pipefail
 
 DIR="${1:-/home/user/sdao}"
@@ -20,7 +21,7 @@ if [ ! -d "$DIR/.git" ]; then
 fi
 cd "$DIR"
 
-# 1. bỏ mọi requirement mainnet (thứ duy nhất khiến simnet gọi mạng)
+# 1. drop every mainnet requirement -- the only thing that makes simnet hit the network
 python3 - <<'PY'
 import re
 s = open('Clarinet.toml').read()
@@ -28,11 +29,11 @@ s = re.sub(r"\[\[project\.requirements\]\]\ncontract_id = \"[^\"]+\"\n\n?", "", 
 open('Clarinet.toml', 'w').write(s)
 PY
 
-# 2. pox-4 mainnet -> mock (nhánh is-in-mainnet là dead code trong simnet)
+# 2. mainnet pox-4 -> mock (the is-in-mainnet branch is dead code under simnet)
 grep -rl "'SP000000000000000000002Q6VF78.pox-4" contracts --include=*.clar \
   | xargs -r sed -i "s/'SP000000000000000000002Q6VF78\.pox-4/.pox-4-mock/g"
 
-# 3. bỏ các contract chỉ đọc dữ liệu on-chain (block-info-*, protocol-*, job, swap)
+# 3. drop contracts that only read on-chain data (block-info-*, protocol-*, jobs, swap)
 python3 - <<'PY'
 import re, subprocess
 off = subprocess.run(
@@ -50,10 +51,10 @@ PY
 npm ci --no-audit --no-fund
 npm i --no-save --no-audit --no-fund @rollup/rollup-linux-x64-gnu
 
-# 5. PoC
+# 5. PoCs
 mkdir -p tests/poc
 cp "$HERE"/fomo_*.ts tests/poc/
 
 echo
-echo "chạy:"
+echo "run:"
 echo "  cd $DIR && npx vitest run tests/poc/"
