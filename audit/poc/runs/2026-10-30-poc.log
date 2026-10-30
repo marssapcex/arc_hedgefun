@@ -30,3 +30,7 @@ Ran 3 test suites in 111.13s (113.28s CPU time): 14 tests passed, 0 failed, 0 sk
 real	1m57.852s
 user	3m48.827s
 sys	0m0.977s
+== 2026-10-30 Perpl decomp audit + RecycleFeePoC ==
+cmd: FOUNDRY_PROFILE=poc FOUNDRY_FUZZ_RUNS=1000 forge test --use /home/user/bin/solc --offline --force
+result: 25 tests passed, 0 failed (5 suites, 139s), RecycleFeePoC 7/7 @5000 runs separately
+new: audit/poc/harness/test/RecycleFeePoC.t.sol, audit/poc/PERPL_DECOMP_AUDIT.md
