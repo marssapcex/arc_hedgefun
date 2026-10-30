@@ -621,7 +621,7 @@ def build_story():
 
     s.append(PageBreak())
     s.append(Paragraph("6.3 · Log của lần chạy thật", st_h2))
-    log_path = os.path.join(HERE, "poc_run.log")
+    log_path = os.path.join(HERE, "poc_full.log")
     log = open(log_path).read() if os.path.exists(log_path) else "(thiếu poc_run.log)"
     log = "\n".join(l for l in log.split("\n") if l.strip())
     log = wrap_log(log, 100).replace("RUN  v1.6.0 /tmp/sdao3", "RUN  npx vitest run tests/poc/")

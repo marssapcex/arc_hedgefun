@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StackingDAO · FOMO retrieve-loser · Security Report v1.0</title>
+<style>
+  :root { --ink:#12161c; --muted:#5b6572; --rule:#d8dee6; --accent:#b3261e; --blue:#0b4f6c; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.6 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+         color:var(--ink); background:#eef1f5; }
+  header { background:var(--ink); color:#fff; padding:28px 32px 24px; border-bottom:4px solid var(--accent); }
+  header .kicker { color:#8a94a3; font-size:11px; letter-spacing:.14em; text-transform:uppercase; }
+  header h1 { margin:10px 0 4px; font-size:30px; letter-spacing:-.01em; }
+  header p { margin:0; color:#b9c4d2; font-size:14px; max-width:70ch; }
+  .wrap { display:grid; grid-template-columns:300px 1fr; gap:20px; padding:20px 32px 40px; align-items:start; }
+  @media (max-width:900px){ .wrap{ grid-template-columns:1fr; } }
+  .card { background:#fff; border:1px solid var(--rule); border-radius:6px; padding:16px 18px; margin-bottom:16px; }
+  .card h2 { font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--blue); margin:0 0 10px; }
+  .metric { display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-bottom:1px solid var(--rule); font-size:14px; }
+  .metric:last-child { border-bottom:0; }
+  .metric b { color:var(--accent); white-space:nowrap; }
+  a.btn { display:block; text-align:center; background:var(--accent); color:#fff; text-decoration:none;
+          padding:12px 16px; border-radius:5px; font-weight:600; font-size:15px; }
+  a.btn:hover { background:#8f1d17; }
+  a.alt { display:block; text-align:center; margin-top:8px; color:var(--blue); font-size:13px; text-decoration:none; }
+  ul { margin:6px 0 0; padding-left:18px; font-size:14px; color:#26303b; }
+  li { margin:5px 0; }
+  code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12.5px; background:#f3f4f6;
+         padding:1px 5px; border-radius:3px; }
+  iframe { width:100%; height:82vh; border:1px solid var(--rule); border-radius:6px; background:#fff; }
+  .foot { padding:0 32px 30px; color:var(--muted); font-size:12.5px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Security assessment · public report · v1.0 · 30 tháng 10, 2026</div>
+  <h1>Rút cạn quỹ FOMO của StackingDAO</h1>
+  <p><code>retrieve-loser</code> trong <code>contracts/nakamoto/fomo.clar</code> không kiểm tra quyền sở hữu NFT.
+     Một giao dịch từ ví trống lấy 31,25 % toàn bộ quỹ. PoC chạy trên mã nguồn thật, commit a8d7d2a.</p>
+</header>
+
+<div class="wrap">
+  <div>
+    <div class="card">
+      <h2>Số liệu</h2>
+      <div class="metric"><span>Mức độ</span><b>Critical (P0)</b></div>
+      <div class="metric"><span>Attacker lấy</span><b>31,25 % quỹ</b></div>
+      <div class="metric"><span>Vượt quỹ 25 %</span><b>+25 %</b></div>
+      <div class="metric"><span>Người thắng</span><b>không rút được</b></div>
+      <div class="metric"><span>PoC</span><b>3 / 3 xanh</b></div>
+      <div class="metric"><span>Tái lập</span><b>~9 giây</b></div>
+    </div>
+    <div class="card">
+      <h2>Tải báo cáo</h2>
+      <a class="btn" href="StackingDAO_FOMO_Audit_v1.0.pdf" target="_blank" rel="noopener">Mở PDF (19 trang)</a>
+      <a class="alt" href="FOMO_RETRIEVE_LOSER.md" target="_blank" rel="noopener">Bản Markdown</a>
+      <a class="alt" href="fomo_poc_test.ts" target="_blank" rel="noopener">PoC — N = 3</a>
+      <a class="alt" href="fomo_scale_test.ts" target="_blank" rel="noopener">PoC — N = 5, một giao dịch</a>
+      <a class="alt" href="prepare.sh" target="_blank" rel="noopener">Script tái lập</a>
+    </div>
+    <div class="card">
+      <h2>Chạy lại</h2>
+      <ul>
+        <li><code>./prepare.sh /tmp/sdao</code></li>
+        <li><code>cd /tmp/sdao</code></li>
+        <li><code>npx vitest run tests/poc/</code></li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <iframe src="StackingDAO_FOMO_Audit_v1.0.pdf#view=FitH" title="Báo cáo PDF"></iframe>
+  </div>
+</div>
+
+<div class="foot">
+  Mã PoC chỉ chạy trên Clarinet simnet cục bộ với dữ liệu tự tạo. Không có giao dịch nào được gửi lên
+  mainnet và không có ví thật nào bị ảnh hưởng.
+</div>
+</body>
+</html>
