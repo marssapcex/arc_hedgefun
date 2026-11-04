@@ -20,10 +20,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from rpc_probe import (  # noqa: E402
-    CHAIN_IDS, RPCS, TOKENS, call, decode, decode_bool, decode_string,
-    decode_uint, find_rpc, rpc,
-)
+from rpc_probe import find_rpc, rpc, decode  # noqa: E402
 
 PROPOSER_ROLE = "b09aa5aeb3702cfd50b6b62bc4532604938f21248a27a1d5ca736082b6819cc1"
 EXECUTOR_ROLE = "d8aa0f3194971a2a116679f7c2090f6939c8d13fec43cfd25c078a9c61c3ad4c8f8f"
@@ -40,15 +37,15 @@ ZERO = {
     "guardian()": ("0x452a9320", "address"),
     "delay()": ("0x6a42b8f8", "uint"),
     "getMinDelay()": ("0xf27a0c92", "uint"),
-    "timelock()": ("0xcd85c98c", "address"),
+    "timelock()": ("0xd33219b4", "address"),
     "token()": ("0xfc0c546a", "address"),
     "implementation()": ("0x5c60da1b", "address"),
     "oracle()": ("0x7dc0d1d0", "address"),
     "proposalCount()": ("0xda35c664", "uint"),
     "proposalThreshold()": ("0xb58131b0", "uint"),
-    "quorumVotes()": ("0x6124c3d5", "uint"),
-    "quorumNumerator()": ("0x2e63e3ff", "uint"),
-    "quorumDenominator()": ("0x395e2b8a", "uint"),
+    "quorumVotes()": ("0x24bc1a64", "uint"),
+    "quorumNumerator()": ("0xa7713a70", "uint"),
+    "quorumDenominator()": ("0x97c3d334", "uint"),
     "votingDelay()": ("0x3932abb1", "uint"),
     "votingPeriod()": ("0x02a251a3", "uint"),
     "totalSupply()": ("0x18160ddd", "uint"),
@@ -116,6 +113,23 @@ FOLLOW = [
     ("linea", "Mendi timelock proposer A", "0xe3CDa0A0896b70F0eBC6A1848096529AA7AEe9eE", None),
     ("linea", "Mendi timelock proposer B", "0x57cd331C7b2c7582625810465Ea3CF9bdcA21236", None),
     ("monad", "Neverland owner", "0xe72df2dde84880dd706c5976e92ed34bb586a38f", None),
+    # --- vote tokens: total supply + past supply decide whether quorum is reachable ---
+    ("ethereum", "HOP token (owner=timelock)", "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc", None),
+    ("ethereum", "ANGLE token", "0x31429d1856aD1377A8A0079410B297e1a9e214c2", None),
+    ("ethereum", "BiFi vote token (governor.token)", "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc", None),
+    ("ethereum", "FLX token", "0x6243d8CEA23066d098a15582d81a598B4e8391F4", None),
+    ("ethereum", "RGT token", "0xD291E7a03283640FDc51b121aC401383A46cC623", None),
+    ("ethereum", "Rari vote token #2", "0xc7283b66eb1eb5fb86327f08e1b5816b0720212b", None),
+    ("ethereum", "PEAK token", "0x630d98424eFe0Ea27Fb1b3Ab7741907dFFEaAd78", None),
+    ("ethereum", "CTR token", "0xb3Ad645dB386D7F6D753B2b9C3F4B853DA6890B8", None),
+    ("ethereum", "veCTR", "0xe4C09928d834cd58D233CD77B5af3545484B4968", None),
+    ("moonriver", "Moonwell MFAM token", "0xbb8d88bcd9749636bc4d2be22aac4bb3b01a58f1", None),
+    ("fantom", "TAROT token", "0xb7c2ddb1ebac1056231ef22c1b0a13988537a274", None),
+    ("aurora", "Aurigami PLY token", "0x09c9d464b58d96837f8d8b6f4d9fe4ad408d3a4f", None),
+    ("aurora", "TRI token", "0xFa94348467f64D5A457F75F8bc40495D33c65aBB", None),
+    ("flare", "Kinetic JOULE token", "0xE6505f92583103AF7ed9974DEC451A7Af4e3A3bE", None),
+    ("linea", "MENDI token", "0x43e8809ea748eff3204ee01f08872f063e44065f", None),
+    ("monad", "Neverland DUST token", "0xAD96C3dffCD6374294e2573A7fBBA96097CC8d7c", None),
 ]
 
 # ERC20 balances to read on each follow address on ethereum
@@ -147,9 +161,18 @@ def _enc_uint(n):
     return hex(n)[2:].rjust(64, "0")
 
 
+def call(url, contract, data, kind):
+    try:
+        v = rpc(url, "eth_call", [{"to": contract, "data": data}, "latest"], timeout=15)
+        if kind == "raw":
+            return v if v and v != "0x" else None
+        return decode(v, kind)
+    except Exception:
+        return None
+
+
 def has_role(url, contract, role, account):
-    data = "0x91d14854" + role + _enc_addr(account)
-    return call(url, contract, data, "bool")
+    return call(url, contract, "0x91d14854" + role + _enc_addr(account), "uint")
 
 
 def quorum_at(url, contract, block):
@@ -169,10 +192,7 @@ def state_of(url, contract, pid):
 
 
 def erc20_balance(url, token, holder):
-    raw = call(url, token, "0x70a08231" + _enc_addr(holder), "uint")
-    if raw is None:
-        return None
-    return int(raw, 16) if isinstance(raw, str) else raw
+    return call(url, token, "0x70a08231" + _enc_addr(holder), "uint")
 
 
 def storage_addr(url, contract, slot):
@@ -288,13 +308,11 @@ def main():
     endpoints = {}
     for c in chains:
         override = a.rpc if (c == "ethereum" and a.rpc) else None
-        endpoints[c] = find_rpc(c, override)
-        print(f"{c}: {endpoints[c] or 'NO RPC'}", flush=True)
-        if endpoints[c] and c not in chain_blocks:
-            try:
-                chain_blocks[c] = int(rpc(endpoints[c], "eth_blockNumber", []), 16)
-            except Exception:
-                pass
+        u, b = find_rpc(c, override)
+        endpoints[c] = u
+        if b and c not in chain_blocks:
+            chain_blocks[c] = b
+        print(f"{c}: {u or 'NO RPC'} block={chain_blocks.get(c)}", flush=True)
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
         results = list(ex.map(lambda e: probe(e, endpoints, chain_blocks, a.workers), entries))
