@@ -31,6 +31,13 @@ from rpc_probe import rpc  # noqa: E402
 NOW = datetime.datetime.now(datetime.timezone.utc)
 NOW_TS = int(NOW.timestamp())
 HOUR = 3600
+# endpoints known to answer for a DIFFERENT network than the chainlist entry
+BAD_ENDPOINTS = (
+    "mainnet.base.org", "rpc-gel.inkonchain.com", "rpc.mainnet.arc.io",
+    "testnet.zkevm.cronos.org", "rpc-testnet.bitkubchain.io",
+    "devnet.adilchain-rpc.io", "public-zigchain-testnet",
+    "rpc.mayachain.io", "rpc.hydradx.cloud",
+)
 DAY = 86400
 
 
@@ -63,7 +70,7 @@ def try_endpoint(url, expected_id, timeout=5):
         if isinstance(blk, dict) and blk.get("timestamp"):
             ts = int(blk["timestamp"], 16) if str(blk["timestamp"]).startswith("0x") else int(blk["timestamp"])
             r["blockTimestamp"] = ts
-            r["ageSeconds"] = NOW_TS - ts
+            r["ageSeconds"] = int(time.time()) - ts
     except Exception as e:
         r["error"] = f"getBlock: {str(e)[:100]}"
     return r
@@ -76,24 +83,33 @@ def probe_chain(entry, workers):
            "expectedChainId": entry["chainId"], "native": entry.get("native"),
            "addresses": entry.get("addresses", []), "attempts": [], "endpoint": None,
            "status": None, "contracts": []}
-    for url in entry["rpcs"][:4]:
+    valid = []
+    for url in entry["rpcs"][:5]:
         a = try_endpoint(url, entry["chainId"])
+        a["suspect"] = any(w in url.lower() for w in ("testnet", "devnet", "sepolia", "goerli")) \
+            or any(b in url for b in BAD_ENDPOINTS)
         out["attempts"].append(a)
-        if a["blockTimestamp"] is not None and a["chainIdMatches"]:
-            out["endpoint"] = url
-            break
-    if not out["endpoint"]:
+        if a["blockTimestamp"] is not None and a["chainIdMatches"] and not a["suspect"]:
+            valid.append(a)
+    if not valid:
         mism = [a for a in out["attempts"] if a["chainIdMatches"] is False]
-        out["status"] = "CHAINID_MISMATCH" if mism else "DEAD_RPC"
+        susp = [a for a in out["attempts"] if a["suspect"]]
+        if mism:
+            out["status"] = "CHAINID_MISMATCH"
+        elif susp:
+            out["status"] = "SUSPECT_RPC"
+        else:
+            out["status"] = "DEAD_RPC"
         return out
-    ep = out["attempts"][-1]
+    ep = min(valid, key=lambda a: a["ageSeconds"] if a["ageSeconds"] is not None else 10**12)
+    out["endpoint"] = ep["url"]
     age = ep["ageSeconds"]
     out["block"] = ep["block"]
     out["blockTimestamp"] = ep["blockTimestamp"]
     out["ageSeconds"] = age
     out["ageDays"] = round(age / DAY, 2) if age is not None else None
     out["lastBlockTime"] = datetime.datetime.fromtimestamp(ep["blockTimestamp"], datetime.timezone.utc).isoformat()
-    if age < 0:
+    if age < -300:
         out["status"] = "CLOCK_SKEW"
     elif age <= HOUR:
         out["status"] = "LIVE"
@@ -154,10 +170,12 @@ def main():
          "| FROZEN | %d | last block > 30d (zombie thật) |" % counts.get("FROZEN", 0),
          "| DEAD_RPC | %d | không endpoint nào trả lời |" % counts.get("DEAD_RPC", 0),
          "| CHAINID_MISMATCH | %d | endpoint trả chain khác |" % counts.get("CHAINID_MISMATCH", 0),
+         "| SUSPECT_RPC | %d | chỉ có endpoint testnet/sai mạng, loại |" % counts.get("SUSPECT_RPC", 0),
+         "| CLOCK_SKEW | %d | block timestamp lệch > 5 phút |" % counts.get("CLOCK_SKEW", 0),
          "", "## FROZEN / DEAD_RPC (chain chết thật)", "",
          "| Chain | DefiLlama TVL | Status | Block cuối | Tuổi | RPC |", "|---|---|---|---|---|---|"]
     for r in sorted(results, key=lambda x: (x["status"] != "FROZEN", x["status"] != "DEAD_RPC", -(x.get("ageDays") or 0))):
-        if r["status"] in ("FROZEN", "DEAD_RPC", "CHAINID_MISMATCH"):
+        if r["status"] in ("FROZEN", "DEAD_RPC", "CHAINID_MISMATCH", "SUSPECT_RPC", "CLOCK_SKEW"):
             L.append(f"| {r['name']} | ${r['chainTvl']:,.0f} | {r['status']} | "
                      f"{r.get('lastBlockTime','—')[:19]} | {r.get('ageDays','—')}d | {r['endpoint'] or '—'} |")
     L += ["", "## LIVE nhưng DefiLlama báo TVL thấp / 0", "",
