@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-04T15:15:53.972707+00:00",
+  "generatedAt": "2026-11-04T15:24:19.766756+00:00",
   "rpc": "https://ethereum-rpc.publicnode.com",
-  "block": 26342284,
+  "block": 26342326,
   "factory": "0xcC5d905b9c2c8C9329Eb4e25dc086369D6C7777C",
   "forgottenEthContract": "0xb529964f86fbf99a6aa67f72a27e59fa3fa4feac",
   "targets": {
-    "OptionsFactory": {
+    "OptionsFactory (v1 main)": {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "getNumberOfOptionsContracts()": 148,
       "oracleAddress()": "0x7054e08461e3ecb7718b63540addb3c3a1746415",
@@ -14,9 +14,10 @@
       "codeBytes": 24551,
       "nativeWei": 0,
       "address": "0xcC5d905b9c2c8C9329Eb4e25dc086369D6C7777C",
-      "balances": {}
+      "balances": {},
+      "ownerCodeBytes": 170
     },
-    "forgotteneth Opyn v1": {
+    "OptionsFactory (v2/permissionless)": {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "getNumberOfOptionsContracts()": 9,
       "oracleAddress()": "0x7054e08461e3ecb7718b63540addb3c3a1746415",
@@ -25,7 +26,8 @@
       "codeBytes": 24510,
       "nativeWei": 0,
       "address": "0xb529964f86fbf99a6aa67f72a27e59fa3fa4feac",
-      "balances": {}
+      "balances": {},
+      "ownerCodeBytes": 0
     },
     "OptionsExchange": {
       "codeBytes": 3394,
@@ -41,6 +43,45 @@
     }
   },
   "series": [
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1607068800,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 6710584593,
+      "symbol()": "oWETH Put $460 12/04/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $460 12/04/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x0376ae94db1bad7774eb2ba646ff61715b4b5d82",
+      "balances": {
+        "USDC": {
+          "raw": "15061328",
+          "human": 15.061328
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1606464000,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "totalSupply()": 108487351,
+      "symbol()": "oWBTC Put $14000 11/27/20",
+      "decimals()": 7,
+      "name()": "Opyn WBTC Put $14000 11/27/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x0414daf8966732a63bdf926d2fa29d73b468f516",
+      "balances": {}
+    },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
@@ -80,6 +121,45 @@
       }
     },
     {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1605859200,
+      "collateral()": "0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 0,
+      "symbol()": "oDPI $100 Call 11/20/20",
+      "decimals()": 6,
+      "name()": "Opyn DPI Call $100 11/20/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x06e9061947c592f07fb66e569aa3052fa230b068",
+      "balances": {
+        "DPI": {
+          "raw": "62256000000000000",
+          "human": 0.062256
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1614326400,
+      "collateral()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 616773868,
+      "symbol()": "oWBTCc $64000 02/26/21",
+      "decimals()": 3,
+      "name()": "Opyn WBTC Call $64000 02/26/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x079439f960836accd84345c767ea116d133b22c3",
+      "balances": {}
+    },
+    {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
@@ -110,12 +190,7 @@
       "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0x093ea3f329a82bcb2986dfc42ac0e5399dd03676",
-      "balances": {
-        "DYDX": {
-          "raw": "1554660000000000000000",
-          "human": 1554.66
-        }
-      }
+      "balances": {}
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
@@ -133,6 +208,27 @@
       "nativeWei": 0,
       "address": "0x15844029b2c2bf24506e9937739a9a912f1e4354",
       "balances": {}
+    },
+    {
+      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "optionsExchange()": "0x5778f2824a114f6115dc74d432685d3336216017",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1586995200,
+      "collateral()": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "totalSupply()": 10011100000000000,
+      "symbol()": "oETH",
+      "decimals()": 18,
+      "name()": "Opyn ETH Insurance",
+      "codeBytes": 16725,
+      "nativeWei": 0,
+      "address": "0x1bc76312a8549204b23c19ad82bab8079c64c265",
+      "balances": {
+        "DAI": {
+          "raw": "1801998000000000000",
+          "human": 1.801998
+        }
+      }
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
@@ -165,6 +261,50 @@
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
+      "expiry()": 1605859200,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 3930633007,
+      "symbol()": "oWETH Put $400 11/20/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $400 11/20/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x1cb15ad7dc5231b5f6310b1cc549289c285c31c1",
+      "balances": {
+        "USDC": {
+          "raw": "3000000",
+          "human": 3.0
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1604044800,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+      "totalSupply()": 6396676,
+      "symbol()": "oYFI $20000 Put 10/30/20",
+      "decimals()": 7,
+      "name()": "Opyn YFI Put $20000 10/30/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x1f22cba297de123dcf007a517cb97721b0736148",
+      "balances": {
+        "USDC": {
+          "raw": "4230",
+          "human": 0.00423
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
       "expiry()": 1594972800,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 4853198929,
@@ -180,6 +320,23 @@
           "human": 180.0
         }
       }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1605859200,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b",
+      "totalSupply()": 28706182618,
+      "symbol()": "oDPI $60 Put 11/20/20",
+      "decimals()": 7,
+      "name()": "Opyn DPI Put $60 11/20/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x21d2125bbb6eb40c1e004604ee9a0dd1e085337a",
+      "balances": {}
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
@@ -204,6 +361,50 @@
       }
     },
     {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1616745600,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "totalSupply()": 107597067,
+      "symbol()": "oWBTCp $44000 03/26/21",
+      "decimals()": 7,
+      "name()": "Opyn WBTC Put $44000 03/26/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x24e48faba1e5685cc73477873f3734745bd16b99",
+      "balances": {
+        "USDC": {
+          "raw": "5000000",
+          "human": 5.0
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1604044800,
+      "collateral()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 19999570,
+      "symbol()": "oWBTC $12500 Call 10/30/20",
+      "decimals()": 3,
+      "name()": "Opyn WBTC Call $12500 10/30/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x26a353e41b2d34534a1f2856ef059c760ea62ccf",
+      "balances": {
+        "WBTC": {
+          "raw": "100000",
+          "human": 0.001
+        }
+      }
+    },
+    {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
@@ -218,6 +419,50 @@
       "nativeWei": 0,
       "address": "0x26dca35587b9591489bfaa1acb3e7615b5fc3530",
       "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1606464000,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+      "totalSupply()": 194303404,
+      "symbol()": "oYFI Put $7000 11/27/20",
+      "decimals()": 7,
+      "name()": "Opyn YFI Put $7000 11/27/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x2862d540782b4a55da029440a7dd20b12f08707d",
+      "balances": {
+        "USDC": {
+          "raw": "3000000",
+          "human": 3.0
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1608883200,
+      "collateral()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "underlying()": "0x8daebade922df735c38c80c7ebd708af50815faa",
+      "totalSupply()": 0,
+      "symbol()": "otBTCwBTC Put 0.98 12/25/20",
+      "decimals()": 8,
+      "name()": "Opyn tBTCwBTC Put 0.98 12/25/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x28bee0c236c22171ef920ca67dc0a1ffd219fbc0",
+      "balances": {
+        "WBTC": {
+          "raw": "200",
+          "human": 2e-06
+        }
+      }
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
@@ -253,6 +498,71 @@
       "balances": {}
     },
     {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1611907200,
+      "collateral()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 882276368,
+      "symbol()": "oWBTC Call $50000 01/29/21",
+      "decimals()": 3,
+      "name()": "Opyn WBTC Call $50000 01/29/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x2c6eaf03c30ba5881673187c2eb197f40679fcf9",
+      "balances": {
+        "WBTC": {
+          "raw": "12000",
+          "human": 0.00012
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1611302400,
+      "collateral()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 129736311674,
+      "symbol()": "oUNI Call $4 01/22/21",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $4 01/22/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x2e40fe398483ddc20e296c2a75e5cea07f629b9c",
+      "balances": {
+        "USDC": {
+          "raw": "2797475395",
+          "human": 2797.475395
+        },
+        "UNI": {
+          "raw": "1631276637787044883",
+          "human": 1.631277
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1619164800,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "totalSupply()": 0,
+      "symbol()": "",
+      "decimals()": 0,
+      "name()": "",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x2e9c9ea86a9636c549f51e9ba17df4ca0dbeb4dc",
+      "balances": {}
+    },
+    {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
@@ -283,12 +593,24 @@
       "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0x31f88266301b08631f9f0e33fd5c43c2a5d1e5b2",
-      "balances": {
-        "USDC": {
-          "raw": "5000000",
-          "human": 5.0
-        }
-      }
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1607673600,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 0,
+      "symbol()": "",
+      "decimals()": 0,
+      "name()": "",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x35c05cd924e4634716cdcd439c30fa35d0625b5c",
+      "balances": {}
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
@@ -304,12 +626,24 @@
       "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0x37a252b46b226da97e4b61f799620acfca76b206",
-      "balances": {
-        "USDC": {
-          "raw": "72525173",
-          "human": 72.525173
-        }
-      }
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1609488000,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 0,
+      "symbol()": "oWETH Put $590 01/01/21",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $590 01/01/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x3b4dd09722cfddaef430e4609e99ed76e06ce0ca",
+      "balances": {}
     },
     {
       "owner()": "0xce6bb0d052a567c42d9665fe730241f91bc1233f",
@@ -337,6 +671,22 @@
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
+      "expiry()": 1624608000,
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 0,
+      "symbol()": "oETH $400 Call 06/25/21",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $400 06/25/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x3ff390b7629f42aea5f8eeb83ffea1d45aee76b9",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
       "expiry()": 1634284800,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "underlying()": "0x92d6c1e31e14520e676a687f0a93788b716beff5",
@@ -351,6 +701,28 @@
         "USDC": {
           "raw": "1154339651",
           "human": 1154.339651
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1603440000,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "totalSupply()": 72887809524,
+      "symbol()": "oUNI $3.5 Put 10/23/20",
+      "decimals()": 7,
+      "name()": "Opyn UNI Put $3.5 10/23/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x4506f130344da58567b6a61a5731fa2c71db3ea4",
+      "balances": {
+        "USDC": {
+          "raw": "6",
+          "human": 6e-06
         }
       }
     },
@@ -391,12 +763,7 @@
       "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0x452b421be5b30f0c6ad8c3f03c06bdaab4f5c56c",
-      "balances": {
-        "USDC": {
-          "raw": "900358677",
-          "human": 900.358677
-        }
-      }
+      "balances": {}
     },
     {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
@@ -418,6 +785,23 @@
           "human": 338.024106
         }
       }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1613721600,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "totalSupply()": 832078672738,
+      "symbol()": "oUNIp $7 02/19/21",
+      "decimals()": 7,
+      "name()": "Opyn UNI Put $7 02/19/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x481307536e4ceb04c3967705fa4cd822714bbeff",
+      "balances": {}
     },
     {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
@@ -458,6 +842,22 @@
     },
     {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "optionsExchange()": "0x5778f2824a114f6115dc74d432685d3336216017",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1585440000,
+      "underlying()": "0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8",
+      "totalSupply()": 26686057022695124262,
+      "symbol()": "oCRV",
+      "decimals()": 15,
+      "name()": "Opyn y.curve.fi Insurance",
+      "codeBytes": 16725,
+      "nativeWei": 2011925098722635115,
+      "address": "0x4ba8c6ce0e855c051e65dfc37883360efaf7c82b",
+      "balances": {}
+    },
+    {
+      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
@@ -470,6 +870,44 @@
       "codeBytes": 16766,
       "nativeWei": 10000000000000000,
       "address": "0x4edf4f93a45fad46e5a2450bfcffe8ff53d0a5b2",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1616745600,
+      "collateral()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 5394940945,
+      "symbol()": "oUNIc $25 03/26/21",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $25 03/26/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x537e5e300e4888e13461a73095a42da43fac3c86",
+      "balances": {
+        "UNI": {
+          "raw": "260100000000000000",
+          "human": 0.2601
+        }
+      }
+    },
+    {
+      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "optionsExchange()": "0x5778f2824a114f6115dc74d432685d3336216017",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1612915200,
+      "underlying()": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
+      "totalSupply()": 0,
+      "symbol()": "",
+      "decimals()": 0,
+      "name()": "",
+      "codeBytes": 16725,
+      "nativeWei": 0,
+      "address": "0x53bc874dcec311c230e28038e1ac8a6c3a28de61",
       "balances": {}
     },
     {
@@ -515,6 +953,76 @@
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
+      "expiry()": 1603440000,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 3989687052,
+      "symbol()": "oWETH $330 Put 10/23/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $330 10/23/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x5baa0a75f9b4c06564616e2079b1518f6267acff",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1614326400,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "totalSupply()": 175448052,
+      "symbol()": "oWBTCp $28000 02/26/21",
+      "decimals()": 7,
+      "name()": "Opyn WBTC Put $28000 02/26/21",
+      "codeBytes": 16766,
+      "address": "0x5d1e7db9dbe660f8b8e5463f5b46236054b228c7",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1604044800,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 0,
+      "symbol()": "oWETH $360 Put 10/30/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $360 10/30/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x5f0e5580d0415cbb662d0d2d3de106ce8e3ae822",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1602835200,
+      "collateral()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 617203877142,
+      "symbol()": "oUNI $10 Call 10/16/20",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $10 10/16/20",
+      "address": "0x6181cc7d990bb518fb9a9427994b5c74fa6c9b54",
+      "balances": {
+        "UNI": {
+          "raw": "1000100000000000000",
+          "human": 1.0001
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
       "expiry()": 1593763200,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "underlying()": "0xc00e94cb662c3520282e6f5717214004a7f26888",
@@ -522,15 +1030,8 @@
       "symbol()": "oCOMP $250",
       "decimals()": 6,
       "name()": "Opyn COMP Put $250 07/03/2020",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x632882f82c7023f17133fe894263b8b10f6ef2b4",
-      "balances": {
-        "USDC": {
-          "raw": "1000000",
-          "human": 1.0
-        }
-      }
+      "balances": {}
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
@@ -544,9 +1045,22 @@
       "symbol()": "oDPIc $400 09/03/21",
       "decimals()": 6,
       "name()": "Opyn DPI Call $400 09/03/21",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x63ecc618d2e605cdcd0a28ec4ac00eb5cc500dc6",
+      "balances": {}
+    },
+    {
+      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "optionsExchange()": "0x5778f2824a114f6115dc74d432685d3336216017",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1612915200,
+      "underlying()": "0x16de59092dae5ccf4a1e6439d611fd0653f0bd01",
+      "totalSupply()": 2692717391294348,
+      "symbol()": "oyDai",
+      "decimals()": 15,
+      "name()": "Opyn iearnDai insurance",
+      "nativeWei": 19641925816370218,
+      "address": "0x67904e24b071d1406a63eceddea6ba0f4a79ab1e",
       "balances": {}
     },
     {
@@ -560,7 +1074,6 @@
       "symbol()": "oETH $200 Put 05/15/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $200 05/15/20",
-      "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0x684a1d736e934a45f6f5d00c62ddf7a0b7d2064b",
       "balances": {
@@ -581,8 +1094,6 @@
       "symbol()": "test oETH $200",
       "decimals()": 6,
       "name()": "test call option $200",
-      "codeBytes": 16766,
-      "nativeWei": 20000000000000000,
       "address": "0x6ba566e667bdefcec27955689e30a56872cacf98",
       "balances": {}
     },
@@ -595,8 +1106,6 @@
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 21382718184,
       "symbol()": "oETH $220 Put 06/26/20",
-      "decimals()": 7,
-      "name()": "Opyn ETH Put $220 06/26/20",
       "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0x6c60c2a9abb2ca13d5a65fd5aecd362007458d40",
@@ -608,12 +1117,8 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1587715200,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 535186726980,
       "symbol()": "oETH $100 Put 04/24/20",
       "decimals()": 8,
@@ -629,13 +1134,16 @@
       }
     },
     {
-      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1601020800,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 191206400000,
+      "symbol()": "oETH Call $800 12/25/20",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $800 12/25/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x6ce283b9ffb91a05fcaa6904bcc69032544167db",
+      "balances": {}
+    },
+    {
       "totalSupply()": 2927719422,
       "symbol()": "oWETH $340 Put 9/25/20",
       "decimals()": 7,
@@ -651,19 +1159,10 @@
       }
     },
     {
-      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1606464000,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
       "totalSupply()": 6035179569,
       "symbol()": "oWETH $280 Put 11/27/20",
       "decimals()": 7,
       "name()": "Opyn WETH Put $280 11/27/20",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x73c2a775d0f1517701422b6f47413270099245de",
       "balances": {
         "USDC": {
@@ -673,47 +1172,53 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1589529600,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 11537879130,
       "symbol()": "oETH $180 Put 05/15/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $180 05/15/20",
       "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x750aea5fbcd4986f1390ef4d2b98ecce690061fa",
       "balances": {}
     },
     {
-      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1630656000,
-      "collateral()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 342979083246,
       "symbol()": "oUNIc $32 09/03/21",
       "decimals()": 6,
       "name()": "Opyn UNI Call $32 09/03/21",
+      "address": "0x76d3c393c28b79445a05c2c399800642ddd05544",
+      "balances": {}
+    },
+    {
+      "isOwner()": 0,
+      "totalSupply()": 13471343836,
+      "symbol()": "oWETH Put $500 01/01/21",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $500 01/01/21",
+      "codeBytes": 16766,
+      "address": "0x76e73543a14de519575d5efea050f9958b0b484f",
+      "balances": {}
+    },
+    {
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 5763459182,
+      "symbol()": "oWETH Put $520 12/25/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $520 12/25/20",
       "codeBytes": 16766,
       "nativeWei": 0,
-      "address": "0x76d3c393c28b79445a05c2c399800642ddd05544",
+      "address": "0x77fe93a60a579e4ed52159ae711794c6fb7cdea7",
       "balances": {
-        "UNI": {
-          "raw": "1350100000000000000",
-          "human": 1.3501
+        "USDC": {
+          "raw": "5000000",
+          "human": 5.0
         }
       }
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
       "hasExpired()": 1,
       "expiry()": 1597996800,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -722,7 +1227,6 @@
       "symbol()": "oBAL $9.50 Put 08/21/20",
       "decimals()": 7,
       "name()": "Opyn BAL Put $9.50 08/21/20 ",
-      "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0x7aa5e66a3cd1054c3a465ef25b33c9ba47cb8c99",
       "balances": {}
@@ -734,10 +1238,6 @@
       "hasExpired()": 1,
       "expiry()": 1598601600,
       "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "totalSupply()": 184066285737,
-      "symbol()": "oETH $400 Call 08/28/20",
-      "decimals()": 6,
-      "name()": "Opyn ETH Call $400 08/28/20",
       "codeBytes": 16766,
       "nativeWei": 10010300000000000000,
       "address": "0x7b936f18cede94eb24389809af9ca046e8c000b3",
@@ -770,12 +1270,8 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1590825600,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 0,
       "symbol()": "",
       "decimals()": 0,
@@ -786,35 +1282,48 @@
       "balances": {}
     },
     {
-      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1627632000,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "underlying()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "totalSupply()": 278672800000,
+      "symbol()": "oETH Call $640 12/25/20",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $640 12/25/20",
+      "codeBytes": 16766,
+      "nativeWei": 166250000000000000,
+      "address": "0x7eb6dd0cc2df2eae901f76a151ca82bb7be10d68",
+      "balances": {}
+    },
+    {
+      "isOwner()": 0,
+      "symbol()": "oWBTC $10500 Put 10/30/20",
+      "name()": "Opyn WBTC Put $10500 10/30/20",
+      "address": "0x7f3b45c11abcb3b05d266910f34024855d501ef0",
+      "balances": {
+        "USDC": {
+          "raw": "10000000",
+          "human": 10.0
+        }
+      }
+    },
+    {
+      "isOwner()": 0,
       "totalSupply()": 286639448146,
       "symbol()": "oUNIp $15 07/30/21",
       "decimals()": 7,
       "name()": "Opyn UNI Put $15 07/30/21",
       "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x7f978b6395c5fcf44bbc110f077b292962fe1bf5",
-      "balances": {}
+      "balances": {
+        "USDC": {
+          "raw": "130000000",
+          "human": 130.0
+        }
+      }
     },
     {
-      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1594972800,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 11427438817,
       "symbol()": "oETH $220 Put 07/17/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $220 07/17/20",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x7fd612bdadbe878f4553735993fb1715c64496b6",
       "balances": {
         "USDC": {
@@ -824,10 +1333,70 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "totalSupply()": 2000000,
+      "symbol()": "\"oSquonk\"",
+      "decimals()": 8,
+      "name()": "\"oSquonk\"",
+      "address": "0x809ee624ad558cff769e6077088eb3dc2357aaea",
+      "balances": {}
+    },
+    {
+      "expiry()": 1604649600,
+      "totalSupply()": 5856505419,
+      "symbol()": "oWETH $400 Put 11/06/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $400 11/06/20",
+      "address": "0x83cbbc045bd86ca1435e9d3e2f5fe29373d532ce",
+      "balances": {}
+    },
+    {
+      "expiry()": 1616745600,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 228341292787,
+      "symbol()": "oUNIp $18 03/26/21",
+      "decimals()": 7,
+      "name()": "Opyn UNI Put $18 03/26/21",
+      "address": "0x85a7a676d610a95865e842d2754b1fd335e55767",
+      "balances": {
+        "USDC": {
+          "raw": "95000000",
+          "human": 95.0
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "isOwner()": 0,
       "hasExpired()": 1,
+      "expiry()": 1602835200,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol()": "oWETH $320 Put 10/16/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x8722d9558077dc8424352f4407bc704f62c386f7",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "isOwner()": 0,
+      "totalSupply()": 54250000000,
+      "symbol()": "oETHc $2500 12/31/21",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $2500 12/31/2021",
+      "codeBytes": 16766,
+      "nativeWei": 1000000000000000000,
+      "address": "0x87b2da4f767dc99e49eab50422c470c9e8635048",
+      "balances": {
+        "WETH": {
+          "raw": "100000000000",
+          "human": 0.0
+        }
+      }
+    },
+    {
+      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "isOwner()": 0,
       "expiry()": 1585526400,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 9370890,
@@ -837,31 +1406,81 @@
       "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0x87fe8eba753076a943bd2a5f6c3556188064797e",
-      "balances": {
-        "USDC": {
-          "raw": "1000000",
-          "human": 1.0
-        }
-      }
+      "balances": {}
     },
     {
-      "owner()": "0xce6bb0d052a567c42d9665fe730241f91bc1233f",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1596787200,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "totalSupply()": 7616499293,
-      "symbol()": "oETH $270 Put 08/07/20",
-      "decimals()": 7,
-      "name()": "Opyn ETH Put $270 08/07/20",
+      "totalSupply()": 67762808832,
+      "symbol()": "oSNX $6.4 Call 10/23/20",
+      "decimals()": 6,
+      "name()": "Opyn SNX Call $6.4 10/23/20",
       "codeBytes": 16766,
       "nativeWei": 0,
+      "address": "0x88137b53b70064d674058e37873a6683ce281045",
+      "balances": {}
+    },
+    {
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "symbol()": "oETH $270 Put 08/07/20",
+      "decimals()": 7,
       "address": "0x8b0c0a128a99437ca855dd245d5b5eeded97d9c2",
       "balances": {
         "USDC": {
           "raw": "5007723",
           "human": 5.007723
+        }
+      }
+    },
+    {
+      "isOwner()": 0,
+      "expiry()": 1611302400,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 1390578978369,
+      "decimals()": 7,
+      "name()": "Opyn UNI Put $3.25 01/22/21",
+      "nativeWei": 0,
+      "address": "0x8c7134237f9eab3605e98de20055b1763886e151",
+      "balances": {
+        "USDC": {
+          "raw": "198531610",
+          "human": 198.53161
+        }
+      }
+    },
+    {
+      "hasExpired()": 1,
+      "symbol()": "oUNI $8 Call 10/23/20",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $8 10/23/20",
+      "codeBytes": 16766,
+      "address": "0x8d25b3843e3918d0f8d1687f0d3c733065d8d32f",
+      "balances": {}
+    },
+    {
+      "expiry()": 1611907200,
+      "totalSupply()": 8050,
+      "symbol()": "oWBTC Put $35000 01/29/21",
+      "decimals()": 7,
+      "name()": "Opyn WBTC Put $35000 01/29/21",
+      "address": "0x8e6cd902e34ccace8c808826c375cfb5b581b4c6",
+      "balances": {
+        "USDC": {
+          "raw": "28211256",
+          "human": 28.211256
+        }
+      }
+    },
+    {
+      "totalSupply()": 540225501107278,
+      "symbol()": "ocUSDC",
+      "decimals()": 8,
+      "name()": "Opyn cUSDC Insurance",
+      "nativeWei": 1808738900521106633,
+      "address": "0x8ed9f862363ffdfd3a07546e618214b6d59f03d4",
+      "balances": {
+        "WETH": {
+          "raw": "100000000000",
+          "human": 0.0
         }
       }
     },
@@ -877,8 +1496,6 @@
       "symbol()": "",
       "decimals()": 0,
       "name()": "",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x8edb347ee9eabda6ab15d1c73e7d95f92fff6014",
       "balances": {}
     },
@@ -890,12 +1507,7 @@
       "expiry()": 1601020800,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "underlying()": "0xd533a949740bb3306d119cc777fa900ba034cd52",
-      "totalSupply()": 4106494765,
-      "symbol()": "oCRV $3 Put 09/25/20",
-      "decimals()": 7,
-      "name()": "Opyn CRV Put $3 09/25/20",
       "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x9215bd49b59748419eac6bad9dbe247df06ebdb9",
       "balances": {
         "USDC": {
@@ -907,16 +1519,54 @@
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1597392000,
+      "expiry()": 1605859200,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "totalSupply()": 712653048,
+      "underlying()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "symbol()": "oUNI $2.5 Put 11/20/20",
+      "decimals()": 7,
+      "name()": "Opyn UNI Put $2.5 11/20/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x921e31a811c27167c501a8cc25ccbbead0a5dc68",
+      "balances": {
+        "USDC": {
+          "raw": "2501503",
+          "human": 2.501503
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "hasExpired()": 1,
+      "totalSupply()": 12477398674,
+      "symbol()": "oWETH Put $440 11/27/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $440 11/27/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0x93db4d252a8f375c03e66faee84e88a90ad75aeb",
+      "balances": {
+        "USDC": {
+          "raw": "5000000",
+          "human": 5.0
+        }
+      }
+    },
+    {
+      "isOwner()": 0,
+      "symbol()": "oETH $500 Call 06/25/21",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $500 06/25/21",
+      "codeBytes": 16766,
+      "address": "0x94d3e3be40081f5e77fc825b4c29308707beca95",
+      "balances": {}
+    },
+    {
       "symbol()": "oETH $330 Put 08/14/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $330 08/14/20",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x951d51baefb72319d9fbe941e1615938d89abfe2",
       "balances": {
         "USDC": {
@@ -926,17 +1576,22 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1591948800,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 1180968735735,
+      "symbol()": "oETH Call $1000 01/01/21",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $1000 01/01/21",
+      "nativeWei": 476500020000000000,
+      "address": "0x95d52139a62df9abdc9db3996a810c1d319ecd23",
+      "balances": {}
+    },
+    {
+      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "totalSupply()": 30176105176,
       "symbol()": "oETH $210 Put 06/12/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $210 06/12/20",
-      "codeBytes": 16766,
       "address": "0x96a4392e1045f97c2311ea767a3f00191f68c436",
       "balances": {
         "USDC": {
@@ -946,18 +1601,26 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
-      "hasExpired()": 1,
+      "totalSupply()": 1554742373885813,
+      "symbol()": "ocDai",
+      "decimals()": 8,
+      "name()": "Opyn cDai Insurance",
+      "address": "0x98cc3bd6af1880fcfda17ac477b2f612980e5e33",
+      "balances": {
+        "WETH": {
+          "raw": "100000000000",
+          "human": 0.0
+        }
+      }
+    },
+    {
+      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
       "expiry()": 1588924800,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 0,
-      "symbol()": "oETH $160 Put 05/08/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $160 05/08/20",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0x9960c89e8b4a50d7d8e8694ccf5c2f78fbfc931b",
       "balances": {}
     },
@@ -966,14 +1629,97 @@
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1594368000,
+      "expiry()": 1616745600,
+      "collateral()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "name()": "Opyn WBTC Call $80000 03/26/21",
+      "codeBytes": 16766,
+      "address": "0x9af6a0523402f88eec9d348fde6b16b22725a8b4",
+      "balances": {
+        "WBTC": {
+          "raw": "12000",
+          "human": 0.00012
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1611907200,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol()": "oWBTC Put $22000 01/29/21",
+      "decimals()": 7,
+      "name()": "Opyn WBTC Put $22000 01/29/21",
+      "codeBytes": 16766,
+      "address": "0x9b07bf9529e24aab772d4bdd1efcd75aed08e708",
+      "balances": {
+        "USDC": {
+          "raw": "10503662939",
+          "human": 10503.662939
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "symbol()": "oWBTC Call $16000 11/27/20",
+      "decimals()": 3,
+      "name()": "Opyn WBTC Call $16000 11/27/20",
+      "codeBytes": 16766,
+      "address": "0x9b5c2a33037b3f0ee5a864543b636d62387bb3ac",
+      "balances": {}
+    },
+    {
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "underlying()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "totalSupply()": 439453955749,
+      "symbol()": "oUNI Put $3.5 12/25/20",
+      "decimals()": 7,
+      "name()": "Opyn UNI Put $3.5 12/25/20",
+      "address": "0x9e22b1c5804f7ac179b77de79a32e458a0ecb651",
+      "balances": {
+        "USDC": {
+          "raw": "1000000",
+          "human": 1.0
+        }
+      }
+    },
+    {
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 2757224927,
+      "symbol()": "oWETH Put $560 12/18/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $560 12/18/20",
+      "address": "0x9f7ed030f02f3adfe37d74d1e7dacf4bfbec3ea0",
+      "balances": {
+        "USDC": {
+          "raw": "5000000",
+          "human": 5.0
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "collateral()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol()": "oWBTC Call $25000 01/15/21",
+      "decimals()": 3,
+      "name()": "Opyn WBTC Call $25000 01/15/21",
+      "nativeWei": 0,
+      "address": "0xa19e70501f141aaa002fe701299dab88829b3197",
+      "balances": {
+        "WBTC": {
+          "raw": "37316",
+          "human": 0.000373
+        }
+      }
+    },
+    {
       "totalSupply()": 22051697266,
       "symbol()": "oETH $230 Put 07/10/20",
-      "decimals()": 7,
-      "name()": "Opyn ETH Put $230 07/10/20",
       "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xa337bce3112a1b11cb1a916e3b7b6a5ccb61a15d",
       "balances": {
         "USDC": {
@@ -983,19 +1729,12 @@
       }
     },
     {
-      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1621584000,
       "collateral()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 625993946888,
       "symbol()": " oUNIc $40 05/21/21",
       "decimals()": 6,
       "name()": " Opyn UNI Call $40 05/21/21",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xa6863cc87203ea93fafcb8cde8d9143f6b44a638",
       "balances": {
         "UNI": {
@@ -1005,18 +1744,73 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1587715200,
+      "expiry()": 1608883200,
+      "collateral()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 347658141467,
+      "symbol()": "oUNI Call $4 12/25/20",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $4 12/25/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0xa8e65d1a3df5c0852f05cd1894b6196457e17c9c",
+      "balances": {
+        "UNI": {
+          "raw": "101000100000000000000",
+          "human": 101.0001
+        }
+      }
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "hasExpired()": 1,
+      "totalSupply()": 621141553918,
+      "symbol()": "oYFI Call $32000 1/01/21",
+      "decimals()": 6,
+      "name()": "Opyn YFI Call $32000 1/01/21",
+      "address": "0xab9a844588e8f9008a7d13b6584cab1fea717129",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1606464000,
+      "collateral()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 0,
+      "symbol()": "",
+      "decimals()": 0,
+      "name()": "",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0xabf869b5f299622cbf905e96542e8e6ce61b6a69",
+      "balances": {}
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "totalSupply()": 386200930350,
+      "symbol()": "oETH $500 Call 11/20/20",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $500 11/20/20",
+      "codeBytes": 16766,
+      "nativeWei": 145860700000000000,
+      "address": "0xaee2b2097ed86354abfd4e2361761794c6ddc07b",
+      "balances": {}
+    },
+    {
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "totalSupply()": 58785843915,
       "symbol()": "oETH $150 Put 04/24/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $150 04/24/20",
       "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xaefc7b368f7b536c9e5e3f342bf534931ce58584",
       "balances": {
         "USDC": {
@@ -1026,18 +1820,12 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
       "expiry()": 1590134400,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 26817384774,
       "symbol()": "oETH $200 Put 05/22/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $200 05/22/20",
       "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xb036f902ff0e7847a6f2be49045a10ce55a9aa87",
       "balances": {
         "USDC": {
@@ -1047,19 +1835,11 @@
       }
     },
     {
-      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1621584000,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "underlying()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
       "totalSupply()": 391061811,
       "symbol()": " oUNIp $32 05/21/21",
       "decimals()": 7,
       "name()": " Opyn UNI Put $32 05/21/21",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xb5ed8cbf7992b1917f097f7ce06b577909ce44ae",
       "balances": {
         "USDC": {
@@ -1069,35 +1849,26 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1593158400,
-      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 24493792500,
+      "symbol()": "oETH Call $500 12/25/20",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $500 12/25/20",
+      "address": "0xb759e6731df19abd72e0456184890f87dcb6c518",
+      "balances": {
+        "USDC": {
+          "raw": "1750000100",
+          "human": 1750.0001
+        }
+      }
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "totalSupply()": 510909138035,
       "symbol()": "oETH Call 1/250th share 06/26/20",
       "decimals()": 6,
       "name()": "oETH Call 1/250th share 06/26/20",
-      "codeBytes": 16766,
-      "nativeWei": 20000000000000000,
       "address": "0xbaf6cfa199fbbe8a9e5198f2af20040c5e7b0333",
-      "balances": {}
-    },
-    {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1590739200,
-      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "totalSupply()": 221709050000,
-      "symbol()": "oETH $250 Call 05/29/20",
-      "decimals()": 6,
-      "name()": "Opyn ETH Call $250 05/29/20 ",
-      "codeBytes": 16766,
-      "nativeWei": 242000000000000000,
-      "address": "0xbcae1db14f1b366cd4611c75aab2031492b136e9",
       "balances": {}
     },
     {
@@ -1108,12 +1879,110 @@
       "expiry()": 1608883200,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 7993348446,
+      "symbol()": "oWETH Put $400 12/25/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $400 12/25/20",
+      "nativeWei": 0,
+      "address": "0xbc1e2390d693ad617142500e3b7094606433c234",
+      "balances": {}
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "expiry()": 1605254400,
+      "totalSupply()": 12426483026,
+      "symbol()": "oWETH $380 Put 11/13/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH $380 11/13/20",
+      "codeBytes": 16766,
+      "address": "0xbc8b60a19a29e1c016d26ee375cbe1341d57f4ee",
+      "balances": {
+        "USDC": {
+          "raw": "105000060",
+          "human": 105.00006
+        }
+      }
+    },
+    {
+      "totalSupply()": 221709050000,
+      "symbol()": "oETH $250 Call 05/29/20",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $250 05/29/20 ",
+      "address": "0xbcae1db14f1b366cd4611c75aab2031492b136e9",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 9244806885,
+      "symbol()": "oWETH $340 Put 11/27/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $340 11/27/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0xbe57edba57748adf92dc9a391532ed8740fe9054",
+      "balances": {}
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "underlying()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol()": "oWBTC Put $18000 12/25/20",
+      "decimals()": 7,
+      "name()": "Opyn WBTC Put $18000 12/25/20",
+      "nativeWei": 0,
+      "address": "0xc06aba6a3e75f451adf743d394383fedf15cf316",
+      "balances": {
+        "USDC": {
+          "raw": "5000000",
+          "human": 5.0
+        }
+      }
+    },
+    {
+      "expiry()": 1610697600,
+      "totalSupply()": 496786555,
+      "symbol()": "oWBTC Put $20000 01/15/21",
+      "decimals()": 7,
+      "name()": "Opyn WBTC Put $20000 01/15/21",
+      "codeBytes": 16766,
+      "address": "0xc4ff62bc115843d15a3bd33efcbf245cb52640e8",
+      "balances": {
+        "USDC": {
+          "raw": "305000000",
+          "human": 305.0
+        }
+      }
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "hasExpired()": 1,
+      "symbol()": "oUNIc $10 02/19/21",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $10 02/19/21",
+      "codeBytes": 16766,
+      "address": "0xc5a978372ba0fdf9028425894f2da152f1ae68f8",
+      "balances": {
+        "USDC": {
+          "raw": "1000000100",
+          "human": 1000.0001
+        },
+        "UNI": {
+          "raw": "100790984296277",
+          "human": 0.000101
+        }
+      }
+    },
+    {
+      "isOwner()": 0,
       "totalSupply()": 9896761942,
       "symbol()": "oWETH $360 Put 12/25/20",
       "decimals()": 7,
       "name()": "Opyn WETH Put $360 12/25/20",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xc6b11850241c5127eab73af4b6c68bc267cbbff4",
       "balances": {
         "USDC": {
@@ -1123,37 +1992,69 @@
       }
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "expiry()": 1587340800,
+      "totalSupply()": 0,
+      "symbol()": "oyDai",
+      "decimals()": 15,
+      "name()": "Opyn iearnDai insurance",
+      "address": "0xc714cea4daaed7fbc66f936b69e79ec0ee998d93",
+      "balances": {}
+    },
+    {
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 3898249661,
+      "symbol()": "oWETH Put $550 12/25/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $550 12/25/20",
+      "address": "0xc7918dc45836d5fc417f93ef63da52d001f033f3",
+      "balances": {}
+    },
+    {
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1588924800,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 19533662113,
       "symbol()": "oETH $160 Put 05/08/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $160 05/08/20",
       "address": "0xc8f95e13eff0165e5e381ea1878c56d93562d7d7",
-      "balances": {
-        "USDC": {
-          "raw": "21005023",
-          "human": 21.005023
-        }
-      }
+      "balances": {}
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1611907200,
+      "symbol()": "oWBTC Call $64000 01/29/21",
+      "decimals()": 3,
+      "name()": "Opyn WBTC Call $64000 01/29/21",
+      "address": "0xcad0c9aff9f44f86bcce10f8ffeb14b3d199997f",
+      "balances": {
+        "WBTC": {
+          "raw": "13000",
+          "human": 0.00013
+        }
+      }
+    },
+    {
+      "totalSupply()": 10354034777,
+      "symbol()": "oDPI Put $90 12/25/20",
+      "decimals()": 7,
+      "name()": "Opyn DPI Put $90 12/25/20",
+      "nativeWei": 0,
+      "address": "0xd047035ef71496e2b83dd2063e2fc50a8331873d",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "hasExpired()": 1,
       "expiry()": 1593763200,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "underlying()": "0xc00e94cb662c3520282e6f5717214004a7f26888",
       "totalSupply()": 3543723016,
-      "symbol()": "oCOMPp $150 Put 07/03/20",
-      "decimals()": 6,
       "name()": "Opyn COMP Put $150 07/03/20",
       "codeBytes": 16766,
+      "nativeWei": 0,
       "address": "0xd12a0a8b672477d76a1d5451b72a0ba8b1e624c4",
       "balances": {
         "USDC": {
@@ -1163,28 +2064,39 @@
       }
     },
     {
-      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1625212800,
-      "collateral()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "totalSupply()": 458455397834,
-      "decimals()": 6,
-      "name()": "Opyn UNI Call $32 07/02/21",
-      "codeBytes": 16766,
-      "address": "0xd186f45f87bf6dbb8e4902ae25603adaa388c2c1",
+      "symbol()": "oSNX $3.75 Put 10/23/20",
+      "decimals()": 7,
+      "name()": "Opyn SNX Put $3.75 10/23/20",
+      "address": "0xd1467d8e6eff2381d62e770cf021e6addbf5d6d7",
       "balances": {}
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "isOwner()": 0,
       "hasExpired()": 1,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "totalSupply()": 91670238,
+      "expiry()": 1625212800,
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 458455397834,
+      "symbol()": "oUNIc $32 07/02/21",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $32 07/02/21",
+      "nativeWei": 0,
+      "address": "0xd186f45f87bf6dbb8e4902ae25603adaa388c2c1",
+      "balances": {
+        "UNI": {
+          "raw": "200100000000000000",
+          "human": 0.2001
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "symbol()": "oYFI $8500 Put 09/18/20 ",
       "decimals()": 7,
       "name()": "Opyn YFI Put $8500 09/18/20 ",
+      "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0xd1cec2f67fdc4c60e0963515dfc3343f31e32e47",
       "balances": {
@@ -1195,13 +2107,43 @@
       }
     },
     {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "totalSupply()": 1881134049552,
+      "symbol()": "oUNI $2.5 Put 10/16/20",
+      "decimals()": 7,
+      "name()": "Opyn UNI Put $2.5 10/16/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0xd2ca7c3285c784270c4a2b69d6343bc11f163690",
+      "balances": {
+        "USDC": {
+          "raw": "910000100",
+          "human": 910.0001
+        }
+      }
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol()": "oUNIc $32 04/23/21",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $32 04/23/21",
+      "address": "0xd473a895943f9dd0cae3dd26d19414302f4978b9",
+      "balances": {
+        "UNI": {
+          "raw": "140100000000000000",
+          "human": 0.1401
+        }
+      }
+    },
+    {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "expiry()": 1593158400,
       "totalSupply()": 16861658248,
       "symbol()": "oETH $180 Put 06/26/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $180 06/26/20",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xd48723715cc1ca4fb10427a9a298094ec1e08adb",
       "balances": {
         "USDC": {
@@ -1211,11 +2153,8 @@
       }
     },
     {
-      "hasExpired()": 1,
       "totalSupply()": 35589752003,
-      "symbol()": "oETH $200 Put 05/08/20",
       "decimals()": 7,
-      "name()": "Opyn ETH Put $200 05/08/20",
       "codeBytes": 16766,
       "nativeWei": 0,
       "address": "0xd79ab5a71fa2099ef30df0e8a81f8c200aac36f1",
@@ -1231,6 +2170,16 @@
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
+      "expiry()": 1608883200,
+      "collateral()": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol()": "oWBTC Call $20000 12/25/20",
+      "decimals()": 3,
+      "name()": "Opyn WBTC Call $20000 12/25/20",
+      "address": "0xda4c285ce9796fb4c35f99d6066ce11ec18ec4cc",
+      "balances": {}
+    },
+    {
       "expiry()": 1601625600,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "underlying()": "0xba100000625a3754423978a60c9317c58a424e3d",
@@ -1238,8 +2187,6 @@
       "symbol()": "oBAL $22 Put 10/02/20",
       "decimals()": 7,
       "name()": "Opyn BAL Put $22 10/02/20",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xdb0991dfc7e828b5a2837dc82d68e16490562c8d",
       "balances": {
         "USDC": {
@@ -1253,39 +2200,98 @@
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1625011200,
-      "underlying()": "0x9ba00d6856a4edf4665bca2c2309936572473b7e",
-      "totalSupply()": 24604000000,
-      "symbol()": "oaUSDC",
+      "expiry()": 1610092800,
+      "collateral()": "0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b",
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 19599030643,
+      "symbol()": "oDPI Call $125 01/08/21",
       "decimals()": 6,
-      "name()": "Opyn aUSDC insurance",
+      "name()": "Opyn DPI Call $125 01/08/21",
       "codeBytes": 16766,
-      "nativeWei": 190050265097619846369,
-      "address": "0xde34d5e3f942b4543c309a0fb0461497e72c793c",
+      "nativeWei": 0,
+      "address": "0xddac24d12dd07e4e2b772cfc64e3eb47e79c74a3",
+      "balances": {
+        "DPI": {
+          "raw": "500000000000000000",
+          "human": 0.5
+        }
+      }
+    },
+    {
+      "optionsExchange()": "0x5778f2824a114f6115dc74d432685d3336216017",
+      "isOwner()": 0,
+      "expiry()": 1612915200,
+      "symbol()": "ocDai",
+      "decimals()": 8,
+      "name()": "Opyn cDai Insurance",
+      "codeBytes": 16725,
+      "address": "0xddac4aed7c8f73032b388efe2c778fc194bc81ed",
       "balances": {}
     },
     {
-      "owner()": "0xce6bb0d052a567c42d9665fe730241f91bc1233f",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "hasExpired()": 1,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "totalSupply()": 10368157295,
-      "name()": "Opyn ETH Put $180 09/25/20",
-      "nativeWei": 0,
-      "address": "0xe3a2c34fa2f59ffa95c4acd1e5663633d45bc3ad",
+      "expiry()": 1625011200,
+      "symbol()": "oaUSDC",
+      "name()": "Opyn aUSDC insurance",
+      "codeBytes": 16766,
+      "address": "0xde34d5e3f942b4543c309a0fb0461497e72c793c",
       "balances": {
-        "USDC": {
-          "raw": "680322",
-          "human": 0.680322
+        "WETH": {
+          "raw": "100000000000",
+          "human": 0.0
         }
       }
+    },
+    {
+      "totalSupply()": 5000000,
+      "symbol()": "oUNI $10 Call 12/31/21",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $10 12/31/21",
+      "address": "0xe0357e100a1c01e9f86a9ac9cb0b63637d55b7d7",
+      "balances": {
+        "UNI": {
+          "raw": "500100000000000000",
+          "human": 0.5001
+        }
+      }
+    },
+    {
+      "hasExpired()": 1,
+      "underlying()": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+      "symbol()": "oYFI Put $25000 1/01/21",
+      "decimals()": 7,
+      "name()": "Opyn YFI Put $25000 1/01/21",
+      "codeBytes": 16766,
+      "address": "0xe17900d324fb41821cc38499063b2e3bbae6c27e",
+      "balances": {}
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 10368157295,
+      "symbol()": "oETH $180 Put 09/25/20",
+      "decimals()": 7,
+      "name()": "Opyn ETH Put $180 09/25/20",
+      "address": "0xe3a2c34fa2f59ffa95c4acd1e5663633d45bc3ad",
+      "balances": {}
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1605859200,
+      "totalSupply()": 472504146322,
+      "symbol()": "oUNI $4 Call 11/20/20",
+      "decimals()": 6,
+      "name()": "Opyn UNI Call $4 11/20/20",
+      "codeBytes": 16766,
+      "address": "0xe446a3247f2144aea33d5e776f2ecedb812a5a40",
+      "balances": {}
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "expiry()": 1596182400,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "totalSupply()": 5676573540,
       "symbol()": "oETH $220 Put 07/31/20 ",
       "decimals()": 7,
@@ -1302,36 +2308,67 @@
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "isOwner()": 0,
-      "hasExpired()": 1,
-      "expiry()": 1601020800,
-      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      "underlying()": "0xc00e94cb662c3520282e6f5717214004a7f26888",
-      "totalSupply()": 52837063,
       "symbol()": "oCOMP $150 Put 09/25/20",
       "decimals()": 7,
       "name()": "Opyn COMP Put $150 09/25/20",
-      "codeBytes": 16766,
       "address": "0xe951ebe6b4420ab3f4844cf36dedd263d095b416",
       "balances": {}
     },
     {
+      "underlying()": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "totalSupply()": 147792844971,
+      "symbol()": "oUNIp $22 04/23/21",
+      "decimals()": 7,
+      "name()": "Opyn UNI Put $22 04/23/21",
+      "address": "0xea81e7e022e5fe7a19b5a0ed3d5e5eac01d5ed37",
+      "balances": {
+        "USDC": {
+          "raw": "5000000",
+          "human": 5.0
+        }
+      }
+    },
+    {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
-      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
-      "expiry()": 1592553600,
+      "isOwner()": 0,
+      "hasExpired()": 1,
+      "expiry()": 1608883200,
       "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b",
+      "totalSupply()": 0,
+      "symbol()": "",
+      "decimals()": 0,
+      "name()": "",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0xeb3937eba6f664f36399db5ffe43fc1f5897fafb",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "expiry()": 1632470400,
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 208075200,
+      "symbol()": "oETH Call $666 09/24/21",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $666 09/24/21",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0xec190e72d6ab75264004400ddfbb59351d8a3c3b",
+      "balances": {}
+    },
+    {
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 6107445128,
       "symbol()": "oETH $230 Put 06/19/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $230 06/19/20",
-      "codeBytes": 16766,
-      "nativeWei": 0,
       "address": "0xecf154b61e1d6ede932550efadb6d9c07b36bb4f",
       "balances": {}
     },
     {
-      "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
-      "totalSupply()": 35894813301,
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "expiry()": 1590739200,
       "symbol()": "oETH $150 Put 05/29/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $150 05/29/20",
@@ -1347,44 +2384,123 @@
     },
     {
       "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "totalSupply()": 0,
+      "symbol()": "",
+      "decimals()": 0,
+      "name()": "",
+      "codeBytes": 16766,
+      "address": "0xed0c96cb50eddeed73911bf9ad0895d876784857",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
       "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
       "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1604044800,
-      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "expiry()": 1602230400,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "underlying()": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "totalSupply()": 9608213667,
+      "symbol()": "oWETH $330 Put 10/9/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $330 10/9/20",
+      "address": "0xeed9c24a7e9c952b1eff581c0c0f71ac09c341e9",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "expiry()": 1608278400,
+      "symbol()": "oWETH Put $600 12/18/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $600 12/18/20",
+      "codeBytes": 16766,
+      "nativeWei": 0,
+      "address": "0xef99e80d6963d801b1f2b4c61f780082d2642152",
+      "balances": {
+        "USDC": {
+          "raw": "5000058",
+          "human": 5.000058
+        }
+      }
+    },
+    {
+      "totalSupply()": 0,
+      "symbol()": "oWETH Put $570 12/11/20",
+      "decimals()": 7,
+      "name()": "Opyn WETH Put $570 12/11/20",
+      "codeBytes": 16766,
+      "address": "0xef9a2ec820dc12aade949a7547fa7234a1675888",
+      "balances": {}
+    },
+    {
+      "isOwner()": 0,
+      "totalSupply()": 59685713011,
+      "symbol()": "oDPI $100 Call 11/20/20",
+      "decimals()": 6,
+      "name()": "Opyn DPI Call $100 11/20/20",
+      "nativeWei": 0,
+      "address": "0xf950d2fdfda2914b9414b6f61895a77bf954fe23",
+      "balances": {
+        "DPI": {
+          "raw": "3009998000000000000",
+          "human": 3.009998
+        }
+      }
+    },
+    {
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
       "totalSupply()": 182705000000,
       "symbol()": "oETH $500 Call 10/30/20",
       "decimals()": 6,
       "name()": "Opyn ETH Call $500 10/30/20",
-      "codeBytes": 16766,
       "nativeWei": 130000000000000000,
       "address": "0xf9aba2e43fb19184408ea3b572a0fd672946f87b",
       "balances": {}
     },
     {
       "owner()": "0x9e68b67660c223b3e0634d851f5df821e0e17d84",
+      "optionsExchange()": "0x39246c4f3f6592c974ebc44f80ba6dc69b817c71",
+      "isOwner()": 0,
       "hasExpired()": 1,
-      "expiry()": 1592553600,
-      "totalSupply()": 8671059971,
+      "collateral()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "symbol()": "oETH $240 Put 06/19/20",
       "decimals()": 7,
       "name()": "Opyn ETH Put $240 06/19/20",
       "codeBytes": 16766,
+      "nativeWei": 0,
       "address": "0xfbcaac56ab9c43ecd7733e1da1b20ab7f9a936aa",
+      "balances": {}
+    },
+    {
+      "owner()": "0x87887cf0e37d937f989ab76b99e4f4682da044c4",
+      "hasExpired()": 1,
+      "underlying()": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "totalSupply()": 49267333357,
+      "symbol()": "oETH $400 Call 11/27/20",
+      "decimals()": 6,
+      "name()": "Opyn ETH Call $400 11/27/20",
+      "codeBytes": 16766,
+      "nativeWei": 2000000000000000,
+      "address": "0xfc19b36158d9a004d3550b7f29ec57ec5ef2ddc9",
       "balances": {}
     }
   ],
   "totals": {
-    "seriesProbed": 70,
-    "seriesTotal": 148,
-    "nativeEthOnSeries": 202.09356509761986,
+    "seriesProbed": 157,
+    "seriesTotal": 157,
+    "seriesEnumerated": 157,
+    "nativeEthOnSeries": 17.392216645060113,
     "erc20OnSeries": {
+      "USDC": 23085.314349000004,
       "WETH": 0.0,
-      "DYDX": 1554.66,
-      "USDC": 6194.434859,
-      "UNI": 13.696931
+      "DPI": 3.572254,
+      "DAI": 1.801998,
+      "UNI": 117.07880900000002,
+      "WBTC": 0.0017450000000000002
     },
-    "expiredSeries": 66,
-    "seriesWithCode": 67
+    "expiredSeries": 91,
+    "seriesWithCode": 102
   }
 }
