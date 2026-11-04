@@ -130,6 +130,13 @@ FOLLOW = [
     ("flare", "Kinetic JOULE token", "0xE6505f92583103AF7ed9974DEC451A7Af4e3A3bE", None),
     ("linea", "MENDI token", "0x43e8809ea748eff3204ee01f08872f063e44065f", None),
     ("monad", "Neverland DUST token", "0xAD96C3dffCD6374294e2573A7fBBA96097CC8d7c", None),
+    # --- addresses discovered in follow v1 storage slots ---
+    ("flare", "Kinetic oracle admin (slot0)", "0x58b1b315319ce94fff3a665e2c4a7f61375aaba8", None),
+    ("moonriver", "Moonwell comptroller impl (slot2)", "0x8529ea4dbdca738aa928d682ea9c1382bf2ff098", None),
+    ("moonriver", "Moonwell oracle slot1", "0x95c8465dabfdaf587c6f93a82c10018e7b9d3eb0", None),
+    ("linea", "Mendi/Neverland Safe singleton", "0x29fcb43b46531bca003ddc8fcb67ffe91900c762", None),
+    ("aurora", "Aurigami PLY admin (slot5)", "0x4444588443c3a91288c5002483449aba1054192b", None),
+    ("fantom", "Tarot owner (slot0)", "0x5b0390bccca1f040d8993eb6e4ce8ded93721765", None),
 ]
 
 # ERC20 balances to read on each follow address on ethereum
@@ -162,13 +169,19 @@ def _enc_uint(n):
 
 
 def call(url, contract, data, kind):
-    try:
-        v = rpc(url, "eth_call", [{"to": contract, "data": data}, "latest"], timeout=15)
-        if kind == "raw":
-            return v if v and v != "0x" else None
-        return decode(v, kind)
-    except Exception:
-        return None
+    import time
+    for attempt in range(3):
+        try:
+            v = rpc(url, "eth_call", [{"to": contract, "data": data}, "latest"], timeout=15)
+            if kind == "raw":
+                return v if v and v != "0x" else None
+            return decode(v, kind)
+        except Exception as e:
+            if "429" in str(e) or "Too Many" in str(e):
+                time.sleep(0.8 * (attempt + 1))
+                continue
+            return None
+    return None
 
 
 def has_role(url, contract, role, account):
@@ -212,7 +225,7 @@ def probe(entry, endpoints, chain_blocks, workers=12):
            "rpc": url, "governorChecked": governor, "calls": {}, "storage": {},
            "roles": {}, "balances": {}, "proposals": {}}
     try:
-        code = rpc(url, "eth_getCode", [addr, "latest"])
+        code = rpc(url, "eth_getCode", [addr, "latest"], timeout=20)
         out["codeBytes"] = (len(code) - 2) // 2 if isinstance(code, str) else 0
     except Exception as e:
         out["codeBytes"] = 0
@@ -223,7 +236,7 @@ def probe(entry, endpoints, chain_blocks, workers=12):
     jobs = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as ex:
         for name, (selector, kind) in ZERO.items():
-            jobs.append((name, ex.submit(call, url, addr, "0x" + selector, kind)))
+            jobs.append((name, ex.submit(call, url, addr, selector, kind)))
         for name, fut in jobs:
             try:
                 v = fut.result(timeout=25)
