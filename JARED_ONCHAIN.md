@@ -1,18 +1,18 @@
 # JaredFromSubway drain — read-only on-chain check
 
-Generated 2026-11-04T16:20:35.624340+00:00 · `https://ethereum-rpc.publicnode.com` · head 26342606. No tx, no fork, no key.
+Generated 2026-11-04T16:27:45.774685+00:00 · `https://ethereum-rpc.publicnode.com` · head 26342642. No tx, no fork, no key.
 
-Drain block **25360696** = 2026-06-20T18:49:11+00:00. Sweep tx `0x2be8704f5a59b69e0b71f64aefdb99eb0e8ae9fb3926147c581910d71bcf3e65` → `0xb84db016324e8f2bfdd8dd9c260338aee0a8df52`, selector `0xc269a509`, status `None`, gas `None`.
+Drain block **25360696** = 2026-06-20T18:49:11+00:00. Sweep tx `0x2be8704f5a59b69e0b71f64aefdb99eb0e8ae9fb3926147c581910d71bcf3e65` → `0xb84db016324e8f2bfdd8dd9c260338aee0a8df52`, selector `0xc269a509`, status `0x1`, gas `1378524`.
 
 Real ERC-20 `Transfer` logs with `from` = bot `0x1f2f…f387`, summed from the receipt:
 
 | Token | Transfer legs | Amount |
 |---|---|---|
-| WETH | 0 | 0.000000 |
-| USDC | 0 | 0.000000 |
-| USDT | 0 | 0.000000 |
+| WETH | 16 | 1,474.582523 |
+| USDC | 20 | 2,870,573.127680 |
+| USDT | 14 | 2,035,760.155871 |
 
-Total logs in receipt: 0; real-token legs out of bot: —.
+Log source: `eth_getTransactionReceipt@https://1rpc.io/eth`. Total logs: 50; real-token legs out of bot: 50.
 
 Coordinator `0xb84db016324e8f2bfdd8dd9c260338aee0a8df52` code today: 2537 bytes.
 
