@@ -160,13 +160,21 @@ def main():
             got = list(ex.map(lambda j: call(url, j[1], SERIES_VIEW[0], "address", hex(j[2])), jobs))
         addrs = sorted({ad for ad in got if ad})
         print(f"{n} series total, {len(jobs)} enumerated, {len(addrs)} unique addresses", flush=True)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:
             futs = {ad: ex.submit(read_all, url, ad) for ad in addrs}
             balfuts = {ad: ex.submit(balances, url, ad) for ad in addrs}
             for ad in addrs:
-                d = futs[ad].result(timeout=60)
+                try:
+                    d = futs[ad].result(timeout=90)
+                except Exception as e:
+                    print(f"  read_all failed {ad}: {str(e)[:100]}", flush=True)
+                    d = {"address": ad, "error": str(e)[:120]}
                 d["address"] = ad
-                d["balances"] = balfuts[ad].result(timeout=60)
+                try:
+                    d["balances"] = balfuts[ad].result(timeout=90)
+                except Exception as e:
+                    print(f"  balances failed {ad}: {str(e)[:100]}", flush=True)
+                    d["balances"] = {}
                 doc["series"].append(d)
         eth = sum(s.get("nativeWei", 0) for s in doc["series"]) / 1e18
         erc = {}
