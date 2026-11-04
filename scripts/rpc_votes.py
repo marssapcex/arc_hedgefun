@@ -109,7 +109,7 @@ def main():
             if not endpoints.get(chain):
                 continue
             for name, (sel, needs_block) in SELS.items():
-                data = "0x" + sel + a32(account)
+                data = sel + a32(account)
                 if needs_block and blocks.get(chain):
                     data += u32(blocks[chain] - 1)
                 if needs_block and not blocks.get(chain):
