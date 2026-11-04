@@ -1,0 +1,21 @@
+name: llama-snapshot
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch DefiLlama snapshots
+        run: |
+          set -e
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/lite/protocols2 -o protocols2.json
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/protocols -o protocols_full.json
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/v2/chains -o chains.json
+          ls -la *.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: llama-data
+          path: "*.json"
+          retention-days: 1
