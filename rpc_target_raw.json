@@ -1,0 +1,608 @@
+{
+  "generatedAt": "2026-11-04T10:23:16.144486+00:00",
+  "method": "read-only eth_call / eth_getCode / eth_getBalance / eth_getStorageAt",
+  "endpoints": {
+    "ethereum": "https://ethereum-rpc.publicnode.com",
+    "moonriver": "https://moonriver.drpc.org"
+  },
+  "blocks": {
+    "ethereum": 26340823,
+    "moonriver": 17381654
+  },
+  "results": [
+    {
+      "chain": "moonriver",
+      "label": "Moonwell Apollo governor",
+      "address": "0x2BE2e230e89c59c8E20E633C524AD2De246e7370",
+      "calls": {
+        "getQuorum()": 40000001000000000000000000,
+        "currentQuorum()": 40000001000000000000000000,
+        "breakGlassGuardian()": "0x5ded9d1025a158554ab19540ae83182d890bb8db",
+        "guardianSunset()": 1681187191,
+        "govToken()": "0xbb8d88bcd9749636bc4d2be22aac4bb3b01a58f1",
+        "proposalCount()": 238,
+        "proposalThreshold()": 100000000000000000000000000,
+        "votingDelay()": 60,
+        "votingPeriod()": 259200,
+        "timelock()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 22521
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell Apollo timelock",
+      "address": "0x04e6322D196E0E4cCBb2610dd8B8f2871E160bd7",
+      "calls": {
+        "admin()": "0x2be2e230e89c59c8e20e633c524ad2de246e7370",
+        "delay()": 86400
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 7486
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell Apollo Unitroller",
+      "address": "0x0b7a0EAA884849c6Af7a129e899536dDDcA4905E",
+      "calls": {
+        "admin()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7",
+        "oracle()": "0x892be716dcf0a6199677f355f45ba8cc123baf60"
+      },
+      "roles": {},
+      "balances": {
+        "native": 8512587738918715260996
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 1508
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell Apollo oracle",
+      "address": "0x892bE716Dcf0A6199677F355f45ba8CC123BAF60",
+      "calls": {
+        "admin()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 3985
+    },
+    {
+      "chain": "moonriver",
+      "label": "MFAM token",
+      "address": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "calls": {
+        "totalSupply()": 1000000000000000000000000000,
+        "decimals()": 18,
+        "symbol()": "MFAM"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 8186
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell comptroller impl",
+      "address": "0x8529ea4dbdca738aa928d682ea9c1382bf2ff098",
+      "calls": {
+        "admin()": "0x9ea6965c44d70beb98788490e8c306f5e51bd949"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 24241
+    },
+    {
+      "chain": "ethereum",
+      "label": "Hop timelock",
+      "address": "0xeea8422a08258e73c139fc32a25e10410c14bd7a",
+      "calls": {
+        "getMinDelay()": 172800,
+        "PROPOSER_ROLE()": "0xb09aa5aeb3702cfd50b6b62bc4532604938f21248a27a1d5ca736082b6819cc1",
+        "EXECUTOR_ROLE()": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+      },
+      "roles": {
+        "hasRole(PROPOSER_ROLE,governor)": 1,
+        "hasRole(ADMIN_ROLE,governor)": 0
+      },
+      "balances": {
+        "native": 9900000000000000,
+        "HOP": {
+          "raw": "511540519882376695197969001",
+          "human": 511540519.8823767
+        }
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 11395
+    },
+    {
+      "chain": "ethereum",
+      "label": "Hop governor",
+      "address": "0xed8bdb5895b8b7f9fdb3c087628fd8410e853d48",
+      "calls": {
+        "proposalThreshold()": 1000000000000000000000000,
+        "votingDelay()": 1,
+        "votingPeriod()": 45818,
+        "timelock()": "0xeea8422a08258e73c139fc32a25e10410c14bd7a",
+        "token()": "0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc"
+      },
+      "roles": {
+        "quorum(block-1)": 60000000000000000000000000
+      },
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 19793
+    },
+    {
+      "chain": "ethereum",
+      "label": "HOP token",
+      "address": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
+      "calls": {
+        "owner()": "0xeea8422a08258e73c139fc32a25e10410c14bd7a",
+        "totalSupply()": 1000000000000000000000000000,
+        "decimals()": 18,
+        "symbol()": "HOP"
+      },
+      "roles": {
+        "getPastTotalSupply(block-1)": 1000000000000000000000000000
+      },
+      "balances": {
+        "native": 0,
+        "HOP": {
+          "raw": "8169322578813333002202782",
+          "human": 8169322.578813333
+        }
+      },
+      "votes": {
+        "selector": "0x9ab24eb0",
+        "account": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
+        "votes": 601160863183579280948
+      },
+      "markets": {},
+      "codeBytes": 19146
+    },
+    {
+      "chain": "ethereum",
+      "label": "Hop L1 bridge USDC",
+      "address": "0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a",
+      "calls": {},
+      "roles": {},
+      "balances": {
+        "USDC": {
+          "raw": "535309328085",
+          "human": 535309.328085
+        }
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 19299
+    },
+    {
+      "chain": "ethereum",
+      "label": "Hop L1 bridge DAI",
+      "address": "0x3d4Cc8A61c7528Fd86C55cfe061a78dCBA48EDd1",
+      "calls": {},
+      "roles": {},
+      "balances": {},
+      "votes": {},
+      "markets": {},
+      "codeBytes": 19373
+    },
+    {
+      "chain": "ethereum",
+      "label": "Hop L1 bridge ETH",
+      "address": "0x3E4a3a4796d16c0Cd582C382691998f7c06420B6",
+      "calls": {},
+      "roles": {},
+      "balances": {
+        "USDT": {
+          "raw": "266028923335",
+          "human": 266028.923335
+        }
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 19373
+    },
+    {
+      "chain": "ethereum",
+      "label": "Angle timelock",
+      "address": "0x5183f032bf42109cd370b9559fd22207e432301e",
+      "calls": {
+        "getMinDelay()": 0,
+        "PROPOSER_ROLE()": "0xb09aa5aeb3702cfd50b6b62bc4532604938f21248a27a1d5ca736082b6819cc1",
+        "EXECUTOR_ROLE()": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+      },
+      "roles": {
+        "hasRole(PROPOSER_ROLE,governor)": 1,
+        "hasRole(ADMIN_ROLE,governor)": 0
+      },
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 8542
+    },
+    {
+      "chain": "ethereum",
+      "label": "Angle governor",
+      "address": "0x59153e939c5b4721543251ff3049ea04c755373b",
+      "calls": {
+        "proposalThreshold()": 2500000000000000000000000,
+        "votingDelay()": 545,
+        "votingPeriod()": 19636,
+        "timelock()": "0x5183f032bf42109cd370b9559fd22207e432301e",
+        "token()": "0x31429d1856ad1377a8a0079410b297e1a9e214c2"
+      },
+      "roles": {
+        "quorum(block-1)": 5000000000000000000000000
+      },
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 2673
+    },
+    {
+      "chain": "ethereum",
+      "label": "ANGLE token",
+      "address": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
+      "calls": {
+        "totalSupply()": 1000000000000000000000000000,
+        "decimals()": 18,
+        "symbol()": "ANGLE"
+      },
+      "roles": {
+        "getPastTotalSupply(block-1)": 1000000000000000000000000000
+      },
+      "balances": {
+        "native": 0,
+        "USDT": {
+          "raw": "496910090",
+          "human": 496.91009
+        },
+        "ANGLE": {
+          "raw": "24391200000000000000000",
+          "human": 24391.2
+        }
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 10122
+    },
+    {
+      "chain": "ethereum",
+      "label": "Flux timelock",
+      "address": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
+      "calls": {
+        "admin()": "0x336505ec1bcc1a020eede459f57581725d23465a",
+        "delay()": 86400
+      },
+      "roles": {},
+      "balances": {
+        "native": 12400000000000000
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 5939
+    },
+    {
+      "chain": "ethereum",
+      "label": "Flux governor",
+      "address": "0x336505EC1BcC1A020EeDe459f57581725D23465A",
+      "calls": {},
+      "roles": {},
+      "balances": {},
+      "votes": {},
+      "markets": {},
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "chain": "ethereum",
+      "label": "BiFi timelock",
+      "address": "0xe75fe5f37bd2e2613b1473f27644cf983555ffdf",
+      "calls": {
+        "getMinDelay()": 1,
+        "PROPOSER_ROLE()": "0xb09aa5aeb3702cfd50b6b62bc4532604938f21248a27a1d5ca736082b6819cc1",
+        "EXECUTOR_ROLE()": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+      },
+      "roles": {
+        "hasRole(PROPOSER_ROLE,governor)": 1,
+        "hasRole(ADMIN_ROLE,governor)": 0
+      },
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 7285
+    },
+    {
+      "chain": "ethereum",
+      "label": "BiFi governor",
+      "address": "0x54F50d2f584F1DD05307aB5eB298Ba96C7d4E0ea",
+      "calls": {},
+      "roles": {},
+      "balances": {},
+      "votes": {},
+      "markets": {},
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "chain": "ethereum",
+      "label": "GBiFi vote token",
+      "address": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
+      "calls": {
+        "underlying()": "0x2791bfd60d232150bff86b39b7146c0eaaa2ba81",
+        "totalSupply()": 3220328449744456911561,
+        "decimals()": 18,
+        "symbol()": "GBiFi"
+      },
+      "roles": {
+        "getPastTotalSupply(block-1)": 3220328449744456911561
+      },
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 9215
+    },
+    {
+      "chain": "ethereum",
+      "label": "Concentrator multisig",
+      "address": "0xA0FB1b11ccA5871fb0225B64308e249B97804E99",
+      "calls": {
+        "getOwners()": [
+          "0x38a93e70b0d8343657f802c1c3fdb06ac8f8fe99",
+          "0x8ecab7b8ed8215ca52500cbf1548b9239173ef82",
+          "0xef0ca09fbf9a5f61e657fb208b46b8685c1d4766",
+          "0xe3522d85d37f55735e9327cd7a5cde3abaf28e03",
+          "0x85db62fdfa9ee6050f8b422f74d75d2069da102b",
+          "0xcdf067f306e7a511ef701588afcdcff292b19282",
+          "0xc8be49a9b1ca1a1cc654491a7cbbd27abfa06a81",
+          "0x18411ab626c9b3b3dd5b7356574d8ff396436744",
+          "0x74390470f4001ca85d93bd546a4ab1724359654b"
+        ],
+        "getThreshold()": 6
+      },
+      "roles": {},
+      "balances": {
+        "USDC": {
+          "raw": "8621064977",
+          "human": 8621.064977
+        },
+        "USDT": {
+          "raw": "340396908",
+          "human": 340.396908
+        },
+        "CRV": {
+          "raw": "2168357235959713359491",
+          "human": 2168.3572359597133
+        },
+        "CVX": {
+          "raw": "1017041731823283156304",
+          "human": 1017.0417318232832
+        }
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 171
+    },
+    {
+      "chain": "ethereum",
+      "label": "Concentrator ProxyAdmin",
+      "address": "0x12b1326459d72F2Ab081116bf27ca46cD97762A0",
+      "calls": {
+        "owner()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99"
+      },
+      "roles": {},
+      "balances": {},
+      "votes": {},
+      "markets": {},
+      "codeBytes": 2171
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell market MOVR (0x6a1A771C)",
+      "address": "0x6a1A771C7826596652daDC9145fEAaE62b1cd07f",
+      "calls": {
+        "admin()": "0xfea5a5927645c0dc5c1e740ec1b24ad320c7e58f",
+        "getCash()": 86942718531600587949091,
+        "totalBorrows()": 27806756307495083977,
+        "totalReserves()": 144408894615,
+        "totalSupply()": 382333665599715,
+        "decimals()": 8,
+        "symbol()": "mMOVR"
+      },
+      "roles": {},
+      "balances": {
+        "native": 86942718531600587949091
+      },
+      "votes": {},
+      "markets": {
+        "MOVR native.balance": 86942718531600587949091
+      },
+      "codeBytes": 21171
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell market xcKSM (0xa0D11651)",
+      "address": "0xa0D116513Bd0B8f3F14e6Ea41556c6Ec34688e0f",
+      "calls": {
+        "admin()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7",
+        "implementation()": "0x45d17fe87e65064b2e85f91a9ff3ad0c7b6cf75d",
+        "getCash()": 4548229352047334,
+        "totalBorrows()": 5825049899359000,
+        "totalReserves()": 2909302224329080,
+        "underlying()": "0xffffffff1fcacbd218edc0eba20fc2308c778080",
+        "totalSupply()": 30975374925241,
+        "decimals()": 8,
+        "symbol()": "mxcKSM"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {
+        "xcKSM underlying.balanceOf(mToken)": 4548229352047334
+      },
+      "codeBytes": 7959
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell market FRAX (0x93Ef8B7c)",
+      "address": "0x93Ef8B7c6171BaB1C0A51092B2c9da8dc2ba0e9D",
+      "calls": {
+        "admin()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7",
+        "implementation()": "0x45d17fe87e65064b2e85f91a9ff3ad0c7b6cf75d",
+        "getCash()": 39943701450769249882737,
+        "totalBorrows()": 81546575290564882438166,
+        "totalReserves()": 78812021653340156026388,
+        "underlying()": "0x1a93b23281cc1cde4c4741353f3064709a16197d",
+        "totalSupply()": 91336244189316,
+        "decimals()": 8,
+        "symbol()": "mFRAX"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {
+        "FRAX underlying.balanceOf(mToken)": 39943701450769249882737
+      },
+      "codeBytes": 7959
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell market BTC.multi (0x6E745367)",
+      "address": "0x6E745367F4Ad2b3da7339aee65dC85d416614D90",
+      "calls": {
+        "admin()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7",
+        "implementation()": "0x45d17fe87e65064b2e85f91a9ff3ad0c7b6cf75d",
+        "getCash()": 9301369,
+        "totalBorrows()": 178919,
+        "totalReserves()": 182380,
+        "underlying()": "0x6ab6d61428fde76768d7b45d8bfeec19c6ef91a8",
+        "totalSupply()": 436329521,
+        "decimals()": 8,
+        "symbol()": "mWBTC"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {
+        "BTC.multi underlying.balanceOf(mToken)": 9301369
+      },
+      "codeBytes": 7959
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell market USDC.multi (0xd0670AEe)",
+      "address": "0xd0670AEe3698F66e2D4dAf071EB9c690d978BFA8",
+      "calls": {
+        "admin()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7",
+        "implementation()": "0x45d17fe87e65064b2e85f91a9ff3ad0c7b6cf75d",
+        "getCash()": 216974459996,
+        "totalBorrows()": 48442854,
+        "totalReserves()": 47696631,
+        "underlying()": "0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d",
+        "totalSupply()": 1049425688599045,
+        "decimals()": 8,
+        "symbol()": "mUSDC"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {
+        "USDC.multi underlying.balanceOf(mToken)": 216974459996
+      },
+      "codeBytes": 7959
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell market ETH.multi (0x6503D905)",
+      "address": "0x6503D905338e2ebB550c9eC39Ced525b612E77aE",
+      "calls": {
+        "admin()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7",
+        "implementation()": "0x45d17fe87e65064b2e85f91a9ff3ad0c7b6cf75d",
+        "getCash()": 15304050358987779895,
+        "totalBorrows()": 6269489729111352,
+        "totalReserves()": 6323868369975028,
+        "underlying()": "0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c",
+        "totalSupply()": 74569388175,
+        "decimals()": 8,
+        "symbol()": "mETH"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {
+        "ETH.multi underlying.balanceOf(mToken)": 15304050358987779895
+      },
+      "codeBytes": 7959
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell market USDT.multi (0x36918B66)",
+      "address": "0x36918B66F9A3eC7a59d0007D8458DB17bDffBF21",
+      "calls": {
+        "admin()": "0x04e6322d196e0e4ccbb2610dd8b8f2871e160bd7",
+        "implementation()": "0x45d17fe87e65064b2e85f91a9ff3ad0c7b6cf75d",
+        "getCash()": 22779279037,
+        "totalBorrows()": 29591603,
+        "totalReserves()": 29594886,
+        "underlying()": "0xb44a9b6905af7c801311e8f4e76932ee959c663c",
+        "totalSupply()": 106986490278653,
+        "decimals()": 8,
+        "symbol()": "mUSDT"
+      },
+      "roles": {},
+      "balances": {
+        "native": 0
+      },
+      "votes": {},
+      "markets": {
+        "USDT.multi underlying.balanceOf(mToken)": 22779279037
+      },
+      "codeBytes": 7959
+    }
+  ]
+}
