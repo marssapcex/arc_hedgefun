@@ -1,0 +1,26 @@
+name: rpc-opyn
+on:
+  push:
+    paths:
+      - '.github/workflows/rpc-opyn.yml'
+      - 'scripts/rpc_opyn.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read-only Opyn Convexity on-chain check
+        run: |
+          python3 scripts/rpc_opyn.py --max-series 60 --out rpc_opyn_raw.json --md OPYN_ONCHAIN.md
+          ls -la rpc_opyn_raw.json OPYN_ONCHAIN.md
+      - name: Publish results
+        run: |
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add -f rpc_opyn_raw.json OPYN_ONCHAIN.md
+          git commit -m "data: Opyn v1 on-chain probe [skip ci]" || echo nothing
+          for i in 1 2 3 4 5; do git push origin HEAD:arena/fbf9cf32-arc-hedgefun && break || sleep 5; done
