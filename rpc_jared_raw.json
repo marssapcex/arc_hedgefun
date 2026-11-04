@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-04T16:27:45.774685+00:00",
+  "generatedAt": "2026-11-04T17:02:23.521758+00:00",
   "rpc": "https://ethereum-rpc.publicnode.com",
-  "headBlock": 26342642,
+  "headBlock": 26342814,
   "blocks": {
     "drain": {
       "number": 25360696,
@@ -150,5 +150,14 @@
   "coordinator": {
     "address": "0xb84db016324e8f2bfdd8dd9c260338aee0a8df52",
     "codeBytes": 2537
+  },
+  "postFix": {
+    "bot": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+    "operator": "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13",
+    "botCodeBytes": 13835,
+    "eip1967ImplSlot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "looksLikeProxy": false,
+    "operatorNonce": 6611259,
+    "operatorCodeBytes": 0
   }
 }
