@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-11-04T16:20:35.624340+00:00",
+  "rpc": "https://ethereum-rpc.publicnode.com",
+  "headBlock": 26342606,
+  "blocks": {
+    "drain": {
+      "number": 25360696,
+      "timestamp": {
+        "unix": 1781981351,
+        "utc": "2026-06-20T18:49:11+00:00"
+      },
+      "txCount": 277,
+      "hash": "0x01518baaea1ec7aafe01e63b6c7e5b3bb198cca03cd6ff1d0f6843415a153f8c"
+    },
+    "bounty": {
+      "number": 25370085,
+      "timestamp": {
+        "unix": 1782094535,
+        "utc": "2026-06-22T02:15:35+00:00"
+      }
+    }
+  },
+  "drain": {
+    "hash": "0x2be8704f5a59b69e0b71f64aefdb99eb0e8ae9fb3926147c581910d71bcf3e65",
+    "from": "0x5af38735b215b00aa7c9f93fed7ee415cecb36e1",
+    "to": "0xb84db016324e8f2bfdd8dd9c260338aee0a8df52",
+    "blockNumber": 25360696,
+    "inputSelector": "0xc269a509",
+    "inputBytes": 2212,
+    "valueWei": 10000000000000000,
+    "transfers": {
+      "WETH": {
+        "count": 0,
+        "raw": 0,
+        "human": 0.0,
+        "amounts": []
+      },
+      "USDC": {
+        "count": 0,
+        "raw": 0,
+        "human": 0.0,
+        "amounts": []
+      },
+      "USDT": {
+        "count": 0,
+        "raw": 0,
+        "human": 0.0,
+        "amounts": []
+      }
+    },
+    "logTotals": {
+      "logs": 0
+    }
+  },
+  "bounty": {
+    "hash": "0x3d30d74d8e9c625b44e5ce9b15ea8301d69f0a405e9267c0cf618e2ecd674ab3",
+    "from": "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13",
+    "to": "0x5af38735b215b00aa7c9f93fed7ee415cecb36e1",
+    "blockNumber": 25370085,
+    "valueWei": 0,
+    "inputText": "Well played. We are willing to offer a 50% white hat bounty if you return 2150 ETH to this address in the next 48 hours, otherwise we will pursue all available legal and law-enforcement remedies."
+  },
+  "allowances": {
+    "latest": {
+      "block": "latest",
+      "raw": 0,
+      "human": 0.0,
+      "error": null
+    },
+    "preDrain": {
+      "block": "0x182f937",
+      "raw": null,
+      "human": null,
+      "error": "historical state unavailable on public RPC"
+    },
+    "postDrain": {
+      "block": "0x182f938",
+      "raw": null,
+      "human": null,
+      "error": "historical state unavailable on public RPC"
+    }
+  },
+  "coordinator": {
+    "address": "0xb84db016324e8f2bfdd8dd9c260338aee0a8df52",
+    "codeBytes": 2537
+  }
+}
