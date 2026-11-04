@@ -1,6 +1,6 @@
 # Pass 3 — money behind the ownership chain
 
-Generated 2026-11-04T10:23:16.144486+00:00. Read-only RPC. No tx, no fork, no key.
+Generated 2026-11-04T10:27:29.414456+00:00. Read-only RPC. No tx, no fork, no key.
 
 | Chain | Contract | Code | Views that answered |
 |---|---|---|---|
@@ -16,14 +16,14 @@ Generated 2026-11-04T10:23:16.144486+00:00. Read-only RPC. No tx, no fork, no ke
 | ethereum | Hop L1 bridge USDC | 19299B | — |
 | ethereum | Hop L1 bridge DAI | 19373B | — |
 | ethereum | Hop L1 bridge ETH | 19373B | — |
-| ethereum | Angle timelock | 8542B | getMinDelay(), PROPOSER_ROLE(), EXECUTOR_ROLE() |
+| ethereum | Angle timelock | 8542B | PROPOSER_ROLE(), EXECUTOR_ROLE() |
 | ethereum | Angle governor | 2673B | proposalThreshold(), votingDelay(), votingPeriod(), timelock(), token() |
-| ethereum | ANGLE token | 10122B | totalSupply(), decimals(), symbol() |
-| ethereum | Flux timelock | 5939B | admin(), delay() |
-| ethereum | BiFi timelock | 7285B | getMinDelay(), PROPOSER_ROLE(), EXECUTOR_ROLE() |
+| ethereum | Flux timelock | 5939B | admin() |
+| ethereum | Flux governor | 1065B | admin(), proposalCount(), proposalThreshold(), quorumVotes(), votingDelay(), votingPeriod() |
+| ethereum | BiFi timelock | 7285B | PROPOSER_ROLE(), EXECUTOR_ROLE() |
+| ethereum | BiFi governor | 12349B | owner(), proposalThreshold(), votingDelay(), timelock(), token() |
 | ethereum | GBiFi vote token | 9215B | underlying(), totalSupply(), decimals(), symbol() |
 | ethereum | Concentrator multisig | 171B | getOwners(), getThreshold() |
-| ethereum | Concentrator ProxyAdmin | 2171B | owner() |
 | moonriver | Moonwell market MOVR (0x6a1A771C) | 21171B | admin(), getCash(), totalBorrows(), totalReserves(), totalSupply(), decimals() |
 | moonriver | Moonwell market xcKSM (0xa0D11651) | 7959B | admin(), implementation(), getCash(), totalBorrows(), totalReserves(), underlying() |
 | moonriver | Moonwell market FRAX (0x93Ef8B7c) | 7959B | admin(), implementation(), getCash(), totalBorrows(), totalReserves(), underlying() |

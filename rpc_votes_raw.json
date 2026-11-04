@@ -1,0 +1,142 @@
+{
+  "generatedAt": "2026-11-04T10:27:37.649639+00:00",
+  "method": "read-only eth_call (getVotes/getCurrentVotes/getPriorVotes/getPastVotes/balanceOf/delegates)",
+  "endpoints": {
+    "ethereum": "https://ethereum-rpc.publicnode.com",
+    "moonriver": "https://moonriver.drpc.org"
+  },
+  "blocks": {
+    "ethereum": 26340847,
+    "moonriver": 17381654
+  },
+  "results": [
+    {
+      "chain": "moonriver",
+      "label": "Moonwell governor",
+      "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "account": "0x2BE2e230e89c59c8E20E633C524AD2De246e7370",
+      "note": "governor itself",
+      "values": {}
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell timelock",
+      "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "account": "0x04e6322D196E0E4cCBb2610dd8B8f2871E160bd7",
+      "note": "timelock",
+      "values": {}
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell Unitroller",
+      "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "account": "0x0b7a0EAA884849c6Af7a129e899536dDDcA4905E",
+      "note": "comptroller",
+      "values": {}
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell oracle",
+      "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "account": "0x892bE716Dcf0A6199677F355f45ba8CC123BAF60",
+      "note": "oracle",
+      "values": {}
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell breakGlassGuardian",
+      "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "account": "0x5ded9d1025a158554ab19540ae83182d890bb8db",
+      "note": "guardian",
+      "values": {}
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell comptroller impl",
+      "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "account": "0x8529ea4dbdca738aa928d682ea9c1382bf2ff098",
+      "note": "impl",
+      "values": {}
+    },
+    {
+      "chain": "moonriver",
+      "label": "Moonwell MFAM token contract",
+      "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "account": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+      "note": "token self",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "Hop governor",
+      "token": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
+      "account": "0xed8bdb5895b8b7f9fdb3c087628fd8410e853d48",
+      "note": "governor",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "Hop timelock",
+      "token": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
+      "account": "0xeea8422a08258e73c139fc32a25e10410c14bd7a",
+      "note": "timelock",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "Hop bridge USDC",
+      "token": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
+      "account": "0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a",
+      "note": "bridge",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "Angle governor",
+      "token": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
+      "account": "0x59153e939c5b4721543251ff3049ea04c755373b",
+      "note": "governor",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "Angle timelock",
+      "token": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
+      "account": "0x5183f032bf42109cd370b9559fd22207e432301e",
+      "note": "timelock",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "Angle ANGLE token self",
+      "token": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
+      "account": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
+      "note": "token self",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "BiFi governor",
+      "token": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
+      "account": "0x54F50d2f584F1DD05307aB5eB298Ba96C7d4E0ea",
+      "note": "governor",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "BiFi timelock",
+      "token": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
+      "account": "0xe75fe5f37bd2e2613b1473f27644cf983555ffdf",
+      "note": "timelock",
+      "values": {}
+    },
+    {
+      "chain": "ethereum",
+      "label": "BiFi owner EOA",
+      "token": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
+      "account": "0xfbb3544329679a7cc1f7644bae1b65d36bf5ce63",
+      "note": "owner",
+      "values": {}
+    }
+  ]
+}
