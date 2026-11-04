@@ -1,0 +1,6792 @@
+{
+  "generatedAt": "2026-11-04T14:50:13.286410+00:00",
+  "source": "DefiLlama snapshot git show 9fccbd9:screen.json (2026-11-04) + ethereum-lists/chains",
+  "criterion": "chainTvl <= $5,000,000; 335 entries, 131 TVL=0",
+  "nonEvmOrUnmapped": 106,
+  "totalChainsInSnapshot": 335,
+  "evmMapped": 229,
+  "counts": {
+    "FROZEN": 8,
+    "DEAD_RPC": 99,
+    "LIVE": 70,
+    "CLOCK_SKEW": 46,
+    "STALLED": 5,
+    "CHAINID_MISMATCH": 1
+  },
+  "results": [
+    {
+      "name": "Moonbeam",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Moonbeam",
+      "expectedChainId": 1284,
+      "native": "GLMR",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.api.moonbeam.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://moonbeam.public.blastapi.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://moonbeam.api.onfinality.io/public",
+          "chainId": 1284,
+          "block": 16796699,
+          "blockTimestamp": 1786361772,
+          "ageSeconds": 7442041,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://moonbeam.api.onfinality.io/public",
+      "status": "FROZEN",
+      "contracts": [],
+      "block": 16796699,
+      "blockTimestamp": 1786361772,
+      "ageSeconds": 7442041,
+      "ageDays": 86.13,
+      "lastBlockTime": "2026-08-10T11:36:12+00:00"
+    },
+    {
+      "name": "Corn",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Corn",
+      "expectedChainId": 21000000,
+      "native": "BTCN",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.corn-rpc.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc.ankr.com/corn_maizenet",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://maizenet-rpc.usecorn.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Harmony",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Harmony Mainnet Shard 0",
+      "expectedChainId": 1666600000,
+      "native": "ONE",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://api.harmony.one",
+          "chainId": 1666600000,
+          "block": 93624315,
+          "blockTimestamp": 1789051303,
+          "ageSeconds": 4752510,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://api.harmony.one",
+      "status": "FROZEN",
+      "contracts": [],
+      "block": 93624315,
+      "blockTimestamp": 1789051303,
+      "ageSeconds": 4752510,
+      "ageDays": 55.01,
+      "lastBlockTime": "2026-09-10T14:41:43+00:00"
+    },
+    {
+      "name": "Fantom",
+      "chainTvl": 3014185.6977921394,
+      "protocolCount": 11,
+      "chainlistName": "Fantom Opera",
+      "expectedChainId": 250,
+      "native": "FTM",
+      "addresses": [
+        "0x00a35FD824c717879BF370E70AC6868b95870Dfb",
+        "0x01e77288b38b416F972428d562454fb329350bAc",
+        "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",
+        "0x21ada0d2ac28c3a5fa3cd2ee30882da8812279b6",
+        "0x5cc61a78f164885776aa610fb0fe1257df78e59b",
+        "0x841fad6eae12c286d1fd18d1d525dffa75c7effe",
+        "0xE992bEAb6659BFF447893641A378FbbF031C5bD6",
+        "0xb7c2ddb1ebac1056231ef22c1b0a13988537a274"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.ftm.tools",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 401: Unauthorized",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://fantom-rpc.publicnode.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://fantom.drpc.org",
+          "chainId": 250,
+          "block": 123951549,
+          "blockTimestamp": 1793803808,
+          "ageSeconds": 5,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://fantom.drpc.org",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x00a35FD824c717879BF370E70AC6868b95870Dfb",
+          "codeBytes": 5497,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x01e77288b38b416F972428d562454fb329350bAc",
+          "codeBytes": 8613,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",
+          "codeBytes": 12304,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x21ada0d2ac28c3a5fa3cd2ee30882da8812279b6",
+          "codeBytes": 680,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x5cc61a78f164885776aa610fb0fe1257df78e59b",
+          "codeBytes": 7044,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x841fad6eae12c286d1fd18d1d525dffa75c7effe",
+          "codeBytes": 10736,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xE992bEAb6659BFF447893641A378FbbF031C5bD6",
+          "codeBytes": 5742,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xb7c2ddb1ebac1056231ef22c1b0a13988537a274",
+          "codeBytes": 13370,
+          "nativeWei": 0
+        }
+      ],
+      "block": 123951549,
+      "blockTimestamp": 1793803808,
+      "ageSeconds": 5,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:08+00:00"
+    },
+    {
+      "name": "Aurora",
+      "chainTvl": 3910906.7553445967,
+      "protocolCount": 10,
+      "chainlistName": "Aurora Mainnet",
+      "expectedChainId": 1313161554,
+      "native": "ETH",
+      "addresses": [
+        "0x09c9d464b58d96837f8d8b6f4d9fe4ad408d3a4f",
+        "0x12c87331f086c3C926248f964f8702C0842Fd77F",
+        "0x8bec47865ade3b172a928df8f990bc7f2a3b9f79",
+        "0x9f1F933C660a1DC856F0E0Fe058435879c5CCEf0",
+        "0xFa94348467f64D5A457F75F8bc40495D33c65aBB",
+        "0xdcD6D4e2B3e1D1E1E6Fa8C21C8A323DcbecfF970"
+      ],
+      "attempts": [
+        {
+          "url": "https://mainnet.aurora.dev",
+          "chainId": 1313161554,
+          "block": 223031206,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.aurora.dev",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x09c9d464b58d96837f8d8b6f4d9fe4ad408d3a4f",
+          "codeBytes": 5162,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x12c87331f086c3C926248f964f8702C0842Fd77F",
+          "codeBytes": 7193,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x8bec47865ade3b172a928df8f990bc7f2a3b9f79",
+          "codeBytes": 5162,
+          "nativeWei": 1000000000000000
+        },
+        {
+          "address": "0x9f1F933C660a1DC856F0E0Fe058435879c5CCEf0",
+          "codeBytes": 5162,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xFa94348467f64D5A457F75F8bc40495D33c65aBB",
+          "codeBytes": 8556,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xdcD6D4e2B3e1D1E1E6Fa8C21C8A323DcbecfF970",
+          "codeBytes": 5425,
+          "nativeWei": 0
+        }
+      ],
+      "block": 223031206,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "Taiko",
+      "chainTvl": 209783.2418910012,
+      "protocolCount": 2,
+      "chainlistName": "Taiko",
+      "expectedChainId": 167000,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.mainnet.taiko.xyz",
+          "chainId": 167000,
+          "block": 13580130,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.mainnet.taiko.xyz",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 13580130,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "Plume Mainnet",
+      "chainTvl": 1629220.3824686476,
+      "protocolCount": 14,
+      "chainlistName": "Plume Mainnet",
+      "expectedChainId": 98866,
+      "native": "PLUME",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.plume.org",
+          "chainId": 98866,
+          "block": 103674871,
+          "blockTimestamp": 1793803814,
+          "ageSeconds": -1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.plume.org",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 103674871,
+      "blockTimestamp": 1793803814,
+      "ageSeconds": -1,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:14+00:00"
+    },
+    {
+      "name": "XDC",
+      "chainTvl": 2023220.6762781325,
+      "protocolCount": 13,
+      "chainlistName": "XDC Network",
+      "expectedChainId": 50,
+      "native": "XDC",
+      "addresses": [
+        "0x36726235dadbdb4658d33e62a249dca7c4b2bc68"
+      ],
+      "attempts": [
+        {
+          "url": "https://erpc.xinfin.network",
+          "chainId": 50,
+          "block": 109056747,
+          "blockTimestamp": 1793803814,
+          "ageSeconds": -1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://erpc.xinfin.network",
+      "status": "CLOCK_SKEW",
+      "contracts": [
+        {
+          "address": "0x36726235dadbdb4658d33e62a249dca7c4b2bc68",
+          "codeBytes": 4559,
+          "nativeWei": 0
+        }
+      ],
+      "block": 109056747,
+      "blockTimestamp": 1793803814,
+      "ageSeconds": -1,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:14+00:00"
+    },
+    {
+      "name": "TAC",
+      "chainTvl": 233073.0469357515,
+      "protocolCount": 3,
+      "chainlistName": "Btachain",
+      "expectedChainId": 1657,
+      "native": "BTA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://dataseed1.btachain.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: TLSV1_UNRECOGNIZED_NAME] tlsv1 unrecognized name (_ssl.c:1000)>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Palm",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Palm",
+      "expectedChainId": 11297108109,
+      "native": "PALM",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://palm-mainnet.public.blastapi.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Moonriver",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Moonriver",
+      "expectedChainId": 1285,
+      "native": "MOVR",
+      "addresses": [
+        "0xbb8d88bcd9749636bc4d2be22aac4bb3b01a58f1",
+        "0x2BE2e230e89c59c8E20E633C524AD2De246e7370",
+        "0x04e6322D196E0E4cCBb2610dd8B8f2871E160bd7",
+        "0x0b7a0EAA884849c6Af7a129e899536dDDcA4905E",
+        "0x892bE716Dcf0A6199677F355f45ba8CC123BAF60",
+        "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+        "0x8529ea4dbdca738aa928d682ea9c1382bf2ff098"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.api.moonriver.moonbeam.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://moonriver.public.blastapi.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://moonriver.api.onfinality.io/public",
+          "chainId": 1285,
+          "block": 17381654,
+          "blockTimestamp": 1786350468,
+          "ageSeconds": 7453345,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://moonriver.api.onfinality.io/public",
+      "status": "FROZEN",
+      "contracts": [
+        {
+          "address": "0xbb8d88bcd9749636bc4d2be22aac4bb3b01a58f1",
+          "codeBytes": 8186,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x2BE2e230e89c59c8E20E633C524AD2De246e7370",
+          "codeBytes": 22521,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x04e6322D196E0E4cCBb2610dd8B8f2871E160bd7",
+          "codeBytes": 7486,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x0b7a0EAA884849c6Af7a129e899536dDDcA4905E",
+          "codeBytes": 1508,
+          "nativeWei": 8512587738918715260996
+        },
+        {
+          "address": "0x892bE716Dcf0A6199677F355f45ba8CC123BAF60",
+          "codeBytes": 3985,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+          "codeBytes": 8186,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x8529ea4dbdca738aa928d682ea9c1382bf2ff098",
+          "codeBytes": 24241,
+          "nativeWei": 0
+        }
+      ],
+      "block": 17381654,
+      "blockTimestamp": 1786350468,
+      "ageSeconds": 7453345,
+      "ageDays": 86.27,
+      "lastBlockTime": "2026-08-10T08:27:48+00:00"
+    },
+    {
+      "name": "Heco",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Huobi ECO Chain Mainnet",
+      "expectedChainId": 128,
+      "native": "HT",
+      "addresses": [
+        "0xe36ffd17b2661eb57144ceaef942d95295e637f0"
+      ],
+      "attempts": [
+        {
+          "url": "https://http-mainnet.hecochain.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Boba_Bnb",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Boba BNB Mainnet",
+      "expectedChainId": 56288,
+      "native": "BOBA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://bnb.boba.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://boba-bnb.gateway.tenderly.co",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://gateway.tenderly.co/public/boba-bnb",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://replica.bnb.boba.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Blast",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Blast",
+      "expectedChainId": 81457,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.blast.io",
+          "chainId": 81457,
+          "block": 42475318,
+          "blockTimestamp": 1793760453,
+          "ageSeconds": 43360,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.blast.io",
+      "status": "STALLED",
+      "contracts": [],
+      "block": 42475318,
+      "blockTimestamp": 1793760453,
+      "ageSeconds": 43360,
+      "ageDays": 0.5,
+      "lastBlockTime": "2026-11-04T02:47:33+00:00"
+    },
+    {
+      "name": "Polygon zkEVM",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Polygon zkEVM",
+      "expectedChainId": 1101,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://zkevm-rpc.com",
+          "chainId": 1101,
+          "block": 33391890,
+          "blockTimestamp": 1783094144,
+          "ageSeconds": 10709669,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://zkevm-rpc.com",
+      "status": "FROZEN",
+      "contracts": [],
+      "block": 33391890,
+      "blockTimestamp": 1783094144,
+      "ageSeconds": 10709669,
+      "ageDays": 123.95,
+      "lastBlockTime": "2026-07-03T15:55:44+00:00"
+    },
+    {
+      "name": "ThunderCore",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "ThunderCore Mainnet",
+      "expectedChainId": 108,
+      "native": "TT",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.thundercore.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://mainnet-rpc.thundertoken.net",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://mainnet-rpc.thundercore.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Telos",
+      "chainTvl": 2387518.8942450164,
+      "protocolCount": 4,
+      "chainlistName": "Telos EVM Mainnet",
+      "expectedChainId": 40,
+      "native": "TLOS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.telos.net",
+          "chainId": 40,
+          "block": 497559891,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.telos.net",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 497559891,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "Boba",
+      "chainTvl": 2304020.6262133108,
+      "protocolCount": 7,
+      "chainlistName": "Boba Network",
+      "expectedChainId": 288,
+      "native": "ETH",
+      "addresses": [
+        "0x5008F837883EA9a07271a1b5eB0658404F5a9610"
+      ],
+      "attempts": [
+        {
+          "url": "https://mainnet.boba.network",
+          "chainId": 288,
+          "block": 41399485,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.boba.network",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x5008F837883EA9a07271a1b5eB0658404F5a9610",
+          "codeBytes": 6887,
+          "nativeWei": 0
+        }
+      ],
+      "block": 41399485,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "Fuse",
+      "chainTvl": 374829.7774598287,
+      "protocolCount": 5,
+      "chainlistName": "Fuse Mainnet",
+      "expectedChainId": 122,
+      "native": "FUSE",
+      "addresses": [
+        "0x34Ef2Cc892a88415e9f02b91BfA9c91fC0bE6bD4"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.fuse.io",
+          "chainId": 122,
+          "block": 44950824,
+          "blockTimestamp": 1793803810,
+          "ageSeconds": 3,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.fuse.io",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x34Ef2Cc892a88415e9f02b91BfA9c91fC0bE6bD4",
+          "codeBytes": 7219,
+          "nativeWei": 0
+        }
+      ],
+      "block": 44950824,
+      "blockTimestamp": 1793803810,
+      "ageSeconds": 3,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:10+00:00"
+    },
+    {
+      "name": "Hemi",
+      "chainTvl": 1199080.15458861,
+      "protocolCount": 6,
+      "chainlistName": "Hemi",
+      "expectedChainId": 43111,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.hemi.network/rpc",
+          "chainId": 43111,
+          "block": 5661425,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.hemi.network/rpc",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 5661425,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "Arbitrum Nova",
+      "chainTvl": 510.4604164033132,
+      "protocolCount": 0,
+      "chainlistName": "Arbitrum Nova",
+      "expectedChainId": 42170,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://nova.arbitrum.io/rpc",
+          "chainId": 42170,
+          "block": 85289239,
+          "blockTimestamp": 1793803088,
+          "ageSeconds": 725,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://nova.arbitrum.io/rpc",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 85289239,
+      "blockTimestamp": 1793803088,
+      "ageSeconds": 725,
+      "ageDays": 0.01,
+      "lastBlockTime": "2026-11-04T14:38:08+00:00"
+    },
+    {
+      "name": "HAQQ",
+      "chainTvl": 0.19558989272917032,
+      "protocolCount": 1,
+      "chainlistName": "Haqq Network",
+      "expectedChainId": 11235,
+      "native": "ISLM",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.eth.haqq.network",
+          "chainId": 11235,
+          "block": 23086594,
+          "blockTimestamp": 1793803806,
+          "ageSeconds": 7,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.eth.haqq.network",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 23086594,
+      "blockTimestamp": 1793803806,
+      "ageSeconds": 7,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:06+00:00"
+    },
+    {
+      "name": "Metis",
+      "chainTvl": 1868481.6674725902,
+      "protocolCount": 13,
+      "chainlistName": "Metis Andromeda Mainnet",
+      "expectedChainId": 1088,
+      "native": "METIS",
+      "addresses": [
+        "0x096a84536ab84e68ee210561ffd3a038e79736f1",
+        "0x69fdb77064ec5c84FA2F21072973eB28441F43F3",
+        "0x90fe084f877c65e1b577c7b2ea64b8d8dd1ab278",
+        "0xb27BbeaACA2C00d6258C3118BAB6b5B6975161c8",
+        "0xbB1676046C36BCd2F6fD08d8f60672c7087d9aDF"
+      ],
+      "attempts": [
+        {
+          "url": "https://andromeda.metis.io/?owner=1088",
+          "chainId": 1088,
+          "block": 23367783,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://andromeda.metis.io/?owner=1088",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x096a84536ab84e68ee210561ffd3a038e79736f1",
+          "codeBytes": 15371,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x69fdb77064ec5c84FA2F21072973eB28441F43F3",
+          "codeBytes": 20692,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x90fe084f877c65e1b577c7b2ea64b8d8dd1ab278",
+          "codeBytes": 8569,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xb27BbeaACA2C00d6258C3118BAB6b5B6975161c8",
+          "codeBytes": 1644,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xbB1676046C36BCd2F6fD08d8f60672c7087d9aDF",
+          "codeBytes": 9303,
+          "nativeWei": 0
+        }
+      ],
+      "block": 23367783,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "Filecoin",
+      "chainTvl": 2505066.7065995317,
+      "protocolCount": 18,
+      "chainlistName": "Filecoin - Mainnet",
+      "expectedChainId": 314,
+      "native": "FIL",
+      "addresses": [
+        "0x005E02A4A934142d8Dd476F192d0dD9c381b16b4",
+        "0x2a0aaf86b2fa64e88d3739091e7773106f3ebcf5",
+        "0xC5eA96Dd365983cfEc90E72b6A2daC9562f458Ba"
+      ],
+      "attempts": [
+        {
+          "url": "https://api.node.glif.io",
+          "chainId": 314,
+          "block": 6516579,
+          "blockTimestamp": 1793803770,
+          "ageSeconds": 43,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://api.node.glif.io",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x005E02A4A934142d8Dd476F192d0dD9c381b16b4",
+          "codeBytes": 6700,
+          "nativeWei": 0
+        },
+        {
+          "address": "0x2a0aaf86b2fa64e88d3739091e7773106f3ebcf5",
+          "codeBytes": 11905,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xC5eA96Dd365983cfEc90E72b6A2daC9562f458Ba",
+          "codeBytes": 4813,
+          "nativeWei": 0
+        }
+      ],
+      "block": 6516579,
+      "blockTimestamp": 1793803770,
+      "ageSeconds": 43,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:30+00:00"
+    },
+    {
+      "name": "SKALE Europa",
+      "chainTvl": 56433.82095298738,
+      "protocolCount": 0,
+      "chainlistName": "SKALE Europa Hub",
+      "expectedChainId": 2046399126,
+      "native": "sFUEL",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.skalenodes.com/v1/elated-tan-skat",
+          "chainId": 2046399126,
+          "block": 28344150,
+          "blockTimestamp": 1793803802,
+          "ageSeconds": 11,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.skalenodes.com/v1/elated-tan-skat",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 28344150,
+      "blockTimestamp": 1793803802,
+      "ageSeconds": 11,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:02+00:00"
+    },
+    {
+      "name": "CORE",
+      "chainTvl": 3269117.0647237417,
+      "protocolCount": 6,
+      "chainlistName": "Dancore",
+      "expectedChainId": 362,
+      "native": "DNC",
+      "addresses": [
+        "0x30a540b05468a250fcc17da2d9d4aaa84b358ea7"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.dancorescan.com",
+          "chainId": 362,
+          "block": 1705878,
+          "blockTimestamp": 1793803814,
+          "ageSeconds": -1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.dancorescan.com",
+      "status": "CLOCK_SKEW",
+      "contracts": [
+        {
+          "address": "0x30a540b05468a250fcc17da2d9d4aaa84b358ea7",
+          "codeBytes": 0,
+          "nativeWei": 0
+        }
+      ],
+      "block": 1705878,
+      "blockTimestamp": 1793803814,
+      "ageSeconds": -1,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:14+00:00"
+    },
+    {
+      "name": "ZetaChain",
+      "chainTvl": 294265.40095493494,
+      "protocolCount": 4,
+      "chainlistName": "ZetaChain Mainnet",
+      "expectedChainId": 7000,
+      "native": "ZETA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://zetachain-evm.blockpi.network/v1/rpc/public",
+          "chainId": 7000,
+          "block": 19960452,
+          "blockTimestamp": 1793803809,
+          "ageSeconds": 4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://zetachain-evm.blockpi.network/v1/rpc/public",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 19960452,
+      "blockTimestamp": 1793803809,
+      "ageSeconds": 4,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:09+00:00"
+    },
+    {
+      "name": "Velas",
+      "chainTvl": 197625.6542059759,
+      "protocolCount": 1,
+      "chainlistName": "Velas EVM Mainnet",
+      "expectedChainId": 106,
+      "native": "VLX",
+      "addresses": [
+        "0xabf26902fd7b624e0db40d31171ea9dddf078351"
+      ],
+      "attempts": [
+        {
+          "url": "https://evmexplorer.velas.com/rpc",
+          "chainId": 106,
+          "block": 70405330,
+          "blockTimestamp": 1793803537,
+          "ageSeconds": 276,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://evmexplorer.velas.com/rpc",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0xabf26902fd7b624e0db40d31171ea9dddf078351",
+          "codeBytes": 7552,
+          "nativeWei": 0
+        }
+      ],
+      "block": 70405330,
+      "blockTimestamp": 1793803537,
+      "ageSeconds": 276,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:45:37+00:00"
+    },
+    {
+      "name": "Oasis Emerald",
+      "chainTvl": 212080.1448516808,
+      "protocolCount": 0,
+      "chainlistName": "Oasis Emerald",
+      "expectedChainId": 42262,
+      "native": "ROSE",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://emerald.oasis.io",
+          "chainId": 42262,
+          "block": 22380787,
+          "blockTimestamp": 1793800418,
+          "ageSeconds": 3395,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://emerald.oasis.io",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 22380787,
+      "blockTimestamp": 1793800418,
+      "ageSeconds": 3395,
+      "ageDays": 0.04,
+      "lastBlockTime": "2026-11-04T13:53:38+00:00"
+    },
+    {
+      "name": "HSK Chain",
+      "chainTvl": 1392.6020851874375,
+      "protocolCount": 0,
+      "chainlistName": "HSKChain",
+      "expectedChainId": 177,
+      "native": "HSK",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.hsk.xyz",
+          "chainId": 177,
+          "block": 29728339,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.hsk.xyz",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 29728339,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "Zircuit",
+      "chainTvl": 98105.25124251915,
+      "protocolCount": 2,
+      "chainlistName": "Zircuit Mainnet",
+      "expectedChainId": 48900,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.zircuit.com",
+          "chainId": 48900,
+          "block": 36933799,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.zircuit.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 36933799,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "Manta",
+      "chainTvl": 2820933.7167635057,
+      "protocolCount": 15,
+      "chainlistName": "Manta Pacific Mainnet",
+      "expectedChainId": 169,
+      "native": "ETH",
+      "addresses": [
+        "0x9582b518d28dc65945f8151c25e44a4e80504205"
+      ],
+      "attempts": [
+        {
+          "url": "https://pacific-rpc.manta.network/http",
+          "chainId": 169,
+          "block": 9957985,
+          "blockTimestamp": 1793803809,
+          "ageSeconds": 4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://pacific-rpc.manta.network/http",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x9582b518d28dc65945f8151c25e44a4e80504205",
+          "codeBytes": 3839,
+          "nativeWei": 0
+        }
+      ],
+      "block": 9957985,
+      "blockTimestamp": 1793803809,
+      "ageSeconds": 4,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:09+00:00"
+    },
+    {
+      "name": "EthereumClassic",
+      "chainTvl": 109579.38401640026,
+      "protocolCount": 4,
+      "chainlistName": "Ethereum Classic",
+      "expectedChainId": 61,
+      "native": "ETC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://etc.rivet.link",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://besu-at.etc-network.info",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error timed out>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://geth-at.etc-network.info",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error timed out>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://etc.etcdesktop.com",
+          "chainId": 61,
+          "block": 25669102,
+          "blockTimestamp": 1793803808,
+          "ageSeconds": 5,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://etc.etcdesktop.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 25669102,
+      "blockTimestamp": 1793803808,
+      "ageSeconds": 5,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:08+00:00"
+    },
+    {
+      "name": "KCC",
+      "chainTvl": 784033.8183443685,
+      "protocolCount": 0,
+      "chainlistName": "KCC Mainnet",
+      "expectedChainId": 321,
+      "native": "KCS",
+      "addresses": [
+        "0x2ca48b4eea5a731c2b54e7c3944dbdb87c0cfb6f"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc-mainnet.kcc.network",
+          "chainId": 321,
+          "block": 57086047,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc-mainnet.kcc.network",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x2ca48b4eea5a731c2b54e7c3944dbdb87c0cfb6f",
+          "codeBytes": 9684,
+          "nativeWei": 0
+        }
+      ],
+      "block": 57086047,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "IoTeX",
+      "chainTvl": 1474535.9253343276,
+      "protocolCount": 10,
+      "chainlistName": "IoTeX Network Mainnet",
+      "expectedChainId": 4689,
+      "native": "IOTX",
+      "addresses": [
+        "0x375488f097176507e39b9653b88fdc52cde736bf",
+        "0xe45d95a66cfF6aB5E9b796CF5A36F0669AF3Ec98"
+      ],
+      "attempts": [
+        {
+          "url": "https://babel-api.mainnet.iotex.io",
+          "chainId": 4689,
+          "block": 54097179,
+          "blockTimestamp": 1793803812,
+          "ageSeconds": 1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://babel-api.mainnet.iotex.io",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x375488f097176507e39b9653b88fdc52cde736bf",
+          "codeBytes": 10660,
+          "nativeWei": 0
+        },
+        {
+          "address": "0xe45d95a66cfF6aB5E9b796CF5A36F0669AF3Ec98",
+          "codeBytes": 3216,
+          "nativeWei": 0
+        }
+      ],
+      "block": 54097179,
+      "blockTimestamp": 1793803812,
+      "ageSeconds": 1,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:12+00:00"
+    },
+    {
+      "name": "Wanchain",
+      "chainTvl": 1741226.6780170836,
+      "protocolCount": 4,
+      "chainlistName": "Wanchain",
+      "expectedChainId": 888,
+      "native": "WAN",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://gwan-ssl.wandevs.org:56891",
+          "chainId": 888,
+          "block": 47126031,
+          "blockTimestamp": 1793803810,
+          "ageSeconds": 3,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://gwan-ssl.wandevs.org:56891",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 47126031,
+      "blockTimestamp": 1793803810,
+      "ageSeconds": 3,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:10+00:00"
+    },
+    {
+      "name": "Ontology",
+      "chainTvl": 4710947.574114999,
+      "protocolCount": 2,
+      "chainlistName": "Ontology Mainnet",
+      "expectedChainId": 58,
+      "native": "ONG",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "http://dappnode1.ont.io:20339",
+          "chainId": 58,
+          "block": 20998306,
+          "blockTimestamp": 1793803789,
+          "ageSeconds": 24,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "http://dappnode1.ont.io:20339",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 20998306,
+      "blockTimestamp": 1793803789,
+      "ageSeconds": 24,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:49+00:00"
+    },
+    {
+      "name": "OntologyEVM",
+      "chainTvl": 1438.7992105077776,
+      "protocolCount": 0,
+      "chainlistName": "Ontology Mainnet",
+      "expectedChainId": 58,
+      "native": "ONG",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "http://dappnode1.ont.io:20339",
+          "chainId": 58,
+          "block": 20998306,
+          "blockTimestamp": 1793803789,
+          "ageSeconds": 24,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "http://dappnode1.ont.io:20339",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 20998306,
+      "blockTimestamp": 1793803789,
+      "ageSeconds": 24,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:49+00:00"
+    },
+    {
+      "name": "opBNB",
+      "chainTvl": 1056170.5550187281,
+      "protocolCount": 0,
+      "chainlistName": "opBNB Mainnet",
+      "expectedChainId": 204,
+      "native": "BNB",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://opbnb-mainnet-rpc.bnbchain.org",
+          "chainId": 204,
+          "block": 202747532,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://opbnb-mainnet-rpc.bnbchain.org",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 202747532,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "Evmos",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Evmos",
+      "expectedChainId": 9001,
+      "native": "EVMOS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://evmos.lava.build",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 502: Bad Gateway",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://evmos-evm-rpc.publicnode.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Energi",
+      "chainTvl": 36561.42625368714,
+      "protocolCount": 0,
+      "chainlistName": "Energi Mainnet",
+      "expectedChainId": 39797,
+      "native": "NRG",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://nodeapi.energi.network",
+          "chainId": 39797,
+          "block": 3497526,
+          "blockTimestamp": 1793803784,
+          "ageSeconds": 29,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://nodeapi.energi.network",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 3497526,
+      "blockTimestamp": 1793803784,
+      "ageSeconds": 29,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:44+00:00"
+    },
+    {
+      "name": "Eclipse",
+      "chainTvl": 38781.21651588981,
+      "protocolCount": 0,
+      "chainlistName": "Eclipse Subnet",
+      "expectedChainId": 17172,
+      "native": "ECLP",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://subnets.avax.network/eclipse/testnet/rpc",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 405: Method Not Allowed",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Zilliqa",
+      "chainTvl": 120185.08177767703,
+      "protocolCount": 2,
+      "chainlistName": "Zilliqa 2",
+      "expectedChainId": 32769,
+      "native": "ZIL",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://api.zilliqa.com",
+          "chainId": 32769,
+          "block": 39638517,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://api.zilliqa.com",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 39638517,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Canto",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Canto",
+      "expectedChainId": 7700,
+      "native": "CANTO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://canto.slingshot.finance",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://canto-rpc.ansybl.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://mainnode.plexnode.org:8545",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://canto.gravitychain.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "REI",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "REI Network",
+      "expectedChainId": 47805,
+      "native": "REI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.rei.network",
+          "chainId": 47805,
+          "block": 42543258,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.rei.network",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 42543258,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Shibarium",
+      "chainTvl": 42736.532784058436,
+      "protocolCount": 1,
+      "chainlistName": "Shibarium",
+      "expectedChainId": 109,
+      "native": "BONE",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.shibarium.shib.io",
+          "chainId": 109,
+          "block": 19716458,
+          "blockTimestamp": 1793803814,
+          "ageSeconds": -1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.shibarium.shib.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 19716458,
+      "blockTimestamp": 1793803814,
+      "ageSeconds": -1,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:14+00:00"
+    },
+    {
+      "name": "Hoo",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "HOO Smart Chain Testnet",
+      "expectedChainId": 170,
+      "native": "HOO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://http-testnet.hoosmartchain.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno 101] Network is unreachable>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Q Protocol",
+      "chainTvl": 9213.944300159439,
+      "protocolCount": 0,
+      "chainlistName": "Q Mainnet",
+      "expectedChainId": 35441,
+      "native": "QGOV",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.q.org",
+          "chainId": 35441,
+          "block": 29083592,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.q.org",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 29083592,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "Bitgert",
+      "chainTvl": 1166.5069381476922,
+      "protocolCount": 0,
+      "chainlistName": "Bitgert Mainnet",
+      "expectedChainId": 32520,
+      "native": "Brise",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-bitgert.icecreamswap.com",
+          "chainId": 32520,
+          "block": 9925583,
+          "blockTimestamp": 1793803801,
+          "ageSeconds": 12,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc-bitgert.icecreamswap.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 9925583,
+      "blockTimestamp": 1793803801,
+      "ageSeconds": 12,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:01+00:00"
+    },
+    {
+      "name": "Astar",
+      "chainTvl": 1140123.0336919308,
+      "protocolCount": 14,
+      "chainlistName": "Astar",
+      "expectedChainId": 592,
+      "native": "ASTR",
+      "addresses": [
+        "0x5271D85CE4241b310C0B34b7C2f1f036686A6d7C",
+        "0xc4335b1b76fa6d52877b3046eca68f6e708a27dd",
+        "0xcCA488aEEf7A1D5C633f877453784F025e7cF160",
+        "0xde2578edec4669ba7f41c5d5d2386300bcea4678"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.astar.network:8545",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error timed out>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Archway",
+      "chainTvl": 115944.33180867463,
+      "protocolCount": 1,
+      "chainlistName": "Arc",
+      "expectedChainId": 5042,
+      "native": "USDC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.mainnet.arc.io",
+          "chainId": 5042,
+          "block": 29514894,
+          "blockTimestamp": 1793803814,
+          "ageSeconds": -1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.mainnet.arc.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 29514894,
+      "blockTimestamp": 1793803814,
+      "ageSeconds": -1,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:14+00:00"
+    },
+    {
+      "name": "Karura",
+      "chainTvl": 629394.432180664,
+      "protocolCount": 4,
+      "chainlistName": "Karura Network",
+      "expectedChainId": 686,
+      "native": "KAR",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://eth-rpc-karura.aca-api.network",
+          "chainId": 686,
+          "block": 12788435,
+          "blockTimestamp": 1793803812,
+          "ageSeconds": 1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://eth-rpc-karura.aca-api.network",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 12788435,
+      "blockTimestamp": 1793803812,
+      "ageSeconds": 1,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:12+00:00"
+    },
+    {
+      "name": "Meter",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Meter Mainnet",
+      "expectedChainId": 82,
+      "native": "MTR",
+      "addresses": [
+        "0x8Df95e66Cb0eF38F91D2776DA3c921768982fBa0"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.meter.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 530: <none>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Rollux",
+      "chainTvl": 48396.50404809122,
+      "protocolCount": 0,
+      "chainlistName": "Rollux Mainnet",
+      "expectedChainId": 570,
+      "native": "SYS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.rollux.com",
+          "chainId": 570,
+          "block": 53219287,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.rollux.com",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 53219287,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Unit Zero",
+      "chainTvl": 10600.972694287742,
+      "protocolCount": 0,
+      "chainlistName": "Unit Zero Mainnet",
+      "expectedChainId": 88811,
+      "native": "UNIT0",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.unit0.dev",
+          "chainId": 88811,
+          "block": 15657843,
+          "blockTimestamp": 1793803812,
+          "ageSeconds": 1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.unit0.dev",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 15657843,
+      "blockTimestamp": 1793803812,
+      "ageSeconds": 1,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:12+00:00"
+    },
+    {
+      "name": "Shiden",
+      "chainTvl": 0.023404922034414955,
+      "protocolCount": 0,
+      "chainlistName": "Shiden",
+      "expectedChainId": 336,
+      "native": "SDN",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://shiden.api.onfinality.io/public",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 504: Gateway Timeout",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://shiden.public.blastapi.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "EnergyWeb",
+      "chainTvl": 63160.16831505464,
+      "protocolCount": 1,
+      "chainlistName": "Energy Web Chain",
+      "expectedChainId": 246,
+      "native": "EWT",
+      "addresses": [
+        "0x9cd9CAECDC816C3E7123A4F130A91A684D01f4Dc"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.energyweb.org",
+          "chainId": 246,
+          "block": 43472957,
+          "blockTimestamp": 1793803810,
+          "ageSeconds": 3,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.energyweb.org",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x9cd9CAECDC816C3E7123A4F130A91A684D01f4Dc",
+          "codeBytes": 13182,
+          "nativeWei": 0
+        }
+      ],
+      "block": 43472957,
+      "blockTimestamp": 1793803810,
+      "ageSeconds": 3,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:10+00:00"
+    },
+    {
+      "name": "GoChain",
+      "chainTvl": 6420.163804488912,
+      "protocolCount": 0,
+      "chainlistName": "GoChain",
+      "expectedChainId": 60,
+      "native": "GO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.gochain.io",
+          "chainId": 60,
+          "block": 53368761,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.gochain.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 53368761,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Viction",
+      "chainTvl": 87331.51985090753,
+      "protocolCount": 0,
+      "chainlistName": "Viction",
+      "expectedChainId": 88,
+      "native": "VIC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.viction.xyz",
+          "chainId": 88,
+          "block": 115899302,
+          "blockTimestamp": 1793803807,
+          "ageSeconds": 6,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.viction.xyz",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 115899302,
+      "blockTimestamp": 1793803807,
+      "ageSeconds": 6,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:07+00:00"
+    },
+    {
+      "name": "Milkomeda C1",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Milkomeda C1 Mainnet",
+      "expectedChainId": 2001,
+      "native": "mADA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-mainnet-cardano-evm.c1.milkomeda.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Empire",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Empire Network",
+      "expectedChainId": 3693,
+      "native": "EMPIRE",
+      "addresses": [
+        "0xc84d8d03aa41ef941721a4d77b24bb44d7c7ac55"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.empirenetwork.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Step",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Step Network",
+      "expectedChainId": 1234,
+      "native": "FITFI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.step.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:100",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "VeChain",
+      "chainTvl": 325249.90825206327,
+      "protocolCount": 5,
+      "chainlistName": "VeChain",
+      "expectedChainId": 100009,
+      "native": "VET",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-mainnet.vechain.energy",
+          "chainId": 100009,
+          "block": 26327117,
+          "blockTimestamp": 1793803810,
+          "ageSeconds": 3,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc-mainnet.vechain.energy",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 26327117,
+      "blockTimestamp": 1793803810,
+      "ageSeconds": 3,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:10+00:00"
+    },
+    {
+      "name": "Callisto",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Callisto Mainnet",
+      "expectedChainId": 820,
+      "native": "CLO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.callistodao.org",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "ApeChain",
+      "chainTvl": 2341171.778967872,
+      "protocolCount": 7,
+      "chainlistName": "ApeChain",
+      "expectedChainId": 33139,
+      "native": "APE",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.apechain.com",
+          "chainId": 33139,
+          "block": 53916584,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.apechain.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 53916584,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "CSC",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "GTCSCAN",
+      "expectedChainId": 3490,
+      "native": "GTC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://gtc-dataseed.gtcscan.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certif",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Ergo",
+      "chainTvl": 950530.879075839,
+      "protocolCount": 5,
+      "chainlistName": "PowerGold",
+      "expectedChainId": 1313161560,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://powergold.aurora.dev",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Lisk",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Lisk",
+      "expectedChainId": 1135,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.api.lisk.com",
+          "chainId": 1135,
+          "block": 39537511,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.api.lisk.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 39537511,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "Somnia",
+      "chainTvl": 2855303.2901939093,
+      "protocolCount": 6,
+      "chainlistName": "Somnia Mainnet",
+      "expectedChainId": 5031,
+      "native": "SOMI",
+      "addresses": [
+        "0xc063b29cd6b30885783b505ae180b3079e0a2154"
+      ],
+      "attempts": [
+        {
+          "url": "https://api.infra.mainnet.somnia.network",
+          "chainId": 5031,
+          "block": 456493531,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://api.infra.mainnet.somnia.network",
+      "status": "CLOCK_SKEW",
+      "contracts": [
+        {
+          "address": "0xc063b29cd6b30885783b505ae180b3079e0a2154",
+          "codeBytes": 5054,
+          "nativeWei": 10000000000000000000
+        }
+      ],
+      "block": 456493531,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Nahmii",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Nahmii 3 Mainnet",
+      "expectedChainId": 4061,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.n3.nahmii.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Theta",
+      "chainTvl": 296342.4627317273,
+      "protocolCount": 4,
+      "chainlistName": "Theta Mainnet",
+      "expectedChainId": 361,
+      "native": "TFUEL",
+      "addresses": [
+        "0x4dc08b15ea0e10b96c41aec22fab934ba15c983e"
+      ],
+      "attempts": [
+        {
+          "url": "https://eth-rpc-api.thetatoken.org/rpc",
+          "chainId": 361,
+          "block": 36572869,
+          "blockTimestamp": 1793803803,
+          "ageSeconds": 10,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://eth-rpc-api.thetatoken.org/rpc",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x4dc08b15ea0e10b96c41aec22fab934ba15c983e",
+          "codeBytes": 1650,
+          "nativeWei": 13092695295761361835601961
+        }
+      ],
+      "block": 36572869,
+      "blockTimestamp": 1793803803,
+      "ageSeconds": 10,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:03+00:00"
+    },
+    {
+      "name": "Syscoin",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Syscoin Mainnet",
+      "expectedChainId": 57,
+      "native": "SYS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.syscoin.org",
+          "chainId": 57,
+          "block": 1019577,
+          "blockTimestamp": 1793803112,
+          "ageSeconds": 701,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.syscoin.org",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 1019577,
+      "blockTimestamp": 1793803112,
+      "ageSeconds": 701,
+      "ageDays": 0.01,
+      "lastBlockTime": "2026-11-04T14:38:32+00:00"
+    },
+    {
+      "name": "Goerli",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Goerli",
+      "expectedChainId": 5,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.goerli.mudit.blog",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://ethereum-goerli-rpc.publicnode.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://goerli.gateway.tenderly.co",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Bahamut",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Bahamut",
+      "expectedChainId": 5165,
+      "native": "FTN",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc1.bahamut.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc2.bahamut.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc1.ftnscan.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc2.ftnscan.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "zkLink Nova",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Ink",
+      "expectedChainId": 57073,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-gel.inkonchain.com",
+          "chainId": 57073,
+          "block": 60305403,
+          "blockTimestamp": 1793803814,
+          "ageSeconds": -1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc-gel.inkonchain.com",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 60305403,
+      "blockTimestamp": 1793803814,
+      "ageSeconds": -1,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:14+00:00"
+    },
+    {
+      "name": "Gravity by Galxe",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Gravity",
+      "expectedChainId": 127001,
+      "native": "G",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.gravity.xyz",
+          "chainId": 127001,
+          "block": 63103670,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet-rpc.gravity.xyz",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 63103670,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Boba_Avax",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Boba Avax",
+      "expectedChainId": 43288,
+      "native": "BOBA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://avax.boba.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://replica.avax.boba.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Mode",
+      "chainTvl": 593014.0978542856,
+      "protocolCount": 4,
+      "chainlistName": "Mode",
+      "expectedChainId": 34443,
+      "native": "ETH",
+      "addresses": [
+        "0x6863fb62Ed27A9DdF458105B507C15b5d741d62e"
+      ],
+      "attempts": [
+        {
+          "url": "https://mainnet.mode.network",
+          "chainId": 34443,
+          "block": 46818116,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.mode.network",
+      "status": "CLOCK_SKEW",
+      "contracts": [
+        {
+          "address": "0x6863fb62Ed27A9DdF458105B507C15b5d741d62e",
+          "codeBytes": 8828,
+          "nativeWei": 0
+        }
+      ],
+      "block": 46818116,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Cronos zkEVM",
+      "chainTvl": 632966.3026431405,
+      "protocolCount": 4,
+      "chainlistName": "Cronos zkEVM Testnet",
+      "expectedChainId": 240,
+      "native": "zkTCRO",
+      "addresses": [
+        "0xcaf2fd3f47e7f46e99f74be579b2cc2233f33ef8"
+      ],
+      "attempts": [
+        {
+          "url": "https://testnet.zkevm.cronos.org",
+          "chainId": 240,
+          "block": 396527,
+          "blockTimestamp": 1793759401,
+          "ageSeconds": 44412,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://testnet.zkevm.cronos.org",
+      "status": "STALLED",
+      "contracts": [
+        {
+          "address": "0xcaf2fd3f47e7f46e99f74be579b2cc2233f33ef8",
+          "codeBytes": 0,
+          "nativeWei": 0
+        }
+      ],
+      "block": 396527,
+      "blockTimestamp": 1793759401,
+      "ageSeconds": 44412,
+      "ageDays": 0.51,
+      "lastBlockTime": "2026-11-04T02:30:01+00:00"
+    },
+    {
+      "name": "Abstract",
+      "chainTvl": 2918466.382249859,
+      "protocolCount": 8,
+      "chainlistName": "Abstract",
+      "expectedChainId": 2741,
+      "native": "ETH",
+      "addresses": [
+        "0x4c68e4102c0f120cce9f08625bd12079806b7c4d"
+      ],
+      "attempts": [
+        {
+          "url": "https://api.mainnet.abs.xyz",
+          "chainId": 2741,
+          "block": 88723723,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://api.mainnet.abs.xyz",
+      "status": "CLOCK_SKEW",
+      "contracts": [
+        {
+          "address": "0x4c68e4102c0f120cce9f08625bd12079806b7c4d",
+          "codeBytes": 19360,
+          "nativeWei": 0
+        }
+      ],
+      "block": 88723723,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "GOAT",
+      "chainTvl": 37929.76352856497,
+      "protocolCount": 0,
+      "chainlistName": "GOAT Network",
+      "expectedChainId": 2345,
+      "native": "BTC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.goat.network",
+          "chainId": 2345,
+          "block": 16600734,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.goat.network",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 16600734,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "DFK",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "DFK Chain",
+      "expectedChainId": 53935,
+      "native": "JEWEL",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 405: Method Not Allowed",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Dogechain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Dogechain Mainnet",
+      "expectedChainId": 2000,
+      "native": "DOGE",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.dogechain.dog",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc01-sg.dogechain.dog",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc.ankr.com/dogechain",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Zora",
+      "chainTvl": 40744.51687677279,
+      "protocolCount": 0,
+      "chainlistName": "Zora",
+      "expectedChainId": 7777777,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.zora.energy",
+          "chainId": 7777777,
+          "block": 53554988,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.zora.energy",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 53554988,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Milkomeda A1",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Milkomeda A1 Mainnet",
+      "expectedChainId": 2002,
+      "native": "mALGO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-mainnet-algorand-rollup.a1.milkomeda.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Findora",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Findora Mainnet",
+      "expectedChainId": 2152,
+      "native": "FRA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-mainnet.findora.org",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "REIchain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "REI Chain Mainnet",
+      "expectedChainId": 55555,
+      "native": "REI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rei-rpc.moonrhythm.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "SX Network",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "SX Network Mainnet",
+      "expectedChainId": 416,
+      "native": "SX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.sx.technology",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 530: <none>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "SX Rollup",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "SX Rollup",
+      "expectedChainId": 4162,
+      "native": "SX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.sx-rollup.gelato.digital",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "MultiVAC",
+      "chainTvl": 3267.7329218086784,
+      "protocolCount": 1,
+      "chainlistName": "MultiVAC Mainnet",
+      "expectedChainId": 62621,
+      "native": "MTV",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.mtv.ac",
+          "chainId": 62621,
+          "block": 56344973,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.mtv.ac",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 56344973,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Acala",
+      "chainTvl": 280124.17287960165,
+      "protocolCount": 5,
+      "chainlistName": "Acala Network",
+      "expectedChainId": 787,
+      "native": "ACA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://eth-rpc-acala.aca-api.network",
+          "chainId": 787,
+          "block": 12359977,
+          "blockTimestamp": 1793803806,
+          "ageSeconds": 7,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://eth-rpc-acala.aca-api.network",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 12359977,
+      "blockTimestamp": 1793803806,
+      "ageSeconds": 7,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:06+00:00"
+    },
+    {
+      "name": "Odyssey",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Odyssey Testnet",
+      "expectedChainId": 911867,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://odyssey.ithaca.xyz",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "LUKSO",
+      "chainTvl": 0,
+      "protocolCount": 2,
+      "chainlistName": "LUKSO Mainnet",
+      "expectedChainId": 42,
+      "native": "LYX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://42.rpc.thirdweb.com",
+          "chainId": 42,
+          "block": 8715718,
+          "blockTimestamp": 1793803812,
+          "ageSeconds": 1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://42.rpc.thirdweb.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 8715718,
+      "blockTimestamp": 1793803812,
+      "ageSeconds": 1,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:12+00:00"
+    },
+    {
+      "name": "Nova Network",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Nova Network",
+      "expectedChainId": 87,
+      "native": "SNT",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://connect.novanetwork.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://0x57.redjackstudio.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc.novanetwork.io:9070",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Kroma",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Kroma",
+      "expectedChainId": 255,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://api.kroma.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc-kroma.rockx.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Ultron",
+      "chainTvl": 50515.62044826981,
+      "protocolCount": 0,
+      "chainlistName": "Ultron Testnet",
+      "expectedChainId": 1230,
+      "native": "ULX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://ultron-dev.io",
+          "chainId": 1230,
+          "block": 8262260,
+          "blockTimestamp": 1793802436,
+          "ageSeconds": 1377,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://ultron-dev.io",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 8262260,
+      "blockTimestamp": 1793802436,
+      "ageSeconds": 1377,
+      "ageDays": 0.02,
+      "lastBlockTime": "2026-11-04T14:27:16+00:00"
+    },
+    {
+      "name": "Zkfair",
+      "chainTvl": 84531.24984486672,
+      "protocolCount": 1,
+      "chainlistName": "ZKFair Mainnet",
+      "expectedChainId": 42766,
+      "native": "USDC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.zkfair.io",
+          "chainId": 42766,
+          "block": 29987589,
+          "blockTimestamp": 1793767754,
+          "ageSeconds": 36059,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.zkfair.io",
+      "status": "STALLED",
+      "contracts": [],
+      "block": 29987589,
+      "blockTimestamp": 1793767754,
+      "ageSeconds": 36059,
+      "ageDays": 0.42,
+      "lastBlockTime": "2026-11-04T04:49:14+00:00"
+    },
+    {
+      "name": "WEMIX3.0",
+      "chainTvl": 2472041.6156989112,
+      "protocolCount": 0,
+      "chainlistName": "WEMIX3.0 Mainnet",
+      "expectedChainId": 1111,
+      "native": "WEMIX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://api.wemix.com",
+          "chainId": 1111,
+          "block": 127570099,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://api.wemix.com",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 127570099,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Dexit",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Dexit Network",
+      "expectedChainId": 877,
+      "native": "DXT",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://dxt.dexit.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Omax",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Omax Mainnet",
+      "expectedChainId": 311,
+      "native": "OMAX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainapi.omaxray.com",
+          "chainId": 311,
+          "block": 12277044,
+          "blockTimestamp": 1793803759,
+          "ageSeconds": 54,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainapi.omaxray.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 12277044,
+      "blockTimestamp": 1793803759,
+      "ageSeconds": 54,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:19+00:00"
+    },
+    {
+      "name": "DChain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "DCHAIN",
+      "expectedChainId": 2716446429837000,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://dchain-2716446429837000-1.jsonrpc.sagarpc.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Ancient8",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Ancient8",
+      "expectedChainId": 888888888,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.ancient8.gg",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "KUB",
+      "chainTvl": 4908275.9664316,
+      "protocolCount": 0,
+      "chainlistName": "KUB Testnet",
+      "expectedChainId": 25925,
+      "native": "tKUB",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-testnet.bitkubchain.io",
+          "chainId": 25925,
+          "block": 34997357,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc-testnet.bitkubchain.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 34997357,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "ShimmerEVM",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "ShimmerEVM",
+      "expectedChainId": 148,
+      "native": "SMR",
+      "addresses": [
+        "0x326f23422ce22ee5fbb5f37f9fa1092d095546f8"
+      ],
+      "attempts": [
+        {
+          "url": "https://json-rpc.evm.shimmer.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "LightLink",
+      "chainTvl": 21129.8574628764,
+      "protocolCount": 0,
+      "chainlistName": "Ink",
+      "expectedChainId": 57073,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-gel.inkonchain.com",
+          "chainId": 57073,
+          "block": 60305404,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc-gel.inkonchain.com",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 60305404,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "GodwokenV1",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Godwoken Mainnet",
+      "expectedChainId": 71402,
+      "native": "pCKB",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://v1.mainnet.godwoken.io/rpc",
+          "chainId": 71402,
+          "block": 2851258,
+          "blockTimestamp": 1781242440,
+          "ageSeconds": 12561373,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://v1.mainnet.godwoken.io/rpc",
+      "status": "FROZEN",
+      "contracts": [],
+      "block": 2851258,
+      "blockTimestamp": 1781242440,
+      "ageSeconds": 12561373,
+      "ageDays": 145.39,
+      "lastBlockTime": "2026-06-12T05:34:00+00:00"
+    },
+    {
+      "name": "Starcoin",
+      "chainTvl": 659461.1402086411,
+      "protocolCount": 2,
+      "chainlistName": "Arc",
+      "expectedChainId": 5042,
+      "native": "USDC",
+      "addresses": [
+        "0x8c109349c6bd91411d6bc962e080c4a3::STAR::STAR"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.mainnet.arc.io",
+          "chainId": 5042,
+          "block": 29514897,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.mainnet.arc.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [
+        {
+          "address": "0x8c109349c6bd91411d6bc962e080c4a3::STAR::STAR",
+          "codeBytes": null,
+          "nativeWei": null,
+          "error": "{'message': 'Invalid params', 'data': 'invalid string length at line 1 column 48",
+          "balanceError": "{'code': -32602, 'message': 'Invalid params', 'data': 'invalid string length at "
+        }
+      ],
+      "block": 29514897,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Bifrost",
+      "chainTvl": 3363183.708125294,
+      "protocolCount": 4,
+      "chainlistName": "Bifrost Mainnet",
+      "expectedChainId": 3068,
+      "native": "BFC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://public-01.mainnet.bifrostnetwork.com/rpc",
+          "chainId": 3068,
+          "block": 39985562,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://public-01.mainnet.bifrostnetwork.com/rpc",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 39985562,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Tombchain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Tomb Chain Mainnet",
+      "expectedChainId": 6969,
+      "native": "TOMB",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.tombchain.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error timed out>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Pego",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Pego Network",
+      "expectedChainId": 20201022,
+      "native": "PG",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://pegorpc.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://node1.pegorpc.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://node2.pegorpc.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://node3.pegorpc.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Cube",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Cube Chain Mainnet",
+      "expectedChainId": 1818,
+      "native": "CUBE",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://http-mainnet.cube.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error timed out>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://http-mainnet-sg.cube.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://http-mainnet-us.cube.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Botanix",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Botanix Testnet",
+      "expectedChainId": 3636,
+      "native": "BTC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://node.botanixlabs.dev",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Saga",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "SagaEVM",
+      "expectedChainId": 5464,
+      "native": "GAS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://sagaevm.jsonrpc.sagarpc.io",
+          "chainId": 5464,
+          "block": 10728506,
+          "blockTimestamp": 1793803809,
+          "ageSeconds": 4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://sagaevm.jsonrpc.sagarpc.io",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 10728506,
+      "blockTimestamp": 1793803809,
+      "ageSeconds": 4,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:09+00:00"
+    },
+    {
+      "name": "Nibiru",
+      "chainTvl": 382174.6915689121,
+      "protocolCount": 3,
+      "chainlistName": "Nibiru devnet-3",
+      "expectedChainId": 7222,
+      "native": "NIBI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://evm-rpc.devnet-3.nibiru.fi",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Lens",
+      "chainTvl": 39381.810811798845,
+      "protocolCount": 0,
+      "chainlistName": "Lens",
+      "expectedChainId": 232,
+      "native": "GHO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.lens.xyz",
+          "chainId": 232,
+          "block": 6459906,
+          "blockTimestamp": 1793803799,
+          "ageSeconds": 14,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.lens.xyz",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 6459906,
+      "blockTimestamp": 1793803799,
+      "ageSeconds": 14,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:59+00:00"
+    },
+    {
+      "name": "0G",
+      "chainTvl": 2795930.8764037383,
+      "protocolCount": 8,
+      "chainlistName": "0G Mainnet",
+      "expectedChainId": 16661,
+      "native": "0G",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://evmrpc.0g.ai",
+          "chainId": 16661,
+          "block": 49268126,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://evmrpc.0g.ai",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 49268126,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Astar zkEVM",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Astar zkEVM",
+      "expectedChainId": 3776,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.startale.com/astar-zkevm",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "DuckChain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "DuckChain Testnet",
+      "expectedChainId": 202105,
+      "native": "TON",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://testnet-rpc.duckchain.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://testnet-rpc-hk.duckchain.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Rari",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Rarimo",
+      "expectedChainId": 7368,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://l2.rarimo.com",
+          "chainId": 7368,
+          "block": 88516,
+          "blockTimestamp": 1793803474,
+          "ageSeconds": 339,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://l2.rarimo.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 88516,
+      "blockTimestamp": 1793803474,
+      "ageSeconds": 339,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:44:34+00:00"
+    },
+    {
+      "name": "Superposition",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Superposition",
+      "expectedChainId": 55244,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.superposition.so",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Xai",
+      "chainTvl": 6331.543516337808,
+      "protocolCount": 1,
+      "chainlistName": "Xai Mainnet",
+      "expectedChainId": 660279,
+      "native": "XAI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://xai-chain.net/rpc",
+          "chainId": 660279,
+          "block": 138266545,
+          "blockTimestamp": 1793803809,
+          "ageSeconds": 4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://xai-chain.net/rpc",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 138266545,
+      "blockTimestamp": 1793803809,
+      "ageSeconds": 4,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:09+00:00"
+    },
+    {
+      "name": "EDU Chain",
+      "chainTvl": 702.9223840784157,
+      "protocolCount": 0,
+      "chainlistName": "EDU Chain",
+      "expectedChainId": 41923,
+      "native": "EDU",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.edu-chain.raas.gelato.cloud",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "MAP Protocol",
+      "chainTvl": 940373.3773250909,
+      "protocolCount": 0,
+      "chainlistName": "MAP Protocol",
+      "expectedChainId": 22776,
+      "native": "MAPO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.maplabs.io",
+          "chainId": 22776,
+          "block": 26914232,
+          "blockTimestamp": 1793803816,
+          "ageSeconds": -3,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.maplabs.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 26914232,
+      "blockTimestamp": 1793803816,
+      "ageSeconds": -3,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:16+00:00"
+    },
+    {
+      "name": "Zeniq",
+      "chainTvl": 15954.965289759693,
+      "protocolCount": 0,
+      "chainlistName": "Zeniq",
+      "expectedChainId": 383414847825,
+      "native": "ZENIQ",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://api.zeniq.network",
+          "chainId": 383414847825,
+          "block": 41087381,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://api.zeniq.network",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 41087381,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "UX",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "LuxePorts",
+      "expectedChainId": 1122,
+      "native": "LXP",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.luxeports.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 523: <none>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://erpc.luxeports.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 523: <none>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Optimism",
+      "chainTvl": 0,
+      "protocolCount": 117,
+      "chainlistName": "Optimism Kovan",
+      "expectedChainId": 69,
+      "native": "ETH",
+      "addresses": [
+        "0x00e1724885473b63bce08a9f0a52f35b0979e35a",
+        "0x0a7B751FcDBBAA8BB988B9217ad5Fb5cfe7bf7A0",
+        "0x1e925de1c68ef83bd98ee3e130ef14a50309c01b",
+        "0x2dad3a13ef0c6366220f989157009e501e7938f8",
+        "0x3af33bef05c2dcb3c7288b77fe1c8d2aeba4d789",
+        "0xFA436399d0458Dbe8aB890c3441256E3E09022a8",
+        "0xf467C7d5a4A9C4687fFc7986aC6aD5A4c81E1404"
+      ],
+      "attempts": [
+        {
+          "url": "https://kovan.optimism.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Oraichain",
+      "chainTvl": 79174.34098561583,
+      "protocolCount": 0,
+      "chainlistName": "Oraichain Mainnet",
+      "expectedChainId": 108160679,
+      "native": "ORAI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://evm.orai.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "inEVM",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Bitcoin EVM",
+      "expectedChainId": 2203,
+      "native": "BTC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://connect.bitcoinevm.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:100",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Dexalot",
+      "chainTvl": 1652448.0785973985,
+      "protocolCount": 1,
+      "chainlistName": "Dexalot Subnet",
+      "expectedChainId": 432204,
+      "native": "ALOT",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://subnets.avax.network/dexalot/mainnet/rpc",
+          "chainId": 432204,
+          "block": 78082399,
+          "blockTimestamp": 1793803816,
+          "ageSeconds": -3,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://subnets.avax.network/dexalot/mainnet/rpc",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 78082399,
+      "blockTimestamp": 1793803816,
+      "ageSeconds": -3,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:16+00:00"
+    },
+    {
+      "name": "Crab",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Crab Network",
+      "expectedChainId": 44,
+      "native": "CRAB",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://crab-rpc.darwinia.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://crab-rpc.dcdao.box",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Darwinia",
+      "chainTvl": 1708.3270228236904,
+      "protocolCount": 0,
+      "chainlistName": "Darwinia Network",
+      "expectedChainId": 46,
+      "native": "RING",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.darwinia.network",
+          "chainId": 46,
+          "block": 13752883,
+          "blockTimestamp": 1793803812,
+          "ageSeconds": 1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.darwinia.network",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 13752883,
+      "blockTimestamp": 1793803812,
+      "ageSeconds": 1,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:12+00:00"
+    },
+    {
+      "name": "Sophon",
+      "chainTvl": 14038.94571625068,
+      "protocolCount": 1,
+      "chainlistName": "Sophon",
+      "expectedChainId": 50104,
+      "native": "SOPH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.sophon.xyz",
+          "chainId": 50104,
+          "block": 29682301,
+          "blockTimestamp": 1793803776,
+          "ageSeconds": 37,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.sophon.xyz",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 29682301,
+      "blockTimestamp": 1793803776,
+      "ageSeconds": 37,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:36+00:00"
+    },
+    {
+      "name": "IOTA EVM",
+      "chainTvl": 310723.17692328664,
+      "protocolCount": 2,
+      "chainlistName": "IOTA EVM",
+      "expectedChainId": 8822,
+      "native": "IOTA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://json-rpc.evm.iotaledger.net",
+          "chainId": 8822,
+          "block": 13071036,
+          "blockTimestamp": 1793803808,
+          "ageSeconds": 5,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://json-rpc.evm.iotaledger.net",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 13071036,
+      "blockTimestamp": 1793803808,
+      "ageSeconds": 5,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:08+00:00"
+    },
+    {
+      "name": "Oasys",
+      "chainTvl": 200605.03331857154,
+      "protocolCount": 2,
+      "chainlistName": "Oasys Mainnet",
+      "expectedChainId": 248,
+      "native": "OAS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.mainnet.oasys.games",
+          "chainId": 248,
+          "block": 15292988,
+          "blockTimestamp": 1793803816,
+          "ageSeconds": -3,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.mainnet.oasys.games",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 15292988,
+      "blockTimestamp": 1793803816,
+      "ageSeconds": -3,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:16+00:00"
+    },
+    {
+      "name": "Coti",
+      "chainTvl": 78859.48488295624,
+      "protocolCount": 1,
+      "chainlistName": "COTI",
+      "expectedChainId": 2632500,
+      "native": "COTI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.coti.io/rpc",
+          "chainId": 2632500,
+          "block": 10224530,
+          "blockTimestamp": 1793803813,
+          "ageSeconds": 0,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.coti.io/rpc",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 10224530,
+      "blockTimestamp": 1793803813,
+      "ageSeconds": 0,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:13+00:00"
+    },
+    {
+      "name": "Hydra",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Hydration",
+      "expectedChainId": 222222,
+      "native": "WETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.hydradx.cloud",
+          "chainId": 222222,
+          "block": 16612430,
+          "blockTimestamp": 1793803806,
+          "ageSeconds": 7,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.hydradx.cloud",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 16612430,
+      "blockTimestamp": 1793803806,
+      "ageSeconds": 7,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:06+00:00"
+    },
+    {
+      "name": "Hydra Chain",
+      "chainTvl": 22419.969307883486,
+      "protocolCount": 0,
+      "chainlistName": "Hydra Chain",
+      "expectedChainId": 4488,
+      "native": "HYDRA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-mainnet.hydrachain.org",
+          "chainId": 4488,
+          "block": 99775363,
+          "blockTimestamp": 1793803817,
+          "ageSeconds": -4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc-mainnet.hydrachain.org",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 99775363,
+      "blockTimestamp": 1793803817,
+      "ageSeconds": -4,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:17+00:00"
+    },
+    {
+      "name": "ENULS",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "ENULS Mainnet",
+      "expectedChainId": 119,
+      "native": "NULS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://evmapi.nuls.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://evmapi2.nuls.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Plume",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Plume Mainnet",
+      "expectedChainId": 98866,
+      "native": "PLUME",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.plume.org",
+          "chainId": 98866,
+          "block": 103674880,
+          "blockTimestamp": 1793803817,
+          "ageSeconds": -4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.plume.org",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 103674880,
+      "blockTimestamp": 1793803817,
+      "ageSeconds": -4,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:17+00:00"
+    },
+    {
+      "name": "Data Network",
+      "chainTvl": 59077.33099261198,
+      "protocolCount": 0,
+      "chainlistName": "Data Network",
+      "expectedChainId": 1514,
+      "native": "DATA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.datarpc.io",
+          "chainId": 1514,
+          "block": 24176764,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.datarpc.io",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 24176764,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "XPLA",
+      "chainTvl": 115482.31344125433,
+      "protocolCount": 1,
+      "chainlistName": "Xpla Testnet",
+      "expectedChainId": 3701,
+      "native": "XPLA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://dimension-rpc.xpla.dev",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: {'code': -32601, 'message': 'Method not found'}",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Onus",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Citronus",
+      "expectedChainId": 50000,
+      "native": "CITRO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.citronus.com",
+          "chainId": 50000,
+          "block": 18090,
+          "blockTimestamp": 1793800592,
+          "ageSeconds": 3221,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.citronus.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 18090,
+      "blockTimestamp": 1793800592,
+      "ageSeconds": 3221,
+      "ageDays": 0.04,
+      "lastBlockTime": "2026-11-04T13:56:32+00:00"
+    },
+    {
+      "name": "Swellchain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Swellchain",
+      "expectedChainId": 1923,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://swell-mainnet.alt.technology",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc.ankr.com/swell",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Tenet",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Tenet",
+      "expectedChainId": 1559,
+      "native": "TENET",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.tenet.org",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:100",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://tenet-evm.publicnode.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Mint",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Mint Testnet",
+      "expectedChainId": 1686,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://testnet-rpc.mintchain.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Bitlayer",
+      "chainTvl": 461869.0701942818,
+      "protocolCount": 5,
+      "chainlistName": "Bitlayer Testnet",
+      "expectedChainId": 200810,
+      "native": "BTC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://testnet-rpc.bitlayer.org",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://testnet-rpc.bitlayer-rpc.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc.ankr.com/bitlayer_testnet",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Superseed",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Superseed",
+      "expectedChainId": 5330,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.superseed.xyz",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Form Network",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Form Network",
+      "expectedChainId": 478,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.form.network/http",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Taraxa",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Taraxa Mainnet",
+      "expectedChainId": 841,
+      "native": "TARA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.mainnet.taraxa.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://ws.mainnet.taraxa.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Artela",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Artela Mainnet",
+      "expectedChainId": 11820,
+      "native": "ART",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://node-euro.artela.network/rpc",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Beam",
+      "chainTvl": 1443149.3290408854,
+      "protocolCount": 1,
+      "chainlistName": "Beam",
+      "expectedChainId": 4337,
+      "native": "BEAM",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://build.onbeam.com/rpc",
+          "chainId": 4337,
+          "block": 9835970,
+          "blockTimestamp": 1793803804,
+          "ageSeconds": 9,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://build.onbeam.com/rpc",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 9835970,
+      "blockTimestamp": 1793803804,
+      "ageSeconds": 9,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:04+00:00"
+    },
+    {
+      "name": "Elysium",
+      "chainTvl": 369.49887273909314,
+      "protocolCount": 0,
+      "chainlistName": "Elysium Testnet",
+      "expectedChainId": 1338,
+      "native": "PYR",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.atlantischain.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Mayachain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "MAYA CHAIN",
+      "expectedChainId": 6292,
+      "native": "M3G",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.mayachain.io",
+          "chainId": 6292,
+          "block": 50,
+          "blockTimestamp": 1793589803,
+          "ageSeconds": 214010,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.mayachain.io",
+      "status": "STALLED",
+      "contracts": [],
+      "block": 50,
+      "blockTimestamp": 1793589803,
+      "ageSeconds": 214010,
+      "ageDays": 2.48,
+      "lastBlockTime": "2026-11-02T03:23:23+00:00"
+    },
+    {
+      "name": "Degen",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Degen Chain",
+      "expectedChainId": 666666666,
+      "native": "DEGEN",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.degen.tips",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 530: <none>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "AB",
+      "chainTvl": 231744.8400001126,
+      "protocolCount": 0,
+      "chainlistName": "Bobabeam",
+      "expectedChainId": 1294,
+      "native": "BOBA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://bobabeam.boba.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://replica.bobabeam.boba.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "BounceBit",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "BounceBit Testnet",
+      "expectedChainId": 6000,
+      "native": "BB",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://fullnode-testnet.bouncebitapi.com",
+          "chainId": 6001,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": null,
+          "chainIdMatches": false
+        }
+      ],
+      "endpoint": null,
+      "status": "CHAINID_MISMATCH",
+      "contracts": []
+    },
+    {
+      "name": "Cyber",
+      "chainTvl": 2483.183901096209,
+      "protocolCount": 1,
+      "chainlistName": "Cyber Testnet",
+      "expectedChainId": 111557560,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://cyber-testnet.alt.technology",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://rpc.testnet.cyber.co",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Fluence",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Fluence",
+      "expectedChainId": 9999999,
+      "native": "FLT",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.mainnet.fluence.dev",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "BEVM",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "BEVM Testnet",
+      "expectedChainId": 11503,
+      "native": "BTC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://testnet.bevm.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Bitnet",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Bitnet",
+      "expectedChainId": 210,
+      "native": "BTN",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.bitnetmoney.com",
+          "chainId": 210,
+          "block": 7931346,
+          "blockTimestamp": 1793803793,
+          "ageSeconds": 20,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.bitnetmoney.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 7931346,
+      "blockTimestamp": 1793803793,
+      "ageSeconds": 20,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:53+00:00"
+    },
+    {
+      "name": "Areum Network",
+      "chainTvl": 12874.023390887367,
+      "protocolCount": 0,
+      "chainlistName": "Areum Network Mainnet",
+      "expectedChainId": 463,
+      "native": "AREA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.areum.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://mainnet-rpc2.areum.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://mainnet-rpc3.areum.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://mainnet-rpc4.areum.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 403: Forbidden",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "DeFiVerse",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "DeFiVerse Mainnet",
+      "expectedChainId": 16116,
+      "native": "OAS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.defi-verse.org",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 503: Service Unavailable",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Oasis Sapphire",
+      "chainTvl": 219427.71019201574,
+      "protocolCount": 0,
+      "chainlistName": "Oasis Sapphire",
+      "expectedChainId": 23294,
+      "native": "ROSE",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://sapphire.oasis.io",
+          "chainId": 23294,
+          "block": 16489746,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://sapphire.oasis.io",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 16489746,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "K2",
+      "chainTvl": 168.34545505835408,
+      "protocolCount": 0,
+      "chainlistName": "K2 Mainnet",
+      "expectedChainId": 2410,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.karak.network",
+          "chainId": 2410,
+          "block": 43110911,
+          "blockTimestamp": 1789617237,
+          "ageSeconds": 4186576,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.karak.network",
+      "status": "FROZEN",
+      "contracts": [],
+      "block": 43110911,
+      "blockTimestamp": 1789617237,
+      "ageSeconds": 4186576,
+      "ageDays": 48.46,
+      "lastBlockTime": "2026-09-17T03:53:57+00:00"
+    },
+    {
+      "name": "SatoshiVM",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "SatoshiVM Testnet",
+      "expectedChainId": 3110,
+      "native": "BTC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://test-rpc-node-http.svmscan.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Prom",
+      "chainTvl": 719231.0212222387,
+      "protocolCount": 2,
+      "chainlistName": "Prom",
+      "expectedChainId": 227,
+      "native": "PROM",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://prom-rpc.eu-north-2.gateway.fm",
+          "chainId": 227,
+          "block": 10401245,
+          "blockTimestamp": 1793803811,
+          "ageSeconds": 2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://prom-rpc.eu-north-2.gateway.fm",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 10401245,
+      "blockTimestamp": 1793803811,
+      "ageSeconds": 2,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:11+00:00"
+    },
+    {
+      "name": "Planq",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Planq Mainnet",
+      "expectedChainId": 7070,
+      "native": "PLQ",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://evm-rpc.planq.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "LaChain Network",
+      "chainTvl": 44911.61840927338,
+      "protocolCount": 0,
+      "chainlistName": "LaChain",
+      "expectedChainId": 274,
+      "native": "LAC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc1.mainnet.lachain.network",
+          "chainId": 274,
+          "block": 23472941,
+          "blockTimestamp": 1788266194,
+          "ageSeconds": 5537619,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc1.mainnet.lachain.network",
+      "status": "FROZEN",
+      "contracts": [],
+      "block": 23472941,
+      "blockTimestamp": 1788266194,
+      "ageSeconds": 5537619,
+      "ageDays": 64.09,
+      "lastBlockTime": "2026-09-01T12:36:34+00:00"
+    },
+    {
+      "name": "EOS EVM",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "EOS EVM Network",
+      "expectedChainId": 17777,
+      "native": "EOS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://api.evm.eosnetwork.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Genesys",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Genesys Mainnet",
+      "expectedChainId": 16507,
+      "native": "GSYS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.genesys.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error timed out>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "AILayer",
+      "chainTvl": 94.68768965632206,
+      "protocolCount": 1,
+      "chainlistName": "AILayer Testnet",
+      "expectedChainId": 2648,
+      "native": "BTC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://testnet-rpc.ailayer.xyz",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 521: <none>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Ham",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Ham",
+      "expectedChainId": 5112,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.ham.fun",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Doma",
+      "chainTvl": 1162221.2373032384,
+      "protocolCount": 2,
+      "chainlistName": "Doma",
+      "expectedChainId": 97477,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.doma.xyz",
+          "chainId": 97477,
+          "block": 17917533,
+          "blockTimestamp": 1793803817,
+          "ageSeconds": -4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.doma.xyz",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 17917533,
+      "blockTimestamp": 1793803817,
+      "ageSeconds": -4,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:17+00:00"
+    },
+    {
+      "name": "Mind Network",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Mind Network Testnet",
+      "expectedChainId": 192940,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-testnet.mindnetwork.xyz",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Saakuru",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Saakuru Testnet",
+      "expectedChainId": 247253,
+      "native": "OAS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc-testnet.saakuru.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -5] No address associated with hostname>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "IOTA",
+      "chainTvl": 1390148.4449725794,
+      "protocolCount": 5,
+      "chainlistName": "IOTA EVM",
+      "expectedChainId": 8822,
+      "native": "IOTA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://json-rpc.evm.iotaledger.net",
+          "chainId": 8822,
+          "block": 13071036,
+          "blockTimestamp": 1793803808,
+          "ageSeconds": 5,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://json-rpc.evm.iotaledger.net",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 13071036,
+      "blockTimestamp": 1793803808,
+      "ageSeconds": 5,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:08+00:00"
+    },
+    {
+      "name": "Neo X Mainnet",
+      "chainTvl": 3915.5424182274965,
+      "protocolCount": 0,
+      "chainlistName": "Neo X Mainnet",
+      "expectedChainId": 47763,
+      "native": "GAS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-1.rpc.banelabs.org",
+          "chainId": 47763,
+          "block": 8205910,
+          "blockTimestamp": 1793803816,
+          "ageSeconds": -3,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet-1.rpc.banelabs.org",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 8205910,
+      "blockTimestamp": 1793803816,
+      "ageSeconds": -3,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:16+00:00"
+    },
+    {
+      "name": "Dymension",
+      "chainTvl": 140799.2378231208,
+      "protocolCount": 2,
+      "chainlistName": "Dymension",
+      "expectedChainId": 1100,
+      "native": "DYM",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://dymension-evm.blockpi.network/v1/rpc/public",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno 111] Connection refused>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://dymension-evm-rpc.publicnode.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "XCHAIN",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "XCHAIN",
+      "expectedChainId": 94524,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://xchain-rpc.kuma.bid",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Electroneum",
+      "chainTvl": 224260.36021314008,
+      "protocolCount": 2,
+      "chainlistName": "Electroneum Mainnet",
+      "expectedChainId": 52014,
+      "native": "ETN",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.electroneum.com",
+          "chainId": 52014,
+          "block": 16739056,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.electroneum.com",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 16739056,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Polynomial",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Polynomial",
+      "expectedChainId": 8008,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.polynomial.fi",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Matchain",
+      "chainTvl": 21083.547296251556,
+      "protocolCount": 0,
+      "chainlistName": "Matchain",
+      "expectedChainId": 698,
+      "native": "BNB",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.matchain.io",
+          "chainId": 698,
+          "block": 172746087,
+          "blockTimestamp": 1793803819,
+          "ageSeconds": -6,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.matchain.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 172746087,
+      "blockTimestamp": 1793803819,
+      "ageSeconds": -6,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:19+00:00"
+    },
+    {
+      "name": "Shape",
+      "chainTvl": 136241.42186883173,
+      "protocolCount": 2,
+      "chainlistName": "Shape",
+      "expectedChainId": 360,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.shape.network",
+          "chainId": 360,
+          "block": 36029674,
+          "blockTimestamp": 1793803819,
+          "ageSeconds": -6,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.shape.network",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 36029674,
+      "blockTimestamp": 1793803819,
+      "ageSeconds": -6,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:19+00:00"
+    },
+    {
+      "name": "Asset Chain",
+      "chainTvl": 145108.53779584152,
+      "protocolCount": 1,
+      "chainlistName": "Asset Chain Mainnet",
+      "expectedChainId": 42420,
+      "native": "RWA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.assetchain.org",
+          "chainId": 42420,
+          "block": 2042791,
+          "blockTimestamp": 1793803779,
+          "ageSeconds": 34,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet-rpc.assetchain.org",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 2042791,
+      "blockTimestamp": 1793803779,
+      "ageSeconds": 34,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:39+00:00"
+    },
+    {
+      "name": "Shido",
+      "chainTvl": 147198.8230130372,
+      "protocolCount": 1,
+      "chainlistName": "Shido Network",
+      "expectedChainId": 9008,
+      "native": "SHIDO",
+      "addresses": [
+        "0xe550bde2f0898552b38a41635d7a8ddb1fd81276"
+      ],
+      "attempts": [
+        {
+          "url": "https://shido-mainnet-archive-lb-nw5es9.zeeve.net/USjg7xqUmCZ4wCsqEOOE/rpc",
+          "chainId": 9008,
+          "block": 46905038,
+          "blockTimestamp": 1793803817,
+          "ageSeconds": -4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://shido-mainnet-archive-lb-nw5es9.zeeve.net/USjg7xqUmCZ4wCsqEOOE/rpc",
+      "status": "CLOCK_SKEW",
+      "contracts": [
+        {
+          "address": "0xe550bde2f0898552b38a41635d7a8ddb1fd81276",
+          "codeBytes": 3556,
+          "nativeWei": 0
+        }
+      ],
+      "block": 46905038,
+      "blockTimestamp": 1793803817,
+      "ageSeconds": -4,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:17+00:00"
+    },
+    {
+      "name": "re.al",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "re.al",
+      "expectedChainId": 111188,
+      "native": "reETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.realforreal.gelato.digital",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://tangible-real.gateway.tenderly.co",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://real.drpc.org",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 400: Bad Request",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "VinuChain",
+      "chainTvl": 6384.196437758733,
+      "protocolCount": 0,
+      "chainlistName": "VinuChain",
+      "expectedChainId": 207,
+      "native": "VC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.vinuchain.org",
+          "chainId": 207,
+          "block": 15277851,
+          "blockTimestamp": 1793803807,
+          "ageSeconds": 6,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.vinuchain.org",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 15277851,
+      "blockTimestamp": 1793803807,
+      "ageSeconds": 6,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:07+00:00"
+    },
+    {
+      "name": "Vana",
+      "chainTvl": 170452.73248618774,
+      "protocolCount": 3,
+      "chainlistName": "Vana",
+      "expectedChainId": 1480,
+      "native": "VANA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.vana.org",
+          "chainId": 1480,
+          "block": 10864904,
+          "blockTimestamp": 1793803819,
+          "ageSeconds": -6,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.vana.org",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 10864904,
+      "blockTimestamp": 1793803819,
+      "ageSeconds": -6,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:19+00:00"
+    },
+    {
+      "name": "CrossFi",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "CrossFi Testnet",
+      "expectedChainId": 4157,
+      "native": "XFI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.testnet.ms",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: The read operation timed out",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Waterfall",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Waterfall Network",
+      "expectedChainId": 181,
+      "native": "WATER",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.waterfall.network",
+          "chainId": 181,
+          "block": 16699104,
+          "blockTimestamp": 1793783307,
+          "ageSeconds": 20506,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.waterfall.network",
+      "status": "STALLED",
+      "contracts": [],
+      "block": 16699104,
+      "blockTimestamp": 1793783307,
+      "ageSeconds": 20506,
+      "ageDays": 0.24,
+      "lastBlockTime": "2026-11-04T09:08:27+00:00"
+    },
+    {
+      "name": "MANTRA",
+      "chainTvl": 517637.38507137384,
+      "protocolCount": 0,
+      "chainlistName": "MANTRA Chain",
+      "expectedChainId": 5888,
+      "native": "MANTRA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://evm.mantrachain.io",
+          "chainId": 5888,
+          "block": 19398253,
+          "blockTimestamp": 1793803815,
+          "ageSeconds": -2,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://evm.mantrachain.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 19398253,
+      "blockTimestamp": 1793803815,
+      "ageSeconds": -2,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:15+00:00"
+    },
+    {
+      "name": "Zero Network",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "ZERO Network",
+      "expectedChainId": 543210,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.zerion.io/v1/zero",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: {'code': -32035, 'message': 'Node is not available.'}",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Redstone",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Redstone",
+      "expectedChainId": 690,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.redstonechain.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Parex",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Parex Mainnet",
+      "expectedChainId": 322202,
+      "native": "PRX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.parex.network",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Silicon zkEVM",
+      "chainTvl": 7665.692631765261,
+      "protocolCount": 1,
+      "chainlistName": "Silicon zkEVM",
+      "expectedChainId": 2355,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.silicon.network",
+          "chainId": 2355,
+          "block": 22018740,
+          "blockTimestamp": 1793803814,
+          "ageSeconds": -1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.silicon.network",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 22018740,
+      "blockTimestamp": 1793803814,
+      "ageSeconds": -1,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:14+00:00"
+    },
+    {
+      "name": "MTT Network",
+      "chainTvl": 3.4033373656548918,
+      "protocolCount": 0,
+      "chainlistName": "MTT Network",
+      "expectedChainId": 6880,
+      "native": "MTT",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://evm-rpc.mtt.network",
+          "chainId": 6880,
+          "block": 22555565,
+          "blockTimestamp": 1793803817,
+          "ageSeconds": -4,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://evm-rpc.mtt.network",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 22555565,
+      "blockTimestamp": 1793803817,
+      "ageSeconds": -4,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:17+00:00"
+    },
+    {
+      "name": "Aleph Zero EVM",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Aleph Zero EVM",
+      "expectedChainId": 41455,
+      "native": "AZERO",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.alephzero.raas.gelato.cloud",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "OpenGPU",
+      "chainTvl": 24750.05867511036,
+      "protocolCount": 0,
+      "chainlistName": "OpenGPU Mainnet",
+      "expectedChainId": 1071,
+      "native": "OGPU",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.ogpuscan.io",
+          "chainId": 1071,
+          "block": 26196991,
+          "blockTimestamp": 1793803820,
+          "ageSeconds": -7,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet-rpc.ogpuscan.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 26196991,
+      "blockTimestamp": 1793803820,
+      "ageSeconds": -7,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:20+00:00"
+    },
+    {
+      "name": "Inertia",
+      "chainTvl": 286507.62636883406,
+      "protocolCount": 1,
+      "chainlistName": "Inertia Scan",
+      "expectedChainId": 5433,
+      "native": "IRTA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.inertiascan.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [SSL: TLSV1_UNRECOGNIZED_NAME] tlsv1 unrecognized name (_ssl.c:1000)>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Yominet",
+      "chainTvl": 136630.23433504422,
+      "protocolCount": 1,
+      "chainlistName": "Yominet",
+      "expectedChainId": 428962654539583,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://jsonrpc-yominet-1.anvil.asia-southeast.initia.xyz",
+          "chainId": 428962654539583,
+          "block": 35017430,
+          "blockTimestamp": 1793803807,
+          "ageSeconds": 6,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://jsonrpc-yominet-1.anvil.asia-southeast.initia.xyz",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 35017430,
+      "blockTimestamp": 1793803807,
+      "ageSeconds": 6,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:07+00:00"
+    },
+    {
+      "name": "XION",
+      "chainTvl": 3874.863192333361,
+      "protocolCount": 2,
+      "chainlistName": "ZEDXION",
+      "expectedChainId": 83872,
+      "native": "ZEDX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.zedscan.net",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error timed out>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "soonBase",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Base",
+      "expectedChainId": 8453,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.base.org",
+          "chainId": 8453,
+          "block": 53507236,
+          "blockTimestamp": 1793803819,
+          "ageSeconds": -6,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.base.org",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 53507236,
+      "blockTimestamp": 1793803819,
+      "ageSeconds": -6,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:19+00:00"
+    },
+    {
+      "name": "Eventum",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Eventum Mainnet",
+      "expectedChainId": 161803,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.evedex.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Bitcichain",
+      "chainTvl": 684.1001595038496,
+      "protocolCount": 0,
+      "chainlistName": "Bitcichain Mainnet",
+      "expectedChainId": 1907,
+      "native": "BITCI",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.bitci.com",
+          "chainId": 1907,
+          "block": 14054932,
+          "blockTimestamp": 1793803812,
+          "ageSeconds": 1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.bitci.com",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 14054932,
+      "blockTimestamp": 1793803812,
+      "ageSeconds": 1,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:12+00:00"
+    },
+    {
+      "name": "ENI",
+      "chainTvl": 1152355.2815330403,
+      "protocolCount": 1,
+      "chainlistName": "ENI Mainnet",
+      "expectedChainId": 173,
+      "native": "EGAS",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.eniac.network",
+          "chainId": 173,
+          "block": 43378337,
+          "blockTimestamp": 1793803820,
+          "ageSeconds": -7,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.eniac.network",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 43378337,
+      "blockTimestamp": 1793803820,
+      "ageSeconds": -7,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:20+00:00"
+    },
+    {
+      "name": "Camp Network",
+      "chainTvl": 81.65954119434772,
+      "protocolCount": 0,
+      "chainlistName": "Camp Network Mainnet",
+      "expectedChainId": 484,
+      "native": "CAMP",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.camp.raas.gelato.cloud",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Peaq",
+      "chainTvl": 718510.800401555,
+      "protocolCount": 5,
+      "chainlistName": "peaq",
+      "expectedChainId": 3338,
+      "native": "PEAQ",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://quicknode1.peaq.xyz",
+          "chainId": 3338,
+          "block": 12251638,
+          "blockTimestamp": 1793803812,
+          "ageSeconds": 1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://quicknode1.peaq.xyz",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 12251638,
+      "blockTimestamp": 1793803812,
+      "ageSeconds": 1,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:12+00:00"
+    },
+    {
+      "name": "Eteria",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Eteria Mainnet",
+      "expectedChainId": 140,
+      "native": "ERA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.eteria.io/v1",
+          "chainId": 140,
+          "block": 102436,
+          "blockTimestamp": 1788454465,
+          "ageSeconds": 5349348,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet.eteria.io/v1",
+      "status": "FROZEN",
+      "contracts": [],
+      "block": 102436,
+      "blockTimestamp": 1788454465,
+      "ageSeconds": 5349348,
+      "ageDays": 61.91,
+      "lastBlockTime": "2026-09-03T16:54:25+00:00"
+    },
+    {
+      "name": "Haven1",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Haven1",
+      "expectedChainId": 8811,
+      "native": "H1",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.haven1.org",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 530: <none>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "GateLayer",
+      "chainTvl": 3052111.6805298366,
+      "protocolCount": 2,
+      "chainlistName": "Gate Layer",
+      "expectedChainId": 10088,
+      "native": "GT",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://gatelayer-mainnet.gatenode.cc",
+          "chainId": 10088,
+          "block": 35720625,
+          "blockTimestamp": 1793803823,
+          "ageSeconds": -10,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://gatelayer-mainnet.gatenode.cc",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 35720625,
+      "blockTimestamp": 1793803823,
+      "ageSeconds": -10,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:23+00:00"
+    },
+    {
+      "name": "Igra",
+      "chainTvl": 516033.7690506156,
+      "protocolCount": 3,
+      "chainlistName": "Igra Network",
+      "expectedChainId": 38833,
+      "native": "iKAS",
+      "addresses": [
+        "0x16d92794F5B81d2CdEd0F0958779A410401e6435"
+      ],
+      "attempts": [
+        {
+          "url": "https://rpc.igralabs.com:8545",
+          "chainId": 38833,
+          "block": 20937467,
+          "blockTimestamp": 1793803270,
+          "ageSeconds": 543,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.igralabs.com:8545",
+      "status": "LIVE",
+      "contracts": [
+        {
+          "address": "0x16d92794F5B81d2CdEd0F0958779A410401e6435",
+          "codeBytes": 3901,
+          "nativeWei": 0
+        }
+      ],
+      "block": 20937467,
+      "blockTimestamp": 1793803270,
+      "ageSeconds": 543,
+      "ageDays": 0.01,
+      "lastBlockTime": "2026-11-04T14:41:10+00:00"
+    },
+    {
+      "name": "Ethereal",
+      "chainTvl": 1548943.8642878132,
+      "protocolCount": 1,
+      "chainlistName": "re.al",
+      "expectedChainId": 111188,
+      "native": "reETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.realforreal.gelato.digital",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://tangible-real.gateway.tenderly.co",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 404: Not Found",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://real.drpc.org",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 400: Bad Request",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "ZIG Chain",
+      "chainTvl": 4693914.573835088,
+      "protocolCount": 0,
+      "chainlistName": "ZIGChain Testnet",
+      "expectedChainId": 2061,
+      "native": "ZIG",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://public-zigchain-testnet-evm-rpc.numia.xyz",
+          "chainId": 2061,
+          "block": 8549859,
+          "blockTimestamp": 1793803812,
+          "ageSeconds": 1,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://public-zigchain-testnet-evm-rpc.numia.xyz",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 8549859,
+      "blockTimestamp": 1793803812,
+      "ageSeconds": 1,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:12+00:00"
+    },
+    {
+      "name": "Capx Chain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "XCHAIN",
+      "expectedChainId": 94524,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://xchain-rpc.kuma.bid",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "GANchain",
+      "chainTvl": 14470.340660782933,
+      "protocolCount": 0,
+      "chainlistName": "GANchain L1",
+      "expectedChainId": 4048,
+      "native": "GPU",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.gpu.net",
+          "chainId": 4048,
+          "block": 10055336,
+          "blockTimestamp": 1793803818,
+          "ageSeconds": -5,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.gpu.net",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 10055336,
+      "blockTimestamp": 1793803818,
+      "ageSeconds": -5,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:18+00:00"
+    },
+    {
+      "name": "GRX Chain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "XCHAIN",
+      "expectedChainId": 94524,
+      "native": "ETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://xchain-rpc.kuma.bid",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "VirBiCoin",
+      "chainTvl": 16459.2364526354,
+      "protocolCount": 0,
+      "chainlistName": "VirBiCoin",
+      "expectedChainId": 329,
+      "native": "VBC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.digitalregion.jp",
+          "chainId": 329,
+          "block": 3296384,
+          "blockTimestamp": 1793803775,
+          "ageSeconds": 38,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.digitalregion.jp",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 3296384,
+      "blockTimestamp": 1793803775,
+      "ageSeconds": 38,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:35+00:00"
+    },
+    {
+      "name": "Open",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "OpenVessel",
+      "expectedChainId": 7355310,
+      "native": "VETH",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-external.openvessel.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Etica",
+      "chainTvl": 9737.61073627261,
+      "protocolCount": 0,
+      "chainlistName": "Etica Mainnet",
+      "expectedChainId": 61803,
+      "native": "EGAZ",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://eticamainnet.eticascan.org",
+          "chainId": 61803,
+          "block": 11122434,
+          "blockTimestamp": 1793803776,
+          "ageSeconds": 37,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://eticamainnet.eticascan.org",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 11122434,
+      "blockTimestamp": 1793803776,
+      "ageSeconds": 37,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:36+00:00"
+    },
+    {
+      "name": "Sentrix",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Sentrix Chain",
+      "expectedChainId": 7119,
+      "native": "SRX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.sentrixchain.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 521: <none>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "XO",
+      "chainTvl": 126545.90659637196,
+      "protocolCount": 0,
+      "chainlistName": "XODEX",
+      "expectedChainId": 2415,
+      "native": "XODEX",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet.xo-dex.com/rpc",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error timed out>",
+          "chainIdMatches": null
+        },
+        {
+          "url": "https://xo-dex.io",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -3] Temporary failure in name resolution>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "ADI",
+      "chainTvl": 2015555.9426453728,
+      "protocolCount": 1,
+      "chainlistName": "ADIL Devnet",
+      "expectedChainId": 123456,
+      "native": "ADIL",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://devnet.adilchain-rpc.io",
+          "chainId": 123456,
+          "block": 38028079,
+          "blockTimestamp": 1793803823,
+          "ageSeconds": -10,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://devnet.adilchain-rpc.io",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 38028079,
+      "blockTimestamp": 1793803823,
+      "ageSeconds": -10,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:23+00:00"
+    },
+    {
+      "name": "Eden",
+      "chainTvl": 4625.7389692758325,
+      "protocolCount": 0,
+      "chainlistName": "Eden",
+      "expectedChainId": 714,
+      "native": "TIA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.eden.gateway.fm",
+          "chainId": 714,
+          "block": 240006801,
+          "blockTimestamp": 1793803822,
+          "ageSeconds": -9,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.eden.gateway.fm",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 240006801,
+      "blockTimestamp": 1793803822,
+      "ageSeconds": -9,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:22+00:00"
+    },
+    {
+      "name": "Strat",
+      "chainTvl": 1202478.0924688736,
+      "protocolCount": 2,
+      "chainlistName": "Astra Testnet",
+      "expectedChainId": 11115,
+      "native": "tASA",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.astranaut.dev",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "GGCHAIN",
+      "chainTvl": 1223.1053178035866,
+      "protocolCount": 0,
+      "chainlistName": "GGCHAIN Mainnet",
+      "expectedChainId": 2121217,
+      "native": "GG",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.gghyper.net",
+          "chainId": 2121217,
+          "block": 943121,
+          "blockTimestamp": 1793803780,
+          "ageSeconds": 33,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.gghyper.net",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 943121,
+      "blockTimestamp": 1793803780,
+      "ageSeconds": 33,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:49:40+00:00"
+    },
+    {
+      "name": "Xphere",
+      "chainTvl": 445516.3018021241,
+      "protocolCount": 2,
+      "chainlistName": "Xphere Testnet",
+      "expectedChainId": 1998991,
+      "native": "XPT",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "http://testnet.x-phere.com",
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: HTTP Error 502: Bad Gateway",
+          "chainIdMatches": null
+        }
+      ],
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
+    },
+    {
+      "name": "Rayls",
+      "chainTvl": 7094.983096970846,
+      "protocolCount": 0,
+      "chainlistName": "Rayls Mainnet",
+      "expectedChainId": 72957,
+      "native": "USDr",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://mainnet-rpc.rayls.com",
+          "chainId": 72957,
+          "block": 13840378,
+          "blockTimestamp": 1793803821,
+          "ageSeconds": -8,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://mainnet-rpc.rayls.com",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 13840378,
+      "blockTimestamp": 1793803821,
+      "ageSeconds": -8,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:21+00:00"
+    },
+    {
+      "name": "Pentagon Chain",
+      "chainTvl": 0,
+      "protocolCount": 0,
+      "chainlistName": "Pentagon Chain",
+      "expectedChainId": 3344,
+      "native": "PC",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.pentagon.games",
+          "chainId": 3344,
+          "block": 5188599,
+          "blockTimestamp": 1793803805,
+          "ageSeconds": 8,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.pentagon.games",
+      "status": "LIVE",
+      "contracts": [],
+      "block": 5188599,
+      "blockTimestamp": 1793803805,
+      "ageSeconds": 8,
+      "ageDays": 0.0,
+      "lastBlockTime": "2026-11-04T14:50:05+00:00"
+    },
+    {
+      "name": "Bitcoin Swap",
+      "chainTvl": 206.72305663688945,
+      "protocolCount": 0,
+      "chainlistName": "Bitcoin Swap",
+      "expectedChainId": 482120,
+      "native": "BTCw",
+      "addresses": [],
+      "attempts": [
+        {
+          "url": "https://rpc.btcw.tech",
+          "chainId": 482120,
+          "block": 737666,
+          "blockTimestamp": 1793803820,
+          "ageSeconds": -7,
+          "error": null,
+          "chainIdMatches": true
+        }
+      ],
+      "endpoint": "https://rpc.btcw.tech",
+      "status": "CLOCK_SKEW",
+      "contracts": [],
+      "block": 737666,
+      "blockTimestamp": 1793803820,
+      "ageSeconds": -7,
+      "ageDays": -0.0,
+      "lastBlockTime": "2026-11-04T14:50:20+00:00"
+    }
+  ]
+}
