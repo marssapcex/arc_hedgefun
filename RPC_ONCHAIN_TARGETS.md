@@ -9,7 +9,9 @@ Dữ liệu thô: `rpc_probe_raw.json`, `rpc_follow_raw.json`, `rpc_target_raw.j
 
 ## Mục tiêu thật sự: Moonwell Apollo, Moonriver
 
-DefiLlama gán chain này `Deprecated`, TVL `$0`, mcap MFAM `$7,128`. Trên chain thì hợp đồng vẫn sống, quyền vẫn khép kín, tiền vẫn còn. Đây là chỗ duy nhất trong đống đó đi được từ governor xuống tới contract giữ tiền mà không đụng multisig hay EOA.
+> **ĐÍNH CHÍNH 14:57 UTC cùng ngày** — xem `ZOMBIE_CHAINS_RPC.md`. Moonriver là chain **FROZEN**: block cuối `17381654` ngày 10/08/2026, hai endpoint độc lập cùng trả `N+1 = null`, năm lần probe trong ngày không nhúc nhích. Mọi `eth_call` ở bảng dưới đọc ra **state đóng băng 86 ngày**, không phải state đang chạy. Không có block mới thì không `propose`/vote/`execute`/`sweep` được. Chuỗi quyền đúng trên giấy, **không thực thi được**. Đây là xác có tiền, không phải mục tiêu sống.
+
+DefiLlama gán chain này `Deprecated`, TVL `$0`, mcap MFAM `$7,128`. State đóng băng đó vẫn có hợp đồng, quyền khép kín và tiền. Đây là chỗ duy nhất trong đống đó đi được từ governor xuống tới contract giữ tiền mà không đụng multisig hay EOA — nhưng chỉ trên state cũ.
 
 | Bước | Địa chỉ | Giá trị đọc được trên chain |
 |---|---|---|
