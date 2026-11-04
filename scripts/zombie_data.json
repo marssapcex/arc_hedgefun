@@ -15,7 +15,8 @@
     "https://moonbeam.public.blastapi.io",
     "https://moonbeam.api.onfinality.io/public",
     "https://moonbeam.unitedbloc.com",
-    "https://moonbeam-rpc.publicnode.com"
+    "https://moonbeam-rpc.publicnode.com",
+    "https://moonbeam.drpc.org"
    ],
    "addresses": []
   },
@@ -171,7 +172,8 @@
     "https://moonriver.public.blastapi.io",
     "https://moonriver.api.onfinality.io/public",
     "https://moonriver.unitedbloc.com",
-    "https://moonriver-rpc.publicnode.com"
+    "https://moonriver-rpc.publicnode.com",
+    "https://moonriver.drpc.org"
    ],
    "addresses": [
     "0xbb8d88bcd9749636bc4d2be22aac4bb3b01a58f1",
@@ -620,18 +622,6 @@
    "addresses": []
   },
   {
-   "name": "Eclipse",
-   "chainTvl": 38781.21651588981,
-   "protocolCount": 0,
-   "chainlistName": "Eclipse Subnet",
-   "chainId": 17172,
-   "native": "ECLP",
-   "rpcs": [
-    "https://subnets.avax.network/eclipse/testnet/rpc"
-   ],
-   "addresses": []
-  },
-  {
    "name": "Zilliqa",
    "chainTvl": 120185.08177767703,
    "protocolCount": 2,
@@ -807,19 +797,6 @@
    "addresses": []
   },
   {
-   "name": "Shiden",
-   "chainTvl": 0.023404922034414955,
-   "protocolCount": 0,
-   "chainlistName": "Shiden",
-   "chainId": 336,
-   "native": "SDN",
-   "rpcs": [
-    "https://shiden.api.onfinality.io/public",
-    "https://shiden.public.blastapi.io"
-   ],
-   "addresses": []
-  },
-  {
    "name": "EnergyWeb",
    "chainTvl": 63160.16831505464,
    "protocolCount": 1,
@@ -944,18 +921,6 @@
    "addresses": []
   },
   {
-   "name": "Ergo",
-   "chainTvl": 950530.879075839,
-   "protocolCount": 5,
-   "chainlistName": "PowerGold",
-   "chainId": 1313161560,
-   "native": "ETH",
-   "rpcs": [
-    "https://powergold.aurora.dev"
-   ],
-   "addresses": []
-  },
-  {
    "name": "Lisk",
    "chainTvl": 0,
    "protocolCount": 0,
@@ -1019,20 +984,6 @@
     "https://syscoin.public-rpc.com",
     "https://57.rpc.thirdweb.com",
     "https://syscoin-evm.publicnode.com"
-   ],
-   "addresses": []
-  },
-  {
-   "name": "Goerli",
-   "chainTvl": 0,
-   "protocolCount": 0,
-   "chainlistName": "Goerli",
-   "chainId": 5,
-   "native": "ETH",
-   "rpcs": [
-    "https://rpc.goerli.mudit.blog",
-    "https://ethereum-goerli-rpc.publicnode.com",
-    "https://goerli.gateway.tenderly.co"
    ],
    "addresses": []
   },
@@ -1698,26 +1649,6 @@
     "https://erpc.luxeports.com"
    ],
    "addresses": []
-  },
-  {
-   "name": "Optimism",
-   "chainTvl": 0,
-   "protocolCount": 117,
-   "chainlistName": "Optimism Kovan",
-   "chainId": 69,
-   "native": "ETH",
-   "rpcs": [
-    "https://kovan.optimism.io"
-   ],
-   "addresses": [
-    "0x00e1724885473b63bce08a9f0a52f35b0979e35a",
-    "0x0a7B751FcDBBAA8BB988B9217ad5Fb5cfe7bf7A0",
-    "0x1e925de1c68ef83bd98ee3e130ef14a50309c01b",
-    "0x2dad3a13ef0c6366220f989157009e501e7938f8",
-    "0x3af33bef05c2dcb3c7288b77fe1c8d2aeba4d789",
-    "0xFA436399d0458Dbe8aB890c3441256E3E09022a8",
-    "0xf467C7d5a4A9C4687fFc7986aC6aD5A4c81E1404"
-   ]
   },
   {
    "name": "Oraichain",
@@ -3003,5 +2934,13 @@
    ],
    "addresses": []
   }
- ]
+ ],
+ "excludedNames": [
+  "Eclipse",
+  "Ergo",
+  "Goerli",
+  "Optimism",
+  "Shiden"
+ ],
+ "excludedReason": "OP Mainnet TVL 0 trong zombieChains l\u00e0 false positive; Goerli testnet; Eclipse/Ergo/Shiden kh\u00f4ng ph\u1ea3i EVM RPC target"
 }
