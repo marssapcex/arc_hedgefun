@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T10:06:18Z",
+ "generatedAt": "2026-11-04T10:13:55Z",
  "method": "read-only eth_call / eth_getBalance / eth_getCode / eth_getStorageAt",
  "endpoints": {
   "aurora": "https://mainnet.aurora.dev",
@@ -12,49 +12,31 @@
   "moonriver": "https://moonriver.drpc.org"
  },
  "blocks": {
-  "aurora": 223002164,
-  "avalanche": 99393495,
-  "ethereum": 26340740,
-  "fantom": 123949426,
-  "flare": 73717758,
-  "linea": 32514947,
-  "monad": 119298480,
+  "aurora": 223002913,
+  "avalanche": 99394000,
+  "ethereum": 26340778,
+  "fantom": 123949458,
+  "flare": 73718178,
+  "linea": 32514988,
+  "monad": 119299978,
   "moonriver": 17381654
  },
  "results": [
   {
    "chain": "ethereum",
-   "label": "Concentrator cvxCRV vault proxy",
-   "address": "0x2b95A1Dcc3D405535f9ed33c219ab38E8d7e0884",
-   "note": "vault holding funds",
-   "code": 4184,
+   "label": "Hop L1 bridge ETH",
+   "address": "0x3E4a3a4796d16c0Cd582C382691998f7c06420B6",
+   "note": "bridge holding funds",
+   "code": 38748,
    "nativeBalanceWei": 0,
-   "calls": {
-    "owner()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99",
-    "totalSupply()": 1108588187457875675219471,
-    "decimals()": 18,
-    "symbol()": "aCRV"
-   },
-   "storage": {
-    "implementation(EIP1967)": "0x9a68dea7dcddfc5c4c6b3cb8ab278bf2cd87d3d3"
-   },
-   "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
-   "label": "CTR token",
-   "address": "0xb3Ad645dB386D7F6D753B2b9C3F4B853DA6890B8",
-   "note": "governance token",
-   "code": 6826,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "admin()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99",
-    "totalSupply()": 5000000000000000000000000,
-    "decimals()": 18,
-    "symbol()": "CTR"
-   },
+   "calls": {},
    "storage": {},
-   "tokenBalances": {}
+   "tokenBalances": {
+    "USDT": {
+     "raw": "266028923335",
+     "human": 266028.923335
+    }
+   }
   },
   {
    "chain": "ethereum",
@@ -69,17 +51,17 @@
   },
   {
    "chain": "ethereum",
-   "label": "Hop L1 bridge DAI",
-   "address": "0x3d4Cc8A61c7528Fd86C55cfe061a78dCBA48EDd1",
+   "label": "Hop L1 bridge USDC",
+   "address": "0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a",
    "note": "bridge holding funds",
-   "code": 38748,
-   "nativeBalanceWei": 100000000000000000,
+   "code": 38600,
+   "nativeBalanceWei": 1000000,
    "calls": {},
    "storage": {},
    "tokenBalances": {
-    "DAI": {
-     "raw": "293358672823333197570331",
-     "human": 293358.672823
+    "USDC": {
+     "raw": "535309328085",
+     "human": 535309.328085
     }
    }
   },
@@ -104,6 +86,27 @@
   },
   {
    "chain": "ethereum",
+   "label": "BIFI token",
+   "address": "0x2791BfD60D232150Bff86b39B7146c0eaAA2BA81",
+   "note": "governance token",
+   "code": 8662,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "owner()": "0xa76540d1180b22db0b760c34336843506f9828ab",
+    "totalSupply()": 1000000000000000000000000000,
+    "decimals()": 18,
+    "symbol()": "BiFi"
+   },
+   "storage": {},
+   "tokenBalances": {
+    "USDT": {
+     "raw": "20049581238",
+     "human": 20049.581238
+    }
+   }
+  },
+  {
+   "chain": "ethereum",
    "label": "Concentrator ProxyAdmin",
    "address": "0x12b1326459d72F2Ab081116bf27ca46cD97762A0",
    "note": "proxy admin",
@@ -114,6 +117,195 @@
    },
    "storage": {},
    "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "Rari governor #2",
+   "address": "0x637deEED4e4deb1D222650bD4B64192abf002c00",
+   "note": "governor",
+   "code": 36240,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "timelock()": "0x8ace03fc45139fddba944c6a4082b604041d19fc",
+    "token()": "0xc7283b66eb1eb5fb86327f08e1b5816b0720212b",
+    "proposalThreshold()": 2500000000000000000000000,
+    "votingDelay()": 1,
+    "votingPeriod()": 13000,
+    "quorumVotes()": 25000000000000000000000000
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "BiFi governor (eip155 id)",
+   "address": "0x54F50d2f584F1DD05307aB5eB298Ba96C7d4E0ea",
+   "note": "governor",
+   "code": 24700,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "owner()": "0xfbb3544329679a7cc1f7644bae1b65d36bf5ce63",
+    "timelock()": "0xe75fe5f37bd2e2613b1473f27644cf983555ffdf",
+    "token()": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
+    "proposalThreshold()": 800000000000000000000000,
+    "votingDelay()": 6545,
+    "votingPeriod()": 19635,
+    "quorumNumerator()": 60,
+    "quorumDenominator()": 100
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "Unslashed governor",
+   "address": "0xa0ae994229b1bc31850d8a17a273904d1ed12190",
+   "note": "governor",
+   "code": 42300,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "timelock()": "0x1417fa839f4d03e59dbda9e60165a752d41b2045",
+    "proposalThreshold()": 100000000000000000000000,
+    "votingDelay()": 1,
+    "votingPeriod()": 17280,
+    "quorumVotes()": 400000000000000000000000,
+    "guardian()": "0x3fdba971a35e238cea1602f50824e296bad85980"
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "Easedefi governor",
+   "address": "0xea5edef17c4fce9c120790f3c54d6e04823de587",
+   "note": "governor",
+   "code": 1576,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "admin()": "0xea5edef1401e8c312c797c27a9842e03eb0e557a",
+    "timelock()": "0xea5edef1401e8c312c797c27a9842e03eb0e557a",
+    "proposalThreshold()": 100000000000000000000000,
+    "votingDelay()": 1,
+    "votingPeriod()": 17280,
+    "quorumVotes()": 50000000000000000000000000,
+    "implementation()": "0xd135c44ca6b6722633ab97d15a5222fe38546ecc"
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "Flux Finance governor",
+   "address": "0x336505EC1BcC1A020EeDe459f57581725D23465A",
+   "note": "governor",
+   "code": 2132,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "admin()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
+    "timelock()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
+    "proposalThreshold()": 100000000000000000000000000,
+    "votingDelay()": 1,
+    "votingPeriod()": 21600,
+    "quorumVotes()": 1000000000000000000000000,
+    "implementation()": "0x8886344a1b9b840bed590f2ef7379dd37e169c8e"
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "Concentrator cvxCRV vault proxy",
+   "address": "0x2b95A1Dcc3D405535f9ed33c219ab38E8d7e0884",
+   "note": "vault holding funds",
+   "code": 4184,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "owner()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99",
+    "totalSupply()": 1108588369366879662561712,
+    "decimals()": 18,
+    "symbol()": "aCRV"
+   },
+   "storage": {
+    "implementation(EIP1967)": "0x9a68dea7dcddfc5c4c6b3cb8ab278bf2cd87d3d3"
+   },
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "ANGLE token",
+   "address": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
+   "note": "governance token",
+   "code": 20246,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "totalSupply()": 1000000000000000000000000000,
+    "decimals()": 18,
+    "symbol()": "ANGLE"
+   },
+   "storage": {},
+   "tokenBalances": {
+    "USDT": {
+     "raw": "496910090",
+     "human": 496.91009
+    },
+    "ANGLE": {
+     "raw": "24391200000000000000000",
+     "human": 24391.2
+    }
+   }
+  },
+  {
+   "chain": "ethereum",
+   "label": "FLX token",
+   "address": "0x6243d8CEA23066d098a15582d81a598B4e8391F4",
+   "note": "governance token",
+   "code": 30024,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "totalSupply()": 957122296129311554103553,
+    "decimals()": 18,
+    "symbol()": "FLX"
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "Hop L1 bridge DAI",
+   "address": "0x3d4Cc8A61c7528Fd86C55cfe061a78dCBA48EDd1",
+   "note": "bridge holding funds",
+   "code": 38748,
+   "nativeBalanceWei": 100000000000000000,
+   "calls": {},
+   "storage": {},
+   "tokenBalances": {
+    "DAI": {
+     "raw": "293358672823333197570331",
+     "human": 293358.672823
+    }
+   }
+  },
+  {
+   "chain": "ethereum",
+   "label": "RGT token",
+   "address": "0xD291E7a03283640FDc51b121aC401383A46cC623",
+   "note": "governance token",
+   "code": 4524,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "totalSupply()": 12485047994434931506885000,
+    "decimals()": 18,
+    "symbol()": "RGT"
+   },
+   "storage": {
+    "implementation(EIP1967)": "0xb528e8bb2dcb99cfdea4c28bf44925ef58ab1520"
+   },
+   "tokenBalances": {
+    "USDT": {
+     "raw": "2469844105",
+     "human": 2469.844105
+    }
+   }
   },
   {
    "chain": "ethereum",
@@ -156,6 +348,61 @@
   },
   {
    "chain": "ethereum",
+   "label": "Reflexer gov (eip155 id)",
+   "address": "0x7a6BBe7fDd793CC9ab7e0fc33605FCd2D19371E8",
+   "note": "governor",
+   "code": 28566,
+   "nativeBalanceWei": 10000000000000,
+   "calls": {
+    "admin()": "0xa57a4e6170930ac547c147cdf26ae4682fa8262e",
+    "timelock()": "0x2cde6a1147b0ee61726b86d83fd548401b1162c7",
+    "proposalThreshold()": 3000000000000000000000,
+    "votingDelay()": 6600,
+    "votingPeriod()": 46500,
+    "quorumVotes()": 20000000000000000000000
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "PEAK token",
+   "address": "0x630d98424eFe0Ea27Fb1b3Ab7741907dFFEaAd78",
+   "note": "governance token",
+   "code": 12070,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "totalSupply()": 117989532125407387,
+    "decimals()": 8,
+    "symbol()": "PEAK",
+    "hasRole(PROPOSER_ROLE,self)": false
+   },
+   "storage": {
+    "implementation(EIP1967)": "0x6b68680c8025f4d8077b4b549ba86299cbc4497b"
+   },
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
+   "label": "Rari governor #1",
+   "address": "0x91d9c2b5cF81D55a5f2Ecc0fC84E62f9cd2ceFd6",
+   "note": "governor",
+   "code": 2132,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "admin()": "0x8ace03fc45139fddba944c6a4082b604041d19fc",
+    "timelock()": "0x8ace03fc45139fddba944c6a4082b604041d19fc",
+    "proposalThreshold()": 65000000000000000000000,
+    "votingDelay()": 13140,
+    "votingPeriod()": 19710,
+    "quorumVotes()": 400000000000000000000000,
+    "implementation()": "0xfd6aca12f464acda7901fcd650dd1bc272da039f"
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "ethereum",
    "label": "Concentrator multisig",
    "address": "0xA0FB1b11ccA5871fb0225B64308e249B97804E99",
    "note": "multisig",
@@ -188,114 +435,6 @@
   },
   {
    "chain": "ethereum",
-   "label": "Flux Finance governor",
-   "address": "0x336505EC1BcC1A020EeDe459f57581725D23465A",
-   "note": "governor",
-   "code": 2132,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "admin()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
-    "timelock()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
-    "proposalThreshold()": 100000000000000000000000000,
-    "votingDelay()": 1,
-    "votingPeriod()": 21600,
-    "quorumVotes()": 1000000000000000000000000,
-    "implementation()": "0x8886344a1b9b840bed590f2ef7379dd37e169c8e"
-   },
-   "storage": {},
-   "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
-   "label": "RGT token",
-   "address": "0xD291E7a03283640FDc51b121aC401383A46cC623",
-   "note": "governance token",
-   "code": 4524,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "totalSupply()": 12485047994434931506885000,
-    "decimals()": 18,
-    "symbol()": "RGT"
-   },
-   "storage": {
-    "implementation(EIP1967)": "0xb528e8bb2dcb99cfdea4c28bf44925ef58ab1520"
-   },
-   "tokenBalances": {
-    "USDT": {
-     "raw": "2469844105",
-     "human": 2469.844105
-    }
-   }
-  },
-  {
-   "chain": "ethereum",
-   "label": "Reflexer gov (eip155 id)",
-   "address": "0x7a6BBe7fDd793CC9ab7e0fc33605FCd2D19371E8",
-   "note": "governor",
-   "code": 28566,
-   "nativeBalanceWei": 10000000000000,
-   "calls": {
-    "admin()": "0xa57a4e6170930ac547c147cdf26ae4682fa8262e",
-    "timelock()": "0x2cde6a1147b0ee61726b86d83fd548401b1162c7",
-    "proposalThreshold()": 3000000000000000000000,
-    "votingDelay()": 6600,
-    "votingPeriod()": 46500,
-    "quorumVotes()": 20000000000000000000000
-   },
-   "storage": {},
-   "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
-   "label": "FLX token",
-   "address": "0x6243d8CEA23066d098a15582d81a598B4e8391F4",
-   "note": "governance token",
-   "code": 30024,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "totalSupply()": 957122296129311554103553,
-    "decimals()": 18,
-    "symbol()": "FLX"
-   },
-   "storage": {},
-   "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
-   "label": "Hop L1 bridge USDC",
-   "address": "0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a",
-   "note": "bridge holding funds",
-   "code": 38600,
-   "nativeBalanceWei": 1000000,
-   "calls": {},
-   "storage": {},
-   "tokenBalances": {
-    "USDC": {
-     "raw": "535309328085",
-     "human": 535309.328085
-    }
-   }
-  },
-  {
-   "chain": "ethereum",
-   "label": "Rari governor #2",
-   "address": "0x637deEED4e4deb1D222650bD4B64192abf002c00",
-   "note": "governor",
-   "code": 36240,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "timelock()": "0x8ace03fc45139fddba944c6a4082b604041d19fc",
-    "token()": "0xc7283b66eb1eb5fb86327f08e1b5816b0720212b",
-    "proposalThreshold()": 2500000000000000000000000,
-    "votingDelay()": 1,
-    "votingPeriod()": 13000,
-    "quorumVotes()": 25000000000000000000000000
-   },
-   "storage": {},
-   "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
    "label": "Angle governor (compound id)",
    "address": "0x59153e939c5b4721543251ff3049ea04c755373b",
    "note": "governor",
@@ -315,158 +454,53 @@
   },
   {
    "chain": "ethereum",
-   "label": "BiFi governor (eip155 id)",
-   "address": "0x54F50d2f584F1DD05307aB5eB298Ba96C7d4E0ea",
-   "note": "governor",
-   "code": 24700,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "owner()": "0xfbb3544329679a7cc1f7644bae1b65d36bf5ce63",
-    "timelock()": "0xe75fe5f37bd2e2613b1473f27644cf983555ffdf",
-    "token()": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
-    "proposalThreshold()": 800000000000000000000000,
-    "votingDelay()": 6545,
-    "votingPeriod()": 19635,
-    "quorumNumerator()": 60,
-    "quorumDenominator()": 100
-   },
-   "storage": {},
-   "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
-   "label": "PEAK token",
-   "address": "0x630d98424eFe0Ea27Fb1b3Ab7741907dFFEaAd78",
+   "label": "CTR token",
+   "address": "0xb3Ad645dB386D7F6D753B2b9C3F4B853DA6890B8",
    "note": "governance token",
-   "code": 12070,
+   "code": 6826,
    "nativeBalanceWei": 0,
    "calls": {
-    "totalSupply()": 117989532125407387,
-    "decimals()": 8,
-    "symbol()": "PEAK",
-    "hasRole(PROPOSER_ROLE,self)": false
-   },
-   "storage": {
-    "implementation(EIP1967)": "0x6b68680c8025f4d8077b4b549ba86299cbc4497b"
-   },
-   "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
-   "label": "Unslashed governor",
-   "address": "0xa0ae994229b1bc31850d8a17a273904d1ed12190",
-   "note": "governor",
-   "code": 42300,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "timelock()": "0x1417fa839f4d03e59dbda9e60165a752d41b2045",
-    "proposalThreshold()": 100000000000000000000000,
-    "votingDelay()": 1,
-    "votingPeriod()": 17280,
-    "quorumVotes()": 400000000000000000000000,
-    "guardian()": "0x3fdba971a35e238cea1602f50824e296bad85980"
-   },
-   "storage": {},
-   "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
-   "label": "BIFI token",
-   "address": "0x2791BfD60D232150Bff86b39B7146c0eaAA2BA81",
-   "note": "governance token",
-   "code": 8662,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "owner()": "0xa76540d1180b22db0b760c34336843506f9828ab",
-    "totalSupply()": 1000000000000000000000000000,
+    "admin()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99",
+    "totalSupply()": 5000000000000000000000000,
     "decimals()": 18,
-    "symbol()": "BiFi"
+    "symbol()": "CTR"
    },
    "storage": {},
-   "tokenBalances": {
-    "USDT": {
-     "raw": "20049581238",
-     "human": 20049.581238
-    }
-   }
+   "tokenBalances": {}
   },
   {
-   "chain": "ethereum",
-   "label": "ANGLE token",
-   "address": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
-   "note": "governance token",
-   "code": 20246,
+   "chain": "fantom",
+   "label": "Tarot",
+   "address": "0xb7c2ddb1ebac1056231ef22c1b0a13988537a274",
+   "note": "lending, Fantom",
+   "code": 26742,
    "nativeBalanceWei": 0,
    "calls": {
-    "totalSupply()": 1000000000000000000000000000,
+    "owner()": "0x5b0390bccca1f040d8993eb6e4ce8ded93721765",
+    "token()": "0xb7c2ddb1ebac1056231ef22c1b0a13988537a274",
+    "totalSupply()": 392007888311763397303889,
     "decimals()": 18,
-    "symbol()": "ANGLE"
-   },
-   "storage": {},
-   "tokenBalances": {
-    "USDT": {
-     "raw": "496910090",
-     "human": 496.91009
-    },
-    "ANGLE": {
-     "raw": "24391200000000000000000",
-     "human": 24391.2
-    }
-   }
-  },
-  {
-   "chain": "ethereum",
-   "label": "Rari governor #1",
-   "address": "0x91d9c2b5cF81D55a5f2Ecc0fC84E62f9cd2ceFd6",
-   "note": "governor",
-   "code": 2132,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "admin()": "0x8ace03fc45139fddba944c6a4082b604041d19fc",
-    "timelock()": "0x8ace03fc45139fddba944c6a4082b604041d19fc",
-    "proposalThreshold()": 65000000000000000000000,
-    "votingDelay()": 13140,
-    "votingPeriod()": 19710,
-    "quorumVotes()": 400000000000000000000000,
-    "implementation()": "0xfd6aca12f464acda7901fcd650dd1bc272da039f"
+    "symbol()": "TAROT"
    },
    "storage": {},
    "tokenBalances": {}
   },
   {
    "chain": "ethereum",
-   "label": "Easedefi governor",
-   "address": "0xea5edef17c4fce9c120790f3c54d6e04823de587",
-   "note": "governor",
-   "code": 1576,
+   "label": "veCTR",
+   "address": "0xe4C09928d834cd58D233CD77B5af3545484B4968",
+   "note": "vote escrow",
+   "code": 19528,
    "nativeBalanceWei": 0,
    "calls": {
-    "admin()": "0xea5edef1401e8c312c797c27a9842e03eb0e557a",
-    "timelock()": "0xea5edef1401e8c312c797c27a9842e03eb0e557a",
-    "proposalThreshold()": 100000000000000000000000,
-    "votingDelay()": 1,
-    "votingPeriod()": 17280,
-    "quorumVotes()": 50000000000000000000000000,
-    "implementation()": "0xd135c44ca6b6722633ab97d15a5222fe38546ecc"
+    "admin()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99",
+    "token()": "0xb3ad645db386d7f6d753b2b9c3f4b853da6890b8",
+    "totalSupply()": 1977285103021345680653750,
+    "decimals()": 18,
+    "symbol()": "veCTR"
    },
    "storage": {},
    "tokenBalances": {}
-  },
-  {
-   "chain": "ethereum",
-   "label": "Hop L1 bridge ETH",
-   "address": "0x3E4a3a4796d16c0Cd582C382691998f7c06420B6",
-   "note": "bridge holding funds",
-   "code": 38748,
-   "nativeBalanceWei": 0,
-   "calls": {},
-   "storage": {},
-   "tokenBalances": {
-    "USDT": {
-     "raw": "266028923335",
-     "human": 266028.923335
-    }
-   }
   },
   {
    "chain": "avalanche",
@@ -483,21 +517,28 @@
    "storage": {}
   },
   {
-   "chain": "ethereum",
-   "label": "veCTR",
-   "address": "0xe4C09928d834cd58D233CD77B5af3545484B4968",
-   "note": "vote escrow",
-   "code": 19528,
+   "chain": "linea",
+   "label": "Mendi timelock proposer",
+   "address": "0xe3CDa0A0896b70F0eBC6A1848096529AA7AEe9eE",
+   "note": "timelock proposer",
+   "code": 344,
+   "nativeBalanceWei": 10000000000000000,
+   "calls": {},
+   "storage": {}
+  },
+  {
+   "chain": "linea",
+   "label": "Mendi Finance",
+   "address": "0x43e8809ea748eff3204ee01f08872f063e44065f",
+   "note": "lending, Linea",
+   "code": 4284,
    "nativeBalanceWei": 0,
    "calls": {
-    "admin()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99",
-    "token()": "0xb3ad645db386d7f6d753b2b9c3f4b853da6890b8",
-    "totalSupply()": 1977294592872381352013030,
+    "totalSupply()": 100000000000000000000000000,
     "decimals()": 18,
-    "symbol()": "veCTR"
+    "symbol()": "MENDI"
    },
-   "storage": {},
-   "tokenBalances": {}
+   "storage": {}
   },
   {
    "chain": "monad",
@@ -517,42 +558,47 @@
    }
   },
   {
-   "chain": "linea",
-   "label": "Mendi Finance",
-   "address": "0x43e8809ea748eff3204ee01f08872f063e44065f",
-   "note": "lending, Linea",
-   "code": 4284,
+   "chain": "moonriver",
+   "label": "Moonwell Apollo",
+   "address": "0xbb8d88bcd9749636bc4d2be22aac4bb3b01a58f1",
+   "note": "lending, chain Deprecated",
+   "code": 16374,
    "nativeBalanceWei": 0,
    "calls": {
-    "totalSupply()": 100000000000000000000000000,
+    "totalSupply()": 1000000000000000000000000000,
     "decimals()": 18,
-    "symbol()": "MENDI"
+    "symbol()": "MFAM"
    },
-   "storage": {}
+   "storage": {},
+   "tokenBalances": {}
   },
   {
-   "chain": "linea",
-   "label": "Mendi timelock proposer",
-   "address": "0xe3CDa0A0896b70F0eBC6A1848096529AA7AEe9eE",
-   "note": "timelock proposer",
-   "code": 344,
-   "nativeBalanceWei": 10000000000000000,
-   "calls": {},
-   "storage": {}
-  },
-  {
-   "chain": "fantom",
-   "label": "Tarot",
-   "address": "0xb7c2ddb1ebac1056231ef22c1b0a13988537a274",
-   "note": "lending, Fantom",
-   "code": 26742,
+   "chain": "aurora",
+   "label": "Aurigami",
+   "address": "0x09c9d464b58d96837f8d8b6f4d9fe4ad408d3a4f",
+   "note": "lending, Aurora",
+   "code": 10326,
    "nativeBalanceWei": 0,
    "calls": {
-    "owner()": "0x5b0390bccca1f040d8993eb6e4ce8ded93721765",
-    "token()": "0xb7c2ddb1ebac1056231ef22c1b0a13988537a274",
-    "totalSupply()": 392007888311763397303889,
+    "admin()": "0x4444588443c3a91288c5002483449aba1054192b",
+    "totalSupply()": 8191936610888403263280116221,
     "decimals()": 18,
-    "symbol()": "TAROT"
+    "symbol()": "PLY"
+   },
+   "storage": {},
+   "tokenBalances": {}
+  },
+  {
+   "chain": "aurora",
+   "label": "Trisolaris",
+   "address": "0xFa94348467f64D5A457F75F8bc40495D33c65aBB",
+   "note": "DEX, Aurora",
+   "code": 17114,
+   "nativeBalanceWei": 0,
+   "calls": {
+    "totalSupply()": 589631098246133682032458625,
+    "decimals()": 18,
+    "symbol()": "TRI"
    },
    "storage": {},
    "tokenBalances": {}
@@ -574,21 +620,6 @@
    }
   },
   {
-   "chain": "aurora",
-   "label": "Trisolaris",
-   "address": "0xFa94348467f64D5A457F75F8bc40495D33c65aBB",
-   "note": "DEX, Aurora",
-   "code": 17114,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "totalSupply()": 589631098246133682032458625,
-    "decimals()": 18,
-    "symbol()": "TRI"
-   },
-   "storage": {},
-   "tokenBalances": {}
-  },
-  {
    "chain": "flare",
    "label": "Kinetic Unitroller (from source)",
    "address": "0x8041680Fb73E1Fe5F851e76233DCDfA0f2D2D7c8",
@@ -600,37 +631,6 @@
     "oracle()": "0xc1d7029c970d9b683da9d37b49d84d081dbed54c"
    },
    "storage": {}
-  },
-  {
-   "chain": "aurora",
-   "label": "Aurigami",
-   "address": "0x09c9d464b58d96837f8d8b6f4d9fe4ad408d3a4f",
-   "note": "lending, Aurora",
-   "code": 10326,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "admin()": "0x4444588443c3a91288c5002483449aba1054192b",
-    "totalSupply()": 8191936610888403263280116221,
-    "decimals()": 18,
-    "symbol()": "PLY"
-   },
-   "storage": {},
-   "tokenBalances": {}
-  },
-  {
-   "chain": "moonriver",
-   "label": "Moonwell Apollo",
-   "address": "0xbb8d88bcd9749636bc4d2be22aac4bb3b01a58f1",
-   "note": "lending, chain Deprecated",
-   "code": 16374,
-   "nativeBalanceWei": 0,
-   "calls": {
-    "totalSupply()": 1000000000000000000000000000,
-    "decimals()": 18,
-    "symbol()": "MFAM"
-   },
-   "storage": {},
-   "tokenBalances": {}
   }
  ]
 }
