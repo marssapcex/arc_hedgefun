@@ -20,7 +20,7 @@ from rpc_probe import find_rpc, rpc, decode  # noqa: E402
 
 FACTORY = "0xcC5d905b9c2c8C9329Eb4e25dc086369D6C7777C"
 FORGOTTEN = "0xb529964f86fbf99a6aa67f72a27e59fa3fa4feac"  # second factory, used by DefiLlama adapter
-FACTORIES = [("OptionsFactory (v1 main)", FACTORY), ("OptionsFactory (v2/permissionless)", FORGOTTEN)]
+FACTORIES = [("OptionsFactory (v1 main)", FACTORY), ("OptionsFactory (second, DefiLlama adapter)", FORGOTTEN)]
 EXCHANGE = "0x39246c4F3F6592C974EBC44F80bA6dC69b817c71"
 ORACLE = "0x7054e08461e3eCb7718B63540adDB3c3A1746415"
 
@@ -61,52 +61,52 @@ def a32(a):
     return a.lower().replace("0x", "").rjust(64, "0")
 
 
+def rpc_try(url, method, params, timeout=15, tries=4):
+    """Retry throttled/timed-out public RPC calls; returns None only after all tries."""
+    for k in range(tries):
+        try:
+            v = rpc(url, method, params, timeout=timeout)
+            if v is not None:
+                return v
+        except Exception as e:
+            if k == tries - 1:
+                print(f"  {method} gave up: {str(e)[:80]}", flush=True)
+        time.sleep(0.6 * (k + 1))
+    return None
+
+
 def call(url, to, selector, kind, arg=None):
     data = "0x" + selector + (a32(arg) if arg is not None else "")
-    for k in range(3):
-        try:
-            v = rpc(url, "eth_call", [{"to": to, "data": data}, "latest"], timeout=12)
-            return decode(v, kind)
-        except Exception as e:
-            if "429" in str(e) or "Too Many" in str(e):
-                time.sleep(0.7 * (k + 1))
-                continue
-            return None
-    return None
+    v = rpc_try(url, "eth_call", [{"to": to, "data": data}, "latest"])
+    return decode(v, kind) if v is not None else None
 
 
 def read_all(url, addr):
     out = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=12) as ex:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
         futs = {n: ex.submit(call, url, addr, sel, kind) for n, (sel, kind) in VIEWS.items()}
         for n, f in futs.items():
             try:
-                v = f.result(timeout=25)
+                v = f.result(timeout=90)
                 if v is not None:
                     out[n] = v
-            except Exception:
-                pass
-    try:
-        c = rpc(url, "eth_getCode", [addr, "latest"], timeout=12)
-        out["codeBytes"] = (len(c) - 2) // 2 if isinstance(c, str) else 0
-    except Exception:
-        pass
-    try:
-        b = rpc(url, "eth_getBalance", [addr, "latest"], timeout=12)
-        out["nativeWei"] = int(b, 16) if isinstance(b, str) else b
-    except Exception:
-        pass
+            except Exception as e:
+                print(f"  view {n} failed {addr}: {str(e)[:60]}", flush=True)
+    c = rpc_try(url, "eth_getCode", [addr, "latest"])
+    out["codeBytes"] = (len(c) - 2) // 2 if isinstance(c, str) else (0 if c is not None else None)
+    b = rpc_try(url, "eth_getBalance", [addr, "latest"])
+    out["nativeWei"] = int(b, 16) if isinstance(b, str) else (b if b is not None else None)
     return out
 
 
 def balances(url, addr):
     out = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
         futs = {s: ex.submit(call, url, tok, "70a08231", "uint", addr)
                 for s, (tok, dec) in TOKENS.items()}
         for s, f in futs.items():
             try:
-                v = f.result(timeout=25)
+                v = f.result(timeout=90)
                 if v:
                     out[s] = {"raw": str(v), "human": round(v / 10 ** TOKENS[s][1], 6)}
             except Exception:
@@ -137,7 +137,7 @@ def main():
         d["address"] = ad
         d["balances"] = balances(url, ad)
         try:
-            c = rpc(url, "eth_getCode", [d["owner()"], "latest"], timeout=10)
+            c = rpc_try(url, "eth_getCode", [d["owner()"], "latest"])
             d["ownerCodeBytes"] = (len(c) - 2) // 2 if isinstance(c, str) else 0
         except Exception:
             pass
@@ -160,7 +160,7 @@ def main():
             got = list(ex.map(lambda j: call(url, j[1], SERIES_VIEW[0], "address", hex(j[2])), jobs))
         addrs = sorted({ad for ad in got if ad})
         print(f"{n} series total, {len(jobs)} enumerated, {len(addrs)} unique addresses", flush=True)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
             futs = {ad: ex.submit(read_all, url, ad) for ad in addrs}
             balfuts = {ad: ex.submit(balances, url, ad) for ad in addrs}
             for ad in addrs:
