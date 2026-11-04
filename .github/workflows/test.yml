@@ -1,6 +1,5 @@
 name: test
 on:
-  push:
   workflow_dispatch:
 permissions:
   contents: read
@@ -12,13 +11,34 @@ jobs:
       - name: Fetch DefiLlama snapshots
         run: |
           set -e
-          curl -sS --retry 3 --max-time 120 https://api.llama.fi/lite/protocols2 -o protocols2.json
-          curl -sS --retry 3 --max-time 120 https://api.llama.fi/protocols -o protocols_full.json
-          curl -sS --retry 3 --max-time 120 https://api.llama.fi/v2/chains -o chains.json
-          curl -sS --retry 3 --max-time 120 https://api.llama.fi/config/smol/appMetadata-protocols.json -o appmeta.json
-          ls -la *.json
+          mkdir -p /tmp/llama
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/lite/protocols2 -o /tmp/llama/protocols2.json
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/protocols -o /tmp/llama/protocols_full.json
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/v2/chains -o /tmp/llama/chains.json
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/config/smol/appMetadata-protocols.json -o /tmp/llama/appmeta.json
+          ls -la /tmp/llama/
+      - name: Filter
+        run: |
+          cp /tmp/llama/*.json /tmp/ 2>/dev/null || true
+          python3 - <<'PY'
+          import subprocess
+          s=open('scripts/llama_screen.py').read().replace('D = "/tmp/llama"','D = "/tmp"')
+          open('/tmp/screen_runner.py','w').write(s)
+          PY
+          cd /home/runner/work/arc_hedgefun/arc_hedgefun 2>/dev/null || cd "$GITHUB_WORKSPACE"
+          python3 /tmp/screen_runner.py
+          cp screen.json /tmp/screen.json
+          python3 - <<'PY'
+          import json,base64
+          d=open('/tmp/screen.json','rb').read()
+          # emit as base64 chunks in the step log, 200KB each
+          b=base64.b64encode(d).decode()
+          for i in range(0,len(b),120000):
+              print('SCREENB64_'+str(i//120000)+'_'+b[i:i+120000])
+          print('SCREENB64_PARTS_'+str((len(b)+119999)//120000))
+          PY
       - uses: actions/upload-artifact@v4
         with:
-          name: llama-data
-          path: "*.json"
+          name: screen
+          path: "screen.json"
           retention-days: 1
