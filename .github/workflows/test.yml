@@ -1,13 +1,17 @@
 name: test
 on:
+  push:
+    paths:
+      - '.github/workflows/test.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   snapshot:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
       - name: Fetch DefiLlama snapshots
         run: |
           set -e
@@ -17,28 +21,13 @@ jobs:
           curl -sS --retry 3 --max-time 120 https://api.llama.fi/v2/chains -o /tmp/llama/chains.json
           curl -sS --retry 3 --max-time 120 https://api.llama.fi/config/smol/appMetadata-protocols.json -o /tmp/llama/appmeta.json
           ls -la /tmp/llama/
-      - name: Filter
+      - name: Screen and publish result
         run: |
-          cp /tmp/llama/*.json /tmp/ 2>/dev/null || true
-          python3 - <<'PY'
-          import subprocess
-          s=open('scripts/llama_screen.py').read().replace('D = "/tmp/llama"','D = "/tmp"')
-          open('/tmp/screen_runner.py','w').write(s)
-          PY
-          cd /home/runner/work/arc_hedgefun/arc_hedgefun 2>/dev/null || cd "$GITHUB_WORKSPACE"
-          python3 /tmp/screen_runner.py
-          cp screen.json /tmp/screen.json
-          python3 - <<'PY'
-          import json,base64
-          d=open('/tmp/screen.json','rb').read()
-          # emit as base64 chunks in the step log, 200KB each
-          b=base64.b64encode(d).decode()
-          for i in range(0,len(b),120000):
-              print('SCREENB64_'+str(i//120000)+'_'+b[i:i+120000])
-          print('SCREENB64_PARTS_'+str((len(b)+119999)//120000))
-          PY
-      - uses: actions/upload-artifact@v4
-        with:
-          name: screen
-          path: "screen.json"
-          retention-days: 1
+          set -e
+          python3 scripts/llama_screen.py
+          ls -la screen.json
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add screen.json
+          git commit -m "data: one-off llama screen [skip ci]" || echo "nothing to commit"
+          git push origin HEAD:arena/fbf9cf32-arc-hedgefun
