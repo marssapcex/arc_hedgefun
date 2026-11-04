@@ -6,7 +6,7 @@ Snapshot `api.llama.fi` ngày **2026-11-04** (4 endpoint: `/protocols`, `/lite/p
 
 - 762 protocol có `mcap` dạng số; **208 dòng** khớp `TVL ≥ 100k, mcap ≤ 1.01m, mcap/TVL ≤ 1`, trong đó **142 dòng có `mcap > 0`** (66 dòng `mcap = 0`: DefiLlama không có giá/token chết, không mua được phiếu → vô dụng).
 - Con số **156 / 558** của ông là snapshot khác thời điểm / khác cách xử lý `mcap` null. Bản hôm nay 142 (hoặc 161 nếu bỏ điều kiện tỉ lệ). Không khớp, mình không ép cho khớp.
-- 11/30 tên ông dán **không còn nằm trong ngưỡng hôm nay** (`mcap` null hoặc > 1.01m): KittyPunch, Alpaca Finance, Blend, UNCX Network, Kuma, Nile Exchange, SparkDEX, PoolTogether, ApeBond, Yield Yak, Bifrost Protocol, Kriya, Biswap. Cái tên "Yield Yak" nay là "Yield Yak Aggregator" ($13.43m / $337.6k).
+- 13/30 tên ông dán **không còn khớp đúng tên/ngưỡng hôm nay** (`mcap` null hoặc > 1.01m): KittyPunch, Alpaca Finance, Blend, UNCX Network, Kuma, Nile Exchange, SparkDEX, PoolTogether, ApeBond, Bifrost Protocol, Kriya, Biswap, và Yield Yak (nay đổi thành "Yield Yak Aggregator", $13.43m / $337.6k).
 - Trong 142: **120 không có `governanceID`**, 16 chỉ có `snapshot:`, **6 có governor on-chain** (`compound:` / `eip155:`). Đây là con số quyết định.
 
 ## Nhóm A — đúng 4 điều kiện cấu trúc
@@ -39,11 +39,15 @@ Chain gần chết mà vẫn đo được TVL thật: Fantom $3.01m (Curve $914k
 
 ## Nhóm C — loại, nói rõ để khỏi lẫn
 
-- **Chỉ Snapshot** (phần lớn 156 + 171/178 `governanceID`): Concentrator $78.9m/$90k, ACryptoS $10.5m/$180k, Pickle $4.67m/$27.5k, Bunny $3.67m/$9.5k, CLever $5.87m/$275k, Hakka, QiDao, Plutus, OnX, Iron Bank, BoringDAO, Siren, Trisolaris… Vote off-chain, thực thi cần multisig → **không phải mua >50% token là xong**.
+- **Chỉ Snapshot** (171/216 tag `governanceID`; phần lớn 156): Concentrator $78.9m/$90k, ACryptoS $10.5m/$180k, Pickle $4.67m/$27.5k, Bunny $3.67m/$9.5k, CLever $5.87m/$275k, Hakka, QiDao, Plutus, OnX, Iron Bank, BoringDAO, Siren, Trisolaris… Vote off-chain, thực thi cần multisig → **không phải mua >50% token là xong**.
 - **Có setter nhưng chỉ admin/timelock, không có Governor token**: Kinetic (Flare, $31.96m/$305k — `UnitrollerTimelockUpgrader`: TimelockController 3 ngày + `NO_DELAY_ROLE`, `Comptroller._setPriceOracle` require `msg.sender == admin`), Mendi Finance (Linea, $1.03m/$17.9k), Neverland (Monad, $5.35m/$52.7k — Aave V3 fork, `PoolAddressesProvider.setPriceOracle/setPoolImpl` `onlyOwner`, `ACLManager` roles). Đây là **cần quyền**, đúng thứ ông đã bảo mình tự dựng ra trước đây.
 - **mcap = 0**: không có giá → không mua được phiếu bằng tiền thật.
 - **CEX / canonical bridge / staking pool / LST**: Obol, xDAI Bridge, Biconomy.com, Stride, Kyros, Saber… TVL không phải pool mà governor có thể gọi `withdraw`.
 - **Đã deprecated / đã hack**: Scream, Rari, Hundred, Belt, Exactly, Astroport, 88mph, DFYN.
+
+## Cạm bẫy của chính bộ lọc này
+
+`mcap` thấp **không đồng nghĩa** mua được >50% phiếu: quorum/threshold thường tính bằng số token cố định, còn mcap là giá × circulating. Angle quorum 25M ANGLE nhưng mcap $52.8k; Hop threshold 1M HOP nhưng mcap $82.8k; Wing quorum 20.000 WING nhưng mcap $20.7k — ba chỗ này tự mâu thuẫn, hoặc token đã mất giá/không còn thanh khoản để mua, hoặc governor đã chết. Đây là lý do mình không viết "mua rẻ là thắng": cần đọc snapshot block, circulating, độ sâu pool, và quorum hiện tại trên chain. Ở đa số dòng, cái rẻ là **vốn hoá của token chết**, không phải quyền biểu quyết đang hoạt động.
 
 ## Ranh giới
 
