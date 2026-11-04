@@ -117,6 +117,19 @@ def probe_chain(entry, workers):
         out["status"] = "STALLED"
     else:
         out["status"] = "FROZEN"
+    # FROZEN proof: ask explicitly for block N+1 on every endpoint that answered
+    if out["status"] == "FROZEN":
+        out["nextBlockProbe"] = []
+        for a in out["attempts"]:
+            if a.get("block") is None or a.get("error"):
+                continue
+            try:
+                nxt = rpc(a["url"], "eth_getBlockByNumber", [hex(a["block"] + 1), False], timeout=6)
+                out["nextBlockProbe"].append({"url": a["url"], "next": a["block"] + 1,
+                                              "exists": isinstance(nxt, dict) and bool(nxt)})
+            except Exception as e:
+                out["nextBlockProbe"].append({"url": a["url"], "next": a["block"] + 1,
+                                              "error": str(e)[:80]})
     # contracts: code + native balance, only on answering chains
     url = out["endpoint"]
     for ad in entry.get("addresses", [])[:10]:
