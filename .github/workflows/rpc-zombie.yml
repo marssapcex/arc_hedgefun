@@ -1,0 +1,27 @@
+name: rpc-zombie
+on:
+  push:
+    paths:
+      - '.github/workflows/rpc-zombie.yml'
+      - 'scripts/rpc_zombie.py'
+      - 'scripts/zombie_data.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  census:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read-only zombie chain RPC census
+        run: |
+          python3 scripts/rpc_zombie.py --workers 32 --out rpc_zombie_raw.json --md ZOMBIE_CHAINS.md
+          ls -la rpc_zombie_raw.json ZOMBIE_CHAINS.md
+      - name: Publish results
+        run: |
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add -f rpc_zombie_raw.json ZOMBIE_CHAINS.md
+          git commit -m "data: zombie chain RPC census [skip ci]" || echo nothing
+          for i in 1 2 3 4 5; do git push origin HEAD:arena/fbf9cf32-arc-hedgefun && break || sleep 5; done

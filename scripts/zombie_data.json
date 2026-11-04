@@ -1,0 +1,3007 @@
+{
+ "source": "DefiLlama snapshot git show 9fccbd9:screen.json (2026-11-04) + ethereum-lists/chains",
+ "criterion": "chainTvl <= $5,000,000; 335 entries, 131 TVL=0",
+ "nonEvmOrUnmapped": 106,
+ "chains": [
+  {
+   "name": "Moonbeam",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Moonbeam",
+   "chainId": 1284,
+   "native": "GLMR",
+   "rpcs": [
+    "https://rpc.api.moonbeam.network",
+    "https://moonbeam.public.blastapi.io",
+    "https://moonbeam.api.onfinality.io/public",
+    "https://moonbeam.unitedbloc.com",
+    "https://moonbeam-rpc.publicnode.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Corn",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Corn",
+   "chainId": 21000000,
+   "native": "BTCN",
+   "rpcs": [
+    "https://mainnet.corn-rpc.com",
+    "https://rpc.ankr.com/corn_maizenet",
+    "https://maizenet-rpc.usecorn.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Harmony",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Harmony Mainnet Shard 0",
+   "chainId": 1666600000,
+   "native": "ONE",
+   "rpcs": [
+    "https://api.harmony.one",
+    "https://a.api.s0.t.hmny.io",
+    "https://api.s0.t.hmny.io",
+    "https://rpc.ankr.com/harmony",
+    "https://1rpc.io/one"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Fantom",
+   "chainTvl": 3014185.6977921394,
+   "protocolCount": 11,
+   "chainlistName": "Fantom Opera",
+   "chainId": 250,
+   "native": "FTM",
+   "rpcs": [
+    "https://rpc.ftm.tools",
+    "https://fantom-rpc.publicnode.com",
+    "https://fantom.drpc.org"
+   ],
+   "addresses": [
+    "0x00a35FD824c717879BF370E70AC6868b95870Dfb",
+    "0x01e77288b38b416F972428d562454fb329350bAc",
+    "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",
+    "0x21ada0d2ac28c3a5fa3cd2ee30882da8812279b6",
+    "0x5cc61a78f164885776aa610fb0fe1257df78e59b",
+    "0x841fad6eae12c286d1fd18d1d525dffa75c7effe",
+    "0xE992bEAb6659BFF447893641A378FbbF031C5bD6",
+    "0xb7c2ddb1ebac1056231ef22c1b0a13988537a274"
+   ]
+  },
+  {
+   "name": "Aurora",
+   "chainTvl": 3910906.7553445967,
+   "protocolCount": 10,
+   "chainlistName": "Aurora Mainnet",
+   "chainId": 1313161554,
+   "native": "ETH",
+   "rpcs": [
+    "https://mainnet.aurora.dev",
+    "https://aurora.drpc.org"
+   ],
+   "addresses": [
+    "0x09c9d464b58d96837f8d8b6f4d9fe4ad408d3a4f",
+    "0x12c87331f086c3C926248f964f8702C0842Fd77F",
+    "0x8bec47865ade3b172a928df8f990bc7f2a3b9f79",
+    "0x9f1F933C660a1DC856F0E0Fe058435879c5CCEf0",
+    "0xFa94348467f64D5A457F75F8bc40495D33c65aBB",
+    "0xdcD6D4e2B3e1D1E1E6Fa8C21C8A323DcbecfF970"
+   ]
+  },
+  {
+   "name": "Taiko",
+   "chainTvl": 209783.2418910012,
+   "protocolCount": 2,
+   "chainlistName": "Taiko",
+   "chainId": 167000,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.mainnet.taiko.xyz",
+    "https://taiko-rpc.publicnode.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Plume Mainnet",
+   "chainTvl": 1629220.3824686476,
+   "protocolCount": 14,
+   "chainlistName": "Plume Mainnet",
+   "chainId": 98866,
+   "native": "PLUME",
+   "rpcs": [
+    "https://rpc.plume.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "XDC",
+   "chainTvl": 2023220.6762781325,
+   "protocolCount": 13,
+   "chainlistName": "XDC Network",
+   "chainId": 50,
+   "native": "XDC",
+   "rpcs": [
+    "https://erpc.xinfin.network",
+    "https://rpc.xinfin.network",
+    "https://rpc1.xinfin.network",
+    "https://rpc.xdcrpc.com",
+    "https://erpc.xdcrpc.com"
+   ],
+   "addresses": [
+    "0x36726235dadbdb4658d33e62a249dca7c4b2bc68"
+   ]
+  },
+  {
+   "name": "TAC",
+   "chainTvl": 233073.0469357515,
+   "protocolCount": 3,
+   "chainlistName": "Btachain",
+   "chainId": 1657,
+   "native": "BTA",
+   "rpcs": [
+    "https://dataseed1.btachain.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Palm",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Palm",
+   "chainId": 11297108109,
+   "native": "PALM",
+   "rpcs": [
+    "https://palm-mainnet.public.blastapi.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Moonriver",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Moonriver",
+   "chainId": 1285,
+   "native": "MOVR",
+   "rpcs": [
+    "https://rpc.api.moonriver.moonbeam.network",
+    "https://moonriver.public.blastapi.io",
+    "https://moonriver.api.onfinality.io/public",
+    "https://moonriver.unitedbloc.com",
+    "https://moonriver-rpc.publicnode.com"
+   ],
+   "addresses": [
+    "0xbb8d88bcd9749636bc4d2be22aac4bb3b01a58f1",
+    "0x2BE2e230e89c59c8E20E633C524AD2De246e7370",
+    "0x04e6322D196E0E4cCBb2610dd8B8f2871E160bd7",
+    "0x0b7a0EAA884849c6Af7a129e899536dDDcA4905E",
+    "0x892bE716Dcf0A6199677F355f45ba8CC123BAF60",
+    "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+    "0x8529ea4dbdca738aa928d682ea9c1382bf2ff098"
+   ]
+  },
+  {
+   "name": "Heco",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Huobi ECO Chain Mainnet",
+   "chainId": 128,
+   "native": "HT",
+   "rpcs": [
+    "https://http-mainnet.hecochain.com"
+   ],
+   "addresses": [
+    "0xe36ffd17b2661eb57144ceaef942d95295e637f0"
+   ]
+  },
+  {
+   "name": "Boba_Bnb",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Boba BNB Mainnet",
+   "chainId": 56288,
+   "native": "BOBA",
+   "rpcs": [
+    "https://bnb.boba.network",
+    "https://boba-bnb.gateway.tenderly.co",
+    "https://gateway.tenderly.co/public/boba-bnb",
+    "https://replica.bnb.boba.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Blast",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Blast",
+   "chainId": 81457,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.blast.io",
+    "https://rpc.ankr.com/blast",
+    "https://blast.din.dev/rpc",
+    "https://blastl2-mainnet.public.blastapi.io",
+    "https://blast.blockpi.network/v1/rpc/public"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Polygon zkEVM",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Polygon zkEVM",
+   "chainId": 1101,
+   "native": "ETH",
+   "rpcs": [
+    "https://zkevm-rpc.com",
+    "https://polygon-zkevm.drpc.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "ThunderCore",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "ThunderCore Mainnet",
+   "chainId": 108,
+   "native": "TT",
+   "rpcs": [
+    "https://mainnet-rpc.thundercore.com",
+    "https://mainnet-rpc.thundertoken.net",
+    "https://mainnet-rpc.thundercore.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Telos",
+   "chainTvl": 2387518.8942450164,
+   "protocolCount": 4,
+   "chainlistName": "Telos EVM Mainnet",
+   "chainId": 40,
+   "native": "TLOS",
+   "rpcs": [
+    "https://rpc.telos.net",
+    "https://telos.drpc.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Boba",
+   "chainTvl": 2304020.6262133108,
+   "protocolCount": 7,
+   "chainlistName": "Boba Network",
+   "chainId": 288,
+   "native": "ETH",
+   "rpcs": [
+    "https://mainnet.boba.network",
+    "https://boba-ethereum.gateway.tenderly.co",
+    "https://gateway.tenderly.co/public/boba-ethereum",
+    "https://boba-eth.drpc.org"
+   ],
+   "addresses": [
+    "0x5008F837883EA9a07271a1b5eB0658404F5a9610"
+   ]
+  },
+  {
+   "name": "Fuse",
+   "chainTvl": 374829.7774598287,
+   "protocolCount": 5,
+   "chainlistName": "Fuse Mainnet",
+   "chainId": 122,
+   "native": "FUSE",
+   "rpcs": [
+    "https://rpc.fuse.io",
+    "https://fuse.drpc.org"
+   ],
+   "addresses": [
+    "0x34Ef2Cc892a88415e9f02b91BfA9c91fC0bE6bD4"
+   ]
+  },
+  {
+   "name": "Hemi",
+   "chainTvl": 1199080.15458861,
+   "protocolCount": 6,
+   "chainlistName": "Hemi",
+   "chainId": 43111,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.hemi.network/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Arbitrum Nova",
+   "chainTvl": 510.4604164033132,
+   "protocolCount": 0,
+   "chainlistName": "Arbitrum Nova",
+   "chainId": 42170,
+   "native": "ETH",
+   "rpcs": [
+    "https://nova.arbitrum.io/rpc",
+    "https://arbitrum-nova-rpc.publicnode.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "HAQQ",
+   "chainTvl": 0.19558989272917032,
+   "protocolCount": 1,
+   "chainlistName": "Haqq Network",
+   "chainId": 11235,
+   "native": "ISLM",
+   "rpcs": [
+    "https://rpc.eth.haqq.network",
+    "https://haqq-evm-rpc.publicnode.com",
+    "https://haqq.drpc.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Metis",
+   "chainTvl": 1868481.6674725902,
+   "protocolCount": 13,
+   "chainlistName": "Metis Andromeda Mainnet",
+   "chainId": 1088,
+   "native": "METIS",
+   "rpcs": [
+    "https://andromeda.metis.io/?owner=1088",
+    "https://metis.drpc.org",
+    "https://metis-rpc.publicnode.com"
+   ],
+   "addresses": [
+    "0x096a84536ab84e68ee210561ffd3a038e79736f1",
+    "0x69fdb77064ec5c84FA2F21072973eB28441F43F3",
+    "0x90fe084f877c65e1b577c7b2ea64b8d8dd1ab278",
+    "0xb27BbeaACA2C00d6258C3118BAB6b5B6975161c8",
+    "0xbB1676046C36BCd2F6fD08d8f60672c7087d9aDF"
+   ]
+  },
+  {
+   "name": "Filecoin",
+   "chainTvl": 2505066.7065995317,
+   "protocolCount": 18,
+   "chainlistName": "Filecoin - Mainnet",
+   "chainId": 314,
+   "native": "FIL",
+   "rpcs": [
+    "https://api.node.glif.io",
+    "https://rpc.ankr.com/filecoin",
+    "https://filecoin-mainnet.chainstacklabs.com/rpc/v1",
+    "https://filfox.info/rpc/v1",
+    "https://filecoin.drpc.org"
+   ],
+   "addresses": [
+    "0x005E02A4A934142d8Dd476F192d0dD9c381b16b4",
+    "0x2a0aaf86b2fa64e88d3739091e7773106f3ebcf5",
+    "0xC5eA96Dd365983cfEc90E72b6A2daC9562f458Ba"
+   ]
+  },
+  {
+   "name": "SKALE Europa",
+   "chainTvl": 56433.82095298738,
+   "protocolCount": 0,
+   "chainlistName": "SKALE Europa Hub",
+   "chainId": 2046399126,
+   "native": "sFUEL",
+   "rpcs": [
+    "https://mainnet.skalenodes.com/v1/elated-tan-skat"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "CORE",
+   "chainTvl": 3269117.0647237417,
+   "protocolCount": 6,
+   "chainlistName": "Dancore",
+   "chainId": 362,
+   "native": "DNC",
+   "rpcs": [
+    "https://rpc.dancorescan.com"
+   ],
+   "addresses": [
+    "0x30a540b05468a250fcc17da2d9d4aaa84b358ea7"
+   ]
+  },
+  {
+   "name": "ZetaChain",
+   "chainTvl": 294265.40095493494,
+   "protocolCount": 4,
+   "chainlistName": "ZetaChain Mainnet",
+   "chainId": 7000,
+   "native": "ZETA",
+   "rpcs": [
+    "https://zetachain-evm.blockpi.network/v1/rpc/public",
+    "https://zetachain-mainnet.g.allthatnode.com/archive/evm",
+    "https://zeta-chain.drpc.org",
+    "https://zetachain-mainnet.public.blastapi.io",
+    "https://7000.rpc.thirdweb.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Velas",
+   "chainTvl": 197625.6542059759,
+   "protocolCount": 1,
+   "chainlistName": "Velas EVM Mainnet",
+   "chainId": 106,
+   "native": "VLX",
+   "rpcs": [
+    "https://evmexplorer.velas.com/rpc",
+    "https://explorer.velas.com/rpc"
+   ],
+   "addresses": [
+    "0xabf26902fd7b624e0db40d31171ea9dddf078351"
+   ]
+  },
+  {
+   "name": "Oasis Emerald",
+   "chainTvl": 212080.1448516808,
+   "protocolCount": 0,
+   "chainlistName": "Oasis Emerald",
+   "chainId": 42262,
+   "native": "ROSE",
+   "rpcs": [
+    "https://emerald.oasis.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "HSK Chain",
+   "chainTvl": 1392.6020851874375,
+   "protocolCount": 0,
+   "chainlistName": "HSKChain",
+   "chainId": 177,
+   "native": "HSK",
+   "rpcs": [
+    "https://mainnet.hsk.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Zircuit",
+   "chainTvl": 98105.25124251915,
+   "protocolCount": 2,
+   "chainlistName": "Zircuit Mainnet",
+   "chainId": 48900,
+   "native": "ETH",
+   "rpcs": [
+    "https://mainnet.zircuit.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Manta",
+   "chainTvl": 2820933.7167635057,
+   "protocolCount": 15,
+   "chainlistName": "Manta Pacific Mainnet",
+   "chainId": 169,
+   "native": "ETH",
+   "rpcs": [
+    "https://pacific-rpc.manta.network/http",
+    "https://manta-pacific.drpc.org"
+   ],
+   "addresses": [
+    "0x9582b518d28dc65945f8151c25e44a4e80504205"
+   ]
+  },
+  {
+   "name": "EthereumClassic",
+   "chainTvl": 109579.38401640026,
+   "protocolCount": 4,
+   "chainlistName": "Ethereum Classic",
+   "chainId": 61,
+   "native": "ETC",
+   "rpcs": [
+    "https://etc.rivet.link",
+    "https://besu-at.etc-network.info",
+    "https://geth-at.etc-network.info",
+    "https://etc.etcdesktop.com",
+    "https://etc.mytokenpocket.vip"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "KCC",
+   "chainTvl": 784033.8183443685,
+   "protocolCount": 0,
+   "chainlistName": "KCC Mainnet",
+   "chainId": 321,
+   "native": "KCS",
+   "rpcs": [
+    "https://rpc-mainnet.kcc.network",
+    "https://kcc.mytokenpocket.vip",
+    "https://public-rpc.blockpi.io/http/kcc"
+   ],
+   "addresses": [
+    "0x2ca48b4eea5a731c2b54e7c3944dbdb87c0cfb6f"
+   ]
+  },
+  {
+   "name": "IoTeX",
+   "chainTvl": 1474535.9253343276,
+   "protocolCount": 10,
+   "chainlistName": "IoTeX Network Mainnet",
+   "chainId": 4689,
+   "native": "IOTX",
+   "rpcs": [
+    "https://babel-api.mainnet.iotex.io"
+   ],
+   "addresses": [
+    "0x375488f097176507e39b9653b88fdc52cde736bf",
+    "0xe45d95a66cfF6aB5E9b796CF5A36F0669AF3Ec98"
+   ]
+  },
+  {
+   "name": "Wanchain",
+   "chainTvl": 1741226.6780170836,
+   "protocolCount": 4,
+   "chainlistName": "Wanchain",
+   "chainId": 888,
+   "native": "WAN",
+   "rpcs": [
+    "https://gwan-ssl.wandevs.org:56891"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Ontology",
+   "chainTvl": 4710947.574114999,
+   "protocolCount": 2,
+   "chainlistName": "Ontology Mainnet",
+   "chainId": 58,
+   "native": "ONG",
+   "rpcs": [
+    "http://dappnode1.ont.io:20339",
+    "http://dappnode2.ont.io:20339",
+    "http://dappnode3.ont.io:20339",
+    "http://dappnode4.ont.io:20339",
+    "https://dappnode1.ont.io:10339"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "OntologyEVM",
+   "chainTvl": 1438.7992105077776,
+   "protocolCount": 0,
+   "chainlistName": "Ontology Mainnet",
+   "chainId": 58,
+   "native": "ONG",
+   "rpcs": [
+    "http://dappnode1.ont.io:20339",
+    "http://dappnode2.ont.io:20339",
+    "http://dappnode3.ont.io:20339",
+    "http://dappnode4.ont.io:20339",
+    "https://dappnode1.ont.io:10339"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "opBNB",
+   "chainTvl": 1056170.5550187281,
+   "protocolCount": 0,
+   "chainlistName": "opBNB Mainnet",
+   "chainId": 204,
+   "native": "BNB",
+   "rpcs": [
+    "https://opbnb-mainnet-rpc.bnbchain.org",
+    "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
+    "https://opbnb-mainnet.nodereal.io/v1/e9a36765eb8a40b9bd12e680a1fd2bc5",
+    "https://opbnb-rpc.publicnode.com",
+    "https://opbnb.drpc.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Evmos",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Evmos",
+   "chainId": 9001,
+   "native": "EVMOS",
+   "rpcs": [
+    "https://evmos.lava.build",
+    "https://evmos-evm-rpc.publicnode.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Energi",
+   "chainTvl": 36561.42625368714,
+   "protocolCount": 0,
+   "chainlistName": "Energi Mainnet",
+   "chainId": 39797,
+   "native": "NRG",
+   "rpcs": [
+    "https://nodeapi.energi.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Eclipse",
+   "chainTvl": 38781.21651588981,
+   "protocolCount": 0,
+   "chainlistName": "Eclipse Subnet",
+   "chainId": 17172,
+   "native": "ECLP",
+   "rpcs": [
+    "https://subnets.avax.network/eclipse/testnet/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Zilliqa",
+   "chainTvl": 120185.08177767703,
+   "protocolCount": 2,
+   "chainlistName": "Zilliqa 2",
+   "chainId": 32769,
+   "native": "ZIL",
+   "rpcs": [
+    "https://api.zilliqa.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Canto",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Canto",
+   "chainId": 7700,
+   "native": "CANTO",
+   "rpcs": [
+    "https://canto.slingshot.finance",
+    "https://canto-rpc.ansybl.io",
+    "https://mainnode.plexnode.org:8545",
+    "https://canto.gravitychain.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "REI",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "REI Network",
+   "chainId": 47805,
+   "native": "REI",
+   "rpcs": [
+    "https://rpc.rei.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Shibarium",
+   "chainTvl": 42736.532784058436,
+   "protocolCount": 1,
+   "chainlistName": "Shibarium",
+   "chainId": 109,
+   "native": "BONE",
+   "rpcs": [
+    "https://rpc.shibarium.shib.io",
+    "https://shib.nownodes.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Hoo",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "HOO Smart Chain Testnet",
+   "chainId": 170,
+   "native": "HOO",
+   "rpcs": [
+    "https://http-testnet.hoosmartchain.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Q Protocol",
+   "chainTvl": 9213.944300159439,
+   "protocolCount": 0,
+   "chainlistName": "Q Mainnet",
+   "chainId": 35441,
+   "native": "QGOV",
+   "rpcs": [
+    "https://rpc.q.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Bitgert",
+   "chainTvl": 1166.5069381476922,
+   "protocolCount": 0,
+   "chainlistName": "Bitgert Mainnet",
+   "chainId": 32520,
+   "native": "Brise",
+   "rpcs": [
+    "https://rpc-bitgert.icecreamswap.com",
+    "https://mainnet-rpc.brisescan.com",
+    "https://chainrpc.com",
+    "https://serverrpc.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Astar",
+   "chainTvl": 1140123.0336919308,
+   "protocolCount": 14,
+   "chainlistName": "Astar",
+   "chainId": 592,
+   "native": "ASTR",
+   "rpcs": [
+    "https://rpc.astar.network:8545"
+   ],
+   "addresses": [
+    "0x5271D85CE4241b310C0B34b7C2f1f036686A6d7C",
+    "0xc4335b1b76fa6d52877b3046eca68f6e708a27dd",
+    "0xcCA488aEEf7A1D5C633f877453784F025e7cF160",
+    "0xde2578edec4669ba7f41c5d5d2386300bcea4678"
+   ]
+  },
+  {
+   "name": "Archway",
+   "chainTvl": 115944.33180867463,
+   "protocolCount": 1,
+   "chainlistName": "Arc",
+   "chainId": 5042,
+   "native": "USDC",
+   "rpcs": [
+    "https://rpc.mainnet.arc.io",
+    "https://rpc.blockdaemon.mainnet.arc.io",
+    "https://rpc.drpc.mainnet.arc.io",
+    "https://rpc.quicknode.mainnet.arc.io",
+    "https://rpc.beamrpc.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Karura",
+   "chainTvl": 629394.432180664,
+   "protocolCount": 4,
+   "chainlistName": "Karura Network",
+   "chainId": 686,
+   "native": "KAR",
+   "rpcs": [
+    "https://eth-rpc-karura.aca-api.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Meter",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Meter Mainnet",
+   "chainId": 82,
+   "native": "MTR",
+   "rpcs": [
+    "https://rpc.meter.io"
+   ],
+   "addresses": [
+    "0x8Df95e66Cb0eF38F91D2776DA3c921768982fBa0"
+   ]
+  },
+  {
+   "name": "Rollux",
+   "chainTvl": 48396.50404809122,
+   "protocolCount": 0,
+   "chainlistName": "Rollux Mainnet",
+   "chainId": 570,
+   "native": "SYS",
+   "rpcs": [
+    "https://rpc.rollux.com",
+    "https://rpc.ankr.com/rollux"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Unit Zero",
+   "chainTvl": 10600.972694287742,
+   "protocolCount": 0,
+   "chainlistName": "Unit Zero Mainnet",
+   "chainId": 88811,
+   "native": "UNIT0",
+   "rpcs": [
+    "https://rpc.unit0.dev"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Shiden",
+   "chainTvl": 0.023404922034414955,
+   "protocolCount": 0,
+   "chainlistName": "Shiden",
+   "chainId": 336,
+   "native": "SDN",
+   "rpcs": [
+    "https://shiden.api.onfinality.io/public",
+    "https://shiden.public.blastapi.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "EnergyWeb",
+   "chainTvl": 63160.16831505464,
+   "protocolCount": 1,
+   "chainlistName": "Energy Web Chain",
+   "chainId": 246,
+   "native": "EWT",
+   "rpcs": [
+    "https://rpc.energyweb.org"
+   ],
+   "addresses": [
+    "0x9cd9CAECDC816C3E7123A4F130A91A684D01f4Dc"
+   ]
+  },
+  {
+   "name": "GoChain",
+   "chainTvl": 6420.163804488912,
+   "protocolCount": 0,
+   "chainlistName": "GoChain",
+   "chainId": 60,
+   "native": "GO",
+   "rpcs": [
+    "https://rpc.gochain.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Viction",
+   "chainTvl": 87331.51985090753,
+   "protocolCount": 0,
+   "chainlistName": "Viction",
+   "chainId": 88,
+   "native": "VIC",
+   "rpcs": [
+    "https://rpc.viction.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Milkomeda C1",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Milkomeda C1 Mainnet",
+   "chainId": 2001,
+   "native": "mADA",
+   "rpcs": [
+    "https://rpc-mainnet-cardano-evm.c1.milkomeda.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Empire",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Empire Network",
+   "chainId": 3693,
+   "native": "EMPIRE",
+   "rpcs": [
+    "https://rpc.empirenetwork.io"
+   ],
+   "addresses": [
+    "0xc84d8d03aa41ef941721a4d77b24bb44d7c7ac55"
+   ]
+  },
+  {
+   "name": "Step",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Step Network",
+   "chainId": 1234,
+   "native": "FITFI",
+   "rpcs": [
+    "https://rpc.step.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "VeChain",
+   "chainTvl": 325249.90825206327,
+   "protocolCount": 5,
+   "chainlistName": "VeChain",
+   "chainId": 100009,
+   "native": "VET",
+   "rpcs": [
+    "https://rpc-mainnet.vechain.energy"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Callisto",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Callisto Mainnet",
+   "chainId": 820,
+   "native": "CLO",
+   "rpcs": [
+    "https://rpc.callistodao.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "ApeChain",
+   "chainTvl": 2341171.778967872,
+   "protocolCount": 7,
+   "chainlistName": "ApeChain",
+   "chainId": 33139,
+   "native": "APE",
+   "rpcs": [
+    "https://rpc.apechain.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "CSC",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "GTCSCAN",
+   "chainId": 3490,
+   "native": "GTC",
+   "rpcs": [
+    "https://gtc-dataseed.gtcscan.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Ergo",
+   "chainTvl": 950530.879075839,
+   "protocolCount": 5,
+   "chainlistName": "PowerGold",
+   "chainId": 1313161560,
+   "native": "ETH",
+   "rpcs": [
+    "https://powergold.aurora.dev"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Lisk",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Lisk",
+   "chainId": 1135,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.api.lisk.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Somnia",
+   "chainTvl": 2855303.2901939093,
+   "protocolCount": 6,
+   "chainlistName": "Somnia Mainnet",
+   "chainId": 5031,
+   "native": "SOMI",
+   "rpcs": [
+    "https://api.infra.mainnet.somnia.network"
+   ],
+   "addresses": [
+    "0xc063b29cd6b30885783b505ae180b3079e0a2154"
+   ]
+  },
+  {
+   "name": "Nahmii",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Nahmii 3 Mainnet",
+   "chainId": 4061,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.n3.nahmii.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Theta",
+   "chainTvl": 296342.4627317273,
+   "protocolCount": 4,
+   "chainlistName": "Theta Mainnet",
+   "chainId": 361,
+   "native": "TFUEL",
+   "rpcs": [
+    "https://eth-rpc-api.thetatoken.org/rpc"
+   ],
+   "addresses": [
+    "0x4dc08b15ea0e10b96c41aec22fab934ba15c983e"
+   ]
+  },
+  {
+   "name": "Syscoin",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Syscoin Mainnet",
+   "chainId": 57,
+   "native": "SYS",
+   "rpcs": [
+    "https://rpc.syscoin.org",
+    "https://syscoin.public-rpc.com",
+    "https://57.rpc.thirdweb.com",
+    "https://syscoin-evm.publicnode.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Goerli",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Goerli",
+   "chainId": 5,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.goerli.mudit.blog",
+    "https://ethereum-goerli-rpc.publicnode.com",
+    "https://goerli.gateway.tenderly.co"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Bahamut",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Bahamut",
+   "chainId": 5165,
+   "native": "FTN",
+   "rpcs": [
+    "https://rpc1.bahamut.io",
+    "https://rpc2.bahamut.io",
+    "https://rpc1.ftnscan.io",
+    "https://rpc2.ftnscan.io",
+    "https://bahamut-rpc.publicnode.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "zkLink Nova",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Ink",
+   "chainId": 57073,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc-gel.inkonchain.com",
+    "https://rpc-qnd.inkonchain.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Gravity by Galxe",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Gravity",
+   "chainId": 127001,
+   "native": "G",
+   "rpcs": [
+    "https://mainnet-rpc.gravity.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Boba_Avax",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Boba Avax",
+   "chainId": 43288,
+   "native": "BOBA",
+   "rpcs": [
+    "https://avax.boba.network",
+    "https://replica.avax.boba.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Mode",
+   "chainTvl": 593014.0978542856,
+   "protocolCount": 4,
+   "chainlistName": "Mode",
+   "chainId": 34443,
+   "native": "ETH",
+   "rpcs": [
+    "https://mainnet.mode.network",
+    "https://mode.drpc.org"
+   ],
+   "addresses": [
+    "0x6863fb62Ed27A9DdF458105B507C15b5d741d62e"
+   ]
+  },
+  {
+   "name": "Cronos zkEVM",
+   "chainTvl": 632966.3026431405,
+   "protocolCount": 4,
+   "chainlistName": "Cronos zkEVM Testnet",
+   "chainId": 240,
+   "native": "zkTCRO",
+   "rpcs": [
+    "https://testnet.zkevm.cronos.org"
+   ],
+   "addresses": [
+    "0xcaf2fd3f47e7f46e99f74be579b2cc2233f33ef8"
+   ]
+  },
+  {
+   "name": "Abstract",
+   "chainTvl": 2918466.382249859,
+   "protocolCount": 8,
+   "chainlistName": "Abstract",
+   "chainId": 2741,
+   "native": "ETH",
+   "rpcs": [
+    "https://api.mainnet.abs.xyz"
+   ],
+   "addresses": [
+    "0x4c68e4102c0f120cce9f08625bd12079806b7c4d"
+   ]
+  },
+  {
+   "name": "GOAT",
+   "chainTvl": 37929.76352856497,
+   "protocolCount": 0,
+   "chainlistName": "GOAT Network",
+   "chainId": 2345,
+   "native": "BTC",
+   "rpcs": [
+    "https://rpc.goat.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "DFK",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "DFK Chain",
+   "chainId": 53935,
+   "native": "JEWEL",
+   "rpcs": [
+    "https://subnets.avax.network/defi-kingdoms/dfk-chain/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Dogechain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Dogechain Mainnet",
+   "chainId": 2000,
+   "native": "DOGE",
+   "rpcs": [
+    "https://rpc.dogechain.dog",
+    "https://rpc01-sg.dogechain.dog",
+    "https://rpc.ankr.com/dogechain"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Zora",
+   "chainTvl": 40744.51687677279,
+   "protocolCount": 0,
+   "chainlistName": "Zora",
+   "chainId": 7777777,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.zora.energy"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Milkomeda A1",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Milkomeda A1 Mainnet",
+   "chainId": 2002,
+   "native": "mALGO",
+   "rpcs": [
+    "https://rpc-mainnet-algorand-rollup.a1.milkomeda.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Findora",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Findora Mainnet",
+   "chainId": 2152,
+   "native": "FRA",
+   "rpcs": [
+    "https://rpc-mainnet.findora.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "REIchain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "REI Chain Mainnet",
+   "chainId": 55555,
+   "native": "REI",
+   "rpcs": [
+    "https://rei-rpc.moonrhythm.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "SX Network",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "SX Network Mainnet",
+   "chainId": 416,
+   "native": "SX",
+   "rpcs": [
+    "https://rpc.sx.technology"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "SX Rollup",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "SX Rollup",
+   "chainId": 4162,
+   "native": "SX",
+   "rpcs": [
+    "https://rpc.sx-rollup.gelato.digital"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "MultiVAC",
+   "chainTvl": 3267.7329218086784,
+   "protocolCount": 1,
+   "chainlistName": "MultiVAC Mainnet",
+   "chainId": 62621,
+   "native": "MTV",
+   "rpcs": [
+    "https://rpc.mtv.ac",
+    "https://rpc-eu.mtv.ac"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Acala",
+   "chainTvl": 280124.17287960165,
+   "protocolCount": 5,
+   "chainlistName": "Acala Network",
+   "chainId": 787,
+   "native": "ACA",
+   "rpcs": [
+    "https://eth-rpc-acala.aca-api.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Odyssey",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Odyssey Testnet",
+   "chainId": 911867,
+   "native": "ETH",
+   "rpcs": [
+    "https://odyssey.ithaca.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "LUKSO",
+   "chainTvl": 0,
+   "protocolCount": 2,
+   "chainlistName": "LUKSO Mainnet",
+   "chainId": 42,
+   "native": "LYX",
+   "rpcs": [
+    "https://42.rpc.thirdweb.com",
+    "https://rpc.lukso.sigmacore.io",
+    "https://rpc.mainnet.lukso.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Nova Network",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Nova Network",
+   "chainId": 87,
+   "native": "SNT",
+   "rpcs": [
+    "https://connect.novanetwork.io",
+    "https://0x57.redjackstudio.com",
+    "https://rpc.novanetwork.io:9070"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Kroma",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Kroma",
+   "chainId": 255,
+   "native": "ETH",
+   "rpcs": [
+    "https://api.kroma.network",
+    "https://rpc-kroma.rockx.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Ultron",
+   "chainTvl": 50515.62044826981,
+   "protocolCount": 0,
+   "chainlistName": "Ultron Testnet",
+   "chainId": 1230,
+   "native": "ULX",
+   "rpcs": [
+    "https://ultron-dev.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Zkfair",
+   "chainTvl": 84531.24984486672,
+   "protocolCount": 1,
+   "chainlistName": "ZKFair Mainnet",
+   "chainId": 42766,
+   "native": "USDC",
+   "rpcs": [
+    "https://rpc.zkfair.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "WEMIX3.0",
+   "chainTvl": 2472041.6156989112,
+   "protocolCount": 0,
+   "chainlistName": "WEMIX3.0 Mainnet",
+   "chainId": 1111,
+   "native": "WEMIX",
+   "rpcs": [
+    "https://api.wemix.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Dexit",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Dexit Network",
+   "chainId": 877,
+   "native": "DXT",
+   "rpcs": [
+    "https://dxt.dexit.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Omax",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Omax Mainnet",
+   "chainId": 311,
+   "native": "OMAX",
+   "rpcs": [
+    "https://mainapi.omaxray.com",
+    "https://mainapi.omaxscan.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "DChain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "DCHAIN",
+   "chainId": 2716446429837000,
+   "native": "ETH",
+   "rpcs": [
+    "https://dchain-2716446429837000-1.jsonrpc.sagarpc.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Ancient8",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Ancient8",
+   "chainId": 888888888,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.ancient8.gg"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "KUB",
+   "chainTvl": 4908275.9664316,
+   "protocolCount": 0,
+   "chainlistName": "KUB Testnet",
+   "chainId": 25925,
+   "native": "tKUB",
+   "rpcs": [
+    "https://rpc-testnet.bitkubchain.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "ShimmerEVM",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "ShimmerEVM",
+   "chainId": 148,
+   "native": "SMR",
+   "rpcs": [
+    "https://json-rpc.evm.shimmer.network"
+   ],
+   "addresses": [
+    "0x326f23422ce22ee5fbb5f37f9fa1092d095546f8"
+   ]
+  },
+  {
+   "name": "LightLink",
+   "chainTvl": 21129.8574628764,
+   "protocolCount": 0,
+   "chainlistName": "Ink",
+   "chainId": 57073,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc-gel.inkonchain.com",
+    "https://rpc-qnd.inkonchain.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "GodwokenV1",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Godwoken Mainnet",
+   "chainId": 71402,
+   "native": "pCKB",
+   "rpcs": [
+    "https://v1.mainnet.godwoken.io/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Starcoin",
+   "chainTvl": 659461.1402086411,
+   "protocolCount": 2,
+   "chainlistName": "Arc",
+   "chainId": 5042,
+   "native": "USDC",
+   "rpcs": [
+    "https://rpc.mainnet.arc.io",
+    "https://rpc.blockdaemon.mainnet.arc.io",
+    "https://rpc.drpc.mainnet.arc.io",
+    "https://rpc.quicknode.mainnet.arc.io",
+    "https://rpc.beamrpc.com"
+   ],
+   "addresses": [
+    "0x8c109349c6bd91411d6bc962e080c4a3::STAR::STAR"
+   ]
+  },
+  {
+   "name": "Bifrost",
+   "chainTvl": 3363183.708125294,
+   "protocolCount": 4,
+   "chainlistName": "Bifrost Mainnet",
+   "chainId": 3068,
+   "native": "BFC",
+   "rpcs": [
+    "https://public-01.mainnet.bifrostnetwork.com/rpc",
+    "https://public-02.mainnet.bifrostnetwork.com/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Tombchain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Tomb Chain Mainnet",
+   "chainId": 6969,
+   "native": "TOMB",
+   "rpcs": [
+    "https://rpc.tombchain.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Pego",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Pego Network",
+   "chainId": 20201022,
+   "native": "PG",
+   "rpcs": [
+    "https://pegorpc.com",
+    "https://node1.pegorpc.com",
+    "https://node2.pegorpc.com",
+    "https://node3.pegorpc.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Cube",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Cube Chain Mainnet",
+   "chainId": 1818,
+   "native": "CUBE",
+   "rpcs": [
+    "https://http-mainnet.cube.network",
+    "https://http-mainnet-sg.cube.network",
+    "https://http-mainnet-us.cube.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Botanix",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Botanix Testnet",
+   "chainId": 3636,
+   "native": "BTC",
+   "rpcs": [
+    "https://node.botanixlabs.dev"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Saga",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "SagaEVM",
+   "chainId": 5464,
+   "native": "GAS",
+   "rpcs": [
+    "https://sagaevm.jsonrpc.sagarpc.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Nibiru",
+   "chainTvl": 382174.6915689121,
+   "protocolCount": 3,
+   "chainlistName": "Nibiru devnet-3",
+   "chainId": 7222,
+   "native": "NIBI",
+   "rpcs": [
+    "https://evm-rpc.devnet-3.nibiru.fi"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Lens",
+   "chainTvl": 39381.810811798845,
+   "protocolCount": 0,
+   "chainlistName": "Lens",
+   "chainId": 232,
+   "native": "GHO",
+   "rpcs": [
+    "https://rpc.lens.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "0G",
+   "chainTvl": 2795930.8764037383,
+   "protocolCount": 8,
+   "chainlistName": "0G Mainnet",
+   "chainId": 16661,
+   "native": "0G",
+   "rpcs": [
+    "https://evmrpc.0g.ai"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Astar zkEVM",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Astar zkEVM",
+   "chainId": 3776,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.startale.com/astar-zkevm"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "DuckChain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "DuckChain Testnet",
+   "chainId": 202105,
+   "native": "TON",
+   "rpcs": [
+    "https://testnet-rpc.duckchain.io",
+    "https://testnet-rpc-hk.duckchain.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Rari",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Rarimo",
+   "chainId": 7368,
+   "native": "ETH",
+   "rpcs": [
+    "https://l2.rarimo.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Superposition",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Superposition",
+   "chainId": 55244,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.superposition.so"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Xai",
+   "chainTvl": 6331.543516337808,
+   "protocolCount": 1,
+   "chainlistName": "Xai Mainnet",
+   "chainId": 660279,
+   "native": "XAI",
+   "rpcs": [
+    "https://xai-chain.net/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "EDU Chain",
+   "chainTvl": 702.9223840784157,
+   "protocolCount": 0,
+   "chainlistName": "EDU Chain",
+   "chainId": 41923,
+   "native": "EDU",
+   "rpcs": [
+    "https://rpc.edu-chain.raas.gelato.cloud"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "MAP Protocol",
+   "chainTvl": 940373.3773250909,
+   "protocolCount": 0,
+   "chainlistName": "MAP Protocol",
+   "chainId": 22776,
+   "native": "MAPO",
+   "rpcs": [
+    "https://rpc.maplabs.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Zeniq",
+   "chainTvl": 15954.965289759693,
+   "protocolCount": 0,
+   "chainlistName": "Zeniq",
+   "chainId": 383414847825,
+   "native": "ZENIQ",
+   "rpcs": [
+    "https://api.zeniq.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "UX",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "LuxePorts",
+   "chainId": 1122,
+   "native": "LXP",
+   "rpcs": [
+    "https://rpc.luxeports.com",
+    "https://erpc.luxeports.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Optimism",
+   "chainTvl": 0,
+   "protocolCount": 117,
+   "chainlistName": "Optimism Kovan",
+   "chainId": 69,
+   "native": "ETH",
+   "rpcs": [
+    "https://kovan.optimism.io"
+   ],
+   "addresses": [
+    "0x00e1724885473b63bce08a9f0a52f35b0979e35a",
+    "0x0a7B751FcDBBAA8BB988B9217ad5Fb5cfe7bf7A0",
+    "0x1e925de1c68ef83bd98ee3e130ef14a50309c01b",
+    "0x2dad3a13ef0c6366220f989157009e501e7938f8",
+    "0x3af33bef05c2dcb3c7288b77fe1c8d2aeba4d789",
+    "0xFA436399d0458Dbe8aB890c3441256E3E09022a8",
+    "0xf467C7d5a4A9C4687fFc7986aC6aD5A4c81E1404"
+   ]
+  },
+  {
+   "name": "Oraichain",
+   "chainTvl": 79174.34098561583,
+   "protocolCount": 0,
+   "chainlistName": "Oraichain Mainnet",
+   "chainId": 108160679,
+   "native": "ORAI",
+   "rpcs": [
+    "https://evm.orai.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "inEVM",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Bitcoin EVM",
+   "chainId": 2203,
+   "native": "BTC",
+   "rpcs": [
+    "https://connect.bitcoinevm.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Dexalot",
+   "chainTvl": 1652448.0785973985,
+   "protocolCount": 1,
+   "chainlistName": "Dexalot Subnet",
+   "chainId": 432204,
+   "native": "ALOT",
+   "rpcs": [
+    "https://subnets.avax.network/dexalot/mainnet/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Crab",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Crab Network",
+   "chainId": 44,
+   "native": "CRAB",
+   "rpcs": [
+    "https://crab-rpc.darwinia.network",
+    "https://crab-rpc.dcdao.box"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Darwinia",
+   "chainTvl": 1708.3270228236904,
+   "protocolCount": 0,
+   "chainlistName": "Darwinia Network",
+   "chainId": 46,
+   "native": "RING",
+   "rpcs": [
+    "https://rpc.darwinia.network",
+    "https://darwinia-rpc.dcdao.box"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Sophon",
+   "chainTvl": 14038.94571625068,
+   "protocolCount": 1,
+   "chainlistName": "Sophon",
+   "chainId": 50104,
+   "native": "SOPH",
+   "rpcs": [
+    "https://rpc.sophon.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "IOTA EVM",
+   "chainTvl": 310723.17692328664,
+   "protocolCount": 2,
+   "chainlistName": "IOTA EVM",
+   "chainId": 8822,
+   "native": "IOTA",
+   "rpcs": [
+    "https://json-rpc.evm.iotaledger.net"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Oasys",
+   "chainTvl": 200605.03331857154,
+   "protocolCount": 2,
+   "chainlistName": "Oasys Mainnet",
+   "chainId": 248,
+   "native": "OAS",
+   "rpcs": [
+    "https://rpc.mainnet.oasys.games"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Coti",
+   "chainTvl": 78859.48488295624,
+   "protocolCount": 1,
+   "chainlistName": "COTI",
+   "chainId": 2632500,
+   "native": "COTI",
+   "rpcs": [
+    "https://mainnet.coti.io/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Hydra",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Hydration",
+   "chainId": 222222,
+   "native": "WETH",
+   "rpcs": [
+    "https://rpc.hydradx.cloud",
+    "https://hydration-rpc.n.dwellir.com",
+    "https://rpc.helikon.io/hydradx",
+    "https://hydration.dotters.network",
+    "https://rpc.cay.hydration.cloud"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Hydra Chain",
+   "chainTvl": 22419.969307883486,
+   "protocolCount": 0,
+   "chainlistName": "Hydra Chain",
+   "chainId": 4488,
+   "native": "HYDRA",
+   "rpcs": [
+    "https://rpc-mainnet.hydrachain.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "ENULS",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "ENULS Mainnet",
+   "chainId": 119,
+   "native": "NULS",
+   "rpcs": [
+    "https://evmapi.nuls.io",
+    "https://evmapi2.nuls.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Plume",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Plume Mainnet",
+   "chainId": 98866,
+   "native": "PLUME",
+   "rpcs": [
+    "https://rpc.plume.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Data Network",
+   "chainTvl": 59077.33099261198,
+   "protocolCount": 0,
+   "chainlistName": "Data Network",
+   "chainId": 1514,
+   "native": "DATA",
+   "rpcs": [
+    "https://mainnet.datarpc.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "XPLA",
+   "chainTvl": 115482.31344125433,
+   "protocolCount": 1,
+   "chainlistName": "Xpla Testnet",
+   "chainId": 3701,
+   "native": "XPLA",
+   "rpcs": [
+    "https://dimension-rpc.xpla.dev"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Onus",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Citronus",
+   "chainId": 50000,
+   "native": "CITRO",
+   "rpcs": [
+    "https://rpc.citronus.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Swellchain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Swellchain",
+   "chainId": 1923,
+   "native": "ETH",
+   "rpcs": [
+    "https://swell-mainnet.alt.technology",
+    "https://rpc.ankr.com/swell"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Tenet",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Tenet",
+   "chainId": 1559,
+   "native": "TENET",
+   "rpcs": [
+    "https://rpc.tenet.org",
+    "https://tenet-evm.publicnode.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Mint",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Mint Testnet",
+   "chainId": 1686,
+   "native": "ETH",
+   "rpcs": [
+    "https://testnet-rpc.mintchain.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Bitlayer",
+   "chainTvl": 461869.0701942818,
+   "protocolCount": 5,
+   "chainlistName": "Bitlayer Testnet",
+   "chainId": 200810,
+   "native": "BTC",
+   "rpcs": [
+    "https://testnet-rpc.bitlayer.org",
+    "https://testnet-rpc.bitlayer-rpc.com",
+    "https://rpc.ankr.com/bitlayer_testnet"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Superseed",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Superseed",
+   "chainId": 5330,
+   "native": "ETH",
+   "rpcs": [
+    "https://mainnet.superseed.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Form Network",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Form Network",
+   "chainId": 478,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.form.network/http"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Taraxa",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Taraxa Mainnet",
+   "chainId": 841,
+   "native": "TARA",
+   "rpcs": [
+    "https://rpc.mainnet.taraxa.io",
+    "https://ws.mainnet.taraxa.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Artela",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Artela Mainnet",
+   "chainId": 11820,
+   "native": "ART",
+   "rpcs": [
+    "https://node-euro.artela.network/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Beam",
+   "chainTvl": 1443149.3290408854,
+   "protocolCount": 1,
+   "chainlistName": "Beam",
+   "chainId": 4337,
+   "native": "BEAM",
+   "rpcs": [
+    "https://build.onbeam.com/rpc",
+    "https://subnets.avax.network/beam/mainnet/rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Elysium",
+   "chainTvl": 369.49887273909314,
+   "protocolCount": 0,
+   "chainlistName": "Elysium Testnet",
+   "chainId": 1338,
+   "native": "PYR",
+   "rpcs": [
+    "https://rpc.atlantischain.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Mayachain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "MAYA CHAIN",
+   "chainId": 6292,
+   "native": "M3G",
+   "rpcs": [
+    "https://rpc.mayachain.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Degen",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Degen Chain",
+   "chainId": 666666666,
+   "native": "DEGEN",
+   "rpcs": [
+    "https://rpc.degen.tips"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "AB",
+   "chainTvl": 231744.8400001126,
+   "protocolCount": 0,
+   "chainlistName": "Bobabeam",
+   "chainId": 1294,
+   "native": "BOBA",
+   "rpcs": [
+    "https://bobabeam.boba.network",
+    "https://replica.bobabeam.boba.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "BounceBit",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "BounceBit Testnet",
+   "chainId": 6000,
+   "native": "BB",
+   "rpcs": [
+    "https://fullnode-testnet.bouncebitapi.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Cyber",
+   "chainTvl": 2483.183901096209,
+   "protocolCount": 1,
+   "chainlistName": "Cyber Testnet",
+   "chainId": 111557560,
+   "native": "ETH",
+   "rpcs": [
+    "https://cyber-testnet.alt.technology",
+    "https://rpc.testnet.cyber.co"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Fluence",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Fluence",
+   "chainId": 9999999,
+   "native": "FLT",
+   "rpcs": [
+    "https://rpc.mainnet.fluence.dev"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "BEVM",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "BEVM Testnet",
+   "chainId": 11503,
+   "native": "BTC",
+   "rpcs": [
+    "https://testnet.bevm.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Bitnet",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Bitnet",
+   "chainId": 210,
+   "native": "BTN",
+   "rpcs": [
+    "https://rpc.bitnetmoney.com",
+    "https://rpc.bitnetmoney.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Areum Network",
+   "chainTvl": 12874.023390887367,
+   "protocolCount": 0,
+   "chainlistName": "Areum Network Mainnet",
+   "chainId": 463,
+   "native": "AREA",
+   "rpcs": [
+    "https://mainnet-rpc.areum.network",
+    "https://mainnet-rpc2.areum.network",
+    "https://mainnet-rpc3.areum.network",
+    "https://mainnet-rpc4.areum.network",
+    "https://mainnet-rpc5.areum.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "DeFiVerse",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "DeFiVerse Mainnet",
+   "chainId": 16116,
+   "native": "OAS",
+   "rpcs": [
+    "https://rpc.defi-verse.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Oasis Sapphire",
+   "chainTvl": 219427.71019201574,
+   "protocolCount": 0,
+   "chainlistName": "Oasis Sapphire",
+   "chainId": 23294,
+   "native": "ROSE",
+   "rpcs": [
+    "https://sapphire.oasis.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "K2",
+   "chainTvl": 168.34545505835408,
+   "protocolCount": 0,
+   "chainlistName": "K2 Mainnet",
+   "chainId": 2410,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.karak.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "SatoshiVM",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "SatoshiVM Testnet",
+   "chainId": 3110,
+   "native": "BTC",
+   "rpcs": [
+    "https://test-rpc-node-http.svmscan.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Prom",
+   "chainTvl": 719231.0212222387,
+   "protocolCount": 2,
+   "chainlistName": "Prom",
+   "chainId": 227,
+   "native": "PROM",
+   "rpcs": [
+    "https://prom-rpc.eu-north-2.gateway.fm"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Planq",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Planq Mainnet",
+   "chainId": 7070,
+   "native": "PLQ",
+   "rpcs": [
+    "https://evm-rpc.planq.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "LaChain Network",
+   "chainTvl": 44911.61840927338,
+   "protocolCount": 0,
+   "chainlistName": "LaChain",
+   "chainId": 274,
+   "native": "LAC",
+   "rpcs": [
+    "https://rpc1.mainnet.lachain.network",
+    "https://rpc2.mainnet.lachain.network",
+    "https://lachain.rpc-nodes.cedalio.dev"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "EOS EVM",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "EOS EVM Network",
+   "chainId": 17777,
+   "native": "EOS",
+   "rpcs": [
+    "https://api.evm.eosnetwork.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Genesys",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Genesys Mainnet",
+   "chainId": 16507,
+   "native": "GSYS",
+   "rpcs": [
+    "https://rpc.genesys.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "AILayer",
+   "chainTvl": 94.68768965632206,
+   "protocolCount": 1,
+   "chainlistName": "AILayer Testnet",
+   "chainId": 2648,
+   "native": "BTC",
+   "rpcs": [
+    "https://testnet-rpc.ailayer.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Ham",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Ham",
+   "chainId": 5112,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.ham.fun"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Doma",
+   "chainTvl": 1162221.2373032384,
+   "protocolCount": 2,
+   "chainlistName": "Doma",
+   "chainId": 97477,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.doma.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Mind Network",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Mind Network Testnet",
+   "chainId": 192940,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc-testnet.mindnetwork.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Saakuru",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Saakuru Testnet",
+   "chainId": 247253,
+   "native": "OAS",
+   "rpcs": [
+    "https://rpc-testnet.saakuru.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "IOTA",
+   "chainTvl": 1390148.4449725794,
+   "protocolCount": 5,
+   "chainlistName": "IOTA EVM",
+   "chainId": 8822,
+   "native": "IOTA",
+   "rpcs": [
+    "https://json-rpc.evm.iotaledger.net"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Neo X Mainnet",
+   "chainTvl": 3915.5424182274965,
+   "protocolCount": 0,
+   "chainlistName": "Neo X Mainnet",
+   "chainId": 47763,
+   "native": "GAS",
+   "rpcs": [
+    "https://mainnet-1.rpc.banelabs.org",
+    "https://mainnet-2.rpc.banelabs.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Dymension",
+   "chainTvl": 140799.2378231208,
+   "protocolCount": 2,
+   "chainlistName": "Dymension",
+   "chainId": 1100,
+   "native": "DYM",
+   "rpcs": [
+    "https://dymension-evm.blockpi.network/v1/rpc/public",
+    "https://dymension-evm-rpc.publicnode.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "XCHAIN",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "XCHAIN",
+   "chainId": 94524,
+   "native": "ETH",
+   "rpcs": [
+    "https://xchain-rpc.kuma.bid"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Electroneum",
+   "chainTvl": 224260.36021314008,
+   "protocolCount": 2,
+   "chainlistName": "Electroneum Mainnet",
+   "chainId": 52014,
+   "native": "ETN",
+   "rpcs": [
+    "https://rpc.electroneum.com",
+    "https://rpc.ankr.com/electroneum"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Polynomial",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Polynomial",
+   "chainId": 8008,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.polynomial.fi"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Matchain",
+   "chainTvl": 21083.547296251556,
+   "protocolCount": 0,
+   "chainlistName": "Matchain",
+   "chainId": 698,
+   "native": "BNB",
+   "rpcs": [
+    "https://rpc.matchain.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Shape",
+   "chainTvl": 136241.42186883173,
+   "protocolCount": 2,
+   "chainlistName": "Shape",
+   "chainId": 360,
+   "native": "ETH",
+   "rpcs": [
+    "https://mainnet.shape.network",
+    "https://shape-mainnet.g.alchemy.com/public"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Asset Chain",
+   "chainTvl": 145108.53779584152,
+   "protocolCount": 1,
+   "chainlistName": "Asset Chain Mainnet",
+   "chainId": 42420,
+   "native": "RWA",
+   "rpcs": [
+    "https://mainnet-rpc.assetchain.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Shido",
+   "chainTvl": 147198.8230130372,
+   "protocolCount": 1,
+   "chainlistName": "Shido Network",
+   "chainId": 9008,
+   "native": "SHIDO",
+   "rpcs": [
+    "https://shido-mainnet-archive-lb-nw5es9.zeeve.net/USjg7xqUmCZ4wCsqEOOE/rpc",
+    "https://evm.shidoscan.net"
+   ],
+   "addresses": [
+    "0xe550bde2f0898552b38a41635d7a8ddb1fd81276"
+   ]
+  },
+  {
+   "name": "re.al",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "re.al",
+   "chainId": 111188,
+   "native": "reETH",
+   "rpcs": [
+    "https://rpc.realforreal.gelato.digital",
+    "https://tangible-real.gateway.tenderly.co",
+    "https://real.drpc.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "VinuChain",
+   "chainTvl": 6384.196437758733,
+   "protocolCount": 0,
+   "chainlistName": "VinuChain",
+   "chainId": 207,
+   "native": "VC",
+   "rpcs": [
+    "https://rpc.vinuchain.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Vana",
+   "chainTvl": 170452.73248618774,
+   "protocolCount": 3,
+   "chainlistName": "Vana",
+   "chainId": 1480,
+   "native": "VANA",
+   "rpcs": [
+    "https://rpc.vana.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "CrossFi",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "CrossFi Testnet",
+   "chainId": 4157,
+   "native": "XFI",
+   "rpcs": [
+    "https://rpc.testnet.ms"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Waterfall",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Waterfall Network",
+   "chainId": 181,
+   "native": "WATER",
+   "rpcs": [
+    "https://rpc.waterfall.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "MANTRA",
+   "chainTvl": 517637.38507137384,
+   "protocolCount": 0,
+   "chainlistName": "MANTRA Chain",
+   "chainId": 5888,
+   "native": "MANTRA",
+   "rpcs": [
+    "https://evm.mantrachain.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Zero Network",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "ZERO Network",
+   "chainId": 543210,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.zerion.io/v1/zero"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Redstone",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Redstone",
+   "chainId": 690,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.redstonechain.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Parex",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Parex Mainnet",
+   "chainId": 322202,
+   "native": "PRX",
+   "rpcs": [
+    "https://mainnet-rpc.parex.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Silicon zkEVM",
+   "chainTvl": 7665.692631765261,
+   "protocolCount": 1,
+   "chainlistName": "Silicon zkEVM",
+   "chainId": 2355,
+   "native": "ETH",
+   "rpcs": [
+    "https://rpc.silicon.network",
+    "https://silicon-mainnet.nodeinfra.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "MTT Network",
+   "chainTvl": 3.4033373656548918,
+   "protocolCount": 0,
+   "chainlistName": "MTT Network",
+   "chainId": 6880,
+   "native": "MTT",
+   "rpcs": [
+    "https://evm-rpc.mtt.network"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Aleph Zero EVM",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Aleph Zero EVM",
+   "chainId": 41455,
+   "native": "AZERO",
+   "rpcs": [
+    "https://rpc.alephzero.raas.gelato.cloud"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "OpenGPU",
+   "chainTvl": 24750.05867511036,
+   "protocolCount": 0,
+   "chainlistName": "OpenGPU Mainnet",
+   "chainId": 1071,
+   "native": "OGPU",
+   "rpcs": [
+    "https://mainnet-rpc.ogpuscan.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Inertia",
+   "chainTvl": 286507.62636883406,
+   "protocolCount": 1,
+   "chainlistName": "Inertia Scan",
+   "chainId": 5433,
+   "native": "IRTA",
+   "rpcs": [
+    "https://rpc.inertiascan.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Yominet",
+   "chainTvl": 136630.23433504422,
+   "protocolCount": 1,
+   "chainlistName": "Yominet",
+   "chainId": 428962654539583,
+   "native": "ETH",
+   "rpcs": [
+    "https://jsonrpc-yominet-1.anvil.asia-southeast.initia.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "XION",
+   "chainTvl": 3874.863192333361,
+   "protocolCount": 2,
+   "chainlistName": "ZEDXION",
+   "chainId": 83872,
+   "native": "ZEDX",
+   "rpcs": [
+    "https://mainnet-rpc.zedscan.net"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "soonBase",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Base",
+   "chainId": 8453,
+   "native": "ETH",
+   "rpcs": [
+    "https://mainnet.base.org",
+    "https://developer-access-mainnet.base.org",
+    "https://base.gateway.tenderly.co",
+    "https://base-rpc.publicnode.com",
+    "https://rpcfree.com/base-rpc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Eventum",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Eventum Mainnet",
+   "chainId": 161803,
+   "native": "ETH",
+   "rpcs": [
+    "https://mainnet-rpc.evedex.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Bitcichain",
+   "chainTvl": 684.1001595038496,
+   "protocolCount": 0,
+   "chainlistName": "Bitcichain Mainnet",
+   "chainId": 1907,
+   "native": "BITCI",
+   "rpcs": [
+    "https://rpc.bitci.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "ENI",
+   "chainTvl": 1152355.2815330403,
+   "protocolCount": 1,
+   "chainlistName": "ENI Mainnet",
+   "chainId": 173,
+   "native": "EGAS",
+   "rpcs": [
+    "https://rpc.eniac.network",
+    "https://rpc1.eniac.network",
+    "https://rpc2.eniac.network",
+    "https://enirpc.com",
+    "https://jp.enirpc.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Camp Network",
+   "chainTvl": 81.65954119434772,
+   "protocolCount": 0,
+   "chainlistName": "Camp Network Mainnet",
+   "chainId": 484,
+   "native": "CAMP",
+   "rpcs": [
+    "https://rpc.camp.raas.gelato.cloud"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Peaq",
+   "chainTvl": 718510.800401555,
+   "protocolCount": 5,
+   "chainlistName": "peaq",
+   "chainId": 3338,
+   "native": "PEAQ",
+   "rpcs": [
+    "https://quicknode1.peaq.xyz",
+    "https://quicknode2.peaq.xyz",
+    "https://quicknode3.peaq.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Eteria",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Eteria Mainnet",
+   "chainId": 140,
+   "native": "ERA",
+   "rpcs": [
+    "https://mainnet.eteria.io/v1"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Haven1",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Haven1",
+   "chainId": 8811,
+   "native": "H1",
+   "rpcs": [
+    "https://rpc.haven1.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "GateLayer",
+   "chainTvl": 3052111.6805298366,
+   "protocolCount": 2,
+   "chainlistName": "Gate Layer",
+   "chainId": 10088,
+   "native": "GT",
+   "rpcs": [
+    "https://gatelayer-mainnet.gatenode.cc"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Igra",
+   "chainTvl": 516033.7690506156,
+   "protocolCount": 3,
+   "chainlistName": "Igra Network",
+   "chainId": 38833,
+   "native": "iKAS",
+   "rpcs": [
+    "https://rpc.igralabs.com:8545"
+   ],
+   "addresses": [
+    "0x16d92794F5B81d2CdEd0F0958779A410401e6435"
+   ]
+  },
+  {
+   "name": "Ethereal",
+   "chainTvl": 1548943.8642878132,
+   "protocolCount": 1,
+   "chainlistName": "re.al",
+   "chainId": 111188,
+   "native": "reETH",
+   "rpcs": [
+    "https://rpc.realforreal.gelato.digital",
+    "https://tangible-real.gateway.tenderly.co",
+    "https://real.drpc.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "ZIG Chain",
+   "chainTvl": 4693914.573835088,
+   "protocolCount": 0,
+   "chainlistName": "ZIGChain Testnet",
+   "chainId": 2061,
+   "native": "ZIG",
+   "rpcs": [
+    "https://public-zigchain-testnet-evm-rpc.numia.xyz"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Capx Chain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "XCHAIN",
+   "chainId": 94524,
+   "native": "ETH",
+   "rpcs": [
+    "https://xchain-rpc.kuma.bid"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "GANchain",
+   "chainTvl": 14470.340660782933,
+   "protocolCount": 0,
+   "chainlistName": "GANchain L1",
+   "chainId": 4048,
+   "native": "GPU",
+   "rpcs": [
+    "https://rpc.gpu.net"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "GRX Chain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "XCHAIN",
+   "chainId": 94524,
+   "native": "ETH",
+   "rpcs": [
+    "https://xchain-rpc.kuma.bid"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "VirBiCoin",
+   "chainTvl": 16459.2364526354,
+   "protocolCount": 0,
+   "chainlistName": "VirBiCoin",
+   "chainId": 329,
+   "native": "VBC",
+   "rpcs": [
+    "https://rpc.digitalregion.jp"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Open",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "OpenVessel",
+   "chainId": 7355310,
+   "native": "VETH",
+   "rpcs": [
+    "https://mainnet-external.openvessel.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Etica",
+   "chainTvl": 9737.61073627261,
+   "protocolCount": 0,
+   "chainlistName": "Etica Mainnet",
+   "chainId": 61803,
+   "native": "EGAZ",
+   "rpcs": [
+    "https://eticamainnet.eticascan.org",
+    "https://eticamainnet.eticaprotocol.org"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Sentrix",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Sentrix Chain",
+   "chainId": 7119,
+   "native": "SRX",
+   "rpcs": [
+    "https://rpc.sentrixchain.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "XO",
+   "chainTvl": 126545.90659637196,
+   "protocolCount": 0,
+   "chainlistName": "XODEX",
+   "chainId": 2415,
+   "native": "XODEX",
+   "rpcs": [
+    "https://mainnet.xo-dex.com/rpc",
+    "https://xo-dex.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "ADI",
+   "chainTvl": 2015555.9426453728,
+   "protocolCount": 1,
+   "chainlistName": "ADIL Devnet",
+   "chainId": 123456,
+   "native": "ADIL",
+   "rpcs": [
+    "https://devnet.adilchain-rpc.io"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Eden",
+   "chainTvl": 4625.7389692758325,
+   "protocolCount": 0,
+   "chainlistName": "Eden",
+   "chainId": 714,
+   "native": "TIA",
+   "rpcs": [
+    "https://rpc.eden.gateway.fm"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Strat",
+   "chainTvl": 1202478.0924688736,
+   "protocolCount": 2,
+   "chainlistName": "Astra Testnet",
+   "chainId": 11115,
+   "native": "tASA",
+   "rpcs": [
+    "https://rpc.astranaut.dev"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "GGCHAIN",
+   "chainTvl": 1223.1053178035866,
+   "protocolCount": 0,
+   "chainlistName": "GGCHAIN Mainnet",
+   "chainId": 2121217,
+   "native": "GG",
+   "rpcs": [
+    "https://rpc.gghyper.net"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Xphere",
+   "chainTvl": 445516.3018021241,
+   "protocolCount": 2,
+   "chainlistName": "Xphere Testnet",
+   "chainId": 1998991,
+   "native": "XPT",
+   "rpcs": [
+    "http://testnet.x-phere.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Rayls",
+   "chainTvl": 7094.983096970846,
+   "protocolCount": 0,
+   "chainlistName": "Rayls Mainnet",
+   "chainId": 72957,
+   "native": "USDr",
+   "rpcs": [
+    "https://mainnet-rpc.rayls.com"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Pentagon Chain",
+   "chainTvl": 0,
+   "protocolCount": 0,
+   "chainlistName": "Pentagon Chain",
+   "chainId": 3344,
+   "native": "PC",
+   "rpcs": [
+    "https://rpc.pentagon.games"
+   ],
+   "addresses": []
+  },
+  {
+   "name": "Bitcoin Swap",
+   "chainTvl": 206.72305663688945,
+   "protocolCount": 0,
+   "chainlistName": "Bitcoin Swap",
+   "chainId": 482120,
+   "native": "BTCw",
+   "rpcs": [
+    "https://rpc.btcw.tech"
+   ],
+   "addresses": []
+  }
+ ]
+}
