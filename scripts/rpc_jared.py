@@ -28,6 +28,8 @@ URLS = [
 ]
 DRAIN_BLOCK = 25360696
 BOUNTY_BLOCK = 25370085
+OPERATOR = "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13"
+IMPL_SLOT = "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"  # EIP-1967
 DRAIN_TX = "0x2be8704f5a59b69e0b71f64aefdb99eb0e8ae9fb3926147c581910d71bcf3e65"
 BOUNTY_TX = "0x3d30d74d8e9c625b44e5ce9b15ea8301d69f0a405e9267c0cf618e2ecd674ab3"
 BOT = "0x1f2f10d1c40777ae1da742455c65828ff36df387"
@@ -194,6 +196,20 @@ def main():
         }
     print("allowances", doc["allowances"], flush=True)
 
+    # 7) is the drained bot contract upgradeable at all? If not, any "fix" is off-chain.
+    post = {"bot": BOT, "operator": OPERATOR}
+    c = r(url, "eth_getCode", [BOT, "latest"])
+    post["botCodeBytes"] = (len(c) - 2) // 2 if isinstance(c, str) else None
+    st = r(url, "eth_getStorageAt", [BOT, IMPL_SLOT, "latest"])
+    post["eip1967ImplSlot"] = st
+    post["looksLikeProxy"] = bool(st) and int(st, 16) != 0 if isinstance(st, str) else None
+    n = r(url, "eth_getTransactionCount", [OPERATOR, "latest"])
+    post["operatorNonce"] = int(n, 16) if isinstance(n, str) else None
+    c2 = r(url, "eth_getCode", [OPERATOR, "latest"])
+    post["operatorCodeBytes"] = (len(c2) - 2) // 2 if isinstance(c2, str) else None
+    doc["postFix"] = post
+    print("postFix", post, flush=True)
+
     json.dump(doc, open(a.out, "w"), indent=2, default=str)
     d = doc["drain"]
     L = ["# JaredFromSubway drain — read-only on-chain check", "",
@@ -212,6 +228,13 @@ def main():
           f"Tx `{BOUNTY_TX}` from `{doc['bounty'].get('from')}`:", "",
           "> " + doc["bounty"].get("inputText", "(not decoded)"), "",
           "Historical `allowance()` reads: " + json.dumps(doc["allowances"]), "",
+          "", "## Bot contract today",
+          "",
+          f"`{BOT}` code: {doc['postFix']['botCodeBytes']} bytes. " +
+          f"EIP-1967 implementation slot: `{doc['postFix']['eip1967ImplSlot']}` → " +
+          f"proxy = **{doc['postFix']['looksLikeProxy']}**. " +
+          f"Operator `{OPERATOR}` nonce: {doc['postFix']['operatorNonce']}, " +
+          f"code: {doc['postFix']['operatorCodeBytes']} bytes.", "",
           "Raw: `rpc_jared_raw.json`."]
     open(a.md, "w").write("\n".join(L) + "\n")
     print(f"wrote {a.out}, {a.md}", flush=True)
