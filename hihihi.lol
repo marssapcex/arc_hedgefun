@@ -1,0 +1,18131 @@
+Home
+Blockchain
+Transactions
+Pending Transactions
+Contract Internal Transactions
+Cross-Chain Transactions
+Beacon Deposits
+Beacon Withdrawals
+View Blobs
+AA Transactions
+EIP-7702 Authorizations Beta
+View Blocks
+Forked Blocks (Reorgs)
+Uncles
+Top Accounts
+Verified Contracts
+Tokens
+Top Tokens (ERC-20)
+Token Transfers (ERC-20)
+Token Flow Visualizer
+Beta
+NFTs
+Top NFTs
+Top Mints
+Latest Trades
+Latest Transfers
+Latest Mints
+Resources
+Charts And Stats
+Top Statistics
+Leaderboard
+Directory
+Newsletter
+Knowledge Base
+API
+Etherscan API
+API Pricing
+API Documentation
+More
+Developer Tools
+Input Data Encoder Beta
+Input Data Decoder
+Unit Converter
+Download Data (CSV Export)
+Account Balance Checker
+Broadcast Transaction
+Bytecode to Opcode
+Smart Contract Tools
+Code Reader
+Verify Contract
+Similar Contract Search
+Smart Contract Search
+Contract Diff Checker
+Vyper Online Compiler
+Explore
+Gas Tracker
+DEX Tracker
+Node Tracker
+Label Cloud
+Domain Name Lookup
+Services
+Token Approvals
+Verified Signature
+Input Data Messages (IDM)
+Advanced Filter
+Blockscan Chat 
+|
+ Sign In
+Transaction Details
+ 
+Sponsored: 1xBit 1xBit - Crypto-only from day one. 1xBit. 40+ coins, instant payouts. Join Now
+Overview
+Internal Txns
+Logs (>1000)
+State
+Transaction Receipt Event Logs (Showing the first 1000 log entries only)
+72
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x59cD1C87501baa753d0B5B5Ab5D8416A45cD71DB
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+wad (uint256) :
+48869742319047987280367
+73
+Address
+0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb
+(Morpho: Morpho)   
+Name
+FlashLoan (index_topic_1 address caller, index_topic_2 address token, uint256 assets)View Source
+
+Topics
+0 0xc76f1b4fe4396ac07a9fa55a415d4ca430e72651d37d3401f3bed7cb13fc4f12
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: token
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+Data
+
+
+assets (uint256) :
+12130257680952012719633
+74
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+wad (uint256) :
+12130257680952012719633
+75
+Address
+0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb
+(Morpho: Morpho)   
+Name
+FlashLoan (index_topic_1 address caller, index_topic_2 address token, uint256 assets)View Source
+
+Topics
+0 0xc76f1b4fe4396ac07a9fa55a415d4ca430e72651d37d3401f3bed7cb13fc4f12
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: token
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+Data
+
+
+assets (uint256) :
+101000000000000
+76
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+101000000000000
+77
+Address
+0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b
+(Set: DeFiPulse Index)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9359c87B38DD25192c5f2b07b351ac91C90E6ca7
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+500000000000000000000
+78
+Address
+0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b
+(Set: DeFiPulse Index)   
+Name
+Approval (index_topic_1 address owner, index_topic_2 address spender, uint256 value)View Source
+
+Topics
+0 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+1: owner
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: spender
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+115792089237316195423570985008687907853269984665640564039457584007913129639935
+79
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Approval (index_topic_1 address owner, index_topic_2 address spender, uint256 value)View Source
+
+Topics
+0 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+1: owner
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: spender
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+115792089237316195423570985008687907853269984665640564039457584007913129639935
+80
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Approval (index_topic_1 address src, index_topic_2 address guy, uint256 wad)View Source
+
+Topics
+0 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: guy
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+115792089237316195423570985008687907853269984665640564039457584007913129639935
+81
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Approval (index_topic_1 address owner, index_topic_2 address spender, uint256 value)View Source
+
+Topics
+0 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+1: owner
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: spender
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+115792089237316195423570985008687907853269984665640564039457584007913129639935
+82
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000003
+3ad8d0110000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+83
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+13872189457
+tokenAmountOut (uint256) :
+11876348
+84
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+13872189457
+85
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+11876348
+86
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000004
+d84538190000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+87
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+20808284185
+tokenAmountOut (uint256) :
+7930784
+88
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+20808284185
+89
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+7930784
+90
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000007
+4467d4260000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+91
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+31212426278
+tokenAmountOut (uint256) :
+5296016
+92
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+31212426278
+93
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+5296016
+94
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb480000000000000000000000000000000000000000000000000000000a
+e69bbe390000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+95
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+46818639417
+tokenAmountOut (uint256) :
+3536571
+96
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+46818639417
+97
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+3536571
+98
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000010
+59e99d550000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+99
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+70227959125
+tokenAmountOut (uint256) :
+2361650
+100
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+70227959125
+101
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+2361650
+102
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000018
+86de6c000000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+103
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+105341938688
+tokenAmountOut (uint256) :
+1577062
+104
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+105341938688
+105
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1577062
+106
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000024
+ca4da2000000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+107
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+158012908032
+tokenAmountOut (uint256) :
+1053130
+108
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+158012908032
+109
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1053130
+110
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000037
+2f7473000000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+111
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+237019362048
+tokenAmountOut (uint256) :
+703259
+112
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+237019362048
+113
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+703259
+114
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000052
+c72eac800000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+115
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+355529043072
+tokenAmountOut (uint256) :
+469622
+116
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+355529043072
+117
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+469622
+118
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb480000000000000000000000000000000000000000000000000000007c
+2ac602c00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+119
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+533293564608
+tokenAmountOut (uint256) :
+313604
+120
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+533293564608
+121
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+313604
+122
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb48000000000000000000000000000000000000000000000000000000ba
+402904200000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+123
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+799940346912
+tokenAmountOut (uint256) :
+209418
+124
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+799940346912
+125
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+209418
+126
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000117
+603d86300000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+127
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1199910520368
+tokenAmountOut (uint256) :
+139845
+128
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1199910520368
+129
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+139845
+130
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb48000000000000000000000000000000000000000000000000000001a3
+105c49480000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+131
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1799865780552
+tokenAmountOut (uint256) :
+93386
+132
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1799865780552
+133
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+93386
+134
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000274
+988a6dec0000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+135
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+2699798670828
+tokenAmountOut (uint256) :
+62361
+136
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+2699798670828
+137
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+62361
+138
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb48000000000000000000000000000000000000000000000000000003ae
+e4cfa4e20000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+139
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+4049698006242
+tokenAmountOut (uint256) :
+41643
+140
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+4049698006242
+141
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+41643
+142
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000586
+573777530000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+143
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+6074547009363
+tokenAmountOut (uint256) :
+27809
+144
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+6074547009363
+145
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+27809
+146
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000849
+82d332fc0000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+147
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+9111820514044
+tokenAmountOut (uint256) :
+18570
+148
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+9111820514044
+149
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+18570
+150
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000000c6e
+443ccc7a0000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+151
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+13667730771066
+tokenAmountOut (uint256) :
+12401
+152
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+13667730771066
+153
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+12401
+154
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb48000000000000000000000000000000000000000000000000000012a5
+665b32b70000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+155
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+20501596156599
+tokenAmountOut (uint256) :
+8281
+156
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+20501596156599
+157
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+8281
+158
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce
+3606eb4800000000000000000000000000000000000000000000000000001bf8
+1988cc130000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+159
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+30752394234899
+tokenAmountOut (uint256) :
+5530
+160
+Address
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+(Circle: USDC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+30752394234899
+161
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+5530
+162
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000000004f85dbce
+1c4332e40000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+163
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+5730227779182736100
+tokenAmountOut (uint256) :
+3693
+164
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+5730227779182736100
+165
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+3693
+166
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000000007748c9b5
+2a64cc560000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+167
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+8595341668774104150
+tokenAmountOut (uint256) :
+2466
+168
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+8595341668774104150
+169
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+2466
+170
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc2000000000000000000000000000000000000000000000000b2ed2e8f
+bf9732810000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+171
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+12893012503161156225
+tokenAmountOut (uint256) :
+1646
+172
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+12893012503161156225
+173
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1646
+174
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000000010c63c5d7
+9f62cbc20000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+175
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+19339518754741734338
+tokenAmountOut (uint256) :
+1100
+176
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+19339518754741734338
+177
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1100
+178
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000000019295a8c3
+6f1431a30000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+179
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+29009278132112601507
+tokenAmountOut (uint256) :
+734
+180
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+29009278132112601507
+181
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+734
+182
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000000025be07d25
+269e4a740000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+183
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+43513917198168902260
+tokenAmountOut (uint256) :
+490
+184
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+43513917198168902260
+185
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+490
+186
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc200000000000000000000000000000000000000000000000389d0bbb7
+b9ed6fae0000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+187
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+65270875797253353390
+tokenAmountOut (uint256) :
+328
+188
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+65270875797253353390
+189
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+328
+190
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000000054eb91993
+96e427850000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+191
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+97906313695880030085
+tokenAmountOut (uint256) :
+219
+192
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+97906313695880030085
+193
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+219
+194
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc2000000000000000000000000000000000000000000000007f615a65d
+62563b480000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+195
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+146859470543820045128
+tokenAmountOut (uint256) :
+146
+196
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+146859470543820045128
+197
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+146
+198
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc200000000000000000000000000000000000000000000000bf120798c
+138158ec0000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+199
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+220289205815730067692
+tokenAmountOut (uint256) :
+97
+200
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+220289205815730067692
+201
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+97
+202
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc2000000000000000000000000000000000000000000000011e9b0b652
+1d4205620000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+203
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+330433808723595101538
+tokenAmountOut (uint256) :
+65
+204
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+330433808723595101538
+205
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+65
+206
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc200000000000000000000000000000000000000000000001ade89117b
+2be308130000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+207
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+495650713085392652307
+tokenAmountOut (uint256) :
+44
+208
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+495650713085392652307
+209
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+44
+210
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc200000000000000000000000000000000000000000000002777c34d09
+3c35a70c0000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+0000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+211
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+728052844887704708876
+tokenAmountOut (uint256) :
+29
+212
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+728052844887704708876
+213
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+29
+214
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc200000000000000000000000000000000000000000000003885441cd5
+c78802ed0000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000013ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+215
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1042620500137696821997
+tokenAmountOut (uint256) :
+19
+216
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+1042620500137696821997
+217
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+19
+218
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc2000000000000000000000000000000000000000000000053b7fce585
+591189df0000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+0000000dffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+219
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1544337481881852414431
+tokenAmountOut (uint256) :
+13
+220
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+1544337481881852414431
+221
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+13
+222
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc200000000000000000000000000000000000000000000006a103adfbb
+a8787e140000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000008ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+223
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1956524364863546883604
+tokenAmountOut (uint256) :
+8
+224
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+1956524364863546883604
+225
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+8
+226
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000000b0becdb1f6
+72f241080000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000006ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+227
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+3260375797882361626888
+tokenAmountOut (uint256) :
+6
+228
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+3260375797882361626888
+229
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+6
+230
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x8201aa3f00000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+8201aa3f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000000575622bf48
+09a14e250000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000002ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+231
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1611073467965321072165
+tokenAmountOut (uint256) :
+2
+232
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+1611073467965321072165
+233
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+2
+234
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x7c5e9ea400000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+7c5e9ea4000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc2000000000000000000000000000000000000000000000a74fa4f4af2
+3f220c770000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000001ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+235
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1298708721035696423590
+tokenAmountOut (uint256) :
+1
+236
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+1298708721035696423590
+237
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+238
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x7c5e9ea400000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+7c5e9ea4000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc2000000000000000000000000000000000000000000000a2e931b0e04
+9c91c9d10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000001ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+239
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1624201673104316320160
+tokenAmountOut (uint256) :
+1
+240
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+1624201673104316320160
+241
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+242
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x7c5e9ea400000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+00000000000000000000000000000000000000000000000000000000000000a4
+7c5e9ea4000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead908
+3c756cc20000000000000000000000000000000000000000000009d686c78db8
+0aab80310000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000000000000
+00000001ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff00000000000000000000000000000000000000000000000000000000
+243
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_SWAP (index_topic_1 address caller, index_topic_2 address tokenIn, index_topic_3 address tokenOut, uint256 tokenAmountIn, uint256 tokenAmountOut)View Source
+
+Topics
+0 0x908fb5ee8f16c6bc9bc3690973819f32a4d4b10188134543c88706e0e1d43378
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+3: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+2089425267913090339423
+tokenAmountOut (uint256) :
+1
+244
+Address
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+(Wrapped Ether)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 wad)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+wad (uint256) :
+2089425267913090339423
+245
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+246
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000431b0db
+0b4b7b3600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+247
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+248
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+302217104844356406
+249
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+302217104844356406
+250
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+251
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000016ab2de
+81558ca700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+252
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+253
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+102090610291608743
+254
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+102090610291608743
+255
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+256
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+257
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000004550d8f
+7e50743a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+258
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+259
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+312170659122803770
+260
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+312170659122803770
+261
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+262
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000176a4ec
+47315a8300000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+263
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+264
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+105452976003439235
+265
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+105452976003439235
+266
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+267
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+268
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000001a6cdff
+fdb8386f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+269
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+270
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+119008939528960111
+271
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+119008939528960111
+272
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+273
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+274
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000001e686d0
+1a9a189100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+275
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+276
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+136945067039004817
+277
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+136945067039004817
+278
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+279
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+280
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000005dbc46c
+9792d8aa00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+281
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+282
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+422146960767768746
+283
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+422146960767768746
+284
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+285
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000001fc5458
+f5f1218700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+286
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+287
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+143082029229089159
+288
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+143082029229089159
+289
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+290
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+291
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000258e869
+229bec0d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+292
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+293
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+169140524276247565
+294
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+169140524276247565
+295
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+296
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+297
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000749b87d
+071d579500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+298
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+299
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+525153678695159701
+300
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+525153678695159701
+301
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+302
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000279c9ca
+a90a608100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+303
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+304
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+178395532514451585
+305
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+178395532514451585
+306
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+307
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+308
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000030ba14f
+05f2ef4900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+309
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+310
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+219446367631896393
+311
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+219446367631896393
+312
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+313
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+314
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000009921e08
+c20bd48e00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+315
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+316
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+689646715905234062
+317
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+689646715905234062
+318
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+319
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000034279a6
+83ea86d900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+320
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+321
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+234883886661404377
+322
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+234883886661404377
+323
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+324
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+325
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000a3e7a24
+d476ee2100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+326
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+327
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+738161687537315361
+328
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+738161687537315361
+329
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+330
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000037d2db2
+37ac11fc00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+331
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+332
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+251407397664068092
+333
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+251407397664068092
+334
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+335
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+336
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000af6f647
+08f315ba00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+337
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+338
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+790089569603360186
+339
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+790089569603360186
+340
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+341
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000003bc02ed
+ab2e468000000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+342
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+343
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+269093297537828480
+344
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+269093297537828480
+345
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+346
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+347
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000bbc6ccb
+ac51ee7d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+348
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+349
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+845670452064022141
+350
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+845670452064022141
+351
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+352
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000003ff43b7
+b7ceda1000000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+353
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+354
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+288023357516864016
+355
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+288023357516864016
+356
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+357
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+358
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000c8fc76b
+7eaf86fb00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+359
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+360
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+905161314625619707
+361
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+905161314625619707
+362
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+363
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000004473faa
+8d23d0fc00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+364
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+365
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+308285101243093244
+366
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+308285101243093244
+367
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+368
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+369
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000d720050
+56dc188b00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+370
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+371
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+968837214892726411
+372
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+968837214892726411
+373
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+374
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000004944bf9
+e911d79a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+375
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+376
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+329972209434089370
+377
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+329972209434089370
+378
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+379
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+380
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000e64233d
+3bbf0c8400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+381
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+382
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1036992560104410244
+383
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1036992560104410244
+384
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+385
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000004e6c3d7
+f0acbc8800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+386
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+387
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+353184953018399880
+388
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+353184953018399880
+389
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+390
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+391
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000f674ecb
+522b890400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+392
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+393
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1109942468334029060
+394
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1109942468334029060
+395
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+396
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000053f08e1
+213f7e3400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+397
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+398
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+378030656740884020
+399
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+378030656740884020
+400
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+401
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+402
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000107cb5bd
+1646612a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+403
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+404
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1188024225446125866
+405
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1188024225446125866
+406
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+407
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000059d838f
+d93f024b00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+408
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+409
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+404624195381559883
+410
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+404624195381559883
+411
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+412
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+413
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000011a5a069
+7200e03700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+414
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+415
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1271598844546703415
+416
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1271598844546703415
+417
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+418
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000602a3b8
+01e76afa00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+419
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+420
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+433088524882242298
+421
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+433088524882242298
+422
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+423
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+424
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000012e36e40
+5e6ac06e00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+425
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+426
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1361052735137038446
+427
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1361052735137038446
+428
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+429
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000066ee10b
+6be2b77200000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+430
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+431
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+463555250836649842
+432
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+463555250836649842
+433
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+434
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+435
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001437976a
+dbd923d600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+436
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+437
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1456799489688413142
+438
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1456799489688413142
+439
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+440
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000006e2bba7
+7ba355a500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+441
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+442
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+496165236972410277
+443
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+496165236972410277
+444
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+445
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+446
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000015a3ae88
+2d3c5f8700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+447
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+448
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1559281795898040199
+449
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1559281795898040199
+450
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+451
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000075ebcac
+cd22b30200000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+452
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+453
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+531069256438297346
+454
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+531069256438297346
+455
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+456
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+457
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001729628a
+65a1264900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+458
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+459
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1668973483467548233
+460
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1668973483467548233
+461
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+462
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000007e376e1
+827fbc6800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+463
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+464
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+568428688907943016
+465
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+568428688907943016
+466
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+467
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+468
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000018ca80b4
+7bec1c9100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+469
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+470
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1786381714867362961
+471
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1786381714867362961
+472
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+473
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000871875e
+fd9990c600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+474
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+475
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+608416266723102918
+476
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+608416266723102918
+477
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+478
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+479
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001a88f6bc
+408cff0a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+480
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+481
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1912049330216042250
+482
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+1912049330216042250
+483
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+484
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000909964b
+d246606800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+485
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+486
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+651216873526288488
+487
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+651216873526288488
+488
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+489
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+490
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001c66d512
+bb5f3d6200000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+491
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+492
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2046557357116177762
+493
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+2046557357116177762
+494
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+495
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000009ac57a2
+cd3d8af300000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+496
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+497
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+697028399075265267
+498
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+697028399075265267
+499
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+500
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+501
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001e665155
+a563824100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+502
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+503
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2190527697051157057
+504
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+2190527697051157057
+505
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+506
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000a5a8c07
+fb47a74900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+507
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+508
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+746062654191675209
+509
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+746062654191675209
+510
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+511
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+512
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000002089c8ec
+e2a5e57f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+513
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+514
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2344626000763413887
+515
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+2344626000763413887
+516
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+517
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000b1501ac
+acd98e0400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+518
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+519
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+798546350074072580
+520
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+798546350074072580
+521
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+522
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+523
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000022d3c3d7
+14b90ebe00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+524
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+525
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2509564745908555454
+526
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+2509564745908555454
+527
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+528
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000bdc9543
+83fc5e8900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+529
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+530
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+854722146503253641
+531
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+854722146503253641
+532
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+533
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+534
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000002546f7a8
+95ed009200000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+535
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+536
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2686106531214983314
+537
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+2686106531214983314
+538
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+539
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000cb23305
+ad60c65f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+540
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+541
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+914849773786285663
+542
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+914849773786285663
+543
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+544
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+545
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000027e64ac0
+69129af600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+546
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+547
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2875067602379643638
+548
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+2875067602379643638
+549
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+550
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000d96d7ca
+79ce0b9000000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+551
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+552
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+979207233626573712
+553
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+979207233626573712
+554
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+555
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+556
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000002ab4d7b6
+e979bd3800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+557
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+558
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+3077321626001980728
+559
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+3077321626001980728
+560
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+561
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000e8b9232
+a2dd8a6600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+562
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+563
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1048092084472220262
+564
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1048092084472220262
+565
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+566
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+567
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000002db5f10a
+4b32e35a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+568
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+569
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+3293803729004979034
+570
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+3293803729004979034
+571
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+572
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000000f9183e8
+9d3b3c1400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+573
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+574
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1121822817285520404
+575
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1121822817285520404
+576
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+577
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+578
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000030ed250d
+44c710c100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+579
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+580
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+3525514822219665601
+581
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+3525514822219665601
+582
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+583
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000010a9e2f7
+738f045e00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+584
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+585
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1200740328094499934
+586
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1200740328094499934
+587
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+588
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+589
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000345e421c
+89e86b6500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+590
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+591
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+3773526228123282277
+592
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+3773526228123282277
+593
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+594
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000011d5fb39
+bfde6f2d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+595
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+596
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1285209494134877997
+597
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1285209494134877997
+598
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+599
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+600
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000380d5b20
+126fc85b00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+601
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+602
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+4038984634127599707
+603
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+4038984634127599707
+604
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+605
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000013172fe2
+75c2c5a600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+606
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+607
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1375620860869789094
+608
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1375620860869789094
+609
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+610
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+611
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000003bfecc5d
+82b2ca6800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+612
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+613
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+4323117394319034984
+614
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+4323117394319034984
+615
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+616
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000146efd21
+4e5dbeda00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+617
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+618
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1472392447687245530
+619
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1472392447687245530
+620
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+621
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+622
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000403740a1
+6a45460000000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+623
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+624
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+4627238204163311104
+625
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+4627238204163311104
+626
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+627
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000015def9e4
+c7abb5bb00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+628
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+629
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1575971680624031163
+630
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1575971680624031163
+631
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+632
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+633
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000044bbb6c5
+75010cf700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+634
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+635
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+4952753174411807991
+636
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+4952753174411807991
+637
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+638
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001768d9bb
+cbd3f1ec00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+639
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+640
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1686837461052027372
+641
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1686837461052027372
+642
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+643
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+644
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000004991879a
+1832b6fa00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+645
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+646
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+5301167332292474618
+647
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+5301167332292474618
+648
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+649
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000190e6ed9
+3a8fa36a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+650
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+651
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1805502379891598186
+652
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1805502379891598186
+653
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+654
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+655
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000004ebe6c3a
+bb8aa9ab00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+656
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+657
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+5674091580043733419
+658
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+5674091580043733419
+659
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+660
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001ad1ac3b
+b6db0a7f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+661
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+662
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+1932515087589509759
+663
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+1932515087589509759
+664
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+665
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+666
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000544884d3
+db7aebe300000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+667
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+668
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+6073250142964345827
+669
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+6073250142964345827
+670
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+671
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001cb4a7fc
+46115e8700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+672
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+673
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2068462830819040903
+674
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+2068462830819040903
+675
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+676
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+677
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000005a365fe3
+2991610700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+678
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+679
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+6500488541415497991
+680
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+6500488541415497991
+681
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+682
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000001eb99dc6
+7b862d8700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+683
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+684
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2213974167630785927
+685
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+2213974167630785927
+686
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+687
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+688
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000608f01fa
+3fc2902b00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+689
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+690
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+6957782123633872939
+691
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+6957782123633872939
+692
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+693
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000020e2f17d
+1cdc867c00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+694
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+695
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2369721873607722620
+696
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+2369721873607722620
+697
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+698
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+699
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000006759ee0d
+1625feb400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+700
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+701
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+7447245198807400116
+702
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+7447245198807400116
+703
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+704
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000002333320e
+5fff7dc800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+705
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+706
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2536426052461231560
+707
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+2536426052461231560
+708
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+709
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+710
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000006e9f2e56
+1011559d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+711
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+712
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+7971140812640703901
+713
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+7971140812640703901
+714
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+715
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000025ad1c7b
+1bf6cc1200000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+716
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+717
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2714857465449991186
+718
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+2714857465449991186
+719
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+720
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+721
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000076675dda
+268ecf5d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+722
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+723
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+8531891210607841117
+724
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+8531891210607841117
+725
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+726
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000028539f14
+82201bc200000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+727
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+728
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+2905841095015406530
+729
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+2905841095015406530
+730
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+731
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+732
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000007ebbb298
+73af5d3d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+733
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+734
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+9132089037269458237
+735
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+9132089037269458237
+736
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+737
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000002b29dcf4
+35e1708400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+738
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+739
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+3110259959110135940
+740
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+3110259959110135940
+741
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+742
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+743
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000087a60871
+2d11de5100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+744
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+745
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+9774509323434712657
+746
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+9774509323434712657
+747
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+748
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000002e3331b2
+ddff551800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+749
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+750
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+3329059193855366424
+751
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+3329059193855366424
+752
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+753
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+754
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000009130ecd0
+f516c06300000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+755
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+756
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+10462122316590923875
+757
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+10462122316590923875
+758
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+759
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000031733561
+94b3ebd900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+760
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+761
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+3563250423403113433
+762
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+3563250423403113433
+763
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+764
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+765
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000009b67ab2e
+529b702f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+766
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+767
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+11198107213922791471
+768
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+11198107213922791471
+769
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+770
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000034edc0ca
+eaca247000000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+771
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+772
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+3813916437207721072
+773
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+3813916437207721072
+774
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+775
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+776
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000a6565a68
+17d62a6600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+777
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+778
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+11985866861416163942
+779
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+11985866861416163942
+780
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+781
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000038a6f200
+86b7e3af00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+782
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+783
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+4082216196332053423
+784
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+4082216196332053423
+785
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+786
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+787
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000b209eb14
+8b2773d000000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+788
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+789
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+12829043487008060368
+790
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+12829043487008060368
+791
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+792
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000003ca3313a
+c35f1fb100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+793
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+794
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+4369390191935168433
+795
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+4369390191935168433
+796
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+797
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+798
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000be9036d2
+41addc8900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+799
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+800
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+13731535540525587593
+801
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+13731535540525587593
+802
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+803
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000040e73610
+132c258f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+804
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+805
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+4676766180716586383
+806
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+4676766180716586383
+807
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+808
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+809
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000cbf810ac
+cc6c034500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+810
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+811
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+14697515718273663813
+812
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+14697515718273663813
+813
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+814
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000045780d0a
+54294fd600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+815
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+816
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+5005765323835133910
+817
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+5005765323835133910
+818
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+819
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+820
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000da5156a8
+9f4917ad00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+821
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+822
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+15731450255608715181
+823
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+15731450255608715181
+824
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+825
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000004a5b1da0
+b0d15ad800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+826
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+827
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+5357908757685820120
+828
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+5357908757685820120
+829
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+830
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+831
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000e9ad048a
+f6a3c80a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+832
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+833
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+16838119576698079242
+834
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+16838119576698079242
+835
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+836
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000004f96309d
+206cd99b00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+837
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+838
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+5734824626914908571
+839
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+5734824626914908571
+840
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+841
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+842
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000fa1d47f3
+f634317c00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+843
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+844
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+18022640396939833724
+845
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+18022640396939833724
+846
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+847
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000552f76f5
+1929f14e00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+848
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+849
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+6138255612190519630
+850
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+6138255612190519630
+851
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+852
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+853
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000010bb595e2
+cc4dc45400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+854
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+855
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+19290489380234183764
+856
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+19290489380234183764
+857
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+858
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000005b2d911d
+8e7638cb00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+859
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+860
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+6570066987533613259
+861
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+6570066987533613259
+862
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+863
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+864
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000011e8ac1bd
+510fef1d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+865
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+866
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+20647528460486438685
+867
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+20647528460486438685
+868
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+869
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000619796e2
+e812c73f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+870
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+871
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+7032255244462638911
+872
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+7032255244462638911
+873
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+874
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+875
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000132b315f6
+63b6f69800000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+876
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+877
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+22100031944416229016
+878
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+22100031944416229016
+879
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+880
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000068751fce
+3a8edd9f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+881
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+882
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+7526957322825817503
+883
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+7526957322825817503
+884
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+885
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+886
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000148466e70
+332480fe00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+887
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+888
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+23654715520983531774
+889
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+23654715520983531774
+890
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+891
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000006fce4c21
+b1070cba00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+892
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+893
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+8056460491000057018
+894
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+8056460491000057018
+895
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+896
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+897
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000015f5e54b9
+ac2611ba00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+898
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+899
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+25318767311557366202
+900
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+25318767311557366202
+901
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+902
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000077abce76
+cafb2a8f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+903
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+904
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+8623212921137867407
+905
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+8623212921137867407
+906
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+907
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+908
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000178161e48
+7a64e9e300000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+909
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+910
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+27099881104388450787
+911
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+27099881104388450787
+912
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+913
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000008016f609
+d098a58700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+914
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+915
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+9229835008357213575
+916
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+9229835008357213575
+917
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+918
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+919
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000001928b0cd3
+62e023b500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+920
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+921
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+29006291927046300597
+922
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+29006291927046300597
+923
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+924
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000008919b9be
+acdb82e500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+925
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+926
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+9879131486208885477
+927
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+9879131486208885477
+928
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+929
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+930
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000001aedc70f3
+431fe95d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+931
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+932
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+31046814121290885469
+933
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+31046814121290885469
+934
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+935
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000092bec3ec
+385940b900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+936
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+937
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+10574104394437574841
+938
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+10574104394437574841
+939
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+940
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+941
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000001cd2bcf33
+b1f1f75500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+942
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+943
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+33230882096419043157
+944
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+33230882096419043157
+945
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+946
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000009d117efb
+ea69a7e100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+947
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+948
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+11317966958993450977
+949
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+11317966958993450977
+950
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+951
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+952
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000001ed9d07bf
+20a4730c00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+953
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+954
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+35568593949509841676
+955
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+35568593949509841676
+956
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+957
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000a81e22ec
+e1c8594700000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+958
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+959
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+12114158448468842823
+960
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+12114158448468842823
+961
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+962
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+963
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000002105680d5
+71c62ef000000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+964
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+965
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+38070758154248269552
+966
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+38070758154248269552
+967
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+968
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000b3f1c3ca
+42e01bd200000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+969
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+970
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+12966360075649162194
+971
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+12966360075649162194
+972
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+973
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+974
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000023581543f
+4819e25e00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+975
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+976
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+40748943534194287198
+977
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+40748943534194287198
+978
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+979
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000c09a6126
+09f524fa00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+980
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+981
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+13878512017699316986
+982
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+13878512017699316986
+983
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+984
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+985
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000025d497ff3
+d98d94b500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+986
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+987
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+43615532751549994165
+988
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+43615532751549994165
+989
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+990
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000ce26f6aa
+a3aaac5f00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+991
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+992
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+14854831633678904415
+993
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+14854831633678904415
+994
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+995
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+996
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000287de1a2a
+dad7d71600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+997
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+998
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+46683779558731667222
+999
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+46683779558731667222
+1000
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+1001
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000dca78dd6
+e856f53500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1002
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+1003
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+15899832963615356213
+1004
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+15899832963615356213
+1005
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+1006
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+1007
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000002b5718918
+25541db400000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1008
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+1009
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+49967870077450853812
+1010
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+49967870077450853812
+1011
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+1012
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000ec2d50f9
+77c6248c00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1013
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+1014
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+17018347599289525388
+1015
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+17018347599289525388
+1016
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+1017
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+1018
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000002e639be93
+0ea1f93600000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1019
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+1020
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+53482988388630001974
+1021
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+53482988388630001974
+1022
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+1023
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000000fcca9f81
+ed11c09100000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1024
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+1025
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+18215547023230353553
+1026
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+18215547023230353553
+1027
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+1028
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+1029
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000031a7077f0
+0d89d34a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1030
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+1031
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+57245386736409367370
+1032
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+57245386736409367370
+1033
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+1034
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000010e9323bf
+f6d0024500000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1035
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+1036
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+19496966519203562053
+1037
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+19496966519203562053
+1038
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+1039
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+1040
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000352538258
+3f3b4a6c00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1041
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+1042
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+61272460670835313260
+1043
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+61272460670835313260
+1044
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+1045
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000001219bea2a
+10f221e000000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1046
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+1047
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+20868530764745155040
+1048
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+20868530764745155040
+1049
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+1050
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+1051
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000038e2503ef
+b0fe671d00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1052
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+1053
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+65582829476654245661
+1054
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+65582829476654245661
+1055
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+1056
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c59900000000000000000000000000000000000000000000000135fb7a47
+6d34100300000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1057
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+1058
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+22336581224067502083
+1059
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+22336581224067502083
+1060
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
+1061
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: to
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+value (uint256) :
+1
+1062
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x6d06dfa000000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+6d06dfa00000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c599000000000000000000000000000000000000000000000003ce2bca21
+0334973a00000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1063
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_JOIN (index_topic_1 address caller, index_topic_2 address tokenIn, uint256 tokenAmountIn)View Source
+
+Topics
+0 0x63982df10efd8dfaaaa0fcc7f50b2d93b7cba26ccc48adee2873220d485dc39a
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenIn
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountIn (uint256) :
+1
+1064
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x0000000000000000000000000000000000000000
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+70196422260076877626
+1065
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+Data
+
+
+amt (uint256) :
+70196422260076877626
+1066
+Address
+0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+(Wrapped BTC: WBTC Token)   
+Name
+Transfer (index_topic_1 address from, index_topic_2 address to, uint256 value)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: from
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: to
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+value (uint256) :
+1
+1067
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Topics
+0 0x46ab38f100000000000000000000000000000000000000000000000000000000
+1
+0x0000000000000000000000009caa8d0e44b22f50057d2f4ce0d1446529e11be3
+Data
+
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000064
+46ab38f10000000000000000000000002260fac5e5542a773aa44fbcfedf7c19
+3bc2c5990000000000000000000000000000000000000000000000014bc9f15a
+87274cc900000000000000000000000000000000000000000000000000000000
+0000000100000000000000000000000000000000000000000000000000000000
+1068
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+LOG_EXIT (index_topic_1 address caller, index_topic_2 address tokenOut, uint256 tokenAmountOut)View Source
+
+Topics
+0 0xe74c91552b64c2e2e7bd255639e004e693bd3e1d01cc33e65610b86afcc1ffed
+1: caller
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: tokenOut
+0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+Data
+
+
+tokenAmountOut (uint256) :
+1
+1069
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x9cAa8d0E44b22f50057d2F4ce0D1446529e11be3
+2: dst
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+Data
+
+
+amt (uint256) :
+23907905467989839049
+1070
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x0000000000000000000000000000000000000000
+Data
+
+
+amt (uint256) :
+23907905467989839049
+1071
+Address
+0x2257aaac34bcb27900291f7b84ee2565a6cbac57
+(Balancer: DPI/USDC/ETH/WBTC 25/25/25/25)   
+Name
+Transfer (index_topic_1 address src, index_topic_2 address dst, uint256 amt)View Source
+
+Topics
+0 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1: src
+0x2257aaac34BcB27900291f7B84eE2565A6cbaC57
+2: dst
+0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd
+Data
+
+
+amt (uint256) :
+0
