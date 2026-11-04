@@ -84,7 +84,7 @@ def probe_chain(entry, workers):
            "addresses": entry.get("addresses", []), "attempts": [], "endpoint": None,
            "status": None, "contracts": []}
     valid = []
-    for url in entry["rpcs"][:5]:
+    for url in entry["rpcs"]:
         a = try_endpoint(url, entry["chainId"])
         a["suspect"] = any(w in url.lower() for w in ("testnet", "devnet", "sepolia", "goerli")) \
             or any(b in url for b in BAD_ENDPOINTS)
