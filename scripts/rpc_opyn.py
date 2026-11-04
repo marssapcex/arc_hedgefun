@@ -176,13 +176,15 @@ def main():
                     print(f"  balances failed {ad}: {str(e)[:100]}", flush=True)
                     d["balances"] = {}
                 doc["series"].append(d)
-        eth = sum(s.get("nativeWei", 0) for s in doc["series"]) / 1e18
+        eth = sum((s.get("nativeWei") or 0) for s in doc["series"]) / 1e18
         erc = {}
         for s in doc["series"]:
             for sym, v in s.get("balances", {}).items():
                 erc[sym] = erc.get(sym, 0) + v["human"]
         doc["totals"] = {"seriesProbed": len(doc["series"]), "seriesTotal": n,
                          "seriesEnumerated": len(jobs),
+                         "codeBytesMissing": sum(s.get("codeBytes") is None for s in doc["series"]),
+                         "nativeWeiMissing": sum(s.get("nativeWei") is None for s in doc["series"]),
                          "nativeEthOnSeries": eth, "erc20OnSeries": erc,
                          "expiredSeries": sum(1 for s in doc["series"] if s.get("hasExpired()")),
                          "seriesWithCode": sum(1 for s in doc["series"] if s.get("codeBytes"))}
