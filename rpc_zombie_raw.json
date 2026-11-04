@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T14:55:57.963629+00:00",
+  "generatedAt": "2026-11-04T14:57:01.026974+00:00",
   "source": "DefiLlama snapshot git show 9fccbd9:screen.json (2026-11-04) + ethereum-lists/chains",
   "criterion": "chainTvl <= $5,000,000; 335 entries, 131 TVL=0",
   "nonEvmOrUnmapped": 106,
@@ -7,9 +7,9 @@
   "evmMapped": 224,
   "counts": {
     "FROZEN": 8,
-    "DEAD_RPC": 82,
-    "LIVE": 113,
-    "STALLED": 3,
+    "DEAD_RPC": 83,
+    "LIVE": 111,
+    "STALLED": 4,
     "SUSPECT_RPC": 17,
     "CHAINID_MISMATCH": 1
   },
@@ -48,7 +48,7 @@
           "chainId": 1284,
           "block": 16796699,
           "blockTimestamp": 1786361772,
-          "ageSeconds": 7442387,
+          "ageSeconds": 7442450,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -59,7 +59,7 @@
           "block": null,
           "blockTimestamp": null,
           "ageSeconds": null,
-          "error": "chainId: HTTP Error 502: Bad Gateway",
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
           "chainIdMatches": null,
           "suspect": false
         },
@@ -72,6 +72,16 @@
           "error": "chainId: HTTP Error 404: Not Found",
           "chainIdMatches": null,
           "suspect": false
+        },
+        {
+          "url": "https://moonbeam.drpc.org",
+          "chainId": 1284,
+          "block": 16796699,
+          "blockTimestamp": 1786361772,
+          "ageSeconds": 7442453,
+          "error": null,
+          "chainIdMatches": true,
+          "suspect": false
         }
       ],
       "endpoint": "https://moonbeam.api.onfinality.io/public",
@@ -79,12 +89,17 @@
       "contracts": [],
       "block": 16796699,
       "blockTimestamp": 1786361772,
-      "ageSeconds": 7442387,
+      "ageSeconds": 7442450,
       "ageDays": 86.14,
       "lastBlockTime": "2026-08-10T11:36:12+00:00",
       "nextBlockProbe": [
         {
           "url": "https://moonbeam.api.onfinality.io/public",
+          "next": 16796700,
+          "exists": false
+        },
+        {
+          "url": "https://moonbeam.drpc.org",
           "next": 16796700,
           "exists": false
         }
@@ -105,7 +120,7 @@
           "block": null,
           "blockTimestamp": null,
           "ageSeconds": null,
-          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certif",
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (",
           "chainIdMatches": null,
           "suspect": false
         },
@@ -148,7 +163,7 @@
           "chainId": 1666600000,
           "block": 93624315,
           "blockTimestamp": 1789051303,
-          "ageSeconds": 4752855,
+          "ageSeconds": 4752918,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -158,7 +173,7 @@
           "chainId": 1666600000,
           "block": 93624315,
           "blockTimestamp": 1789051303,
-          "ageSeconds": 4752855,
+          "ageSeconds": 4752918,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -168,7 +183,7 @@
           "chainId": 1666600000,
           "block": 93624315,
           "blockTimestamp": 1789051303,
-          "ageSeconds": 4752856,
+          "ageSeconds": 4752919,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -188,7 +203,7 @@
           "chainId": 1666600000,
           "block": 93624315,
           "blockTimestamp": 1789051303,
-          "ageSeconds": 4752858,
+          "ageSeconds": 4752920,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -199,7 +214,7 @@
       "contracts": [],
       "block": 93624315,
       "blockTimestamp": 1789051303,
-      "ageSeconds": 4752855,
+      "ageSeconds": 4752918,
       "ageDays": 55.01,
       "lastBlockTime": "2026-09-10T14:41:43+00:00",
       "nextBlockProbe": [
@@ -266,8 +281,8 @@
         {
           "url": "https://fantom.drpc.org",
           "chainId": 250,
-          "block": 123951615,
-          "blockTimestamp": 1793804157,
+          "block": 123951625,
+          "blockTimestamp": 1793804220,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -318,11 +333,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 123951615,
-      "blockTimestamp": 1793804157,
+      "block": 123951625,
+      "blockTimestamp": 1793804220,
       "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:57+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Aurora",
@@ -343,9 +358,9 @@
         {
           "url": "https://mainnet.aurora.dev",
           "chainId": 1313161554,
-          "block": 223031803,
-          "blockTimestamp": 1793804156,
-          "ageSeconds": 2,
+          "block": 223031914,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -353,8 +368,8 @@
         {
           "url": "https://aurora.drpc.org",
           "chainId": 1313161554,
-          "block": 223031754,
-          "blockTimestamp": 1793804156,
+          "block": 223031857,
+          "blockTimestamp": 1793804220,
           "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
@@ -395,11 +410,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 223031803,
-      "blockTimestamp": 1793804156,
-      "ageSeconds": 2,
+      "block": 223031914,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:56+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Taiko",
@@ -413,9 +428,9 @@
         {
           "url": "https://rpc.mainnet.taiko.xyz",
           "chainId": 167000,
-          "block": 13580302,
-          "blockTimestamp": 1793804155,
-          "ageSeconds": 3,
+          "block": 13580333,
+          "blockTimestamp": 1793804219,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -423,9 +438,9 @@
         {
           "url": "https://taiko-rpc.publicnode.com",
           "chainId": 167000,
-          "block": 13580302,
-          "blockTimestamp": 1793804157,
-          "ageSeconds": 2,
+          "block": 13580334,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -434,11 +449,11 @@
       "endpoint": "https://taiko-rpc.publicnode.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 13580302,
-      "blockTimestamp": 1793804157,
-      "ageSeconds": 2,
+      "block": 13580334,
+      "blockTimestamp": 1793804221,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:57+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Plume Mainnet",
@@ -452,8 +467,8 @@
         {
           "url": "https://rpc.plume.org",
           "chainId": 98866,
-          "block": 103675730,
-          "blockTimestamp": 1793804158,
+          "block": 103675889,
+          "blockTimestamp": 1793804221,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -463,11 +478,11 @@
       "endpoint": "https://rpc.plume.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 103675730,
-      "blockTimestamp": 1793804158,
+      "block": 103675889,
+      "blockTimestamp": 1793804221,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:58+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "XDC",
@@ -483,9 +498,9 @@
         {
           "url": "https://erpc.xinfin.network",
           "chainId": 50,
-          "block": 109056908,
-          "blockTimestamp": 1793804150,
-          "ageSeconds": 8,
+          "block": 109056939,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -493,9 +508,9 @@
         {
           "url": "https://rpc.xinfin.network",
           "chainId": 50,
-          "block": 109056908,
-          "blockTimestamp": 1793804150,
-          "ageSeconds": 9,
+          "block": 109056939,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -503,9 +518,9 @@
         {
           "url": "https://rpc1.xinfin.network",
           "chainId": 50,
-          "block": 109056908,
-          "blockTimestamp": 1793804150,
-          "ageSeconds": 10,
+          "block": 109056940,
+          "blockTimestamp": 1793804222,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -513,9 +528,9 @@
         {
           "url": "https://rpc.xdcrpc.com",
           "chainId": 50,
-          "block": 109056908,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 2,
+          "block": 109056940,
+          "blockTimestamp": 1793804224,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -523,15 +538,15 @@
         {
           "url": "https://erpc.xdcrpc.com",
           "chainId": 50,
-          "block": 109056909,
-          "blockTimestamp": 1793804162,
-          "ageSeconds": 2,
+          "block": 109056941,
+          "blockTimestamp": 1793804226,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "https://rpc.xdcrpc.com",
+      "endpoint": "https://rpc1.xinfin.network",
       "status": "LIVE",
       "contracts": [
         {
@@ -540,11 +555,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 109056908,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 2,
+      "block": 109056940,
+      "blockTimestamp": 1793804222,
+      "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:02+00:00"
     },
     {
       "name": "TAC",
@@ -636,7 +651,7 @@
           "chainId": 1285,
           "block": 17381654,
           "blockTimestamp": 1786350468,
-          "ageSeconds": 7453691,
+          "ageSeconds": 7453755,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -647,7 +662,7 @@
           "block": null,
           "blockTimestamp": null,
           "ageSeconds": null,
-          "error": "chainId: HTTP Error 502: Bad Gateway",
+          "error": "chainId: <urlopen error [Errno -2] Name or service not known>",
           "chainIdMatches": null,
           "suspect": false
         },
@@ -659,6 +674,16 @@
           "ageSeconds": null,
           "error": "chainId: HTTP Error 404: Not Found",
           "chainIdMatches": null,
+          "suspect": false
+        },
+        {
+          "url": "https://moonriver.drpc.org",
+          "chainId": 1285,
+          "block": 17381654,
+          "blockTimestamp": 1786350468,
+          "ageSeconds": 7453758,
+          "error": null,
+          "chainIdMatches": true,
           "suspect": false
         }
       ],
@@ -703,12 +728,17 @@
       ],
       "block": 17381654,
       "blockTimestamp": 1786350468,
-      "ageSeconds": 7453691,
+      "ageSeconds": 7453755,
       "ageDays": 86.27,
       "lastBlockTime": "2026-08-10T08:27:48+00:00",
       "nextBlockProbe": [
         {
           "url": "https://moonriver.api.onfinality.io/public",
+          "next": 17381655,
+          "exists": false
+        },
+        {
+          "url": "https://moonriver.drpc.org",
           "next": 17381655,
           "exists": false
         }
@@ -806,9 +836,9 @@
         {
           "url": "https://rpc.blast.io",
           "chainId": 81457,
-          "block": 42475487,
-          "blockTimestamp": 1793760789,
-          "ageSeconds": 43370,
+          "block": 42475525,
+          "blockTimestamp": 1793760873,
+          "ageSeconds": 43348,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -857,11 +887,11 @@
       "endpoint": "https://rpc.blast.io",
       "status": "STALLED",
       "contracts": [],
-      "block": 42475487,
-      "blockTimestamp": 1793760789,
-      "ageSeconds": 43370,
+      "block": 42475525,
+      "blockTimestamp": 1793760873,
+      "ageSeconds": 43348,
       "ageDays": 0.5,
-      "lastBlockTime": "2026-11-04T02:53:09+00:00"
+      "lastBlockTime": "2026-11-04T02:54:33+00:00"
     },
     {
       "name": "Polygon zkEVM",
@@ -877,7 +907,7 @@
           "chainId": 1101,
           "block": 33391890,
           "blockTimestamp": 1783094144,
-          "ageSeconds": 10710014,
+          "ageSeconds": 10710078,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -887,7 +917,7 @@
           "chainId": 1101,
           "block": 33391890,
           "blockTimestamp": 1783094144,
-          "ageSeconds": 10710015,
+          "ageSeconds": 10710078,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -898,7 +928,7 @@
       "contracts": [],
       "block": 33391890,
       "blockTimestamp": 1783094144,
-      "ageSeconds": 10710014,
+      "ageSeconds": 10710078,
       "ageDays": 123.96,
       "lastBlockTime": "2026-07-03T15:55:44+00:00",
       "nextBlockProbe": [
@@ -970,8 +1000,8 @@
         {
           "url": "https://rpc.telos.net",
           "chainId": 40,
-          "block": 497560581,
-          "blockTimestamp": 1793804158,
+          "block": 497560707,
+          "blockTimestamp": 1793804221,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -980,10 +1010,10 @@
         {
           "url": "https://telos.drpc.org",
           "chainId": 40,
-          "block": 497560569,
-          "blockTimestamp": 1793804159,
-          "ageSeconds": 0,
-          "error": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "blockNumber: HTTP Error 400: Bad Request",
           "chainIdMatches": true,
           "suspect": false
         }
@@ -991,11 +1021,11 @@
       "endpoint": "https://rpc.telos.net",
       "status": "LIVE",
       "contracts": [],
-      "block": 497560581,
-      "blockTimestamp": 1793804158,
+      "block": 497560707,
+      "blockTimestamp": 1793804221,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:58+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Boba",
@@ -1011,9 +1041,9 @@
         {
           "url": "https://mainnet.boba.network",
           "chainId": 288,
-          "block": 41399658,
-          "blockTimestamp": 1793804157,
-          "ageSeconds": 2,
+          "block": 41399689,
+          "blockTimestamp": 1793804219,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1021,9 +1051,9 @@
         {
           "url": "https://boba-ethereum.gateway.tenderly.co",
           "chainId": 288,
-          "block": 41399659,
-          "blockTimestamp": 1793804159,
-          "ageSeconds": 0,
+          "block": 41399690,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1031,8 +1061,8 @@
         {
           "url": "https://gateway.tenderly.co/public/boba-ethereum",
           "chainId": 288,
-          "block": 41399659,
-          "blockTimestamp": 1793804159,
+          "block": 41399690,
+          "blockTimestamp": 1793804221,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -1041,9 +1071,9 @@
         {
           "url": "https://boba-eth.drpc.org",
           "chainId": 288,
-          "block": 41399659,
-          "blockTimestamp": 1793804157,
-          "ageSeconds": 3,
+          "block": 41399690,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1058,11 +1088,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 41399659,
-      "blockTimestamp": 1793804159,
-      "ageSeconds": 0,
+      "block": 41399690,
+      "blockTimestamp": 1793804221,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:59+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Fuse",
@@ -1078,9 +1108,9 @@
         {
           "url": "https://rpc.fuse.io",
           "chainId": 122,
-          "block": 44950893,
-          "blockTimestamp": 1793804155,
-          "ageSeconds": 4,
+          "block": 44950906,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1088,9 +1118,9 @@
         {
           "url": "https://fuse.drpc.org",
           "chainId": 122,
-          "block": 44950891,
-          "blockTimestamp": 1793804155,
-          "ageSeconds": 4,
+          "block": 44950903,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1105,11 +1135,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 44950893,
-      "blockTimestamp": 1793804155,
-      "ageSeconds": 4,
+      "block": 44950906,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:55+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Hemi",
@@ -1123,9 +1153,9 @@
         {
           "url": "https://rpc.hemi.network/rpc",
           "chainId": 43111,
-          "block": 5661453,
-          "blockTimestamp": 1793804147,
-          "ageSeconds": 11,
+          "block": 5661459,
+          "blockTimestamp": 1793804219,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1134,11 +1164,11 @@
       "endpoint": "https://rpc.hemi.network/rpc",
       "status": "LIVE",
       "contracts": [],
-      "block": 5661453,
-      "blockTimestamp": 1793804147,
-      "ageSeconds": 11,
+      "block": 5661459,
+      "blockTimestamp": 1793804219,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:47+00:00"
+      "lastBlockTime": "2026-11-04T14:56:59+00:00"
     },
     {
       "name": "Arbitrum Nova",
@@ -1154,7 +1184,7 @@
           "chainId": 42170,
           "block": 85289240,
           "blockTimestamp": 1793803319,
-          "ageSeconds": 839,
+          "ageSeconds": 903,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1164,7 +1194,7 @@
           "chainId": 42170,
           "block": 85289240,
           "blockTimestamp": 1793803319,
-          "ageSeconds": 840,
+          "ageSeconds": 903,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1175,7 +1205,7 @@
       "contracts": [],
       "block": 85289240,
       "blockTimestamp": 1793803319,
-      "ageSeconds": 839,
+      "ageSeconds": 903,
       "ageDays": 0.01,
       "lastBlockTime": "2026-11-04T14:41:59+00:00"
     },
@@ -1191,9 +1221,9 @@
         {
           "url": "https://rpc.eth.haqq.network",
           "chainId": 11235,
-          "block": 23086652,
-          "blockTimestamp": 1793804148,
-          "ageSeconds": 10,
+          "block": 23086663,
+          "blockTimestamp": 1793804214,
+          "ageSeconds": 8,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1201,9 +1231,9 @@
         {
           "url": "https://haqq-evm-rpc.publicnode.com",
           "chainId": 11235,
-          "block": 23086652,
-          "blockTimestamp": 1793804148,
-          "ageSeconds": 11,
+          "block": 23086663,
+          "blockTimestamp": 1793804214,
+          "ageSeconds": 8,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1211,9 +1241,9 @@
         {
           "url": "https://haqq.drpc.org",
           "chainId": 11235,
-          "block": 23086652,
-          "blockTimestamp": 1793804148,
-          "ageSeconds": 12,
+          "block": 23086663,
+          "blockTimestamp": 1793804214,
+          "ageSeconds": 9,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1222,11 +1252,11 @@
       "endpoint": "https://rpc.eth.haqq.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 23086652,
-      "blockTimestamp": 1793804148,
-      "ageSeconds": 10,
+      "block": 23086663,
+      "blockTimestamp": 1793804214,
+      "ageSeconds": 8,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:48+00:00"
+      "lastBlockTime": "2026-11-04T14:56:54+00:00"
     },
     {
       "name": "Metis",
@@ -1246,9 +1276,9 @@
         {
           "url": "https://andromeda.metis.io/?owner=1088",
           "chainId": 1088,
-          "block": 23367798,
-          "blockTimestamp": 1793804143,
-          "ageSeconds": 15,
+          "block": 23367799,
+          "blockTimestamp": 1793804191,
+          "ageSeconds": 31,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1256,9 +1286,9 @@
         {
           "url": "https://metis.drpc.org",
           "chainId": 1088,
-          "block": 23367798,
-          "blockTimestamp": 1793804143,
-          "ageSeconds": 16,
+          "block": 23367799,
+          "blockTimestamp": 1793804191,
+          "ageSeconds": 31,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1266,9 +1296,9 @@
         {
           "url": "https://metis-rpc.publicnode.com",
           "chainId": 1088,
-          "block": 23367798,
-          "blockTimestamp": 1793804143,
-          "ageSeconds": 16,
+          "block": 23367799,
+          "blockTimestamp": 1793804191,
+          "ageSeconds": 31,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1303,11 +1333,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 23367798,
-      "blockTimestamp": 1793804143,
-      "ageSeconds": 15,
+      "block": 23367799,
+      "blockTimestamp": 1793804191,
+      "ageSeconds": 31,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:43+00:00"
+      "lastBlockTime": "2026-11-04T14:56:31+00:00"
     },
     {
       "name": "Filecoin",
@@ -1325,9 +1355,9 @@
         {
           "url": "https://api.node.glif.io",
           "chainId": 314,
-          "block": 6516590,
-          "blockTimestamp": 1793804100,
-          "ageSeconds": 59,
+          "block": 6516592,
+          "blockTimestamp": 1793804190,
+          "ageSeconds": 32,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1335,9 +1365,9 @@
         {
           "url": "https://rpc.ankr.com/filecoin",
           "chainId": 314,
-          "block": 6516590,
-          "blockTimestamp": 1793804100,
-          "ageSeconds": 60,
+          "block": 6516593,
+          "blockTimestamp": 1793804190,
+          "ageSeconds": 32,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1355,9 +1385,9 @@
         {
           "url": "https://filfox.info/rpc/v1",
           "chainId": 314,
-          "block": 6516591,
-          "blockTimestamp": 1793804130,
-          "ageSeconds": 32,
+          "block": 6516593,
+          "blockTimestamp": 1793804190,
+          "ageSeconds": 35,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1365,15 +1395,15 @@
         {
           "url": "https://filecoin.drpc.org",
           "chainId": 314,
-          "block": 6516590,
-          "blockTimestamp": 1793804130,
-          "ageSeconds": 32,
+          "block": 6516592,
+          "blockTimestamp": 1793804190,
+          "ageSeconds": 35,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "https://filfox.info/rpc/v1",
+      "endpoint": "https://api.node.glif.io",
       "status": "LIVE",
       "contracts": [
         {
@@ -1392,11 +1422,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 6516591,
-      "blockTimestamp": 1793804130,
+      "block": 6516592,
+      "blockTimestamp": 1793804190,
       "ageSeconds": 32,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:30+00:00"
+      "lastBlockTime": "2026-11-04T14:56:30+00:00"
     },
     {
       "name": "SKALE Europa",
@@ -1410,9 +1440,9 @@
         {
           "url": "https://mainnet.skalenodes.com/v1/elated-tan-skat",
           "chainId": 2046399126,
-          "block": 28344192,
-          "blockTimestamp": 1793804151,
-          "ageSeconds": 8,
+          "block": 28344202,
+          "blockTimestamp": 1793804219,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1421,11 +1451,11 @@
       "endpoint": "https://mainnet.skalenodes.com/v1/elated-tan-skat",
       "status": "LIVE",
       "contracts": [],
-      "block": 28344192,
-      "blockTimestamp": 1793804151,
-      "ageSeconds": 8,
+      "block": 28344202,
+      "blockTimestamp": 1793804219,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:51+00:00"
+      "lastBlockTime": "2026-11-04T14:56:59+00:00"
     },
     {
       "name": "CORE",
@@ -1441,9 +1471,9 @@
         {
           "url": "https://rpc.dancorescan.com",
           "chainId": 362,
-          "block": 1706050,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 0,
+          "block": 1706082,
+          "blockTimestamp": 1793804222,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1458,11 +1488,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 1706050,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 0,
+      "block": 1706082,
+      "blockTimestamp": 1793804222,
+      "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:02+00:00"
     },
     {
       "name": "ZetaChain",
@@ -1476,9 +1506,9 @@
         {
           "url": "https://zetachain-evm.blockpi.network/v1/rpc/public",
           "chainId": 7000,
-          "block": 19960541,
-          "blockTimestamp": 1793804149,
-          "ageSeconds": 9,
+          "block": 19960558,
+          "blockTimestamp": 1793804211,
+          "ageSeconds": 10,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1486,9 +1516,9 @@
         {
           "url": "https://zetachain-mainnet.g.allthatnode.com/archive/evm",
           "chainId": 7000,
-          "block": 19960541,
-          "blockTimestamp": 1793804149,
-          "ageSeconds": 10,
+          "block": 19960558,
+          "blockTimestamp": 1793804211,
+          "ageSeconds": 11,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1496,9 +1526,9 @@
         {
           "url": "https://zeta-chain.drpc.org",
           "chainId": 7000,
-          "block": 19960541,
-          "blockTimestamp": 1793804149,
-          "ageSeconds": 10,
+          "block": 19960558,
+          "blockTimestamp": 1793804211,
+          "ageSeconds": 11,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1516,9 +1546,9 @@
         {
           "url": "https://7000.rpc.thirdweb.com",
           "chainId": 7000,
-          "block": 19960541,
-          "blockTimestamp": 1793804149,
-          "ageSeconds": 11,
+          "block": 19960558,
+          "blockTimestamp": 1793804211,
+          "ageSeconds": 12,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1527,11 +1557,11 @@
       "endpoint": "https://zetachain-evm.blockpi.network/v1/rpc/public",
       "status": "LIVE",
       "contracts": [],
-      "block": 19960541,
-      "blockTimestamp": 1793804149,
-      "ageSeconds": 9,
+      "block": 19960558,
+      "blockTimestamp": 1793804211,
+      "ageSeconds": 10,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:49+00:00"
+      "lastBlockTime": "2026-11-04T14:56:51+00:00"
     },
     {
       "name": "Velas",
@@ -1549,7 +1579,7 @@
           "chainId": 106,
           "block": 70405332,
           "blockTimestamp": 1793804035,
-          "ageSeconds": 124,
+          "ageSeconds": 187,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1559,7 +1589,7 @@
           "chainId": 106,
           "block": 70405332,
           "blockTimestamp": 1793804035,
-          "ageSeconds": 126,
+          "ageSeconds": 188,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1576,7 +1606,7 @@
       ],
       "block": 70405332,
       "blockTimestamp": 1793804035,
-      "ageSeconds": 124,
+      "ageSeconds": 187,
       "ageDays": 0.0,
       "lastBlockTime": "2026-11-04T14:53:55+00:00"
     },
@@ -1594,7 +1624,7 @@
           "chainId": 42262,
           "block": 22380788,
           "blockTimestamp": 1793803898,
-          "ageSeconds": 261,
+          "ageSeconds": 324,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1605,7 +1635,7 @@
       "contracts": [],
       "block": 22380788,
       "blockTimestamp": 1793803898,
-      "ageSeconds": 261,
+      "ageSeconds": 324,
       "ageDays": 0.0,
       "lastBlockTime": "2026-11-04T14:51:38+00:00"
     },
@@ -1621,9 +1651,9 @@
         {
           "url": "https://mainnet.hsk.xyz",
           "chainId": 177,
-          "block": 29728511,
-          "blockTimestamp": 1793804159,
-          "ageSeconds": 0,
+          "block": 29728543,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1632,11 +1662,11 @@
       "endpoint": "https://mainnet.hsk.xyz",
       "status": "LIVE",
       "contracts": [],
-      "block": 29728511,
-      "blockTimestamp": 1793804159,
-      "ageSeconds": 0,
+      "block": 29728543,
+      "blockTimestamp": 1793804221,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:59+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Zircuit",
@@ -1650,9 +1680,9 @@
         {
           "url": "https://mainnet.zircuit.com",
           "chainId": 48900,
-          "block": 36933971,
-          "blockTimestamp": 1793804157,
-          "ageSeconds": 1,
+          "block": 36934003,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1661,11 +1691,11 @@
       "endpoint": "https://mainnet.zircuit.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 36933971,
-      "blockTimestamp": 1793804157,
-      "ageSeconds": 1,
+      "block": 36934003,
+      "blockTimestamp": 1793804221,
+      "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:57+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Manta",
@@ -1681,9 +1711,9 @@
         {
           "url": "https://pacific-rpc.manta.network/http",
           "chainId": 169,
-          "block": 9958019,
-          "blockTimestamp": 1793804149,
-          "ageSeconds": 9,
+          "block": 9958026,
+          "blockTimestamp": 1793804219,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1691,15 +1721,15 @@
         {
           "url": "https://manta-pacific.drpc.org",
           "chainId": 169,
-          "block": 9958019,
-          "blockTimestamp": 1793804159,
-          "ageSeconds": 0,
+          "block": 9958026,
+          "blockTimestamp": 1793804219,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "https://manta-pacific.drpc.org",
+      "endpoint": "https://pacific-rpc.manta.network/http",
       "status": "LIVE",
       "contracts": [
         {
@@ -1708,11 +1738,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 9958019,
-      "blockTimestamp": 1793804159,
-      "ageSeconds": 0,
+      "block": 9958026,
+      "blockTimestamp": 1793804219,
+      "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:59+00:00"
+      "lastBlockTime": "2026-11-04T14:56:59+00:00"
     },
     {
       "name": "EthereumClassic",
@@ -1756,9 +1786,9 @@
         {
           "url": "https://etc.etcdesktop.com",
           "chainId": 61,
-          "block": 25669117,
-          "blockTimestamp": 1793804143,
-          "ageSeconds": 28,
+          "block": 25669121,
+          "blockTimestamp": 1793804191,
+          "ageSeconds": 42,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1777,11 +1807,11 @@
       "endpoint": "https://etc.etcdesktop.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 25669117,
-      "blockTimestamp": 1793804143,
-      "ageSeconds": 28,
+      "block": 25669121,
+      "blockTimestamp": 1793804191,
+      "ageSeconds": 42,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:43+00:00"
+      "lastBlockTime": "2026-11-04T14:56:31+00:00"
     },
     {
       "name": "KCC",
@@ -1797,9 +1827,9 @@
         {
           "url": "https://rpc-mainnet.kcc.network",
           "chainId": 321,
-          "block": 57086162,
-          "blockTimestamp": 1793804158,
-          "ageSeconds": 0,
+          "block": 57086183,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1834,11 +1864,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 57086162,
-      "blockTimestamp": 1793804158,
-      "ageSeconds": 0,
+      "block": 57086183,
+      "blockTimestamp": 1793804221,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:58+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "IoTeX",
@@ -1855,8 +1885,8 @@
         {
           "url": "https://babel-api.mainnet.iotex.io",
           "chainId": 4689,
-          "block": 54097312,
-          "blockTimestamp": 1793804157,
+          "block": 54097336,
+          "blockTimestamp": 1793804220,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -1877,11 +1907,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 54097312,
-      "blockTimestamp": 1793804157,
+      "block": 54097336,
+      "blockTimestamp": 1793804220,
       "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:57+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Wanchain",
@@ -1895,9 +1925,9 @@
         {
           "url": "https://gwan-ssl.wandevs.org:56891",
           "chainId": 888,
-          "block": 47126096,
-          "blockTimestamp": 1793804155,
-          "ageSeconds": 4,
+          "block": 47126109,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1906,11 +1936,11 @@
       "endpoint": "https://gwan-ssl.wandevs.org:56891",
       "status": "LIVE",
       "contracts": [],
-      "block": 47126096,
-      "blockTimestamp": 1793804155,
-      "ageSeconds": 4,
+      "block": 47126109,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:55+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Ontology",
@@ -1924,9 +1954,9 @@
         {
           "url": "http://dappnode1.ont.io:20339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 53,
+          "block": 20998326,
+          "blockTimestamp": 1793804166,
+          "ageSeconds": 57,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1934,9 +1964,9 @@
         {
           "url": "http://dappnode2.ont.io:20339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 55,
+          "block": 20998326,
+          "blockTimestamp": 1793804166,
+          "ageSeconds": 58,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1944,9 +1974,9 @@
         {
           "url": "http://dappnode3.ont.io:20339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 56,
+          "block": 20998326,
+          "blockTimestamp": 1793804166,
+          "ageSeconds": 59,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1954,9 +1984,9 @@
         {
           "url": "http://dappnode4.ont.io:20339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 57,
+          "block": 20998326,
+          "blockTimestamp": 1793804166,
+          "ageSeconds": 61,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -1964,22 +1994,22 @@
         {
           "url": "https://dappnode1.ont.io:10339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 59,
+          "block": 20998327,
+          "blockTimestamp": 1793804196,
+          "ageSeconds": 32,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "http://dappnode1.ont.io:20339",
+      "endpoint": "https://dappnode1.ont.io:10339",
       "status": "LIVE",
       "contracts": [],
-      "block": 20998324,
-      "blockTimestamp": 1793804106,
-      "ageSeconds": 53,
+      "block": 20998327,
+      "blockTimestamp": 1793804196,
+      "ageSeconds": 32,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:06+00:00"
+      "lastBlockTime": "2026-11-04T14:56:36+00:00"
     },
     {
       "name": "OntologyEVM",
@@ -1993,9 +2023,9 @@
         {
           "url": "http://dappnode1.ont.io:20339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 53,
+          "block": 20998326,
+          "blockTimestamp": 1793804166,
+          "ageSeconds": 57,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2003,9 +2033,9 @@
         {
           "url": "http://dappnode2.ont.io:20339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 55,
+          "block": 20998326,
+          "blockTimestamp": 1793804166,
+          "ageSeconds": 58,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2013,9 +2043,9 @@
         {
           "url": "http://dappnode3.ont.io:20339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 56,
+          "block": 20998326,
+          "blockTimestamp": 1793804166,
+          "ageSeconds": 59,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2023,9 +2053,9 @@
         {
           "url": "http://dappnode4.ont.io:20339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 57,
+          "block": 20998326,
+          "blockTimestamp": 1793804166,
+          "ageSeconds": 61,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2033,22 +2063,22 @@
         {
           "url": "https://dappnode1.ont.io:10339",
           "chainId": 58,
-          "block": 20998324,
-          "blockTimestamp": 1793804106,
-          "ageSeconds": 59,
+          "block": 20998327,
+          "blockTimestamp": 1793804196,
+          "ageSeconds": 32,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "http://dappnode1.ont.io:20339",
+      "endpoint": "https://dappnode1.ont.io:10339",
       "status": "LIVE",
       "contracts": [],
-      "block": 20998324,
-      "blockTimestamp": 1793804106,
-      "ageSeconds": 53,
+      "block": 20998327,
+      "blockTimestamp": 1793804196,
+      "ageSeconds": 32,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:06+00:00"
+      "lastBlockTime": "2026-11-04T14:56:36+00:00"
     },
     {
       "name": "opBNB",
@@ -2062,8 +2092,8 @@
         {
           "url": "https://opbnb-mainnet-rpc.bnbchain.org",
           "chainId": 204,
-          "block": 202748910,
-          "blockTimestamp": 1793804158,
+          "block": 202749165,
+          "blockTimestamp": 1793804221,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -2072,8 +2102,8 @@
         {
           "url": "https://opbnb-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3",
           "chainId": 204,
-          "block": 202748916,
-          "blockTimestamp": 1793804158,
+          "block": 202749168,
+          "blockTimestamp": 1793804221,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -2082,8 +2112,8 @@
         {
           "url": "https://opbnb-mainnet.nodereal.io/v1/e9a36765eb8a40b9bd12e680a1fd2bc5",
           "chainId": 204,
-          "block": 202748919,
-          "blockTimestamp": 1793804158,
+          "block": 202749171,
+          "blockTimestamp": 1793804221,
           "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
@@ -2092,9 +2122,9 @@
         {
           "url": "https://opbnb-rpc.publicnode.com",
           "chainId": 204,
-          "block": 202748922,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 1,
+          "block": 202749173,
+          "blockTimestamp": 1793804224,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2102,22 +2132,22 @@
         {
           "url": "https://opbnb.drpc.org",
           "chainId": 204,
-          "block": 202748923,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 1,
+          "block": 202749175,
+          "blockTimestamp": 1793804225,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "https://opbnb-mainnet-rpc.bnbchain.org",
+      "endpoint": "https://opbnb-rpc.publicnode.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 202748910,
-      "blockTimestamp": 1793804158,
-      "ageSeconds": 1,
+      "block": 202749173,
+      "blockTimestamp": 1793804224,
+      "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:58+00:00"
+      "lastBlockTime": "2026-11-04T14:57:04+00:00"
     },
     {
       "name": "Evmos",
@@ -2167,7 +2197,7 @@
           "chainId": 39797,
           "block": 3497532,
           "blockTimestamp": 1793804124,
-          "ageSeconds": 36,
+          "ageSeconds": 99,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2178,7 +2208,7 @@
       "contracts": [],
       "block": 3497532,
       "blockTimestamp": 1793804124,
-      "ageSeconds": 36,
+      "ageSeconds": 99,
       "ageDays": 0.0,
       "lastBlockTime": "2026-11-04T14:55:24+00:00"
     },
@@ -2194,9 +2224,9 @@
         {
           "url": "https://api.zilliqa.com",
           "chainId": 32769,
-          "block": 39638816,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 1,
+          "block": 39638873,
+          "blockTimestamp": 1793804222,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2205,11 +2235,11 @@
       "endpoint": "https://api.zilliqa.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 39638816,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 1,
+      "block": 39638873,
+      "blockTimestamp": 1793804222,
+      "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:02+00:00"
     },
     {
       "name": "Canto",
@@ -2277,9 +2307,9 @@
         {
           "url": "https://rpc.rei.network",
           "chainId": 47805,
-          "block": 42543368,
-          "blockTimestamp": 1793804158,
-          "ageSeconds": 2,
+          "block": 42543387,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2288,11 +2318,11 @@
       "endpoint": "https://rpc.rei.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 42543368,
-      "blockTimestamp": 1793804158,
-      "ageSeconds": 2,
+      "block": 42543387,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:58+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Shibarium",
@@ -2306,9 +2336,9 @@
         {
           "url": "https://rpc.shibarium.shib.io",
           "chainId": 109,
-          "block": 19716505,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 0,
+          "block": 19716518,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2327,11 +2357,11 @@
       "endpoint": "https://rpc.shibarium.shib.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 19716505,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 0,
+      "block": 19716518,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Hoo",
@@ -2369,9 +2399,9 @@
         {
           "url": "https://rpc.q.org",
           "chainId": 35441,
-          "block": 29083661,
-          "blockTimestamp": 1793804156,
-          "ageSeconds": 4,
+          "block": 29083674,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2380,11 +2410,11 @@
       "endpoint": "https://rpc.q.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 29083661,
-      "blockTimestamp": 1793804156,
-      "ageSeconds": 4,
+      "block": 29083674,
+      "blockTimestamp": 1793804221,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:56+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Bitgert",
@@ -2398,9 +2428,9 @@
         {
           "url": "https://rpc-bitgert.icecreamswap.com",
           "chainId": 32520,
-          "block": 9925606,
-          "blockTimestamp": 1793804146,
-          "ageSeconds": 15,
+          "block": 9925611,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2439,11 +2469,11 @@
       "endpoint": "https://rpc-bitgert.icecreamswap.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 9925606,
-      "blockTimestamp": 1793804146,
-      "ageSeconds": 15,
+      "block": 9925611,
+      "blockTimestamp": 1793804221,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:46+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Astar",
@@ -2486,9 +2516,9 @@
         {
           "url": "https://rpc.mainnet.arc.io",
           "chainId": 5042,
-          "block": 29515575,
-          "blockTimestamp": 1793804159,
-          "ageSeconds": 0,
+          "block": 29515701,
+          "blockTimestamp": 1793804222,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": true
@@ -2496,8 +2526,8 @@
         {
           "url": "https://rpc.blockdaemon.mainnet.arc.io",
           "chainId": 5042,
-          "block": 29515578,
-          "blockTimestamp": 1793804160,
+          "block": 29515703,
+          "blockTimestamp": 1793804223,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -2506,8 +2536,8 @@
         {
           "url": "https://rpc.drpc.mainnet.arc.io",
           "chainId": 5042,
-          "block": 29515579,
-          "blockTimestamp": 1793804161,
+          "block": 29515704,
+          "blockTimestamp": 1793804224,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -2516,8 +2546,8 @@
         {
           "url": "https://rpc.quicknode.mainnet.arc.io",
           "chainId": 5042,
-          "block": 29515579,
-          "blockTimestamp": 1793804161,
+          "block": 29515704,
+          "blockTimestamp": 1793804224,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -2526,8 +2556,8 @@
         {
           "url": "https://rpc.beamrpc.com",
           "chainId": 5042,
-          "block": 29515580,
-          "blockTimestamp": 1793804161,
+          "block": 29515705,
+          "blockTimestamp": 1793804224,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -2537,11 +2567,11 @@
       "endpoint": "https://rpc.quicknode.mainnet.arc.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 29515579,
-      "blockTimestamp": 1793804161,
+      "block": 29515704,
+      "blockTimestamp": 1793804224,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:04+00:00"
     },
     {
       "name": "Karura",
@@ -2555,9 +2585,9 @@
         {
           "url": "https://eth-rpc-karura.aca-api.network",
           "chainId": 686,
-          "block": 12788463,
-          "blockTimestamp": 1793804154,
-          "ageSeconds": 6,
+          "block": 12788468,
+          "blockTimestamp": 1793804214,
+          "ageSeconds": 10,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2566,11 +2596,11 @@
       "endpoint": "https://eth-rpc-karura.aca-api.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 12788463,
-      "blockTimestamp": 1793804154,
-      "ageSeconds": 6,
+      "block": 12788468,
+      "blockTimestamp": 1793804214,
+      "ageSeconds": 10,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:54+00:00"
+      "lastBlockTime": "2026-11-04T14:56:54+00:00"
     },
     {
       "name": "Meter",
@@ -2610,9 +2640,9 @@
         {
           "url": "https://rpc.rollux.com",
           "chainId": 570,
-          "block": 53219460,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 0,
+          "block": 53219491,
+          "blockTimestamp": 1793804223,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2631,11 +2661,11 @@
       "endpoint": "https://rpc.rollux.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 53219460,
-      "blockTimestamp": 1793804161,
-      "ageSeconds": 0,
+      "block": 53219491,
+      "blockTimestamp": 1793804223,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:03+00:00"
     },
     {
       "name": "Unit Zero",
@@ -2649,9 +2679,9 @@
         {
           "url": "https://rpc.unit0.dev",
           "chainId": 88811,
-          "block": 15657884,
-          "blockTimestamp": 1793804153,
-          "ageSeconds": 9,
+          "block": 15657892,
+          "blockTimestamp": 1793804219,
+          "ageSeconds": 6,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2660,11 +2690,11 @@
       "endpoint": "https://rpc.unit0.dev",
       "status": "LIVE",
       "contracts": [],
-      "block": 15657884,
-      "blockTimestamp": 1793804153,
-      "ageSeconds": 9,
+      "block": 15657892,
+      "blockTimestamp": 1793804219,
+      "ageSeconds": 6,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:53+00:00"
+      "lastBlockTime": "2026-11-04T14:56:59+00:00"
     },
     {
       "name": "EnergyWeb",
@@ -2680,9 +2710,9 @@
         {
           "url": "https://rpc.energyweb.org",
           "chainId": 246,
-          "block": 43473027,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 1,
+          "block": 43473039,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 4,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2697,11 +2727,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 43473027,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 1,
+      "block": 43473039,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 4,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "GoChain",
@@ -2715,9 +2745,9 @@
         {
           "url": "https://rpc.gochain.io",
           "chainId": 60,
-          "block": 53368830,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 1,
+          "block": 53368842,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 4,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2726,11 +2756,11 @@
       "endpoint": "https://rpc.gochain.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 53368830,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 1,
+      "block": 53368842,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 4,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Viction",
@@ -2744,9 +2774,9 @@
         {
           "url": "https://rpc.viction.xyz",
           "chainId": 88,
-          "block": 115899433,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 0,
+          "block": 115899465,
+          "blockTimestamp": 1793804223,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2755,11 +2785,11 @@
       "endpoint": "https://rpc.viction.xyz",
       "status": "LIVE",
       "contracts": [],
-      "block": 115899433,
-      "blockTimestamp": 1793804161,
-      "ageSeconds": 0,
+      "block": 115899465,
+      "blockTimestamp": 1793804223,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:03+00:00"
     },
     {
       "name": "Milkomeda C1",
@@ -2847,9 +2877,9 @@
         {
           "url": "https://rpc-mainnet.vechain.energy",
           "chainId": 100009,
-          "block": 26327152,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 1,
+          "block": 26327158,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 5,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2858,11 +2888,11 @@
       "endpoint": "https://rpc-mainnet.vechain.energy",
       "status": "LIVE",
       "contracts": [],
-      "block": 26327152,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 1,
+      "block": 26327158,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 5,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Callisto",
@@ -2900,9 +2930,9 @@
         {
           "url": "https://rpc.apechain.com",
           "chainId": 33139,
-          "block": 53916979,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 0,
+          "block": 53917044,
+          "blockTimestamp": 1793804223,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -2911,11 +2941,11 @@
       "endpoint": "https://rpc.apechain.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 53916979,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 0,
+      "block": 53917044,
+      "blockTimestamp": 1793804223,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:03+00:00"
     },
     {
       "name": "CSC",
@@ -2953,8 +2983,8 @@
         {
           "url": "https://rpc.api.lisk.com",
           "chainId": 1135,
-          "block": 39537684,
-          "blockTimestamp": 1793804159,
+          "block": 39537715,
+          "blockTimestamp": 1793804221,
           "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
@@ -2964,11 +2994,11 @@
       "endpoint": "https://rpc.api.lisk.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 39537684,
-      "blockTimestamp": 1793804159,
+      "block": 39537715,
+      "blockTimestamp": 1793804221,
       "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:59+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Somnia",
@@ -2984,8 +3014,8 @@
         {
           "url": "https://api.infra.mainnet.somnia.network",
           "chainId": 5031,
-          "block": 456496988,
-          "blockTimestamp": 1793804161,
+          "block": 456497618,
+          "blockTimestamp": 1793804224,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -3001,11 +3031,11 @@
           "nativeWei": 10000000000000000000
         }
       ],
-      "block": 456496988,
-      "blockTimestamp": 1793804161,
+      "block": 456497618,
+      "blockTimestamp": 1793804224,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:04+00:00"
     },
     {
       "name": "Nahmii",
@@ -3045,9 +3075,9 @@
         {
           "url": "https://eth-rpc-api.thetatoken.org/rpc",
           "chainId": 361,
-          "block": 36572915,
-          "blockTimestamp": 1793804144,
-          "ageSeconds": 17,
+          "block": 36572925,
+          "blockTimestamp": 1793804206,
+          "ageSeconds": 18,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3058,16 +3088,15 @@
       "contracts": [
         {
           "address": "0x4dc08b15ea0e10b96c41aec22fab934ba15c983e",
-          "codeBytes": null,
-          "nativeWei": 13092695295761361835601961,
-          "error": "{'code': -32000, 'message': \"failed to get theta RPC response: invalid character"
+          "codeBytes": 1650,
+          "nativeWei": 13092695295761361835601961
         }
       ],
-      "block": 36572915,
-      "blockTimestamp": 1793804144,
-      "ageSeconds": 17,
+      "block": 36572925,
+      "blockTimestamp": 1793804206,
+      "ageSeconds": 18,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:44+00:00"
+      "lastBlockTime": "2026-11-04T14:56:46+00:00"
     },
     {
       "name": "Syscoin",
@@ -3083,7 +3112,7 @@
           "chainId": 57,
           "block": 1019578,
           "blockTimestamp": 1793803336,
-          "ageSeconds": 826,
+          "ageSeconds": 889,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3103,7 +3132,7 @@
           "chainId": 57,
           "block": 1019578,
           "blockTimestamp": 1793803336,
-          "ageSeconds": 827,
+          "ageSeconds": 890,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3113,7 +3142,7 @@
           "chainId": 57,
           "block": 1019578,
           "blockTimestamp": 1793803336,
-          "ageSeconds": 828,
+          "ageSeconds": 891,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3124,7 +3153,7 @@
       "contracts": [],
       "block": 1019578,
       "blockTimestamp": 1793803336,
-      "ageSeconds": 826,
+      "ageSeconds": 889,
       "ageDays": 0.01,
       "lastBlockTime": "2026-11-04T14:42:16+00:00"
     },
@@ -3204,8 +3233,8 @@
         {
           "url": "https://rpc-gel.inkonchain.com",
           "chainId": 57073,
-          "block": 60305749,
-          "blockTimestamp": 1793804161,
+          "block": 60305813,
+          "blockTimestamp": 1793804224,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -3214,8 +3243,8 @@
         {
           "url": "https://rpc-qnd.inkonchain.com",
           "chainId": 57073,
-          "block": 60305751,
-          "blockTimestamp": 1793804162,
+          "block": 60305815,
+          "blockTimestamp": 1793804226,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -3225,11 +3254,11 @@
       "endpoint": "https://rpc-qnd.inkonchain.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 60305751,
-      "blockTimestamp": 1793804162,
+      "block": 60305815,
+      "blockTimestamp": 1793804226,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:02+00:00"
+      "lastBlockTime": "2026-11-04T14:57:06+00:00"
     },
     {
       "name": "Gravity by Galxe",
@@ -3243,8 +3272,8 @@
         {
           "url": "https://mainnet-rpc.gravity.xyz",
           "chainId": 127001,
-          "block": 63105145,
-          "blockTimestamp": 1793804161,
+          "block": 63105414,
+          "blockTimestamp": 1793804224,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -3254,11 +3283,11 @@
       "endpoint": "https://mainnet-rpc.gravity.xyz",
       "status": "LIVE",
       "contracts": [],
-      "block": 63105145,
-      "blockTimestamp": 1793804161,
+      "block": 63105414,
+      "blockTimestamp": 1793804224,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:04+00:00"
     },
     {
       "name": "Boba_Avax",
@@ -3308,9 +3337,9 @@
         {
           "url": "https://mainnet.mode.network",
           "chainId": 34443,
-          "block": 46818289,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 0,
+          "block": 46818320,
+          "blockTimestamp": 1793804223,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3318,15 +3347,15 @@
         {
           "url": "https://mode.drpc.org",
           "chainId": 34443,
-          "block": 46818287,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 1,
+          "block": 46818320,
+          "blockTimestamp": 1793804225,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "https://mainnet.mode.network",
+      "endpoint": "https://mode.drpc.org",
       "status": "LIVE",
       "contracts": [
         {
@@ -3335,11 +3364,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 46818289,
-      "blockTimestamp": 1793804161,
+      "block": 46818320,
+      "blockTimestamp": 1793804225,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:05+00:00"
     },
     {
       "name": "Cronos zkEVM",
@@ -3357,7 +3386,7 @@
           "chainId": 240,
           "block": 396527,
           "blockTimestamp": 1793759401,
-          "ageSeconds": 44761,
+          "ageSeconds": 44823,
           "error": null,
           "chainIdMatches": true,
           "suspect": true
@@ -3381,9 +3410,9 @@
         {
           "url": "https://api.mainnet.abs.xyz",
           "chainId": 2741,
-          "block": 88724041,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 1,
+          "block": 88724092,
+          "blockTimestamp": 1793804223,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3398,11 +3427,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 88724041,
-      "blockTimestamp": 1793804161,
-      "ageSeconds": 1,
+      "block": 88724092,
+      "blockTimestamp": 1793804223,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:03+00:00"
     },
     {
       "name": "GOAT",
@@ -3416,8 +3445,8 @@
         {
           "url": "https://rpc.goat.network",
           "chainId": 2345,
-          "block": 16600832,
-          "blockTimestamp": 1793804161,
+          "block": 16600851,
+          "blockTimestamp": 1793804224,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -3427,11 +3456,11 @@
       "endpoint": "https://rpc.goat.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 16600832,
-      "blockTimestamp": 1793804161,
+      "block": 16600851,
+      "blockTimestamp": 1793804224,
       "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:04+00:00"
     },
     {
       "name": "DFK",
@@ -3513,9 +3542,9 @@
         {
           "url": "https://rpc.zora.energy",
           "chainId": 7777777,
-          "block": 53555161,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 1,
+          "block": 53555193,
+          "blockTimestamp": 1793804225,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3524,11 +3553,11 @@
       "endpoint": "https://rpc.zora.energy",
       "status": "LIVE",
       "contracts": [],
-      "block": 53555161,
-      "blockTimestamp": 1793804161,
-      "ageSeconds": 1,
+      "block": 53555193,
+      "blockTimestamp": 1793804225,
+      "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:05+00:00"
     },
     {
       "name": "Milkomeda A1",
@@ -3662,8 +3691,8 @@
         {
           "url": "https://rpc.mtv.ac",
           "chainId": 62621,
-          "block": 56345088,
-          "blockTimestamp": 1793804163,
+          "block": 56345109,
+          "blockTimestamp": 1793804226,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -3672,9 +3701,9 @@
         {
           "url": "https://rpc-eu.mtv.ac",
           "chainId": 62621,
-          "block": 56345087,
-          "blockTimestamp": 1793804157,
-          "ageSeconds": 7,
+          "block": 56345107,
+          "blockTimestamp": 1793804217,
+          "ageSeconds": 10,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3683,11 +3712,11 @@
       "endpoint": "https://rpc.mtv.ac",
       "status": "LIVE",
       "contracts": [],
-      "block": 56345088,
-      "blockTimestamp": 1793804163,
+      "block": 56345109,
+      "blockTimestamp": 1793804226,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:03+00:00"
+      "lastBlockTime": "2026-11-04T14:57:06+00:00"
     },
     {
       "name": "Acala",
@@ -3701,9 +3730,9 @@
         {
           "url": "https://eth-rpc-acala.aca-api.network",
           "chainId": 787,
-          "block": 12360006,
-          "blockTimestamp": 1793804154,
-          "ageSeconds": 9,
+          "block": 12360011,
+          "blockTimestamp": 1793804214,
+          "ageSeconds": 12,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3712,11 +3741,11 @@
       "endpoint": "https://eth-rpc-acala.aca-api.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 12360006,
-      "blockTimestamp": 1793804154,
-      "ageSeconds": 9,
+      "block": 12360011,
+      "blockTimestamp": 1793804214,
+      "ageSeconds": 12,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:54+00:00"
+      "lastBlockTime": "2026-11-04T14:56:54+00:00"
     },
     {
       "name": "Odyssey",
@@ -3754,9 +3783,9 @@
         {
           "url": "https://42.rpc.thirdweb.com",
           "chainId": 42,
-          "block": 8715743,
-          "blockTimestamp": 1793804148,
-          "ageSeconds": 14,
+          "block": 8715749,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 5,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3774,22 +3803,22 @@
         {
           "url": "https://rpc.mainnet.lukso.network",
           "chainId": 42,
-          "block": 8715744,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 9,
+          "block": 8715749,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 12,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "https://rpc.mainnet.lukso.network",
+      "endpoint": "https://42.rpc.thirdweb.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 8715744,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 9,
+      "block": 8715749,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 5,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Nova Network",
@@ -3883,7 +3912,7 @@
           "chainId": 1230,
           "block": 8262261,
           "blockTimestamp": 1793802993,
-          "ageSeconds": 1170,
+          "ageSeconds": 1233,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3894,7 +3923,7 @@
       "contracts": [],
       "block": 8262261,
       "blockTimestamp": 1793802993,
-      "ageSeconds": 1170,
+      "ageSeconds": 1233,
       "ageDays": 0.01,
       "lastBlockTime": "2026-11-04T14:36:33+00:00"
     },
@@ -3912,7 +3941,7 @@
           "chainId": 42766,
           "block": 29987589,
           "blockTimestamp": 1793767754,
-          "ageSeconds": 36409,
+          "ageSeconds": 36472,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -3923,7 +3952,7 @@
       "contracts": [],
       "block": 29987589,
       "blockTimestamp": 1793767754,
-      "ageSeconds": 36409,
+      "ageSeconds": 36472,
       "ageDays": 0.42,
       "lastBlockTime": "2026-11-04T04:49:14+00:00"
     },
@@ -3939,8 +3968,8 @@
         {
           "url": "https://api.wemix.com",
           "chainId": 1111,
-          "block": 127570445,
-          "blockTimestamp": 1793804161,
+          "block": 127570508,
+          "blockTimestamp": 1793804224,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -3950,11 +3979,11 @@
       "endpoint": "https://api.wemix.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 127570445,
-      "blockTimestamp": 1793804161,
+      "block": 127570508,
+      "blockTimestamp": 1793804224,
       "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:57:04+00:00"
     },
     {
       "name": "Dexit",
@@ -3992,9 +4021,9 @@
         {
           "url": "https://mainapi.omaxray.com",
           "chainId": 311,
-          "block": 12277060,
-          "blockTimestamp": 1793804159,
-          "ageSeconds": 4,
+          "block": 12277064,
+          "blockTimestamp": 1793804199,
+          "ageSeconds": 28,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4002,9 +4031,9 @@
         {
           "url": "https://mainapi.omaxscan.com",
           "chainId": 311,
-          "block": 12277060,
-          "blockTimestamp": 1793804159,
-          "ageSeconds": 5,
+          "block": 12277064,
+          "blockTimestamp": 1793804199,
+          "ageSeconds": 29,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4013,11 +4042,11 @@
       "endpoint": "https://mainapi.omaxray.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 12277060,
-      "blockTimestamp": 1793804159,
-      "ageSeconds": 4,
+      "block": 12277064,
+      "blockTimestamp": 1793804199,
+      "ageSeconds": 28,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:59+00:00"
+      "lastBlockTime": "2026-11-04T14:56:39+00:00"
     },
     {
       "name": "DChain",
@@ -4079,9 +4108,9 @@
         {
           "url": "https://rpc-testnet.bitkubchain.io",
           "chainId": 25925,
-          "block": 34997472,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 3,
+          "block": 34997494,
+          "blockTimestamp": 1793804226,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": true
@@ -4108,7 +4137,7 @@
           "block": null,
           "blockTimestamp": null,
           "ageSeconds": null,
-          "error": "chainId: HTTP Error 502: Bad Gateway",
+          "error": "chainId: HTTP Error 404: Not Found",
           "chainIdMatches": null,
           "suspect": false
         }
@@ -4129,8 +4158,8 @@
         {
           "url": "https://rpc-gel.inkonchain.com",
           "chainId": 57073,
-          "block": 60305751,
-          "blockTimestamp": 1793804162,
+          "block": 60305814,
+          "blockTimestamp": 1793804226,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -4139,9 +4168,9 @@
         {
           "url": "https://rpc-qnd.inkonchain.com",
           "chainId": 57073,
-          "block": 60305752,
-          "blockTimestamp": 1793804164,
-          "ageSeconds": 0,
+          "block": 60305816,
+          "blockTimestamp": 1793804227,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4150,11 +4179,11 @@
       "endpoint": "https://rpc-qnd.inkonchain.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 60305752,
-      "blockTimestamp": 1793804164,
-      "ageSeconds": 0,
+      "block": 60305816,
+      "blockTimestamp": 1793804227,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:04+00:00"
+      "lastBlockTime": "2026-11-04T14:57:07+00:00"
     },
     {
       "name": "GodwokenV1",
@@ -4170,7 +4199,7 @@
           "chainId": 71402,
           "block": 2851258,
           "blockTimestamp": 1781242440,
-          "ageSeconds": 12561723,
+          "ageSeconds": 12561786,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4181,7 +4210,7 @@
       "contracts": [],
       "block": 2851258,
       "blockTimestamp": 1781242440,
-      "ageSeconds": 12561723,
+      "ageSeconds": 12561786,
       "ageDays": 145.39,
       "lastBlockTime": "2026-06-12T05:34:00+00:00",
       "nextBlockProbe": [
@@ -4206,8 +4235,8 @@
         {
           "url": "https://rpc.mainnet.arc.io",
           "chainId": 5042,
-          "block": 29515582,
-          "blockTimestamp": 1793804162,
+          "block": 29515707,
+          "blockTimestamp": 1793804226,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -4216,9 +4245,9 @@
         {
           "url": "https://rpc.blockdaemon.mainnet.arc.io",
           "chainId": 5042,
-          "block": 29515584,
-          "blockTimestamp": 1793804163,
-          "ageSeconds": 1,
+          "block": 29515709,
+          "blockTimestamp": 1793804227,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4226,8 +4255,8 @@
         {
           "url": "https://rpc.drpc.mainnet.arc.io",
           "chainId": 5042,
-          "block": 29515585,
-          "blockTimestamp": 1793804163,
+          "block": 29515711,
+          "blockTimestamp": 1793804227,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -4236,8 +4265,8 @@
         {
           "url": "https://rpc.quicknode.mainnet.arc.io",
           "chainId": 5042,
-          "block": 29515585,
-          "blockTimestamp": 1793804163,
+          "block": 29515711,
+          "blockTimestamp": 1793804227,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -4246,15 +4275,15 @@
         {
           "url": "https://rpc.beamrpc.com",
           "chainId": 5042,
-          "block": 29515585,
-          "blockTimestamp": 1793804164,
+          "block": 29515711,
+          "blockTimestamp": 1793804228,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "https://rpc.beamrpc.com",
+      "endpoint": "https://rpc.blockdaemon.mainnet.arc.io",
       "status": "LIVE",
       "contracts": [
         {
@@ -4265,11 +4294,11 @@
           "balanceError": "{'code': -32602, 'message': 'Invalid params', 'data': 'invalid string length at "
         }
       ],
-      "block": 29515585,
-      "blockTimestamp": 1793804164,
+      "block": 29515709,
+      "blockTimestamp": 1793804227,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:04+00:00"
+      "lastBlockTime": "2026-11-04T14:57:07+00:00"
     },
     {
       "name": "Bifrost",
@@ -4283,9 +4312,9 @@
         {
           "url": "https://public-01.mainnet.bifrostnetwork.com/rpc",
           "chainId": 3068,
-          "block": 39985678,
-          "blockTimestamp": 1793804163,
-          "ageSeconds": 0,
+          "block": 39985699,
+          "blockTimestamp": 1793804226,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4293,8 +4322,8 @@
         {
           "url": "https://public-02.mainnet.bifrostnetwork.com/rpc",
           "chainId": 3068,
-          "block": 39985678,
-          "blockTimestamp": 1793804163,
+          "block": 39985699,
+          "blockTimestamp": 1793804226,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -4304,11 +4333,11 @@
       "endpoint": "https://public-01.mainnet.bifrostnetwork.com/rpc",
       "status": "LIVE",
       "contracts": [],
-      "block": 39985678,
-      "blockTimestamp": 1793804163,
-      "ageSeconds": 0,
+      "block": 39985699,
+      "blockTimestamp": 1793804226,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:03+00:00"
+      "lastBlockTime": "2026-11-04T14:57:06+00:00"
     },
     {
       "name": "Tombchain",
@@ -4468,9 +4497,9 @@
         {
           "url": "https://sagaevm.jsonrpc.sagarpc.io",
           "chainId": 5464,
-          "block": 10728571,
-          "blockTimestamp": 1793804156,
-          "ageSeconds": 8,
+          "block": 10728583,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 7,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4479,11 +4508,11 @@
       "endpoint": "https://sagaevm.jsonrpc.sagarpc.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 10728571,
-      "blockTimestamp": 1793804156,
-      "ageSeconds": 8,
+      "block": 10728583,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 7,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:56+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Nibiru",
@@ -4521,9 +4550,9 @@
         {
           "url": "https://rpc.lens.xyz",
           "chainId": 232,
-          "block": 6459919,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 3,
+          "block": 6459925,
+          "blockTimestamp": 1793804200,
+          "ageSeconds": 28,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4532,11 +4561,11 @@
       "endpoint": "https://rpc.lens.xyz",
       "status": "LIVE",
       "contracts": [],
-      "block": 6459919,
-      "blockTimestamp": 1793804161,
-      "ageSeconds": 3,
+      "block": 6459925,
+      "blockTimestamp": 1793804200,
+      "ageSeconds": 28,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:01+00:00"
+      "lastBlockTime": "2026-11-04T14:56:40+00:00"
     },
     {
       "name": "0G",
@@ -4550,8 +4579,8 @@
         {
           "url": "https://evmrpc.0g.ai",
           "chainId": 16661,
-          "block": 49268533,
-          "blockTimestamp": 1793804162,
+          "block": 49268613,
+          "blockTimestamp": 1793804226,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -4561,11 +4590,11 @@
       "endpoint": "https://evmrpc.0g.ai",
       "status": "LIVE",
       "contracts": [],
-      "block": 49268533,
-      "blockTimestamp": 1793804162,
+      "block": 49268613,
+      "blockTimestamp": 1793804226,
       "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:02+00:00"
+      "lastBlockTime": "2026-11-04T14:57:06+00:00"
     },
     {
       "name": "Astar zkEVM",
@@ -4639,7 +4668,7 @@
           "chainId": 7368,
           "block": 88518,
           "blockTimestamp": 1793803948,
-          "ageSeconds": 216,
+          "ageSeconds": 279,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4650,7 +4679,7 @@
       "contracts": [],
       "block": 88518,
       "blockTimestamp": 1793803948,
-      "ageSeconds": 216,
+      "ageSeconds": 279,
       "ageDays": 0.0,
       "lastBlockTime": "2026-11-04T14:52:28+00:00"
     },
@@ -4690,9 +4719,9 @@
         {
           "url": "https://xai-chain.net/rpc",
           "chainId": 660279,
-          "block": 138266731,
-          "blockTimestamp": 1793804143,
-          "ageSeconds": 21,
+          "block": 138266780,
+          "blockTimestamp": 1793804226,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4701,11 +4730,11 @@
       "endpoint": "https://xai-chain.net/rpc",
       "status": "LIVE",
       "contracts": [],
-      "block": 138266731,
-      "blockTimestamp": 1793804143,
-      "ageSeconds": 21,
+      "block": 138266780,
+      "blockTimestamp": 1793804226,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:43+00:00"
+      "lastBlockTime": "2026-11-04T14:57:06+00:00"
     },
     {
       "name": "EDU Chain",
@@ -4743,9 +4772,9 @@
         {
           "url": "https://rpc.maplabs.io",
           "chainId": 22776,
-          "block": 26914296,
-          "blockTimestamp": 1793804164,
-          "ageSeconds": 2,
+          "block": 26914306,
+          "blockTimestamp": 1793804221,
+          "ageSeconds": 8,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4754,11 +4783,11 @@
       "endpoint": "https://rpc.maplabs.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 26914296,
-      "blockTimestamp": 1793804164,
-      "ageSeconds": 2,
+      "block": 26914306,
+      "blockTimestamp": 1793804221,
+      "ageSeconds": 8,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:04+00:00"
+      "lastBlockTime": "2026-11-04T14:57:01+00:00"
     },
     {
       "name": "Zeniq",
@@ -4772,8 +4801,8 @@
         {
           "url": "https://api.zeniq.network",
           "chainId": 383414847825,
-          "block": 41087486,
-          "blockTimestamp": 1793804160,
+          "block": 41087505,
+          "blockTimestamp": 1793804223,
           "ageSeconds": 5,
           "error": null,
           "chainIdMatches": true,
@@ -4783,11 +4812,11 @@
       "endpoint": "https://api.zeniq.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 41087486,
-      "blockTimestamp": 1793804160,
+      "block": 41087505,
+      "blockTimestamp": 1793804223,
       "ageSeconds": 5,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:03+00:00"
     },
     {
       "name": "UX",
@@ -4883,8 +4912,8 @@
         {
           "url": "https://subnets.avax.network/dexalot/mainnet/rpc",
           "chainId": 432204,
-          "block": 78082744,
-          "blockTimestamp": 1793804163,
+          "block": 78082807,
+          "blockTimestamp": 1793804227,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -4894,11 +4923,11 @@
       "endpoint": "https://subnets.avax.network/dexalot/mainnet/rpc",
       "status": "LIVE",
       "contracts": [],
-      "block": 78082744,
-      "blockTimestamp": 1793804163,
+      "block": 78082807,
+      "blockTimestamp": 1793804227,
       "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:03+00:00"
+      "lastBlockTime": "2026-11-04T14:57:07+00:00"
     },
     {
       "name": "Crab",
@@ -4946,9 +4975,9 @@
         {
           "url": "https://rpc.darwinia.network",
           "chainId": 46,
-          "block": 13752935,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 5,
+          "block": 13752945,
+          "blockTimestamp": 1793804226,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4967,11 +4996,11 @@
       "endpoint": "https://rpc.darwinia.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 13752935,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 5,
+      "block": 13752945,
+      "blockTimestamp": 1793804226,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:57:06+00:00"
     },
     {
       "name": "Sophon",
@@ -4987,7 +5016,7 @@
           "chainId": 50104,
           "block": 29682303,
           "blockTimestamp": 1793804057,
-          "ageSeconds": 108,
+          "ageSeconds": 172,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -4998,7 +5027,7 @@
       "contracts": [],
       "block": 29682303,
       "blockTimestamp": 1793804057,
-      "ageSeconds": 108,
+      "ageSeconds": 172,
       "ageDays": 0.0,
       "lastBlockTime": "2026-11-04T14:54:17+00:00"
     },
@@ -5014,9 +5043,9 @@
         {
           "url": "https://json-rpc.evm.iotaledger.net",
           "chainId": 8822,
-          "block": 13071047,
-          "blockTimestamp": 1793804162,
-          "ageSeconds": 3,
+          "block": 13071049,
+          "blockTimestamp": 1793804170,
+          "ageSeconds": 59,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5025,11 +5054,11 @@
       "endpoint": "https://json-rpc.evm.iotaledger.net",
       "status": "LIVE",
       "contracts": [],
-      "block": 13071047,
-      "blockTimestamp": 1793804162,
-      "ageSeconds": 3,
+      "block": 13071049,
+      "blockTimestamp": 1793804170,
+      "ageSeconds": 59,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:02+00:00"
+      "lastBlockTime": "2026-11-04T14:56:10+00:00"
     },
     {
       "name": "Oasys",
@@ -5043,9 +5072,9 @@
         {
           "url": "https://rpc.mainnet.oasys.games",
           "chainId": 248,
-          "block": 15293043,
-          "blockTimestamp": 1793804162,
-          "ageSeconds": 3,
+          "block": 15293053,
+          "blockTimestamp": 1793804228,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5054,11 +5083,11 @@
       "endpoint": "https://rpc.mainnet.oasys.games",
       "status": "LIVE",
       "contracts": [],
-      "block": 15293043,
-      "blockTimestamp": 1793804162,
-      "ageSeconds": 3,
+      "block": 15293053,
+      "blockTimestamp": 1793804228,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:02+00:00"
+      "lastBlockTime": "2026-11-04T14:57:08+00:00"
     },
     {
       "name": "Coti",
@@ -5072,8 +5101,8 @@
         {
           "url": "https://mainnet.coti.io/rpc",
           "chainId": 2632500,
-          "block": 10224600,
-          "blockTimestamp": 1793804163,
+          "block": 10224613,
+          "blockTimestamp": 1793804228,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -5083,11 +5112,11 @@
       "endpoint": "https://mainnet.coti.io/rpc",
       "status": "LIVE",
       "contracts": [],
-      "block": 10224600,
-      "blockTimestamp": 1793804163,
+      "block": 10224613,
+      "blockTimestamp": 1793804228,
       "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:03+00:00"
+      "lastBlockTime": "2026-11-04T14:57:08+00:00"
     },
     {
       "name": "Hydra",
@@ -5101,9 +5130,9 @@
         {
           "url": "https://rpc.hydradx.cloud",
           "chainId": 222222,
-          "block": 16612567,
-          "blockTimestamp": 1793804154,
-          "ageSeconds": 11,
+          "block": 16612599,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 8,
           "error": null,
           "chainIdMatches": true,
           "suspect": true
@@ -5111,9 +5140,9 @@
         {
           "url": "https://hydration-rpc.n.dwellir.com",
           "chainId": 222222,
-          "block": 16612568,
-          "blockTimestamp": 1793804154,
-          "ageSeconds": 13,
+          "block": 16612600,
+          "blockTimestamp": 1793804220,
+          "ageSeconds": 10,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5152,11 +5181,11 @@
       "endpoint": "https://hydration-rpc.n.dwellir.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 16612568,
-      "blockTimestamp": 1793804154,
-      "ageSeconds": 13,
+      "block": 16612600,
+      "blockTimestamp": 1793804220,
+      "ageSeconds": 10,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:54+00:00"
+      "lastBlockTime": "2026-11-04T14:57:00+00:00"
     },
     {
       "name": "Hydra Chain",
@@ -5170,9 +5199,9 @@
         {
           "url": "https://rpc-mainnet.hydrachain.org",
           "chainId": 4488,
-          "block": 99776025,
-          "blockTimestamp": 1793804165,
-          "ageSeconds": 1,
+          "block": 99776147,
+          "blockTimestamp": 1793804229,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5181,11 +5210,11 @@
       "endpoint": "https://rpc-mainnet.hydrachain.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 99776025,
-      "blockTimestamp": 1793804165,
-      "ageSeconds": 1,
+      "block": 99776147,
+      "blockTimestamp": 1793804229,
+      "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:05+00:00"
+      "lastBlockTime": "2026-11-04T14:57:09+00:00"
     },
     {
       "name": "ENULS",
@@ -5233,8 +5262,8 @@
         {
           "url": "https://rpc.plume.org",
           "chainId": 98866,
-          "block": 103675745,
-          "blockTimestamp": 1793804164,
+          "block": 103675904,
+          "blockTimestamp": 1793804228,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -5244,11 +5273,11 @@
       "endpoint": "https://rpc.plume.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 103675745,
-      "blockTimestamp": 1793804164,
+      "block": 103675904,
+      "blockTimestamp": 1793804228,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:04+00:00"
+      "lastBlockTime": "2026-11-04T14:57:08+00:00"
     },
     {
       "name": "Data Network",
@@ -5262,9 +5291,9 @@
         {
           "url": "https://mainnet.datarpc.io",
           "chainId": 1514,
-          "block": 24176925,
-          "blockTimestamp": 1793804159,
-          "ageSeconds": 6,
+          "block": 24176954,
+          "blockTimestamp": 1793804222,
+          "ageSeconds": 7,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5273,11 +5302,11 @@
       "endpoint": "https://mainnet.datarpc.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 24176925,
-      "blockTimestamp": 1793804159,
-      "ageSeconds": 6,
+      "block": 24176954,
+      "blockTimestamp": 1793804222,
+      "ageSeconds": 7,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:59+00:00"
+      "lastBlockTime": "2026-11-04T14:57:02+00:00"
     },
     {
       "name": "XPLA",
@@ -5317,18 +5346,18 @@
           "chainId": 50000,
           "block": 18090,
           "blockTimestamp": 1793800592,
-          "ageSeconds": 3574,
+          "ageSeconds": 3638,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
       "endpoint": "https://rpc.citronus.com",
-      "status": "LIVE",
+      "status": "STALLED",
       "contracts": [],
       "block": 18090,
       "blockTimestamp": 1793800592,
-      "ageSeconds": 3574,
+      "ageSeconds": 3638,
       "ageDays": 0.04,
       "lastBlockTime": "2026-11-04T13:56:32+00:00"
     },
@@ -5449,7 +5478,7 @@
           "block": null,
           "blockTimestamp": null,
           "ageSeconds": null,
-          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certif",
+          "error": "chainId: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (",
           "chainIdMatches": null,
           "suspect": true
         },
@@ -5586,9 +5615,9 @@
         {
           "url": "https://build.onbeam.com/rpc",
           "chainId": 4337,
-          "block": 9835983,
-          "blockTimestamp": 1793804016,
-          "ageSeconds": 150,
+          "block": 9835986,
+          "blockTimestamp": 1793804188,
+          "ageSeconds": 42,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5596,9 +5625,9 @@
         {
           "url": "https://subnets.avax.network/beam/mainnet/rpc",
           "chainId": 4337,
-          "block": 9835983,
-          "blockTimestamp": 1793804016,
-          "ageSeconds": 151,
+          "block": 9835986,
+          "blockTimestamp": 1793804188,
+          "ageSeconds": 42,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5607,11 +5636,11 @@
       "endpoint": "https://build.onbeam.com/rpc",
       "status": "LIVE",
       "contracts": [],
-      "block": 9835983,
-      "blockTimestamp": 1793804016,
-      "ageSeconds": 150,
+      "block": 9835986,
+      "blockTimestamp": 1793804188,
+      "ageSeconds": 42,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:53:36+00:00"
+      "lastBlockTime": "2026-11-04T14:56:28+00:00"
     },
     {
       "name": "Elysium",
@@ -5651,7 +5680,7 @@
           "chainId": 6292,
           "block": 50,
           "blockTimestamp": 1793589803,
-          "ageSeconds": 214363,
+          "ageSeconds": 214426,
           "error": null,
           "chainIdMatches": true,
           "suspect": true
@@ -5837,9 +5866,9 @@
         {
           "url": "https://rpc.bitnetmoney.com",
           "chainId": 210,
-          "block": 7931364,
-          "blockTimestamp": 1793804148,
-          "ageSeconds": 18,
+          "block": 7931365,
+          "blockTimestamp": 1793804165,
+          "ageSeconds": 65,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5847,9 +5876,9 @@
         {
           "url": "https://rpc.bitnetmoney.org",
           "chainId": 210,
-          "block": 7931364,
-          "blockTimestamp": 1793804148,
-          "ageSeconds": 18,
+          "block": 7931365,
+          "blockTimestamp": 1793804165,
+          "ageSeconds": 65,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -5858,11 +5887,11 @@
       "endpoint": "https://rpc.bitnetmoney.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 7931364,
-      "blockTimestamp": 1793804148,
-      "ageSeconds": 18,
+      "block": 7931365,
+      "blockTimestamp": 1793804165,
+      "ageSeconds": 65,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:48+00:00"
+      "lastBlockTime": "2026-11-04T14:56:05+00:00"
     },
     {
       "name": "Areum Network",
@@ -5964,8 +5993,8 @@
         {
           "url": "https://sapphire.oasis.io",
           "chainId": 23294,
-          "block": 16489804,
-          "blockTimestamp": 1793804155,
+          "block": 16489815,
+          "blockTimestamp": 1793804219,
           "ageSeconds": 11,
           "error": null,
           "chainIdMatches": true,
@@ -5975,11 +6004,11 @@
       "endpoint": "https://sapphire.oasis.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 16489804,
-      "blockTimestamp": 1793804155,
+      "block": 16489815,
+      "blockTimestamp": 1793804219,
       "ageSeconds": 11,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:55+00:00"
+      "lastBlockTime": "2026-11-04T14:56:59+00:00"
     },
     {
       "name": "K2",
@@ -5995,7 +6024,7 @@
           "chainId": 2410,
           "block": 43110911,
           "blockTimestamp": 1789617237,
-          "ageSeconds": 4186931,
+          "ageSeconds": 4186994,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6006,7 +6035,7 @@
       "contracts": [],
       "block": 43110911,
       "blockTimestamp": 1789617237,
-      "ageSeconds": 4186931,
+      "ageSeconds": 4186994,
       "ageDays": 48.46,
       "lastBlockTime": "2026-09-17T03:53:57+00:00",
       "nextBlockProbe": [
@@ -6053,9 +6082,9 @@
         {
           "url": "https://prom-rpc.eu-north-2.gateway.fm",
           "chainId": 227,
-          "block": 10401302,
-          "blockTimestamp": 1793804155,
-          "ageSeconds": 12,
+          "block": 10401313,
+          "blockTimestamp": 1793804223,
+          "ageSeconds": 8,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6064,11 +6093,11 @@
       "endpoint": "https://prom-rpc.eu-north-2.gateway.fm",
       "status": "LIVE",
       "contracts": [],
-      "block": 10401302,
-      "blockTimestamp": 1793804155,
-      "ageSeconds": 12,
+      "block": 10401313,
+      "blockTimestamp": 1793804223,
+      "ageSeconds": 8,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:55+00:00"
+      "lastBlockTime": "2026-11-04T14:57:03+00:00"
     },
     {
       "name": "Planq",
@@ -6108,7 +6137,7 @@
           "chainId": 274,
           "block": 23472941,
           "blockTimestamp": 1788266194,
-          "ageSeconds": 5537973,
+          "ageSeconds": 5538037,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6118,7 +6147,7 @@
           "chainId": 274,
           "block": 23472941,
           "blockTimestamp": 1788266194,
-          "ageSeconds": 5537974,
+          "ageSeconds": 5538037,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6139,7 +6168,7 @@
       "contracts": [],
       "block": 23472941,
       "blockTimestamp": 1788266194,
-      "ageSeconds": 5537973,
+      "ageSeconds": 5538037,
       "ageDays": 64.1,
       "lastBlockTime": "2026-09-01T12:36:34+00:00",
       "nextBlockProbe": [
@@ -6263,8 +6292,8 @@
         {
           "url": "https://rpc.doma.xyz",
           "chainId": 97477,
-          "block": 17917707,
-          "blockTimestamp": 1793804165,
+          "block": 17917739,
+          "blockTimestamp": 1793804229,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -6274,11 +6303,11 @@
       "endpoint": "https://rpc.doma.xyz",
       "status": "LIVE",
       "contracts": [],
-      "block": 17917707,
-      "blockTimestamp": 1793804165,
+      "block": 17917739,
+      "blockTimestamp": 1793804229,
       "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:05+00:00"
+      "lastBlockTime": "2026-11-04T14:57:09+00:00"
     },
     {
       "name": "Mind Network",
@@ -6340,9 +6369,9 @@
         {
           "url": "https://json-rpc.evm.iotaledger.net",
           "chainId": 8822,
-          "block": 13071047,
-          "blockTimestamp": 1793804162,
-          "ageSeconds": 5,
+          "block": 13071050,
+          "blockTimestamp": 1793804228,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6351,11 +6380,11 @@
       "endpoint": "https://json-rpc.evm.iotaledger.net",
       "status": "LIVE",
       "contracts": [],
-      "block": 13071047,
-      "blockTimestamp": 1793804162,
-      "ageSeconds": 5,
+      "block": 13071050,
+      "blockTimestamp": 1793804228,
+      "ageSeconds": 3,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:02+00:00"
+      "lastBlockTime": "2026-11-04T14:57:08+00:00"
     },
     {
       "name": "Neo X Mainnet",
@@ -6369,9 +6398,9 @@
         {
           "url": "https://mainnet-1.rpc.banelabs.org",
           "chainId": 47763,
-          "block": 8205951,
-          "blockTimestamp": 1793804151,
-          "ageSeconds": 16,
+          "block": 8205958,
+          "blockTimestamp": 1793804213,
+          "ageSeconds": 18,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6379,9 +6408,9 @@
         {
           "url": "https://mainnet-2.rpc.banelabs.org",
           "chainId": 47763,
-          "block": 8205951,
-          "blockTimestamp": 1793804151,
-          "ageSeconds": 17,
+          "block": 8205958,
+          "blockTimestamp": 1793804213,
+          "ageSeconds": 19,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6390,11 +6419,11 @@
       "endpoint": "https://mainnet-1.rpc.banelabs.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 8205951,
-      "blockTimestamp": 1793804151,
-      "ageSeconds": 16,
+      "block": 8205958,
+      "blockTimestamp": 1793804213,
+      "ageSeconds": 18,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:51+00:00"
+      "lastBlockTime": "2026-11-04T14:56:53+00:00"
     },
     {
       "name": "Dymension",
@@ -6466,9 +6495,9 @@
         {
           "url": "https://rpc.electroneum.com",
           "chainId": 52014,
-          "block": 16739126,
-          "blockTimestamp": 1793804165,
-          "ageSeconds": 2,
+          "block": 16739139,
+          "blockTimestamp": 1793804230,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6476,9 +6505,9 @@
         {
           "url": "https://rpc.ankr.com/electroneum",
           "chainId": 52014,
-          "block": 16739126,
-          "blockTimestamp": 1793804165,
-          "ageSeconds": 3,
+          "block": 16739139,
+          "blockTimestamp": 1793804230,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6487,11 +6516,11 @@
       "endpoint": "https://rpc.electroneum.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 16739126,
-      "blockTimestamp": 1793804165,
-      "ageSeconds": 2,
+      "block": 16739139,
+      "blockTimestamp": 1793804230,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:05+00:00"
+      "lastBlockTime": "2026-11-04T14:57:10+00:00"
     },
     {
       "name": "Polynomial",
@@ -6529,9 +6558,9 @@
         {
           "url": "https://rpc.matchain.io",
           "chainId": 698,
-          "block": 172747481,
-          "blockTimestamp": 1793804168,
-          "ageSeconds": 0,
+          "block": 172747735,
+          "blockTimestamp": 1793804231,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6540,11 +6569,11 @@
       "endpoint": "https://rpc.matchain.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 172747481,
-      "blockTimestamp": 1793804168,
-      "ageSeconds": 0,
+      "block": 172747735,
+      "blockTimestamp": 1793804231,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:08+00:00"
+      "lastBlockTime": "2026-11-04T14:57:11+00:00"
     },
     {
       "name": "Shape",
@@ -6558,8 +6587,8 @@
         {
           "url": "https://mainnet.shape.network",
           "chainId": 360,
-          "block": 36029848,
-          "blockTimestamp": 1793804167,
+          "block": 36029880,
+          "blockTimestamp": 1793804231,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -6568,8 +6597,8 @@
         {
           "url": "https://shape-mainnet.g.alchemy.com/public",
           "chainId": 360,
-          "block": 36029848,
-          "blockTimestamp": 1793804167,
+          "block": 36029880,
+          "blockTimestamp": 1793804231,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -6579,11 +6608,11 @@
       "endpoint": "https://mainnet.shape.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 36029848,
-      "blockTimestamp": 1793804167,
+      "block": 36029880,
+      "blockTimestamp": 1793804231,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:07+00:00"
+      "lastBlockTime": "2026-11-04T14:57:11+00:00"
     },
     {
       "name": "Asset Chain",
@@ -6597,9 +6626,9 @@
         {
           "url": "https://mainnet-rpc.assetchain.org",
           "chainId": 42420,
-          "block": 2042807,
-          "blockTimestamp": 1793804138,
-          "ageSeconds": 30,
+          "block": 2042811,
+          "blockTimestamp": 1793804206,
+          "ageSeconds": 26,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6608,11 +6637,11 @@
       "endpoint": "https://mainnet-rpc.assetchain.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 2042807,
-      "blockTimestamp": 1793804138,
-      "ageSeconds": 30,
+      "block": 2042811,
+      "blockTimestamp": 1793804206,
+      "ageSeconds": 26,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:38+00:00"
+      "lastBlockTime": "2026-11-04T14:56:46+00:00"
     },
     {
       "name": "Shido",
@@ -6628,8 +6657,8 @@
         {
           "url": "https://shido-mainnet-archive-lb-nw5es9.zeeve.net/USjg7xqUmCZ4wCsqEOOE/rpc",
           "chainId": 9008,
-          "block": 46905437,
-          "blockTimestamp": 1793804168,
+          "block": 46905508,
+          "blockTimestamp": 1793804231,
           "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
@@ -6638,9 +6667,9 @@
         {
           "url": "https://evm.shidoscan.net",
           "chainId": 9008,
-          "block": 46905438,
-          "blockTimestamp": 1793804169,
-          "ageSeconds": 2,
+          "block": 46905511,
+          "blockTimestamp": 1793804233,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6655,11 +6684,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 46905437,
-      "blockTimestamp": 1793804168,
+      "block": 46905508,
+      "blockTimestamp": 1793804231,
       "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:08+00:00"
+      "lastBlockTime": "2026-11-04T14:57:11+00:00"
     },
     {
       "name": "re.al",
@@ -6717,9 +6746,9 @@
         {
           "url": "https://rpc.vinuchain.org",
           "chainId": 207,
-          "block": 15277885,
-          "blockTimestamp": 1793804165,
-          "ageSeconds": 3,
+          "block": 15277887,
+          "blockTimestamp": 1793804198,
+          "ageSeconds": 33,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6728,11 +6757,11 @@
       "endpoint": "https://rpc.vinuchain.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 15277885,
-      "blockTimestamp": 1793804165,
-      "ageSeconds": 3,
+      "block": 15277887,
+      "blockTimestamp": 1793804198,
+      "ageSeconds": 33,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:05+00:00"
+      "lastBlockTime": "2026-11-04T14:56:38+00:00"
     },
     {
       "name": "Vana",
@@ -6746,9 +6775,9 @@
         {
           "url": "https://rpc.vana.org",
           "chainId": 1480,
-          "block": 10864962,
-          "blockTimestamp": 1793804167,
-          "ageSeconds": 1,
+          "block": 10864972,
+          "blockTimestamp": 1793804227,
+          "ageSeconds": 5,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6757,11 +6786,11 @@
       "endpoint": "https://rpc.vana.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 10864962,
-      "blockTimestamp": 1793804167,
-      "ageSeconds": 1,
+      "block": 10864972,
+      "blockTimestamp": 1793804227,
+      "ageSeconds": 5,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:07+00:00"
+      "lastBlockTime": "2026-11-04T14:57:07+00:00"
     },
     {
       "name": "CrossFi",
@@ -6801,7 +6830,7 @@
           "chainId": 181,
           "block": 16699104,
           "blockTimestamp": 1793783307,
-          "ageSeconds": 20862,
+          "ageSeconds": 20926,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6812,7 +6841,7 @@
       "contracts": [],
       "block": 16699104,
       "blockTimestamp": 1793783307,
-      "ageSeconds": 20862,
+      "ageSeconds": 20926,
       "ageDays": 0.24,
       "lastBlockTime": "2026-11-04T09:08:27+00:00"
     },
@@ -6828,9 +6857,9 @@
         {
           "url": "https://evm.mantrachain.io",
           "chainId": 5888,
-          "block": 19398361,
-          "blockTimestamp": 1793804164,
-          "ageSeconds": 4,
+          "block": 19398380,
+          "blockTimestamp": 1793804225,
+          "ageSeconds": 7,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6839,11 +6868,11 @@
       "endpoint": "https://evm.mantrachain.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 19398361,
-      "blockTimestamp": 1793804164,
-      "ageSeconds": 4,
+      "block": 19398380,
+      "blockTimestamp": 1793804225,
+      "ageSeconds": 7,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:04+00:00"
+      "lastBlockTime": "2026-11-04T14:57:05+00:00"
     },
     {
       "name": "Zero Network",
@@ -6929,9 +6958,9 @@
         {
           "url": "https://rpc.silicon.network",
           "chainId": 2355,
-          "block": 22018841,
-          "blockTimestamp": 1793804163,
-          "ageSeconds": 6,
+          "block": 22018860,
+          "blockTimestamp": 1793804229,
+          "ageSeconds": 4,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6939,9 +6968,9 @@
         {
           "url": "https://silicon-mainnet.nodeinfra.com",
           "chainId": 2355,
-          "block": 22018841,
-          "blockTimestamp": 1793804163,
-          "ageSeconds": 8,
+          "block": 22018860,
+          "blockTimestamp": 1793804229,
+          "ageSeconds": 6,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6950,11 +6979,11 @@
       "endpoint": "https://rpc.silicon.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 22018841,
-      "blockTimestamp": 1793804163,
-      "ageSeconds": 6,
+      "block": 22018860,
+      "blockTimestamp": 1793804229,
+      "ageSeconds": 4,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:03+00:00"
+      "lastBlockTime": "2026-11-04T14:57:09+00:00"
     },
     {
       "name": "MTT Network",
@@ -6968,9 +6997,9 @@
         {
           "url": "https://evm-rpc.mtt.network",
           "chainId": 6880,
-          "block": 22555670,
-          "blockTimestamp": 1793804163,
-          "ageSeconds": 6,
+          "block": 22555689,
+          "blockTimestamp": 1793804226,
+          "ageSeconds": 7,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -6979,11 +7008,11 @@
       "endpoint": "https://evm-rpc.mtt.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 22555670,
-      "blockTimestamp": 1793804163,
-      "ageSeconds": 6,
+      "block": 22555689,
+      "blockTimestamp": 1793804226,
+      "ageSeconds": 7,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:03+00:00"
+      "lastBlockTime": "2026-11-04T14:57:06+00:00"
     },
     {
       "name": "Aleph Zero EVM",
@@ -7021,8 +7050,8 @@
         {
           "url": "https://mainnet-rpc.ogpuscan.io",
           "chainId": 1071,
-          "block": 26197136,
-          "blockTimestamp": 1793804170,
+          "block": 26197159,
+          "blockTimestamp": 1793804234,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -7032,11 +7061,11 @@
       "endpoint": "https://mainnet-rpc.ogpuscan.io",
       "status": "LIVE",
       "contracts": [],
-      "block": 26197136,
-      "blockTimestamp": 1793804170,
+      "block": 26197159,
+      "blockTimestamp": 1793804234,
       "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:10+00:00"
+      "lastBlockTime": "2026-11-04T14:57:14+00:00"
     },
     {
       "name": "Inertia",
@@ -7074,9 +7103,9 @@
         {
           "url": "https://jsonrpc-yominet-1.anvil.asia-southeast.initia.xyz",
           "chainId": 428962654539583,
-          "block": 35017657,
-          "blockTimestamp": 1793804169,
-          "ageSeconds": 0,
+          "block": 35017689,
+          "blockTimestamp": 1793804232,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7085,11 +7114,11 @@
       "endpoint": "https://jsonrpc-yominet-1.anvil.asia-southeast.initia.xyz",
       "status": "LIVE",
       "contracts": [],
-      "block": 35017657,
-      "blockTimestamp": 1793804169,
-      "ageSeconds": 0,
+      "block": 35017689,
+      "blockTimestamp": 1793804232,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:09+00:00"
+      "lastBlockTime": "2026-11-04T14:57:12+00:00"
     },
     {
       "name": "XION",
@@ -7127,9 +7156,9 @@
         {
           "url": "https://mainnet.base.org",
           "chainId": 8453,
-          "block": 53507411,
-          "blockTimestamp": 1793804169,
-          "ageSeconds": 0,
+          "block": 53507442,
+          "blockTimestamp": 1793804231,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": true
@@ -7147,8 +7176,8 @@
         {
           "url": "https://base.gateway.tenderly.co",
           "chainId": 8453,
-          "block": 53507411,
-          "blockTimestamp": 1793804169,
+          "block": 53507442,
+          "blockTimestamp": 1793804233,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -7157,9 +7186,9 @@
         {
           "url": "https://base-rpc.publicnode.com",
           "chainId": 8453,
-          "block": 53507411,
-          "blockTimestamp": 1793804169,
-          "ageSeconds": 1,
+          "block": 53507443,
+          "blockTimestamp": 1793804233,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7178,11 +7207,11 @@
       "endpoint": "https://base.gateway.tenderly.co",
       "status": "LIVE",
       "contracts": [],
-      "block": 53507411,
-      "blockTimestamp": 1793804169,
+      "block": 53507442,
+      "blockTimestamp": 1793804233,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:09+00:00"
+      "lastBlockTime": "2026-11-04T14:57:13+00:00"
     },
     {
       "name": "Eventum",
@@ -7220,9 +7249,9 @@
         {
           "url": "https://rpc.bitci.com",
           "chainId": 1907,
-          "block": 14054955,
-          "blockTimestamp": 1793804157,
-          "ageSeconds": 13,
+          "block": 14054960,
+          "blockTimestamp": 1793804232,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7231,11 +7260,11 @@
       "endpoint": "https://rpc.bitci.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 14054955,
-      "blockTimestamp": 1793804157,
-      "ageSeconds": 13,
+      "block": 14054960,
+      "blockTimestamp": 1793804232,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:57+00:00"
+      "lastBlockTime": "2026-11-04T14:57:12+00:00"
     },
     {
       "name": "ENI",
@@ -7249,9 +7278,9 @@
         {
           "url": "https://rpc.eniac.network",
           "chainId": 173,
-          "block": 43378672,
-          "blockTimestamp": 1793804168,
-          "ageSeconds": 2,
+          "block": 43378733,
+          "blockTimestamp": 1793804232,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7259,8 +7288,8 @@
         {
           "url": "https://rpc1.eniac.network",
           "chainId": 173,
-          "block": 43378673,
-          "blockTimestamp": 1793804168,
+          "block": 43378734,
+          "blockTimestamp": 1793804232,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -7269,9 +7298,9 @@
         {
           "url": "https://rpc2.eniac.network",
           "chainId": 173,
-          "block": 43378673,
-          "blockTimestamp": 1793804168,
-          "ageSeconds": 3,
+          "block": 43378735,
+          "blockTimestamp": 1793804233,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7279,9 +7308,9 @@
         {
           "url": "https://enirpc.com",
           "chainId": 173,
-          "block": 43378674,
-          "blockTimestamp": 1793804170,
-          "ageSeconds": 1,
+          "block": 43378735,
+          "blockTimestamp": 1793804233,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7289,22 +7318,22 @@
         {
           "url": "https://jp.enirpc.com",
           "chainId": 173,
-          "block": 43378674,
-          "blockTimestamp": 1793804170,
-          "ageSeconds": 2,
+          "block": 43378736,
+          "blockTimestamp": 1793804234,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
         }
       ],
-      "endpoint": "https://enirpc.com",
+      "endpoint": "https://rpc.eniac.network",
       "status": "LIVE",
       "contracts": [],
-      "block": 43378674,
-      "blockTimestamp": 1793804170,
+      "block": 43378733,
+      "blockTimestamp": 1793804232,
       "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:10+00:00"
+      "lastBlockTime": "2026-11-04T14:57:12+00:00"
     },
     {
       "name": "Camp Network",
@@ -7342,9 +7371,9 @@
         {
           "url": "https://quicknode1.peaq.xyz",
           "chainId": 3338,
-          "block": 12251688,
-          "blockTimestamp": 1793804166,
-          "ageSeconds": 3,
+          "block": 12251699,
+          "blockTimestamp": 1793804232,
+          "ageSeconds": 1,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7352,9 +7381,9 @@
         {
           "url": "https://quicknode2.peaq.xyz",
           "chainId": 3338,
-          "block": 12251688,
-          "blockTimestamp": 1793804166,
-          "ageSeconds": 4,
+          "block": 12251699,
+          "blockTimestamp": 1793804232,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7362,9 +7391,9 @@
         {
           "url": "https://quicknode3.peaq.xyz",
           "chainId": 3338,
-          "block": 12251688,
-          "blockTimestamp": 1793804166,
-          "ageSeconds": 6,
+          "block": 12251699,
+          "blockTimestamp": 1793804232,
+          "ageSeconds": 3,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7373,11 +7402,11 @@
       "endpoint": "https://quicknode1.peaq.xyz",
       "status": "LIVE",
       "contracts": [],
-      "block": 12251688,
-      "blockTimestamp": 1793804166,
-      "ageSeconds": 3,
+      "block": 12251699,
+      "blockTimestamp": 1793804232,
+      "ageSeconds": 1,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:06+00:00"
+      "lastBlockTime": "2026-11-04T14:57:12+00:00"
     },
     {
       "name": "Eteria",
@@ -7393,7 +7422,7 @@
           "chainId": 140,
           "block": 102436,
           "blockTimestamp": 1788454465,
-          "ageSeconds": 5349705,
+          "ageSeconds": 5349768,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7404,7 +7433,7 @@
       "contracts": [],
       "block": 102436,
       "blockTimestamp": 1788454465,
-      "ageSeconds": 5349705,
+      "ageSeconds": 5349768,
       "ageDays": 61.92,
       "lastBlockTime": "2026-09-03T16:54:25+00:00",
       "nextBlockProbe": [
@@ -7451,8 +7480,8 @@
         {
           "url": "https://gatelayer-mainnet.gatenode.cc",
           "chainId": 10088,
-          "block": 35720973,
-          "blockTimestamp": 1793804170,
+          "block": 35721036,
+          "blockTimestamp": 1793804234,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -7462,11 +7491,11 @@
       "endpoint": "https://gatelayer-mainnet.gatenode.cc",
       "status": "LIVE",
       "contracts": [],
-      "block": 35720973,
-      "blockTimestamp": 1793804170,
+      "block": 35721036,
+      "blockTimestamp": 1793804234,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:10+00:00"
+      "lastBlockTime": "2026-11-04T14:57:14+00:00"
     },
     {
       "name": "Igra",
@@ -7482,9 +7511,9 @@
         {
           "url": "https://rpc.igralabs.com:8545",
           "chainId": 38833,
-          "block": 20937798,
-          "blockTimestamp": 1793803620,
-          "ageSeconds": 551,
+          "block": 20937854,
+          "blockTimestamp": 1793803678,
+          "ageSeconds": 556,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7499,11 +7528,11 @@
           "nativeWei": 0
         }
       ],
-      "block": 20937798,
-      "blockTimestamp": 1793803620,
-      "ageSeconds": 551,
+      "block": 20937854,
+      "blockTimestamp": 1793803678,
+      "ageSeconds": 556,
       "ageDays": 0.01,
-      "lastBlockTime": "2026-11-04T14:47:00+00:00"
+      "lastBlockTime": "2026-11-04T14:47:58+00:00"
     },
     {
       "name": "Ethereal",
@@ -7561,9 +7590,9 @@
         {
           "url": "https://public-zigchain-testnet-evm-rpc.numia.xyz",
           "chainId": 2061,
-          "block": 8549921,
-          "blockTimestamp": 1793804161,
-          "ageSeconds": 10,
+          "block": 8549932,
+          "blockTimestamp": 1793804222,
+          "ageSeconds": 12,
           "error": null,
           "chainIdMatches": true,
           "suspect": true
@@ -7609,9 +7638,9 @@
         {
           "url": "https://rpc.gpu.net",
           "chainId": 4048,
-          "block": 10055393,
-          "blockTimestamp": 1793804166,
-          "ageSeconds": 5,
+          "block": 10055401,
+          "blockTimestamp": 1793804232,
+          "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7620,11 +7649,11 @@
       "endpoint": "https://rpc.gpu.net",
       "status": "LIVE",
       "contracts": [],
-      "block": 10055393,
-      "blockTimestamp": 1793804166,
-      "ageSeconds": 5,
+      "block": 10055401,
+      "blockTimestamp": 1793804232,
+      "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:06+00:00"
+      "lastBlockTime": "2026-11-04T14:57:12+00:00"
     },
     {
       "name": "GRX Chain",
@@ -7662,9 +7691,9 @@
         {
           "url": "https://rpc.digitalregion.jp",
           "chainId": 329,
-          "block": 3296412,
-          "blockTimestamp": 1793804143,
-          "ageSeconds": 28,
+          "block": 3296414,
+          "blockTimestamp": 1793804175,
+          "ageSeconds": 59,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7673,11 +7702,11 @@
       "endpoint": "https://rpc.digitalregion.jp",
       "status": "LIVE",
       "contracts": [],
-      "block": 3296412,
-      "blockTimestamp": 1793804143,
-      "ageSeconds": 28,
+      "block": 3296414,
+      "blockTimestamp": 1793804175,
+      "ageSeconds": 59,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:43+00:00"
+      "lastBlockTime": "2026-11-04T14:56:15+00:00"
     },
     {
       "name": "Open",
@@ -7715,9 +7744,9 @@
         {
           "url": "https://eticamainnet.eticascan.org",
           "chainId": 61803,
-          "block": 11122452,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 12,
+          "block": 11122457,
+          "blockTimestamp": 1793804199,
+          "ageSeconds": 35,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7725,9 +7754,9 @@
         {
           "url": "https://eticamainnet.eticaprotocol.org",
           "chainId": 61803,
-          "block": 11122452,
-          "blockTimestamp": 1793804160,
-          "ageSeconds": 14,
+          "block": 11122457,
+          "blockTimestamp": 1793804199,
+          "ageSeconds": 37,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7736,11 +7765,11 @@
       "endpoint": "https://eticamainnet.eticascan.org",
       "status": "LIVE",
       "contracts": [],
-      "block": 11122452,
-      "blockTimestamp": 1793804160,
-      "ageSeconds": 12,
+      "block": 11122457,
+      "blockTimestamp": 1793804199,
+      "ageSeconds": 35,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:00+00:00"
+      "lastBlockTime": "2026-11-04T14:56:39+00:00"
     },
     {
       "name": "Sentrix",
@@ -7812,8 +7841,8 @@
         {
           "url": "https://devnet.adilchain-rpc.io",
           "chainId": 123456,
-          "block": 38028195,
-          "blockTimestamp": 1793804171,
+          "block": 38028216,
+          "blockTimestamp": 1793804234,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -7836,8 +7865,8 @@
         {
           "url": "https://rpc.eden.gateway.fm",
           "chainId": 714,
-          "block": 240010269,
-          "blockTimestamp": 1793804172,
+          "block": 240010895,
+          "blockTimestamp": 1793804235,
           "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
@@ -7847,11 +7876,11 @@
       "endpoint": "https://rpc.eden.gateway.fm",
       "status": "LIVE",
       "contracts": [],
-      "block": 240010269,
-      "blockTimestamp": 1793804172,
+      "block": 240010895,
+      "blockTimestamp": 1793804235,
       "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:12+00:00"
+      "lastBlockTime": "2026-11-04T14:57:15+00:00"
     },
     {
       "name": "Strat",
@@ -7888,23 +7917,18 @@
       "attempts": [
         {
           "url": "https://rpc.gghyper.net",
-          "chainId": 2121217,
-          "block": 943151,
-          "blockTimestamp": 1793804108,
-          "ageSeconds": 73,
-          "error": null,
-          "chainIdMatches": true,
+          "chainId": null,
+          "block": null,
+          "blockTimestamp": null,
+          "ageSeconds": null,
+          "error": "chainId: <urlopen error _ssl.c:983: The handshake operation timed out>",
+          "chainIdMatches": null,
           "suspect": false
         }
       ],
-      "endpoint": "https://rpc.gghyper.net",
-      "status": "LIVE",
-      "contracts": [],
-      "block": 943151,
-      "blockTimestamp": 1793804108,
-      "ageSeconds": 73,
-      "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:08+00:00"
+      "endpoint": null,
+      "status": "DEAD_RPC",
+      "contracts": []
     },
     {
       "name": "Xphere",
@@ -7942,8 +7966,8 @@
         {
           "url": "https://mainnet-rpc.rayls.com",
           "chainId": 72957,
-          "block": 13840639,
-          "blockTimestamp": 1793804169,
+          "block": 13840688,
+          "blockTimestamp": 1793804232,
           "ageSeconds": 2,
           "error": null,
           "chainIdMatches": true,
@@ -7953,11 +7977,11 @@
       "endpoint": "https://mainnet-rpc.rayls.com",
       "status": "LIVE",
       "contracts": [],
-      "block": 13840639,
-      "blockTimestamp": 1793804169,
+      "block": 13840688,
+      "blockTimestamp": 1793804232,
       "ageSeconds": 2,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:09+00:00"
+      "lastBlockTime": "2026-11-04T14:57:12+00:00"
     },
     {
       "name": "Pentagon Chain",
@@ -7971,9 +7995,9 @@
         {
           "url": "https://rpc.pentagon.games",
           "chainId": 3344,
-          "block": 5188633,
-          "blockTimestamp": 1793804153,
-          "ageSeconds": 19,
+          "block": 5188639,
+          "blockTimestamp": 1793804224,
+          "ageSeconds": 11,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -7982,11 +8006,11 @@
       "endpoint": "https://rpc.pentagon.games",
       "status": "LIVE",
       "contracts": [],
-      "block": 5188633,
-      "blockTimestamp": 1793804153,
-      "ageSeconds": 19,
+      "block": 5188639,
+      "blockTimestamp": 1793804224,
+      "ageSeconds": 11,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:55:53+00:00"
+      "lastBlockTime": "2026-11-04T14:57:04+00:00"
     },
     {
       "name": "Bitcoin Swap",
@@ -8000,9 +8024,9 @@
         {
           "url": "https://rpc.btcw.tech",
           "chainId": 482120,
-          "block": 737736,
-          "blockTimestamp": 1793804170,
-          "ageSeconds": 2,
+          "block": 737749,
+          "blockTimestamp": 1793804235,
+          "ageSeconds": 0,
           "error": null,
           "chainIdMatches": true,
           "suspect": false
@@ -8011,11 +8035,11 @@
       "endpoint": "https://rpc.btcw.tech",
       "status": "LIVE",
       "contracts": [],
-      "block": 737736,
-      "blockTimestamp": 1793804170,
-      "ageSeconds": 2,
+      "block": 737749,
+      "blockTimestamp": 1793804235,
+      "ageSeconds": 0,
       "ageDays": 0.0,
-      "lastBlockTime": "2026-11-04T14:56:10+00:00"
+      "lastBlockTime": "2026-11-04T14:57:15+00:00"
     }
   ]
 }
