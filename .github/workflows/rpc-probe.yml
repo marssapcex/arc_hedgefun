@@ -1,0 +1,25 @@
+name: rpc-probe
+on:
+  push:
+    paths:
+      - '.github/workflows/rpc-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run read-only RPC probe
+        run: |
+          python3 scripts/rpc_probe.py --workers 24 --out rpc_probe_raw.json --md RPC_PROBE.md
+          ls -la rpc_probe_raw.json RPC_PROBE.md
+      - name: Publish results
+        run: |
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add -f rpc_probe_raw.json RPC_PROBE.md
+          git commit -m "data: on-chain RPC probe results [skip ci]" || echo nothing
+          for i in 1 2 3 4 5; do git push origin HEAD:arena/fbf9cf32-arc-hedgefun && break || sleep 5; done
