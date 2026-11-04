@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T10:26:55.999127+00:00",
+  "generatedAt": "2026-11-04T10:29:53.696640+00:00",
   "note": "read-only eth_call/getCode/getStorageAt/getBalance; derived from rpc_probe_raw.json + protocol deployment repos",
   "endpoints": {
     "aurora": "https://mainnet.aurora.dev",
@@ -11,13 +11,13 @@
     "moonriver": "https://moonriver.drpc.org"
   },
   "blocks": {
-    "aurora": 223004149,
-    "avalanche": 99394779,
-    "ethereum": 26340840,
-    "fantom": 123949520,
-    "flare": 73718863,
-    "linea": 32515061,
-    "monad": 119302423,
+    "aurora": 223004467,
+    "avalanche": 99394985,
+    "ethereum": 26340855,
+    "fantom": 123949535,
+    "flare": 73719046,
+    "linea": 32515078,
+    "monad": 119303041,
     "moonriver": 17381654
   },
   "results": [
@@ -596,9 +596,7 @@
       "storage": {
         "slot0": "0x0000000000000000000000000000000000000001"
       },
-      "roles": {
-        "quorum(block-1)": 5000000000000000000000000
-      },
+      "roles": {},
       "balances": {
         "USDC": {
           "raw": "0",
@@ -616,43 +614,11 @@
           "raw": "0",
           "human": 0.0
         },
-        "HOP": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
         "CVX": {
           "raw": "0",
           "human": 0.0
         },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
-          "raw": "0",
-          "human": 0.0
-        },
         "PEAK": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "BIFI": {
           "raw": "0",
           "human": 0.0
         },
@@ -662,8 +628,7 @@
         }
       },
       "proposals": {},
-      "codeBytes": 2673,
-      "nativeBalanceWei": 0
+      "codeBytes": 2673
     },
     {
       "chain": "ethereum",
@@ -674,43 +639,10 @@
       "calls": {
         "getMinDelay()": 1
       },
-      "storage": {
-        "slot2": "0x0000000000000000000000000000000000000001"
-      },
-      "roles": {
-        "hasRole(PROPOSER_ROLE,governor)": 1,
-        "hasRole(ADMIN_ROLE,governor)": 0
-      },
+      "storage": {},
+      "roles": {},
       "balances": {
-        "USDC": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "USDT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "DAI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "HOP": {
-          "raw": "0",
-          "human": 0.0
-        },
         "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
           "raw": "0",
           "human": 0.0
         },
@@ -818,15 +750,7 @@
           "raw": "0",
           "human": 0.0
         },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
         "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
           "raw": "0",
           "human": 0.0
         },
@@ -834,14 +758,21 @@
           "raw": "0",
           "human": 0.0
         },
+        "PEAK": {
+          "raw": "0",
+          "human": 0.0
+        },
         "BIFI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "MTA": {
           "raw": "0",
           "human": 0.0
         }
       },
       "proposals": {},
-      "codeBytes": 12349,
-      "nativeBalanceWei": 0
+      "codeBytes": 12349
     },
     {
       "chain": "ethereum",
@@ -854,9 +785,132 @@
         "delay()": 86400
       },
       "storage": {
-        "slot0": "0x336505ec1bcc1a020eede459f57581725d23465a",
-        "slot2": "0x0000000000000000000000000000000000015180"
+        "slot0": "0x336505ec1bcc1a020eede459f57581725d23465a"
       },
+      "roles": {},
+      "balances": {
+        "USDT": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "DAI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "WETH": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "ANGLE": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "PEAK": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "BIFI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "MTA": {
+          "raw": "0",
+          "human": 0.0
+        }
+      },
+      "proposals": {},
+      "codeBytes": 5939
+    },
+    {
+      "chain": "ethereum",
+      "label": "Flux governor",
+      "address": "0x336505EC1BcC1A020EeDe459f57581725D23465A",
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "governorChecked": null,
+      "calls": {
+        "admin()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
+        "timelock()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
+        "implementation()": "0x8886344a1b9b840bed590f2ef7379dd37e169c8e",
+        "proposalCount()": 10,
+        "proposalThreshold()": 100000000000000000000000000
+      },
+      "storage": {
+        "slot0": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
+        "slot3": "0x0000000000000000000000000000000000000001",
+        "slot5": "0x00000000000000000052b7d2dcc80cd2e4000000",
+        "slot6": "0x0000000000000000000000000000000000000001"
+      },
+      "roles": {},
+      "balances": {
+        "USDT": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "DAI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "CTR": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "PEAK": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "BIFI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "MTA": {
+          "raw": "0",
+          "human": 0.0
+        }
+      },
+      "proposals": {},
+      "codeBytes": 1065
+    },
+    {
+      "chain": "ethereum",
+      "label": "Reflexer timelock",
+      "address": "0x2cde6a1147b0ee61726b86d83fd548401b1162c7",
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "governorChecked": null,
+      "calls": {},
+      "storage": {},
+      "roles": {},
+      "balances": {},
+      "proposals": {},
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "chain": "ethereum",
+      "label": "Reflexer admin",
+      "address": "0xa57a4e6170930ac547c147cdf26ae4682fa8262e",
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "governorChecked": null,
+      "calls": {},
+      "storage": {},
+      "roles": {},
+      "balances": {},
+      "proposals": {},
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "chain": "ethereum",
+      "label": "Reflexer governor",
+      "address": "0x7a6BBe7fDd793CC9ab7e0fc33605FCd2D19371E8",
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "governorChecked": null,
+      "calls": {
+        "admin()": "0xa57a4e6170930ac547c147cdf26ae4682fa8262e",
+        "proposalCount()": 62,
+        "proposalThreshold()": 3000000000000000000000,
+        "votingPeriod()": 46500
+      },
+      "storage": {},
       "roles": {},
       "balances": {
         "USDC": {
@@ -895,14 +949,6 @@
           "raw": "0",
           "human": 0.0
         },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
-          "raw": "0",
-          "human": 0.0
-        },
         "CTR": {
           "raw": "0",
           "human": 0.0
@@ -920,112 +966,14 @@
           "human": 0.0
         }
       },
-      "proposals": {},
-      "codeBytes": 5939,
-      "nativeBalanceWei": 12400000000000000
-    },
-    {
-      "chain": "ethereum",
-      "label": "Flux governor",
-      "address": "0x336505EC1BcC1A020EeDe459f57581725D23465A",
-      "rpc": "https://ethereum-rpc.publicnode.com",
-      "governorChecked": null,
-      "calls": {
-        "admin()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
-        "timelock()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
-        "implementation()": "0x8886344a1b9b840bed590f2ef7379dd37e169c8e",
-        "proposalCount()": 10,
-        "proposalThreshold()": 100000000000000000000000000,
-        "quorumVotes()": 1000000000000000000000000,
-        "votingDelay()": 1,
-        "votingPeriod()": 21600
-      },
-      "storage": {
-        "slot4": "0x0000000000000000000000000000000000005460",
-        "slot6": "0x0000000000000000000000000000000000000001"
-      },
-      "roles": {},
-      "balances": {
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "BIFI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "MTA": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
       "proposals": {
-        "state(8)": 7,
-        "state(10)": 7
+        "state(1)": 2,
+        "state(60)": 7,
+        "state(61)": 2,
+        "state(62)": 7
       },
-      "codeBytes": 1065
-    },
-    {
-      "chain": "ethereum",
-      "label": "Reflexer timelock",
-      "address": "0x2cde6a1147b0ee61726b86d83fd548401b1162c7",
-      "rpc": "https://ethereum-rpc.publicnode.com",
-      "governorChecked": null,
-      "calls": {},
-      "storage": {},
-      "roles": {},
-      "balances": {},
-      "proposals": {},
-      "codeBytes": 0,
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    {
-      "chain": "ethereum",
-      "label": "Reflexer admin",
-      "address": "0xa57a4e6170930ac547c147cdf26ae4682fa8262e",
-      "rpc": "https://ethereum-rpc.publicnode.com",
-      "governorChecked": null,
-      "calls": {},
-      "storage": {},
-      "roles": {},
-      "balances": {},
-      "proposals": {},
-      "codeBytes": 0,
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    {
-      "chain": "ethereum",
-      "label": "Reflexer governor",
-      "address": "0x7a6BBe7fDd793CC9ab7e0fc33605FCd2D19371E8",
-      "rpc": "https://ethereum-rpc.publicnode.com",
-      "governorChecked": null,
-      "calls": {},
-      "storage": {},
-      "roles": {},
-      "balances": {},
-      "proposals": {},
-      "codeBytes": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "codeBytes": 14282,
+      "nativeBalanceWei": 10000000000000
     },
     {
       "chain": "ethereum",
@@ -1034,42 +982,12 @@
       "rpc": "https://ethereum-rpc.publicnode.com",
       "governorChecked": null,
       "calls": {},
-      "storage": {
-        "slot2": "0x000000000000000000000000000000000002a300"
-      },
+      "storage": {},
       "roles": {},
-      "balances": {
-        "USDC": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "USDT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "MTA": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
+      "balances": {},
       "proposals": {},
-      "codeBytes": 5866
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
@@ -1082,7 +1000,8 @@
       "roles": {},
       "balances": {},
       "proposals": {},
-      "codeBytes": 0
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
@@ -1104,19 +1023,47 @@
       "address": "0x8ace03fc45139fddba944c6a4082b604041d19fc",
       "rpc": "https://ethereum-rpc.publicnode.com",
       "governorChecked": null,
+      "calls": {},
+      "storage": {},
+      "roles": {},
+      "balances": {},
+      "proposals": {},
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "chain": "ethereum",
+      "label": "Rari governor #2",
+      "address": "0x637deEED4e4deb1D222650bD4B64192abf002c00",
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "governorChecked": null,
       "calls": {
-        "admin()": "0x6f6580285a63f1e886548458f427f8695ba1a563"
+        "token()": "0xc7283b66eb1eb5fb86327f08e1b5816b0720212b",
+        "votingDelay()": 1,
+        "votingPeriod()": 13000
       },
       "storage": {},
       "roles": {},
       "balances": {
+        "USDC": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "WETH": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "HOP": {
+          "raw": "0",
+          "human": 0.0
+        },
         "CRV": {
           "raw": "0",
           "human": 0.0
         },
-        "RGT": {
-          "raw": "2693752595966709551570352",
-          "human": 2693752.59596671
+        "CVX": {
+          "raw": "0",
+          "human": 0.0
         },
         "FLX": {
           "raw": "0",
@@ -1128,21 +1075,8 @@
         }
       },
       "proposals": {},
-      "codeBytes": 5955
-    },
-    {
-      "chain": "ethereum",
-      "label": "Rari governor #2",
-      "address": "0x637deEED4e4deb1D222650bD4B64192abf002c00",
-      "rpc": "https://ethereum-rpc.publicnode.com",
-      "governorChecked": null,
-      "calls": {},
-      "storage": {},
-      "roles": {},
-      "balances": {},
-      "proposals": {},
-      "codeBytes": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "codeBytes": 18119,
+      "nativeBalanceWei": 0
     },
     {
       "chain": "ethereum",
@@ -1183,7 +1117,8 @@
       "roles": {},
       "balances": {},
       "proposals": {},
-      "codeBytes": 0
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
@@ -1194,11 +1129,87 @@
       "calls": {
         "delay()": 172800
       },
+      "storage": {},
+      "roles": {},
+      "balances": {
+        "USDC": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "DAI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "WETH": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "HOP": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "ANGLE": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "CVX": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "FLX": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "PEAK": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "BIFI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "MTA": {
+          "raw": "0",
+          "human": 0.0
+        }
+      },
+      "proposals": {},
+      "codeBytes": 4076
+    },
+    {
+      "chain": "ethereum",
+      "label": "Concentrator multisig",
+      "address": "0xA0FB1b11ccA5871fb0225B64308e249B97804E99",
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "governorChecked": null,
+      "calls": {
+        "getOwners()": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000900000000000000000000000038a93e70b0d8343657f802c1c3fdb06ac8f8fe990000000000000000000000008ecab7b8ed8215ca52500cbf1548b9239173ef82000000000000000000000000ef0ca09fbf9a5f61e657fb208b46b8685c1d4766000000000000000000000000e3522d85d37f55735e9327cd7a5cde3abaf28e0300000000000000000000000085db62fdfa9ee6050f8b422f74d75d2069da102b000000000000000000000000cdf067f306e7a511ef701588afcdcff292b19282000000000000000000000000c8be49a9b1ca1a1cc654491a7cbbd27abfa06a8100000000000000000000000018411ab626c9b3b3dd5b7356574d8ff39643674400000000000000000000000074390470f4001ca85d93bd546a4ab1724359654b",
+        "getThreshold()": 6
+      },
       "storage": {
-        "slot3": "0x6b0000000000000000000000000000000000001a"
+        "slot0": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "slot3": "0x0000000000000000000000000000000000000009",
+        "slot4": "0x0000000000000000000000000000000000000006",
+        "slot5": "0x00000000000000000000000000000000000000de"
       },
       "roles": {},
       "balances": {
+        "USDC": {
+          "raw": "8621064977",
+          "human": 8621.064977
+        },
+        "USDT": {
+          "raw": "340396908",
+          "human": 340.396908
+        },
+        "DAI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "WETH": {
+          "raw": "5616364906257308",
+          "human": 0.005616364906257308
+        },
         "HOP": {
           "raw": "0",
           "human": 0.0
@@ -1212,59 +1223,26 @@
           "human": 0.0
         },
         "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "PEAK": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "BIFI": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
-      "proposals": {},
-      "codeBytes": 4076,
-      "nativeBalanceWei": 0
-    },
-    {
-      "chain": "ethereum",
-      "label": "Concentrator multisig",
-      "address": "0xA0FB1b11ccA5871fb0225B64308e249B97804E99",
-      "rpc": "https://ethereum-rpc.publicnode.com",
-      "governorChecked": null,
-      "calls": {},
-      "storage": {
-        "slot4": "0x0000000000000000000000000000000000000006"
-      },
-      "roles": {},
-      "balances": {
-        "USDT": {
-          "raw": "340396908",
-          "human": 340.396908
-        },
-        "WETH": {
-          "raw": "5616364906257308",
-          "human": 0.005616364906257308
+          "raw": "2168357235959713359491",
+          "human": 2168.3572359597133
         },
         "CVX": {
           "raw": "1017041731823283156304",
           "human": 1017.0417318232832
         },
         "RGT": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "FLX": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "CTR": {
+          "raw": "441755482425881601989516",
+          "human": 441755.4824258816
+        },
+        "PEAK": {
           "raw": "0",
           "human": 0.0
         },
@@ -1324,15 +1302,7 @@
           "raw": "0",
           "human": 0.0
         },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
         "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
           "raw": "0",
           "human": 0.0
         },
@@ -1340,7 +1310,7 @@
           "raw": "0",
           "human": 0.0
         },
-        "PEAK": {
+        "BIFI": {
           "raw": "0",
           "human": 0.0
         },
@@ -1361,6 +1331,7 @@
       "governorChecked": null,
       "calls": {
         "totalSupply()": 0,
+        "decimals()": 0,
         "symbol()": ""
       },
       "storage": {},
@@ -1370,7 +1341,15 @@
           "raw": "0",
           "human": 0.0
         },
+        "USDT": {
+          "raw": "0",
+          "human": 0.0
+        },
         "DAI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "WETH": {
           "raw": "0",
           "human": 0.0
         },
@@ -1379,6 +1358,10 @@
           "human": 0.0
         },
         "ANGLE": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "cvxCRV": {
           "raw": "0",
           "human": 0.0
         },
@@ -1391,10 +1374,6 @@
           "human": 0.0
         },
         "FLX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
           "raw": "0",
           "human": 0.0
         },
@@ -1412,81 +1391,13 @@
       "address": "0x2b95A1Dcc3D405535f9ed33c219ab38E8d7e0884",
       "rpc": "https://ethereum-rpc.publicnode.com",
       "governorChecked": null,
-      "calls": {
-        "owner()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99",
-        "totalSupply()": 1108588725537536644509613,
-        "decimals()": 18,
-        "symbol()": "aCRV"
-      },
-      "storage": {
-        "slot0": "0x0000000000000000000000000000000000000001"
-      },
+      "calls": {},
+      "storage": {},
       "roles": {},
-      "balances": {
-        "USDC": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "USDT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "DAI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "HOP": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "PEAK": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "BIFI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "MTA": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
+      "balances": {},
       "proposals": {},
-      "codeBytes": 2091,
-      "nativeBalanceWei": 0
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
@@ -1494,80 +1405,13 @@
       "address": "0x3e399ae5b4d8bc0021e53b51c8bcdd66dd62c03b",
       "rpc": "https://ethereum-rpc.publicnode.com",
       "governorChecked": null,
-      "calls": {
-        "proposalThreshold()": 0,
-        "votingPeriod()": 0
-      },
-      "storage": {
-        "slot0": "0x0000000000000000000000000000000000000001"
-      },
-      "roles": {
-        "quorum(block-1)": 0
-      },
-      "balances": {
-        "USDC": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "USDT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "DAI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "HOP": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "PEAK": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "BIFI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "MTA": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
+      "calls": {},
+      "storage": {},
+      "roles": {},
+      "balances": {},
       "proposals": {},
-      "codeBytes": 15915
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
@@ -1576,6 +1420,8 @@
       "rpc": "https://ethereum-rpc.publicnode.com",
       "governorChecked": null,
       "calls": {
+        "proposalCount()": 0,
+        "proposalThreshold()": 0,
         "quorumVotes()": 1000000000000000000000000,
         "votingDelay()": 0,
         "votingPeriod()": 0
@@ -1645,8 +1491,7 @@
         }
       },
       "proposals": {},
-      "codeBytes": 18096,
-      "nativeBalanceWei": 0
+      "codeBytes": 18096
     },
     {
       "chain": "ethereum",
@@ -1654,77 +1499,13 @@
       "address": "0xfd6aca12f464acda7901fcd650dd1bc272da039f",
       "rpc": "https://ethereum-rpc.publicnode.com",
       "governorChecked": null,
-      "calls": {
-        "votingDelay()": 0,
-        "votingPeriod()": 0
-      },
+      "calls": {},
       "storage": {},
       "roles": {},
-      "balances": {
-        "USDC": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "USDT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "DAI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "HOP": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "PEAK": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "BIFI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "MTA": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
+      "balances": {},
       "proposals": {},
-      "codeBytes": 16932,
-      "nativeBalanceWei": 0
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
@@ -1981,9 +1762,14 @@
       "governorChecked": null,
       "calls": {
         "owner()": "0xeea8422a08258e73c139fc32a25e10410c14bd7a",
+        "totalSupply()": 1000000000000000000000000000,
         "decimals()": 18
       },
-      "storage": {},
+      "storage": {
+        "slot2": "0x0000000000000000033b2e3c9fd0803ce8000000",
+        "slot3": "0x0000000000000000000000000000000000000006",
+        "slot4": "0x0000000000000000000000000000000000000006"
+      },
       "roles": {
         "getPastTotalSupply(block-1)": 1000000000000000000000000000
       },
@@ -1993,6 +1779,10 @@
           "human": 0.0
         },
         "USDT": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "DAI": {
           "raw": "0",
           "human": 0.0
         },
@@ -2007,64 +1797,6 @@
         "ANGLE": {
           "raw": "0",
           "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "MTA": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
-      "proposals": {},
-      "codeBytes": 19146
-    },
-    {
-      "chain": "ethereum",
-      "label": "ANGLE token",
-      "address": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
-      "rpc": "https://ethereum-rpc.publicnode.com",
-      "governorChecked": null,
-      "calls": {
-        "totalSupply()": 1000000000000000000000000000,
-        "decimals()": 18,
-        "symbol()": "ANGLE"
-      },
-      "storage": {
-        "slot3": "0x000000000000000000000000000000000000000a"
-      },
-      "roles": {
-        "getPastTotalSupply(block-1)": 1000000000000000000000000000
-      },
-      "balances": {
-        "USDC": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "USDT": {
-          "raw": "496910090",
-          "human": 496.91009
-        },
-        "DAI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "HOP": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "24391200000000000000000",
-          "human": 24391.2
         },
         "cvxCRV": {
           "raw": "0",
@@ -2104,7 +1836,80 @@
         }
       },
       "proposals": {},
-      "codeBytes": 10122
+      "codeBytes": 19146
+    },
+    {
+      "chain": "ethereum",
+      "label": "ANGLE token",
+      "address": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "governorChecked": null,
+      "calls": {
+        "totalSupply()": 1000000000000000000000000000,
+        "decimals()": 18,
+        "symbol()": "ANGLE"
+      },
+      "storage": {
+        "slot2": "0x0000000000000000033b2e3c9fd0803ce8000000",
+        "slot3": "0x000000000000000000000000000000000000000a",
+        "slot4": "0x000000000000000000000000000000000000000a"
+      },
+      "roles": {
+        "getPastTotalSupply(block-1)": 1000000000000000000000000000
+      },
+      "balances": {
+        "USDC": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "USDT": {
+          "raw": "496910090",
+          "human": 496.91009
+        },
+        "DAI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "WETH": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "HOP": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "cvxCRV": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "CRV": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "CVX": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "RGT": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "CTR": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "PEAK": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "BIFI": {
+          "raw": "0",
+          "human": 0.0
+        }
+      },
+      "proposals": {},
+      "codeBytes": 10122,
+      "nativeBalanceWei": 0
     },
     {
       "chain": "ethereum",
@@ -2118,11 +1923,9 @@
         "symbol()": "GBiFi"
       },
       "storage": {
-        "slot4": "0x000000000000000000000000000000000000000a"
+        "slot2": "0x0000000000000000000000ae9308ef02debc0ac9"
       },
-      "roles": {
-        "getPastTotalSupply(block-1)": 3220328449744456911561
-      },
+      "roles": {},
       "balances": {
         "USDC": {
           "raw": "0",
@@ -2152,7 +1955,51 @@
           "raw": "0",
           "human": 0.0
         },
-        "CVX": {
+        "CRV": {
+          "raw": "0",
+          "human": 0.0
+        }
+      },
+      "proposals": {},
+      "codeBytes": 9215
+    },
+    {
+      "chain": "ethereum",
+      "label": "FLX token",
+      "address": "0x6243d8CEA23066d098a15582d81a598B4e8391F4",
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "governorChecked": null,
+      "calls": {
+        "totalSupply()": 957122296129311554103553,
+        "decimals()": 18,
+        "symbol()": "FLX"
+      },
+      "storage": {
+        "slot0": "0x00000000000000000000caadb421be59388b6901"
+      },
+      "roles": {},
+      "balances": {
+        "USDC": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "USDT": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "DAI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "WETH": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "HOP": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "CRV": {
           "raw": "0",
           "human": 0.0
         },
@@ -2164,9 +2011,9 @@
           "raw": "0",
           "human": 0.0
         },
-        "BIFI": {
-          "raw": "3220328449744456911561",
-          "human": 3220.328449744457
+        "CTR": {
+          "raw": "0",
+          "human": 0.0
         },
         "MTA": {
           "raw": "0",
@@ -2174,22 +2021,7 @@
         }
       },
       "proposals": {},
-      "codeBytes": 9215,
-      "nativeBalanceWei": 0
-    },
-    {
-      "chain": "ethereum",
-      "label": "FLX token",
-      "address": "0x6243d8CEA23066d098a15582d81a598B4e8391F4",
-      "rpc": "https://ethereum-rpc.publicnode.com",
-      "governorChecked": null,
-      "calls": {},
-      "storage": {},
-      "roles": {},
-      "balances": {},
-      "proposals": {},
-      "codeBytes": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "codeBytes": 15011
     },
     {
       "chain": "ethereum",
@@ -2206,6 +2038,10 @@
       "storage": {},
       "roles": {},
       "balances": {
+        "USDC": {
+          "raw": "0",
+          "human": 0.0
+        },
         "USDT": {
           "raw": "2469844105",
           "human": 2469.844105
@@ -2214,11 +2050,27 @@
           "raw": "0",
           "human": 0.0
         },
+        "WETH": {
+          "raw": "0",
+          "human": 0.0
+        },
         "HOP": {
           "raw": "0",
           "human": 0.0
         },
+        "ANGLE": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "cvxCRV": {
+          "raw": "0",
+          "human": 0.0
+        },
         "CRV": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "CVX": {
           "raw": "0",
           "human": 0.0
         },
@@ -2230,7 +2082,19 @@
           "raw": "0",
           "human": 0.0
         },
+        "CTR": {
+          "raw": "0",
+          "human": 0.0
+        },
         "PEAK": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "BIFI": {
+          "raw": "0",
+          "human": 0.0
+        },
+        "MTA": {
           "raw": "0",
           "human": 0.0
         }
@@ -2259,83 +2123,13 @@
       "address": "0x630d98424eFe0Ea27Fb1b3Ab7741907dFFEaAd78",
       "rpc": "https://ethereum-rpc.publicnode.com",
       "governorChecked": null,
-      "calls": {
-        "totalSupply()": 117989532125407387,
-        "decimals()": 8,
-        "symbol()": "PEAK",
-        "paused()": 0,
-        "getRoleMemberCount(PROPOSER_ROLE)": 0,
-        "getRoleMemberCount(EXECUTOR_ROLE)": 0,
-        "getRoleMemberCount(ADMIN_ROLE)": 1
-      },
-      "storage": {
-        "slot2": "0x0000000000000000000000000000000000000008"
-      },
+      "calls": {},
+      "storage": {},
       "roles": {},
-      "balances": {
-        "USDC": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "USDT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "DAI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "HOP": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "PEAK": {
-          "raw": "947971433470",
-          "human": 9479.7143347
-        },
-        "BIFI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "MTA": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
+      "balances": {},
       "proposals": {},
-      "codeBytes": 6034
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
@@ -2357,80 +2151,13 @@
       "address": "0xe4C09928d834cd58D233CD77B5af3545484B4968",
       "rpc": "https://ethereum-rpc.publicnode.com",
       "governorChecked": null,
-      "calls": {
-        "totalSupply()": 1977268870381416242802350,
-        "symbol()": "veCTR"
-      },
-      "storage": {
-        "slot1": "0xb3ad645db386d7f6d753b2b9c3f4b853da6890b8",
-        "slot2": "0x000000000000000000029c938adc1167f3ee64e8",
-        "slot4": "0x0000000000000000000000000000000000000838"
-      },
+      "calls": {},
+      "storage": {},
       "roles": {},
-      "balances": {
-        "USDC": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "USDT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "DAI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "WETH": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "HOP": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "ANGLE": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "cvxCRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CRV": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CVX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "RGT": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "FLX": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "CTR": {
-          "raw": "3157262487827368589026536",
-          "human": 3157262.4878273685
-        },
-        "PEAK": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "BIFI": {
-          "raw": "0",
-          "human": 0.0
-        },
-        "MTA": {
-          "raw": "0",
-          "human": 0.0
-        }
-      },
+      "balances": {},
       "proposals": {},
-      "codeBytes": 9763
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "moonriver",

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-04T10:27:29.414456+00:00",
+  "generatedAt": "2026-11-04T10:30:25.134203+00:00",
   "method": "read-only eth_call / eth_getCode / eth_getBalance / eth_getStorageAt",
   "endpoints": {
     "ethereum": "https://ethereum-rpc.publicnode.com",
     "moonriver": "https://moonriver.drpc.org"
   },
   "blocks": {
-    "ethereum": 26340844,
+    "ethereum": 26340859,
     "moonriver": 17381654
   },
   "results": [
@@ -151,9 +151,7 @@
       "roles": {
         "quorum(block-1)": 60000000000000000000000000
       },
-      "balances": {
-        "native": 0
-      },
+      "balances": {},
       "votes": {},
       "markets": {},
       "codeBytes": 19793
@@ -163,10 +161,7 @@
       "label": "HOP token",
       "address": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
       "calls": {
-        "owner()": "0xeea8422a08258e73c139fc32a25e10410c14bd7a",
-        "totalSupply()": 1000000000000000000000000000,
-        "decimals()": 18,
-        "symbol()": "HOP"
+        "owner()": "0xeea8422a08258e73c139fc32a25e10410c14bd7a"
       },
       "roles": {
         "getPastTotalSupply(block-1)": 1000000000000000000000000000
@@ -178,11 +173,7 @@
           "human": 8169322.578813333
         }
       },
-      "votes": {
-        "selector": "0x9ab24eb0",
-        "account": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
-        "votes": 601160863183579280948
-      },
+      "votes": {},
       "markets": {},
       "codeBytes": 19146
     },
@@ -241,6 +232,7 @@
       "label": "Angle timelock",
       "address": "0x5183f032bf42109cd370b9559fd22207e432301e",
       "calls": {
+        "getMinDelay()": 0,
         "PROPOSER_ROLE()": "0xb09aa5aeb3702cfd50b6b62bc4532604938f21248a27a1d5ca736082b6819cc1",
         "EXECUTOR_ROLE()": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
       },
@@ -259,7 +251,6 @@
       "address": "0x59153e939c5b4721543251ff3049ea04c755373b",
       "calls": {
         "proposalThreshold()": 2500000000000000000000000,
-        "votingDelay()": 545,
         "votingPeriod()": 19636,
         "timelock()": "0x5183f032bf42109cd370b9559fd22207e432301e",
         "token()": "0x31429d1856ad1377a8a0079410b297e1a9e214c2"
@@ -276,6 +267,46 @@
       "chain": "ethereum",
       "label": "ANGLE token",
       "address": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
+      "calls": {
+        "totalSupply()": 1000000000000000000000000000,
+        "decimals()": 18,
+        "symbol()": "ANGLE"
+      },
+      "roles": {
+        "getPastTotalSupply(block-1)": 1000000000000000000000000000
+      },
+      "balances": {
+        "USDT": {
+          "raw": "496910090",
+          "human": 496.91009
+        },
+        "ANGLE": {
+          "raw": "24391200000000000000000",
+          "human": 24391.2
+        }
+      },
+      "votes": {},
+      "markets": {},
+      "codeBytes": 10122
+    },
+    {
+      "chain": "ethereum",
+      "label": "Flux timelock",
+      "address": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
+      "calls": {
+        "admin()": "0x336505ec1bcc1a020eede459f57581725d23465a",
+        "delay()": 86400
+      },
+      "roles": {},
+      "balances": {},
+      "votes": {},
+      "markets": {},
+      "codeBytes": 5939
+    },
+    {
+      "chain": "ethereum",
+      "label": "Flux governor",
+      "address": "0x336505EC1BcC1A020EeDe459f57581725D23465A",
       "calls": {},
       "roles": {},
       "balances": {},
@@ -286,74 +317,27 @@
     },
     {
       "chain": "ethereum",
-      "label": "Flux timelock",
-      "address": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
-      "calls": {
-        "admin()": "0x336505ec1bcc1a020eede459f57581725d23465a"
-      },
-      "roles": {},
-      "balances": {
-        "native": 12400000000000000
-      },
-      "votes": {},
-      "markets": {},
-      "codeBytes": 5939
-    },
-    {
-      "chain": "ethereum",
-      "label": "Flux governor",
-      "address": "0x336505EC1BcC1A020EeDe459f57581725D23465A",
-      "calls": {
-        "admin()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
-        "proposalCount()": 10,
-        "proposalThreshold()": 100000000000000000000000000,
-        "quorumVotes()": 1000000000000000000000000,
-        "votingDelay()": 1,
-        "votingPeriod()": 21600,
-        "timelock()": "0x2c5898da4df1d45eab2b7b192a361c3b9eb18d9c",
-        "implementation()": "0x8886344a1b9b840bed590f2ef7379dd37e169c8e"
-      },
-      "roles": {},
-      "balances": {},
-      "votes": {},
-      "markets": {},
-      "codeBytes": 1065
-    },
-    {
-      "chain": "ethereum",
       "label": "BiFi timelock",
       "address": "0xe75fe5f37bd2e2613b1473f27644cf983555ffdf",
-      "calls": {
-        "PROPOSER_ROLE()": "0xb09aa5aeb3702cfd50b6b62bc4532604938f21248a27a1d5ca736082b6819cc1",
-        "EXECUTOR_ROLE()": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
-      },
-      "roles": {
-        "hasRole(PROPOSER_ROLE,governor)": 1,
-        "hasRole(ADMIN_ROLE,governor)": 0
-      },
+      "calls": {},
+      "roles": {},
       "balances": {},
       "votes": {},
       "markets": {},
-      "codeBytes": 7285
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
       "label": "BiFi governor",
       "address": "0x54F50d2f584F1DD05307aB5eB298Ba96C7d4E0ea",
-      "calls": {
-        "owner()": "0xfbb3544329679a7cc1f7644bae1b65d36bf5ce63",
-        "proposalThreshold()": 800000000000000000000000,
-        "votingDelay()": 6545,
-        "timelock()": "0xe75fe5f37bd2e2613b1473f27644cf983555ffdf",
-        "token()": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc"
-      },
-      "roles": {
-        "quorum(block-1)": 1932197069846674146936
-      },
+      "calls": {},
+      "roles": {},
       "balances": {},
       "votes": {},
       "markets": {},
-      "codeBytes": 12349
+      "codeBytes": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "chain": "ethereum",
@@ -379,23 +363,9 @@
       "chain": "ethereum",
       "label": "Concentrator multisig",
       "address": "0xA0FB1b11ccA5871fb0225B64308e249B97804E99",
-      "calls": {
-        "getOwners()": [
-          "0x38a93e70b0d8343657f802c1c3fdb06ac8f8fe99",
-          "0x8ecab7b8ed8215ca52500cbf1548b9239173ef82",
-          "0xef0ca09fbf9a5f61e657fb208b46b8685c1d4766",
-          "0xe3522d85d37f55735e9327cd7a5cde3abaf28e03",
-          "0x85db62fdfa9ee6050f8b422f74d75d2069da102b",
-          "0xcdf067f306e7a511ef701588afcdcff292b19282",
-          "0xc8be49a9b1ca1a1cc654491a7cbbd27abfa06a81",
-          "0x18411ab626c9b3b3dd5b7356574d8ff396436744",
-          "0x74390470f4001ca85d93bd546a4ab1724359654b"
-        ],
-        "getThreshold()": 6
-      },
+      "calls": {},
       "roles": {},
       "balances": {
-        "native": 66148594211054954,
         "USDC": {
           "raw": "8621064977",
           "human": 8621.064977
@@ -421,13 +391,14 @@
       "chain": "ethereum",
       "label": "Concentrator ProxyAdmin",
       "address": "0x12b1326459d72F2Ab081116bf27ca46cD97762A0",
-      "calls": {},
+      "calls": {
+        "owner()": "0xa0fb1b11cca5871fb0225b64308e249b97804e99"
+      },
       "roles": {},
       "balances": {},
       "votes": {},
       "markets": {},
-      "codeBytes": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "codeBytes": 2171
     },
     {
       "chain": "moonriver",

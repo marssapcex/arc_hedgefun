@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-04T10:27:37.649639+00:00",
+  "generatedAt": "2026-11-04T10:30:27.160819+00:00",
   "method": "read-only eth_call (getVotes/getCurrentVotes/getPriorVotes/getPastVotes/balanceOf/delegates)",
   "endpoints": {
     "ethereum": "https://ethereum-rpc.publicnode.com",
     "moonriver": "https://moonriver.drpc.org"
   },
   "blocks": {
-    "ethereum": 26340847,
+    "ethereum": 26340862,
     "moonriver": 17381654
   },
   "results": [
@@ -16,7 +16,11 @@
       "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
       "account": "0x2BE2e230e89c59c8E20E633C524AD2De246e7370",
       "note": "governor itself",
-      "values": {}
+      "values": {
+        "getCurrentVotes(address)": 0,
+        "balanceOf(address)": 0,
+        "getPriorVotes(address,block-1)": 0
+      }
     },
     {
       "chain": "moonriver",
@@ -24,7 +28,11 @@
       "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
       "account": "0x04e6322D196E0E4cCBb2610dd8B8f2871E160bd7",
       "note": "timelock",
-      "values": {}
+      "values": {
+        "getCurrentVotes(address)": 0,
+        "balanceOf(address)": 1390141714484544000,
+        "getPriorVotes(address,block-1)": 0
+      }
     },
     {
       "chain": "moonriver",
@@ -32,7 +40,11 @@
       "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
       "account": "0x0b7a0EAA884849c6Af7a129e899536dDDcA4905E",
       "note": "comptroller",
-      "values": {}
+      "values": {
+        "getCurrentVotes(address)": 0,
+        "balanceOf(address)": 4019226411850708,
+        "getPriorVotes(address,block-1)": 0
+      }
     },
     {
       "chain": "moonriver",
@@ -40,7 +52,11 @@
       "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
       "account": "0x892bE716Dcf0A6199677F355f45ba8CC123BAF60",
       "note": "oracle",
-      "values": {}
+      "values": {
+        "getCurrentVotes(address)": 0,
+        "balanceOf(address)": 0,
+        "getPriorVotes(address,block-1)": 0
+      }
     },
     {
       "chain": "moonriver",
@@ -48,7 +64,11 @@
       "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
       "account": "0x5ded9d1025a158554ab19540ae83182d890bb8db",
       "note": "guardian",
-      "values": {}
+      "values": {
+        "getCurrentVotes(address)": 0,
+        "balanceOf(address)": 0,
+        "getPriorVotes(address,block-1)": 0
+      }
     },
     {
       "chain": "moonriver",
@@ -56,7 +76,11 @@
       "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
       "account": "0x8529ea4dbdca738aa928d682ea9c1382bf2ff098",
       "note": "impl",
-      "values": {}
+      "values": {
+        "getCurrentVotes(address)": 0,
+        "balanceOf(address)": 0,
+        "getPriorVotes(address,block-1)": 0
+      }
     },
     {
       "chain": "moonriver",
@@ -64,7 +88,11 @@
       "token": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
       "account": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
       "note": "token self",
-      "values": {}
+      "values": {
+        "getCurrentVotes(address)": 0,
+        "balanceOf(address)": 20065917212524308808775,
+        "getPriorVotes(address,block-1)": 0
+      }
     },
     {
       "chain": "ethereum",
@@ -72,7 +100,10 @@
       "token": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
       "account": "0xed8bdb5895b8b7f9fdb3c087628fd8410e853d48",
       "note": "governor",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "balanceOf(address)": 0
+      }
     },
     {
       "chain": "ethereum",
@@ -80,7 +111,10 @@
       "token": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
       "account": "0xeea8422a08258e73c139fc32a25e10410c14bd7a",
       "note": "timelock",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "balanceOf(address)": 511540519882376695197969001
+      }
     },
     {
       "chain": "ethereum",
@@ -88,7 +122,10 @@
       "token": "0xc5102fE9359FD9a28F877a67E36B0F050d81a3Cc",
       "account": "0x3666f603Cc164936C1b87e207F36BEBa4AC5f18a",
       "note": "bridge",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "balanceOf(address)": 0
+      }
     },
     {
       "chain": "ethereum",
@@ -96,7 +133,10 @@
       "token": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
       "account": "0x59153e939c5b4721543251ff3049ea04c755373b",
       "note": "governor",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "balanceOf(address)": 0
+      }
     },
     {
       "chain": "ethereum",
@@ -104,7 +144,10 @@
       "token": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
       "account": "0x5183f032bf42109cd370b9559fd22207e432301e",
       "note": "timelock",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "balanceOf(address)": 0
+      }
     },
     {
       "chain": "ethereum",
@@ -112,7 +155,10 @@
       "token": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
       "account": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
       "note": "token self",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "balanceOf(address)": 24391200000000000000000
+      }
     },
     {
       "chain": "ethereum",
@@ -120,7 +166,10 @@
       "token": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
       "account": "0x54F50d2f584F1DD05307aB5eB298Ba96C7d4E0ea",
       "note": "governor",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "balanceOf(address)": 0
+      }
     },
     {
       "chain": "ethereum",
@@ -128,7 +177,10 @@
       "token": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
       "account": "0xe75fe5f37bd2e2613b1473f27644cf983555ffdf",
       "note": "timelock",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "balanceOf(address)": 0
+      }
     },
     {
       "chain": "ethereum",
@@ -136,7 +188,11 @@
       "token": "0x22f68ae048b126ad76cd5dbc2c671603a188d6dc",
       "account": "0xfbb3544329679a7cc1f7644bae1b65d36bf5ce63",
       "note": "owner",
-      "values": {}
+      "values": {
+        "getVotes(address)": 0,
+        "delegates(address)": "0xfbb3544329679a7cc1f7644bae1b65d36bf5ce63",
+        "balanceOf(address)": 0
+      }
     }
   ]
 }
