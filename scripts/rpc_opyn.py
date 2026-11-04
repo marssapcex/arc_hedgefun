@@ -196,8 +196,9 @@ def main():
          "| Contract | Code | Native ETH | Note |", "|---|---|---|---|"]
     for label, d in doc["targets"].items():
         L.append(f"| {label} `{d['address']}` | {d.get('codeBytes','—')}B | "
-                 f"{d.get('nativeWei',0)/1e18:.6f} | owner={d.get('owner()','—')} "
-                 f"(code {d.get('ownerCodeBytes','?')}B) |")
+                 f"{(d.get('nativeWei') or 0)/1e18:.6f} | " +
+                 (f"owner={d['owner()']} (code {d.get('ownerCodeBytes','?')}B)"
+                  if d.get("owner()") else "no owner() view (library/oracle/exchange)") + " |")
     L += ["", f"Factory `getNumberOfOptionsContracts()` = **{doc['totals'].get('seriesTotal','—')}**, "
           f"probed {doc['totals'].get('seriesProbed','—')}. "
           f"Expired: {doc['totals'].get('expiredSeries','—')}. "
