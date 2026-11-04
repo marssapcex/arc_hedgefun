@@ -18,6 +18,14 @@ import time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from rpc_probe import find_rpc, rpc  # noqa: E402
 
+URLS = [
+    "https://ethereum-rpc.publicnode.com",
+    "https://eth.llamarpc.com",
+    "https://1rpc.io/eth",
+    "https://eth.drpc.org",
+    "https://rpc.flashbots.net",
+    "https://cloudflare-eth.com",
+]
 DRAIN_BLOCK = 25360696
 BOUNTY_BLOCK = 25370085
 DRAIN_TX = "0x2be8704f5a59b69e0b71f64aefdb99eb0e8ae9fb3926147c581910d71bcf3e65"
@@ -49,6 +57,15 @@ def r(url, method, params, timeout=20, tries=4):
                 print(f"  {method} failed: {str(e)[:100]}", flush=True)
         time.sleep(0.6 * (k + 1))
     return None
+
+
+def r_any(method, params, timeout=20):
+    """Try several public Ethereum endpoints; return (value, url) or (None, None)."""
+    for u in URLS:
+        v = r(u, method, params, timeout=timeout, tries=2)
+        if v is not None:
+            return v, u
+    return None, None
 
 
 def ts(b):
@@ -101,36 +118,48 @@ def main():
                         "valueWei": int(tx.get("value", "0x0"), 16)}
     print("drain tx", doc["drain"], flush=True)
 
-    # 3) receipt: count and sum real-token Transfers out of the bot
-    rc = r(url, "eth_getTransactionReceipt", [DRAIN_TX])
-    sums = {s: {"count": 0, "raw": 0, "human": 0.0, "amounts": []} for s in TOKENS}
-    totals = {"logs": 0}
-    if rc:
+    # 3) receipt / logs: count and sum real-token Transfers out of the bot
+    rc, rc_url = r_any("eth_getTransactionReceipt", [DRAIN_TX])
+    logs = rc.get("logs", []) if isinstance(rc, dict) else []
+    source = f"eth_getTransactionReceipt@{rc_url}" if logs else None
+    if isinstance(rc, dict):
         doc["drain"]["status"] = rc.get("status")
-        doc["drain"]["gasUsed"] = int(rc.get("gasUsed", "0x0"), 16)
-        byaddr = {a.lower(): s for s, (a, _) in TOKENS.items()}
-        for lg in rc.get("logs", []):
-            totals["logs"] += 1
-            sym = byaddr.get((lg.get("address") or "").lower())
-            if not sym or not lg.get("topics") or lg["topics"][0].lower() != TRANSFER:
-                continue
-            if len(lg["topics"]) < 3:
-                continue
-            frm, to = addr(lg["topics"][1]).lower(), addr(lg["topics"][2]).lower()
-            if frm != BOT.lower():
-                continue
-            amt = int(lg.get("data", "0x0"), 16)
-            if amt == 0:
-                continue
-            dec = TOKENS[sym][1]
-            sums[sym]["count"] += 1
-            sums[sym]["raw"] += amt
-            sums[sym]["human"] += amt / 10 ** dec
-            sums[sym]["amounts"].append(amt / 10 ** dec)
-            sums[sym].setdefault("recipients", {}).setdefault(to, 0)
-            sums[sym]["recipients"][to] += 1
-        totals["logsFromBot"] = sum(v["count"] for v in sums.values())
-        totals["attackerRecipient"] = ATTACKER.lower()
+        doc["drain"]["gasUsed"] = int(rc.get("gasUsed", "0x0"), 16) if rc.get("gasUsed") else None
+    if not logs:
+        flt = {"fromBlock": h(DRAIN_BLOCK), "toBlock": h(DRAIN_BLOCK),
+               "address": [a for a, _ in TOKENS.values()],
+               "topics": [TRANSFER, "0x" + BOT.lower().replace("0x", "").rjust(64, "0")]}
+        gl, gl_url = r_any("eth_getLogs", [flt])
+        if isinstance(gl, list):
+            logs = gl
+            source = f"eth_getLogs@{gl_url}"
+            print(f"eth_getLogs returned {len(logs)} logs", flush=True)
+    sums = {s: {"count": 0, "raw": 0, "human": 0.0, "amounts": []} for s in TOKENS}
+    totals = {"logs": len(logs), "source": source}
+    byaddr = {a.lower(): s for s, (a, _) in TOKENS.items()}
+    for lg in logs:
+        if (lg.get("transactionHash") or DRAIN_TX).lower() != DRAIN_TX.lower():
+            continue
+        sym = byaddr.get((lg.get("address") or "").lower())
+        if not sym or not lg.get("topics") or lg["topics"][0].lower() != TRANSFER:
+            continue
+        if len(lg["topics"]) < 3:
+            continue
+        frm, to = addr(lg["topics"][1]).lower(), addr(lg["topics"][2]).lower()
+        if frm != BOT.lower():
+            continue
+        amt = int(lg.get("data", "0x0"), 16)
+        if amt == 0:
+            continue
+        dec = TOKENS[sym][1]
+        sums[sym]["count"] += 1
+        sums[sym]["raw"] += amt
+        sums[sym]["human"] += amt / 10 ** dec
+        sums[sym]["amounts"].append(amt / 10 ** dec)
+        sums[sym].setdefault("recipients", {}).setdefault(to, 0)
+        sums[sym]["recipients"][to] += 1
+    totals["logsFromBot"] = sum(v["count"] for v in sums.values())
+    totals["attackerRecipient"] = ATTACKER.lower()
     doc["drain"]["transfers"] = sums
     doc["drain"]["logTotals"] = totals
     print("transfer sums", {s: (v["count"], round(v["human"], 6)) for s, v in sums.items()}, flush=True)
@@ -176,7 +205,7 @@ def main():
          "| Token | Transfer legs | Amount |", "|---|---|---|"]
     for s, v in d.get("transfers", {}).items():
         L.append(f"| {s} | {v['count']} | {v['human']:,.6f} |")
-    L += ["", f"Total logs in receipt: {d.get('logTotals',{}).get('logs','—')}; " +
+    L += ["", f"Log source: `{d.get('logTotals',{}).get('source','—')}`. Total logs: {d.get('logTotals',{}).get('logs','—')}; " +
           f"real-token legs out of bot: {d.get('logTotals',{}).get('logsFromBot','—')}.",
           "", f"Coordinator `{COORDINATOR}` code today: {doc['coordinator']['codeBytes']} bytes.", "",
           f"Bounty block {BOUNTY_BLOCK}: {doc['blocks']['bounty']['timestamp']['utc']}. " +
