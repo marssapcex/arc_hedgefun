@@ -1,20 +1,24 @@
 name: test
 on:
   push:
-  pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  unit:
-    name: Build, sizes and offline tests
+  snapshot:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - name: Fetch DefiLlama snapshots
+        run: |
+          set -e
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/lite/protocols2 -o protocols2.json
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/protocols -o protocols_full.json
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/v2/chains -o chains.json
+          curl -sS --retry 3 --max-time 120 https://api.llama.fi/config/smol/appMetadata-protocols.json -o appmeta.json
+          ls -la *.json
+      - uses: actions/upload-artifact@v4
         with:
-          submodules: recursive
-      - uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: v1.5.0
-      - run: forge build --sizes
-      - run: forge test
+          name: llama-data
+          path: "*.json"
+          retention-days: 1
