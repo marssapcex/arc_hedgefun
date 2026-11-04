@@ -19,7 +19,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from rpc_probe import find_rpc, rpc, decode  # noqa: E402
 
 FACTORY = "0xcC5d905b9c2c8C9329Eb4e25dc086369D6C7777C"
-FORGOTTEN = "0xb529964f86fbf99a6aa67f72a27e59fa3fa4feac"  # forgotteneth.com/opyn-v1
+FORGOTTEN = "0xb529964f86fbf99a6aa67f72a27e59fa3fa4feac"  # second factory, used by DefiLlama adapter
+FACTORIES = [("OptionsFactory (v1 main)", FACTORY), ("OptionsFactory (v2/permissionless)", FORGOTTEN)]
 EXCHANGE = "0x39246c4F3F6592C974EBC44F80bA6dC69b817c71"
 ORACLE = "0x7054e08461e3eCb7718B63540adDB3c3A1746415"
 
@@ -130,26 +131,35 @@ def main():
            "factory": FACTORY, "forgottenEthContract": FORGOTTEN,
            "targets": {}, "series": [], "totals": {}}
 
-    for label, ad in (("OptionsFactory", FACTORY), ("forgotteneth Opyn v1", FORGOTTEN),
-                      ("OptionsExchange", EXCHANGE), ("Compound oracle", ORACLE)):
+    targets = list(FACTORIES) + [("OptionsExchange", EXCHANGE), ("Compound oracle", ORACLE)]
+    for label, ad in targets:
         d = read_all(url, ad)
         d["address"] = ad
         d["balances"] = balances(url, ad)
+        try:
+            c = rpc(url, "eth_getCode", [d["owner()"], "latest"], timeout=10)
+            d["ownerCodeBytes"] = (len(c) - 2) // 2 if isinstance(c, str) else 0
+        except Exception:
+            pass
         doc["targets"][label] = d
         print(f"{label}: {d}", flush=True)
 
-    n = doc["targets"]["OptionsFactory"].get("getNumberOfOptionsContracts()")
+    n = sum(int(doc["targets"][lbl].get("getNumberOfOptionsContracts()") or 0)
+            for lbl, _ in FACTORIES)
     if not n:
         print("no series count", flush=True)
     else:
-        n = int(n)
-        idxs = list(range(min(n, a.max_series)))
-        if n > a.max_series:
-            idxs += list(range(n - 10, n))
-        with concurrent.futures.ThreadPoolExecutor(max_workers=12) as ex:
-            got = list(ex.map(lambda i: (i, call(url, FACTORY, SERIES_VIEW[0], "address", hex(i))), idxs))
-        addrs = sorted({ad for i, ad in got if ad})
-        print(f"{n} series, resolved {len(addrs)} addresses", flush=True)
+        jobs = []
+        for lbl, fadr in FACTORIES:
+            cnt = int(doc["targets"][lbl].get("getNumberOfOptionsContracts()") or 0)
+            for i in range(cnt):
+                jobs.append((lbl, fadr, i))
+        if a.max_series and len(jobs) > a.max_series:
+            jobs = jobs[:a.max_series]
+        with concurrent.futures.ThreadPoolExecutor(max_workers=14) as ex:
+            got = list(ex.map(lambda j: call(url, j[1], SERIES_VIEW[0], "address", hex(j[2])), jobs))
+        addrs = sorted({ad for ad in got if ad})
+        print(f"{n} series total, {len(jobs)} enumerated, {len(addrs)} unique addresses", flush=True)
         with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
             futs = {ad: ex.submit(read_all, url, ad) for ad in addrs}
             balfuts = {ad: ex.submit(balances, url, ad) for ad in addrs}
@@ -164,6 +174,7 @@ def main():
             for sym, v in s.get("balances", {}).items():
                 erc[sym] = erc.get(sym, 0) + v["human"]
         doc["totals"] = {"seriesProbed": len(doc["series"]), "seriesTotal": n,
+                         "seriesEnumerated": len(jobs),
                          "nativeEthOnSeries": eth, "erc20OnSeries": erc,
                          "expiredSeries": sum(1 for s in doc["series"] if s.get("hasExpired()")),
                          "seriesWithCode": sum(1 for s in doc["series"] if s.get("codeBytes"))}
@@ -175,7 +186,8 @@ def main():
          "| Contract | Code | Native ETH | Note |", "|---|---|---|---|"]
     for label, d in doc["targets"].items():
         L.append(f"| {label} `{d['address']}` | {d.get('codeBytes','—')}B | "
-                 f"{d.get('nativeWei',0)/1e18:.6f} | owner={d.get('owner()','—')} |")
+                 f"{d.get('nativeWei',0)/1e18:.6f} | owner={d.get('owner()','—')} "
+                 f"(code {d.get('ownerCodeBytes','?')}B) |")
     L += ["", f"Factory `getNumberOfOptionsContracts()` = **{doc['totals'].get('seriesTotal','—')}**, "
           f"probed {doc['totals'].get('seriesProbed','—')}. "
           f"Expired: {doc['totals'].get('expiredSeries','—')}. "
