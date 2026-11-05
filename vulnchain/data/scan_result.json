@@ -1,0 +1,6023 @@
+{
+ "meta": {
+  "generatedAt": "2026-11-05T06:35:12.354Z",
+  "network": "ethereum",
+  "mode": "hybrid",
+  "fromBlock": 26346822,
+  "toBlock": 26346861,
+  "head": 26346861,
+  "rpc": "https://ethereum-rpc.publicnode.com",
+  "incidentCount": 821,
+  "note": "Ranked similarity to known incidents. Not a vulnerability proof."
+ },
+ "stats": {
+  "contractsScanned": 60,
+  "logsSeen": 34044,
+  "verdicts": {
+   "REVIEW": 7,
+   "INFO": 53
+  },
+  "clusters": 4,
+  "errors": 0,
+  "matcher": {
+   "incidents": 821,
+   "bandKeys": 25627,
+   "selectorKeys": 1617,
+   "knownAddresses": 381,
+   "seededBytecodeFingerprints": 38,
+   "genericSelectors": 18
+  },
+  "sourcifyHits": 0
+ },
+ "clusters": [
+  {
+   "codeHash": "0xae84c77e5908e1e4cf980fe535cf1a94f5da5377c5260d9d92e32d303930948b",
+   "count": 6,
+   "addresses": [
+    "0x0ba9bf6ece534ef7d43ec50f6f08c899ddecebbe",
+    "0x161b721ca7e418791383567e67416027a6a45e2f",
+    "0x3920187e61877d4744dc58a619a73907a41e5463",
+    "0x5069008931fdd9ada584a4bb7b149676132f0981",
+    "0x5844c49760bebc0f8c566f3a88724c84826c4502",
+    "0xe797085683b66d784d423204e2d9ac6400369476"
+   ]
+  },
+  {
+   "codeHash": "0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5",
+   "count": 4,
+   "addresses": [
+    "0xca7c2771d248dcbe09eabe0ce57a62e18da178c0",
+    "0xdfcf744c8ae896e8631ba9b9dc717546646f6708",
+    "0x2325e3f261cadb1c30cebf66c9f95f6fb016c0d4",
+    "0x1d45a4e326a29454036e7154c60c4a855a041a9f"
+   ]
+  },
+  {
+   "codeHash": "0x55e3735acd886d76160bfd959db31dd476e73e46e8a0d70ac36e4c53ef5a2a45",
+   "count": 4,
+   "addresses": [
+    "0xba9abfdfb7c28e232d853d85c619e4248971aa31",
+    "0xd661623947ef2ead12d577b47021c167d163b0c5",
+    "0x941ddc62f8699f448e86c798e62520550616503d",
+    "0xace88ccc9f71c811ea38ea93d707d036579166d4"
+   ]
+  },
+  {
+   "codeHash": "0xc4ccbe092743099a70ae6a593d1eb2c827b3fec98da78fef9063a2d5e4a10699",
+   "count": 2,
+   "addresses": [
+    "0x8cc14565736f89fbe3ebf05720c0dc8bdba6468b",
+    "0xa743cd05e2a3508c6cf59c766b02a784b3ba5051"
+   ]
+  }
+ ],
+ "errors": [],
+ "findings": [
+  {
+   "address": "0xba9abfdfb7c28e232d853d85c619e4248971aa31",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x55e3735acd886d76160bfd959db31dd476e73e46e8a0d70ac36e4c53ef5a2a45",
+   "codeBytes": 45,
+   "opcodeCount": 24,
+   "ngramCount": 20,
+   "selectors": [
+    "0x4c8cb1c9"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "REVIEW",
+   "score": 0.353,
+   "candidatesConsidered": 5,
+   "similarIncidents": [
+    {
+     "id": "2021-03-09_DODO_FlashLoan_ReInit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DODO Finance",
+     "date": "2021-03-09",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "DVM.init() function lacks an initialized flag, allowing it to be called again at any time",
+     "lossUsd": 3800000
+    },
+    {
+     "id": "2021-06-23_88mph_UnprotectedInit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "88mph (MPH NFT)",
+     "date": "2021-06-23",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "The init() function checks an initialized flag but can be re-invoked after deployment, allowing ownership takeover",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-04_DaoMaker_UnprotectedInit_EmergencyExit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DAO Maker",
+     "date": "2021-09-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Unprotected init() function in SHO contracts allowed re-initialization to change ownership, followed by emergencyExit() to drain funds",
+     "lossUsd": 7000000
+    },
+    {
+     "id": "2021-09-14_NowSwap_DutchAuction_BatchReentrancy",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "NowSwap (Dutch Auction)",
+     "date": "2021-09-14",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "When the batch() function makes multiple calls to the same function (commitEth), state is not updated between each call, allowing duplicate participation",
+     "lossUsd": null
+    },
+    {
+     "id": "2022-04-30_Saddle_StableSwapArbitrage",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Saddle Finance",
+     "date": "2022-04-30",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "A virtual price calculation bug in the legacy Saddle pool allowed profit to be extracted simply by repeatedly swapping sUSD back and forth between Curve and Sad",
+     "lossUsd": 11000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "bytecode opcode-5gram Jaccard ≈ 1.00 vs a known-vulnerable deployment",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xd661623947ef2ead12d577b47021c167d163b0c5",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x55e3735acd886d76160bfd959db31dd476e73e46e8a0d70ac36e4c53ef5a2a45",
+   "codeBytes": 45,
+   "opcodeCount": 24,
+   "ngramCount": 20,
+   "selectors": [
+    "0x4c8cb1c9"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "REVIEW",
+   "score": 0.353,
+   "candidatesConsidered": 5,
+   "similarIncidents": [
+    {
+     "id": "2021-03-09_DODO_FlashLoan_ReInit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DODO Finance",
+     "date": "2021-03-09",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "DVM.init() function lacks an initialized flag, allowing it to be called again at any time",
+     "lossUsd": 3800000
+    },
+    {
+     "id": "2021-06-23_88mph_UnprotectedInit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "88mph (MPH NFT)",
+     "date": "2021-06-23",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "The init() function checks an initialized flag but can be re-invoked after deployment, allowing ownership takeover",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-04_DaoMaker_UnprotectedInit_EmergencyExit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DAO Maker",
+     "date": "2021-09-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Unprotected init() function in SHO contracts allowed re-initialization to change ownership, followed by emergencyExit() to drain funds",
+     "lossUsd": 7000000
+    },
+    {
+     "id": "2021-09-14_NowSwap_DutchAuction_BatchReentrancy",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "NowSwap (Dutch Auction)",
+     "date": "2021-09-14",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "When the batch() function makes multiple calls to the same function (commitEth), state is not updated between each call, allowing duplicate participation",
+     "lossUsd": null
+    },
+    {
+     "id": "2022-04-30_Saddle_StableSwapArbitrage",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Saddle Finance",
+     "date": "2022-04-30",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "A virtual price calculation bug in the legacy Saddle pool allowed profit to be extracted simply by repeatedly swapping sUSD back and forth between Curve and Sad",
+     "lossUsd": 11000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "bytecode opcode-5gram Jaccard ≈ 1.00 vs a known-vulnerable deployment",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x941ddc62f8699f448e86c798e62520550616503d",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x55e3735acd886d76160bfd959db31dd476e73e46e8a0d70ac36e4c53ef5a2a45",
+   "codeBytes": 45,
+   "opcodeCount": 24,
+   "ngramCount": 20,
+   "selectors": [
+    "0x4c8cb1c9"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "REVIEW",
+   "score": 0.353,
+   "candidatesConsidered": 5,
+   "similarIncidents": [
+    {
+     "id": "2021-03-09_DODO_FlashLoan_ReInit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DODO Finance",
+     "date": "2021-03-09",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "DVM.init() function lacks an initialized flag, allowing it to be called again at any time",
+     "lossUsd": 3800000
+    },
+    {
+     "id": "2021-06-23_88mph_UnprotectedInit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "88mph (MPH NFT)",
+     "date": "2021-06-23",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "The init() function checks an initialized flag but can be re-invoked after deployment, allowing ownership takeover",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-04_DaoMaker_UnprotectedInit_EmergencyExit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DAO Maker",
+     "date": "2021-09-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Unprotected init() function in SHO contracts allowed re-initialization to change ownership, followed by emergencyExit() to drain funds",
+     "lossUsd": 7000000
+    },
+    {
+     "id": "2021-09-14_NowSwap_DutchAuction_BatchReentrancy",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "NowSwap (Dutch Auction)",
+     "date": "2021-09-14",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "When the batch() function makes multiple calls to the same function (commitEth), state is not updated between each call, allowing duplicate participation",
+     "lossUsd": null
+    },
+    {
+     "id": "2022-04-30_Saddle_StableSwapArbitrage",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Saddle Finance",
+     "date": "2022-04-30",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "A virtual price calculation bug in the legacy Saddle pool allowed profit to be extracted simply by repeatedly swapping sUSD back and forth between Curve and Sad",
+     "lossUsd": 11000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "bytecode opcode-5gram Jaccard ≈ 1.00 vs a known-vulnerable deployment",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xace88ccc9f71c811ea38ea93d707d036579166d4",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x55e3735acd886d76160bfd959db31dd476e73e46e8a0d70ac36e4c53ef5a2a45",
+   "codeBytes": 45,
+   "opcodeCount": 24,
+   "ngramCount": 20,
+   "selectors": [
+    "0x4c8cb1c9"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "REVIEW",
+   "score": 0.353,
+   "candidatesConsidered": 5,
+   "similarIncidents": [
+    {
+     "id": "2021-03-09_DODO_FlashLoan_ReInit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DODO Finance",
+     "date": "2021-03-09",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "DVM.init() function lacks an initialized flag, allowing it to be called again at any time",
+     "lossUsd": 3800000
+    },
+    {
+     "id": "2021-06-23_88mph_UnprotectedInit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "88mph (MPH NFT)",
+     "date": "2021-06-23",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "The init() function checks an initialized flag but can be re-invoked after deployment, allowing ownership takeover",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-04_DaoMaker_UnprotectedInit_EmergencyExit",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DAO Maker",
+     "date": "2021-09-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Unprotected init() function in SHO contracts allowed re-initialization to change ownership, followed by emergencyExit() to drain funds",
+     "lossUsd": 7000000
+    },
+    {
+     "id": "2021-09-14_NowSwap_DutchAuction_BatchReentrancy",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "NowSwap (Dutch Auction)",
+     "date": "2021-09-14",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "When the batch() function makes multiple calls to the same function (commitEth), state is not updated between each call, allowing duplicate participation",
+     "lossUsd": null
+    },
+    {
+     "id": "2022-04-30_Saddle_StableSwapArbitrage",
+     "score": 0.353,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Saddle Finance",
+     "date": "2022-04-30",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "A virtual price calculation bug in the legacy Saddle pool allowed profit to be extracted simply by repeatedly swapping sUSD back and forth between Curve and Sad",
+     "lossUsd": 11000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "bytecode opcode-5gram Jaccard ≈ 1.00 vs a known-vulnerable deployment",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xbdb20519288025f180533b5acd9139ae22752f06",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xf0f301d94d5b08b52928572574b92b11e68d0f858603daf4daafb599c7472d10",
+   "codeBytes": 45,
+   "opcodeCount": 24,
+   "ngramCount": 20,
+   "selectors": [],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "REVIEW",
+   "score": 0.32,
+   "candidatesConsidered": 5,
+   "similarIncidents": [
+    {
+     "id": "2021-03-09_DODO_FlashLoan_ReInit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DODO Finance",
+     "date": "2021-03-09",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "DVM.init() function lacks an initialized flag, allowing it to be called again at any time",
+     "lossUsd": 3800000
+    },
+    {
+     "id": "2021-06-23_88mph_UnprotectedInit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "88mph (MPH NFT)",
+     "date": "2021-06-23",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "The init() function checks an initialized flag but can be re-invoked after deployment, allowing ownership takeover",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-04_DaoMaker_UnprotectedInit_EmergencyExit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DAO Maker",
+     "date": "2021-09-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Unprotected init() function in SHO contracts allowed re-initialization to change ownership, followed by emergencyExit() to drain funds",
+     "lossUsd": 7000000
+    },
+    {
+     "id": "2021-09-14_NowSwap_DutchAuction_BatchReentrancy",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "NowSwap (Dutch Auction)",
+     "date": "2021-09-14",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "When the batch() function makes multiple calls to the same function (commitEth), state is not updated between each call, allowing duplicate participation",
+     "lossUsd": null
+    },
+    {
+     "id": "2022-04-30_Saddle_StableSwapArbitrage",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Saddle Finance",
+     "date": "2022-04-30",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "A virtual price calculation bug in the legacy Saddle pool allowed profit to be extracted simply by repeatedly swapping sUSD back and forth between Curve and Sad",
+     "lossUsd": 11000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "bytecode opcode-5gram Jaccard ≈ 1.00 vs a known-vulnerable deployment",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xc0c69d0556d2ae3b2d236e45395a4eed7f6514e6",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xc3155d0082ab3efe91a75f7d99b0163c09ca274501ebb62b48bddd7af0e844bd",
+   "codeBytes": 45,
+   "opcodeCount": 24,
+   "ngramCount": 20,
+   "selectors": [],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "REVIEW",
+   "score": 0.32,
+   "candidatesConsidered": 5,
+   "similarIncidents": [
+    {
+     "id": "2021-03-09_DODO_FlashLoan_ReInit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DODO Finance",
+     "date": "2021-03-09",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "DVM.init() function lacks an initialized flag, allowing it to be called again at any time",
+     "lossUsd": 3800000
+    },
+    {
+     "id": "2021-06-23_88mph_UnprotectedInit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "88mph (MPH NFT)",
+     "date": "2021-06-23",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "The init() function checks an initialized flag but can be re-invoked after deployment, allowing ownership takeover",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-04_DaoMaker_UnprotectedInit_EmergencyExit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DAO Maker",
+     "date": "2021-09-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Unprotected init() function in SHO contracts allowed re-initialization to change ownership, followed by emergencyExit() to drain funds",
+     "lossUsd": 7000000
+    },
+    {
+     "id": "2021-09-14_NowSwap_DutchAuction_BatchReentrancy",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "NowSwap (Dutch Auction)",
+     "date": "2021-09-14",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "When the batch() function makes multiple calls to the same function (commitEth), state is not updated between each call, allowing duplicate participation",
+     "lossUsd": null
+    },
+    {
+     "id": "2022-04-30_Saddle_StableSwapArbitrage",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Saddle Finance",
+     "date": "2022-04-30",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "A virtual price calculation bug in the legacy Saddle pool allowed profit to be extracted simply by repeatedly swapping sUSD back and forth between Curve and Sad",
+     "lossUsd": 11000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "bytecode opcode-5gram Jaccard ≈ 1.00 vs a known-vulnerable deployment",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xb25bac207297773ce7fb17af0f9d06863330dac2",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xd37d7cb1b00b1a35c54303484441c301235a1b48e7da36cf2df888ee40df1d1f",
+   "codeBytes": 45,
+   "opcodeCount": 24,
+   "ngramCount": 20,
+   "selectors": [
+    "0x8fa7164d"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "REVIEW",
+   "score": 0.32,
+   "candidatesConsidered": 5,
+   "similarIncidents": [
+    {
+     "id": "2021-03-09_DODO_FlashLoan_ReInit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DODO Finance",
+     "date": "2021-03-09",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "DVM.init() function lacks an initialized flag, allowing it to be called again at any time",
+     "lossUsd": 3800000
+    },
+    {
+     "id": "2021-06-23_88mph_UnprotectedInit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "88mph (MPH NFT)",
+     "date": "2021-06-23",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "The init() function checks an initialized flag but can be re-invoked after deployment, allowing ownership takeover",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-04_DaoMaker_UnprotectedInit_EmergencyExit",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "DAO Maker",
+     "date": "2021-09-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Unprotected init() function in SHO contracts allowed re-initialization to change ownership, followed by emergencyExit() to drain funds",
+     "lossUsd": 7000000
+    },
+    {
+     "id": "2021-09-14_NowSwap_DutchAuction_BatchReentrancy",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "NowSwap (Dutch Auction)",
+     "date": "2021-09-14",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "When the batch() function makes multiple calls to the same function (commitEth), state is not updated between each call, allowing duplicate participation",
+     "lossUsd": null
+    },
+    {
+     "id": "2022-04-30_Saddle_StableSwapArbitrage",
+     "score": 0.32,
+     "bytecodeSim": 1,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Saddle Finance",
+     "date": "2022-04-30",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "A virtual price calculation bug in the legacy Saddle pool allowed profit to be extracted simply by repeatedly swapping sUSD back and forth between Curve and Sad",
+     "lossUsd": 11000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "bytecode opcode-5gram Jaccard ≈ 1.00 vs a known-vulnerable deployment",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xdb1475c24597d10d31b28eac2ddfb14fd5d2a249",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xcc08050fd364b565f2778764adbabaece0e1614b790703c904cc2a8c2333427c",
+   "codeBytes": 3066,
+   "opcodeCount": 1965,
+   "ngramCount": 969,
+   "selectors": [
+    "0x0746f3d3",
+    "0x1be19560",
+    "0x30cd7471",
+    "0x39a7d5ff",
+    "0x61887a81",
+    "0x6f074e32",
+    "0x70a08231",
+    "0x8da5cb5b",
+    "0x909b19d9",
+    "0xab803a76",
+    "0xeae4c19f",
+    "0xf2fde38b"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.2129,
+   "candidatesConsidered": 1,
+   "similarIncidents": [
+    {
+     "id": "2022-03-14_CompoundTUSD_SweepTokenUnauthorized",
+     "score": 0.21286420489223368,
+     "bytecodeSim": 0.09375,
+     "selectorSim": 0.9143210244611684,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Compound Finance (cTUSD Market)",
+     "date": "2022-03-14",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "sweepToken() was designed in a way that allowed recovery of the contract's underlying token (TUSD), enabling withdrawal of market funds when the legacy TUSD tok",
+     "lossUsd": null
+    }
+   ],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x23617e59a5925b2a4bf75d73ff6711cd0b29de85",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x55e6b334152096d60367d7ab24241948b31e8d0e66adc8b81cba049a19f9d2ac",
+   "codeBytes": 24380,
+   "opcodeCount": 12869,
+   "ngramCount": 7307,
+   "selectors": [
+    "0x1a27b201",
+    "0x24856bc3",
+    "0x3593564c",
+    "0x44684dc3",
+    "0x8021fef7",
+    "0x817122dc",
+    "0x84b0196e",
+    "0x899ed4a7",
+    "0x91dd7346",
+    "0xd04d79a2",
+    "0xd0c9f6cb",
+    "0xd737d0c7",
+    "0xdc4c90d3",
+    "0xfa461e33"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.2,
+   "candidatesConsidered": 10,
+   "similarIncidents": [
+    {
+     "id": "2024-07-18_MEVbot_0xdd7c_UniswapV3CallbackExploit",
+     "score": 0.2,
+     "bytecodeSim": 0,
+     "selectorSim": 1,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "MEV Bot (0xDd7c)",
+     "date": "2024-07-18",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3SwapCallback() allowing arbitrary token withdrawal",
+     "lossUsd": 18000
+    },
+    {
+     "id": "2024-07-28_UnverifiedContr_0x452E25_UniswapV3CallbackExploit",
+     "score": 0.2,
+     "bytecodeSim": 0,
+     "selectorSim": 1,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (0x452E25)",
+     "date": "2024-07-28",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing msg.sender validation in uniswapV3SwapCallback(), allowing arbitrary WETH withdrawal",
+     "lossUsd": 27
+    },
+    {
+     "id": "2025-08-10_0x8d2e_MissingAccessControl-SwapCallback",
+     "score": 0.2,
+     "bytecodeSim": 0,
+     "selectorSim": 1,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "0x8d2e (Anonymous Protocol)",
+     "date": "2025-08-10",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "uniswapV3SwapCallback function has no caller validation, allowing anyone to call it arbitrarily",
+     "lossUsd": 40000
+    },
+    {
+     "id": "2024-03-20_ParaSwap_AccessControl_Multichain",
+     "score": 0.17013407089282673,
+     "bytecodeSim": 0,
+     "selectorSim": 0.8506703544641336,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "ParaSwap (Augustus V6)",
+     "date": "2024-03-20 (Deployed: 2024-03-18, Discovered and exploited: 2024-03-20)",
+     "categories": [
+      "access-control",
+      "arbitrary-call"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3SwapCallback() — a fake Uniswap V3 pool triggers the callback to gain control of fromAddress and drain victim tokens",
+     "lossUsd": 300000
+    },
+    {
+     "id": "2024-11-07_CoW_SwapCallbackDrain",
+     "score": 0.16507996114110937,
+     "bytecodeSim": 0,
+     "selectorSim": 0.8253998057055468,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "CoW Protocol (GPv2Settlement)",
+     "date": "2024-11-07",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "No msg.sender validation in GPv2Settlement's uniswapV3SwapCallback or its integrated contract (addr2)",
+     "lossUsd": 59000
+    }
+   ],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xca7c2771d248dcbe09eabe0ce57a62e18da178c0",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5",
+   "codeBytes": 11293,
+   "opcodeCount": 5372,
+   "ngramCount": 2569,
+   "selectors": [
+    "0x022c0d9f",
+    "0x06fdde03",
+    "0x0902f1ac",
+    "0x095ea7b3",
+    "0x0dfe1681",
+    "0x18160ddd",
+    "0x23b872dd",
+    "0x30adf81f",
+    "0x313ce567",
+    "0x3644e515",
+    "0x485cc955",
+    "0x5909c0d5",
+    "0x5a3d5493",
+    "0x6a627842",
+    "0x70a08231",
+    "0x7464fc3d",
+    "0x7ecebe00",
+    "0x89afcb44",
+    "0x95d89b41",
+    "0xa9059cbb",
+    "0xba9a7a56",
+    "0xbc25cf77",
+    "0xc45a0155",
+    "0xd21220a7",
+    "0xd505accf",
+    "0xdd62ed3e",
+    "0xfff6cae9"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1971,
+   "candidatesConsidered": 70,
+   "similarIncidents": [
+    {
+     "id": "2022-08_Circle_MakerCDP_FlashLoan",
+     "score": 0.1971340733322104,
+     "bytecodeSim": 0,
+     "selectorSim": 0.8206703666610519,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Maker Protocol (CDP)",
+     "date": "2022-08",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "Insufficient access control in frob() and flux() allowing withdrawal of collateral from another user's CDP position",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-04-18_Swapos_InitialReserveManipulation",
+     "score": 0.1702988838183915,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4364944190919574,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "",
+     "date": "2023-04-18",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-21_Nimbus_KInvariant_1000vs10000",
+     "score": 0.1497074859857525,
+     "bytecodeSim": 0.3203125,
+     "selectorSim": 0.07103742992876247,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Nimbus DEX",
+     "date": "2021-09-21",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "Identical to Uranium Finance — K invariant constant mismatch: reserves multiplied by 10000, but K validation uses 1000^2",
+     "lossUsd": 1.45
+    },
+    {
+     "id": "2024-04-XX_SATX_SkimSyncReserveManipulation",
+     "score": 0.14462545080366002,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3081272540183,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "SATX",
+     "date": "2024-04",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Repeated discrepancies between pair reserves and actual balances were created by combining skim() + sync() on the SATX fee-on-transfer token with flash swaps, d",
+     "lossUsd": 999000000
+    },
+    {
+     "id": "2022-02-18_TecraSpace_BurnFromPriceManipulation",
+     "score": 0.1445442099272467,
+     "bytecodeSim": 0.1015625,
+     "selectorSim": 0.1452210496362334,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "TecraSpace (TCR Token)",
+     "date": "2022-02-18",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Used burnFrom() to burn TCR from the Uniswap pool, then called sync() to force-update pool reserves, manipulating the TCR/USDT spot price to extract arbitrage p",
+     "lossUsd": 639222
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xdfcf744c8ae896e8631ba9b9dc717546646f6708",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5",
+   "codeBytes": 11293,
+   "opcodeCount": 5372,
+   "ngramCount": 2569,
+   "selectors": [
+    "0x022c0d9f",
+    "0x06fdde03",
+    "0x0902f1ac",
+    "0x095ea7b3",
+    "0x0dfe1681",
+    "0x18160ddd",
+    "0x23b872dd",
+    "0x30adf81f",
+    "0x313ce567",
+    "0x3644e515",
+    "0x485cc955",
+    "0x5909c0d5",
+    "0x5a3d5493",
+    "0x6a627842",
+    "0x70a08231",
+    "0x7464fc3d",
+    "0x7ecebe00",
+    "0x89afcb44",
+    "0x95d89b41",
+    "0xa9059cbb",
+    "0xba9a7a56",
+    "0xbc25cf77",
+    "0xc45a0155",
+    "0xd21220a7",
+    "0xd505accf",
+    "0xdd62ed3e",
+    "0xfff6cae9"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1971,
+   "candidatesConsidered": 70,
+   "similarIncidents": [
+    {
+     "id": "2022-08_Circle_MakerCDP_FlashLoan",
+     "score": 0.1971340733322104,
+     "bytecodeSim": 0,
+     "selectorSim": 0.8206703666610519,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Maker Protocol (CDP)",
+     "date": "2022-08",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "Insufficient access control in frob() and flux() allowing withdrawal of collateral from another user's CDP position",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-04-18_Swapos_InitialReserveManipulation",
+     "score": 0.1702988838183915,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4364944190919574,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "",
+     "date": "2023-04-18",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-21_Nimbus_KInvariant_1000vs10000",
+     "score": 0.1497074859857525,
+     "bytecodeSim": 0.3203125,
+     "selectorSim": 0.07103742992876247,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Nimbus DEX",
+     "date": "2021-09-21",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "Identical to Uranium Finance — K invariant constant mismatch: reserves multiplied by 10000, but K validation uses 1000^2",
+     "lossUsd": 1.45
+    },
+    {
+     "id": "2024-04-XX_SATX_SkimSyncReserveManipulation",
+     "score": 0.14462545080366002,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3081272540183,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "SATX",
+     "date": "2024-04",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Repeated discrepancies between pair reserves and actual balances were created by combining skim() + sync() on the SATX fee-on-transfer token with flash swaps, d",
+     "lossUsd": 999000000
+    },
+    {
+     "id": "2022-02-18_TecraSpace_BurnFromPriceManipulation",
+     "score": 0.1445442099272467,
+     "bytecodeSim": 0.1015625,
+     "selectorSim": 0.1452210496362334,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "TecraSpace (TCR Token)",
+     "date": "2022-02-18",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Used burnFrom() to burn TCR from the Uniswap pool, then called sync() to force-update pool reserves, manipulating the TCR/USDT spot price to extract arbitrage p",
+     "lossUsd": 639222
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x2325e3f261cadb1c30cebf66c9f95f6fb016c0d4",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5",
+   "codeBytes": 11293,
+   "opcodeCount": 5372,
+   "ngramCount": 2569,
+   "selectors": [
+    "0x022c0d9f",
+    "0x06fdde03",
+    "0x0902f1ac",
+    "0x095ea7b3",
+    "0x0dfe1681",
+    "0x18160ddd",
+    "0x23b872dd",
+    "0x30adf81f",
+    "0x313ce567",
+    "0x3644e515",
+    "0x485cc955",
+    "0x5909c0d5",
+    "0x5a3d5493",
+    "0x6a627842",
+    "0x70a08231",
+    "0x7464fc3d",
+    "0x7ecebe00",
+    "0x89afcb44",
+    "0x95d89b41",
+    "0xa9059cbb",
+    "0xba9a7a56",
+    "0xbc25cf77",
+    "0xc45a0155",
+    "0xd21220a7",
+    "0xd505accf",
+    "0xdd62ed3e",
+    "0xfff6cae9"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1971,
+   "candidatesConsidered": 70,
+   "similarIncidents": [
+    {
+     "id": "2022-08_Circle_MakerCDP_FlashLoan",
+     "score": 0.1971340733322104,
+     "bytecodeSim": 0,
+     "selectorSim": 0.8206703666610519,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Maker Protocol (CDP)",
+     "date": "2022-08",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "Insufficient access control in frob() and flux() allowing withdrawal of collateral from another user's CDP position",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-04-18_Swapos_InitialReserveManipulation",
+     "score": 0.1702988838183915,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4364944190919574,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "",
+     "date": "2023-04-18",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-21_Nimbus_KInvariant_1000vs10000",
+     "score": 0.1497074859857525,
+     "bytecodeSim": 0.3203125,
+     "selectorSim": 0.07103742992876247,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Nimbus DEX",
+     "date": "2021-09-21",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "Identical to Uranium Finance — K invariant constant mismatch: reserves multiplied by 10000, but K validation uses 1000^2",
+     "lossUsd": 1.45
+    },
+    {
+     "id": "2024-04-XX_SATX_SkimSyncReserveManipulation",
+     "score": 0.14462545080366002,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3081272540183,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "SATX",
+     "date": "2024-04",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Repeated discrepancies between pair reserves and actual balances were created by combining skim() + sync() on the SATX fee-on-transfer token with flash swaps, d",
+     "lossUsd": 999000000
+    },
+    {
+     "id": "2022-02-18_TecraSpace_BurnFromPriceManipulation",
+     "score": 0.1445442099272467,
+     "bytecodeSim": 0.1015625,
+     "selectorSim": 0.1452210496362334,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "TecraSpace (TCR Token)",
+     "date": "2022-02-18",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Used burnFrom() to burn TCR from the Uniswap pool, then called sync() to force-update pool reserves, manipulating the TCR/USDT spot price to extract arbitrage p",
+     "lossUsd": 639222
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x1d45a4e326a29454036e7154c60c4a855a041a9f",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x5b83bdbcc56b2e630f2807bbadd2b0c21619108066b92a58de081261089e9ce5",
+   "codeBytes": 11293,
+   "opcodeCount": 5372,
+   "ngramCount": 2569,
+   "selectors": [
+    "0x022c0d9f",
+    "0x06fdde03",
+    "0x0902f1ac",
+    "0x095ea7b3",
+    "0x0dfe1681",
+    "0x18160ddd",
+    "0x23b872dd",
+    "0x30adf81f",
+    "0x313ce567",
+    "0x3644e515",
+    "0x485cc955",
+    "0x5909c0d5",
+    "0x5a3d5493",
+    "0x6a627842",
+    "0x70a08231",
+    "0x7464fc3d",
+    "0x7ecebe00",
+    "0x89afcb44",
+    "0x95d89b41",
+    "0xa9059cbb",
+    "0xba9a7a56",
+    "0xbc25cf77",
+    "0xc45a0155",
+    "0xd21220a7",
+    "0xd505accf",
+    "0xdd62ed3e",
+    "0xfff6cae9"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1971,
+   "candidatesConsidered": 70,
+   "similarIncidents": [
+    {
+     "id": "2022-08_Circle_MakerCDP_FlashLoan",
+     "score": 0.1971340733322104,
+     "bytecodeSim": 0,
+     "selectorSim": 0.8206703666610519,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Maker Protocol (CDP)",
+     "date": "2022-08",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "Insufficient access control in frob() and flux() allowing withdrawal of collateral from another user's CDP position",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-04-18_Swapos_InitialReserveManipulation",
+     "score": 0.1702988838183915,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4364944190919574,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "",
+     "date": "2023-04-18",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-09-21_Nimbus_KInvariant_1000vs10000",
+     "score": 0.1497074859857525,
+     "bytecodeSim": 0.3203125,
+     "selectorSim": 0.07103742992876247,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Nimbus DEX",
+     "date": "2021-09-21",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "Identical to Uranium Finance — K invariant constant mismatch: reserves multiplied by 10000, but K validation uses 1000^2",
+     "lossUsd": 1.45
+    },
+    {
+     "id": "2024-04-XX_SATX_SkimSyncReserveManipulation",
+     "score": 0.14462545080366002,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3081272540183,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "SATX",
+     "date": "2024-04",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Repeated discrepancies between pair reserves and actual balances were created by combining skim() + sync() on the SATX fee-on-transfer token with flash swaps, d",
+     "lossUsd": 999000000
+    },
+    {
+     "id": "2022-02-18_TecraSpace_BurnFromPriceManipulation",
+     "score": 0.1445442099272467,
+     "bytecodeSim": 0.1015625,
+     "selectorSim": 0.1452210496362334,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "TecraSpace (TCR Token)",
+     "date": "2022-02-18",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Used burnFrom() to burn TCR from the Uniswap pool, then called sync() to force-update pool reserves, manipulating the TCR/USDT spot price to extract arbitrage p",
+     "lossUsd": 639222
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x0000000aa232009084bd71a5797d089aa4edfad4",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x528182e66a441545ea3ba1dede4e6063f23acd4ada4036c24b9fa2f254bc4ed1",
+   "codeBytes": 23569,
+   "opcodeCount": 13022,
+   "ngramCount": 7214,
+   "selectors": [
+    "0x01000000",
+    "0x09c5eabe",
+    "0x116a5550",
+    "0x13871465",
+    "0x1828e0e7",
+    "0x21d0ee70",
+    "0x259982e5",
+    "0x33830e48",
+    "0x47e7ef24",
+    "0x48c89491",
+    "0x53b41c55",
+    "0x575e24b4",
+    "0x578063d9",
+    "0x7407905c",
+    "0x7cf98081",
+    "0x8340f549",
+    "0x84b0196e",
+    "0x8587f450",
+    "0x91dd7346",
+    "0x92eefe9b",
+    "0xb47b2fb1",
+    "0xd6cffd1e",
+    "0xd9caed12",
+    "0xd9e17f98",
+    "0xdd4d4cf6",
+    "0xf3fef3a3"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1812,
+   "candidatesConsidered": 13,
+   "similarIncidents": [
+    {
+     "id": "2023-07-25_Platypus02_PriceManipulation",
+     "score": 0.18116831695488184,
+     "bytecodeSim": 0,
+     "selectorSim": 0.6558415847744091,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "",
+     "date": "2023-07-25",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2020-04-19_LendfMe_Reentrancy",
+     "score": 0.12198621520381571,
+     "bytecodeSim": 0.03125,
+     "selectorSim": 0.30993107601907854,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [
+      "reentrancy"
+     ],
+     "protocol": "Lendf.Me (dForce)",
+     "date": "2020-04-19",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "Reentrancy via ERC777 token's tokensToSend hook allows withdrawal before balance update",
+     "lossUsd": 25000000
+    },
+    {
+     "id": "2020-11-12_Akropolis_ReentrancyDAI",
+     "score": 0.10558290550476483,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2779145275238241,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "reentrancy"
+     ],
+     "protocol": "Akropolis (delphi Savings Pool)",
+     "date": "2020-11-12",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "Reentrancy via malicious ERC20 token: the deposit function did not follow the Checks-Effects-Interactions pattern, allowing reentry before balance update during",
+     "lossUsd": 2000000
+    },
+    {
+     "id": "2022-12_TIFI_DepositBorrowReserveManipulation",
+     "score": 0.09789117071645963,
+     "bytecodeSim": 0,
+     "selectorSim": 0.23945585358229812,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "TIFI Finance",
+     "date": "2022-12",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Calling borrow() after deposit() while internal reserves are manipulated via a WBNB→BUSD swap allows borrowing the entire TIFI token supply based on the manipul",
+     "lossUsd": null
+    },
+    {
+     "id": "2020-12-28_Cover_MintingExploit",
+     "score": 0.07236879119117134,
+     "bytecodeSim": 0.0859375,
+     "selectorSim": 0.22434395595585674,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Cover Protocol",
+     "date": "2020-12-28",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "Reward calculation bug in Blacksmith staking contract allowed arbitrary large-scale COVER token minting",
+     "lossUsd": 4000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x48ba574edf0bc4e2e40b529863aaa6a67c264e7c",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xeff3e9f306378dcc61384bb5ddca62af19557648c3be2bb979ee2c12ab8bc73c",
+   "codeBytes": 12841,
+   "opcodeCount": 7527,
+   "ngramCount": 2047,
+   "selectors": [
+    "0x0d9167c1",
+    "0x0e81c403",
+    "0x12d43a51",
+    "0x1e5a3a4b",
+    "0x1ef08b75",
+    "0x22867d78",
+    "0x236331e9",
+    "0x24a3d622",
+    "0x2c333e25",
+    "0x2e1a7d4d",
+    "0x2ecd4e7d",
+    "0x34734dd3",
+    "0x3525f591",
+    "0x3644e515",
+    "0x36459f04",
+    "0x3e553756",
+    "0x46e368d4",
+    "0x477230b2",
+    "0x47e7ef24",
+    "0x48bde20c",
+    "0x4ca8ff5a",
+    "0x4ef64ee7",
+    "0x5a57b46f",
+    "0x651afe83",
+    "0x6f1c4839",
+    "0x6f48fbb6",
+    "0x6f8dd24c",
+    "0x7164695a",
+    "0x7adbf973",
+    "0x7d32e793",
+    "0x7dc0d1d0",
+    "0x7ecebe00",
+    "0x7f5007ed",
+    "0x8951b054",
+    "0x97904e42",
+    "0xb6b55f25",
+    "0xb75061bb",
+    "0xbcb4bbea",
+    "0xbcbaf487",
+    "0xbcead63e",
+    "0xc5ebeaec",
+    "0xc74e6d80",
+    "0xc7ed69cd",
+    "0xc8018619",
+    "0xcfad57a2",
+    "0xd1220a3c",
+    "0xd8dfeb45",
+    "0xe00f0a99",
+    "0xe031a824",
+    "0xe5cd8b6a",
+    "0xea0593e4",
+    "0xebc9b94d",
+    "0xfc7b9c18"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": true,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1545,
+   "candidatesConsidered": 49,
+   "similarIncidents": [
+    {
+     "id": "2022-12_TIFI_DepositBorrowReserveManipulation",
+     "score": 0.15452922724924092,
+     "bytecodeSim": 0,
+     "selectorSim": 0.5226461362462046,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "TIFI Finance",
+     "date": "2022-12",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Calling borrow() after deposit() while internal reserves are manipulated via a WBNB→BUSD swap allows borrowing the entire TIFI token supply based on the manipul",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-07-25_Platypus02_PriceManipulation",
+     "score": 0.10490634640864921,
+     "bytecodeSim": 0,
+     "selectorSim": 0.27453173204324605,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "",
+     "date": "2023-07-25",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2022-06-16_InverseFinance_CurveOracleManipulation",
+     "score": 0.0845709429378788,
+     "bytecodeSim": 0,
+     "selectorSim": 0.17285471468939398,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "Inverse Finance (Anchor Protocol)",
+     "date": "2022-06-16",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "The collateral pricing function _getCollateralPrice() directly used Curve's get_virtual_price(), allowing a temporarily inflated AMM internal value caused by a ",
+     "lossUsd": 1200000
+    },
+    {
+     "id": "2021-10-27_Cream_Finance2_OracleManipulation_RecursiveBorrow",
+     "score": 0.07973726881115474,
+     "bytecodeSim": 0,
+     "selectorSim": 0.1486863440557737,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "Cream Finance",
+     "date": "2021-10-27",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Collateral value calculated using yUSD vault's pricePerShare() as a spot value — manipulable within a single block via recursive mint/borrow",
+     "lossUsd": 130000000
+    },
+    {
+     "id": "2020-12-28_Cover_MintingExploit",
+     "score": 0.07530931471116335,
+     "bytecodeSim": 0.109375,
+     "selectorSim": 0.20154657355581673,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Cover Protocol",
+     "date": "2020-12-28",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "Reward calculation bug in Blacksmith staking contract allowed arbitrary large-scale COVER token minting",
+     "lossUsd": 4000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x8f10b468b06c6fd214b65f87778827f7d113f996",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xc3fe18bd9e1e31adecfcaba58177f3d796c3028e7d53a628e321e18295e10682",
+   "codeBytes": 13529,
+   "opcodeCount": 5177,
+   "ngramCount": 3249,
+   "selectors": [
+    "0x01ffc9a7",
+    "0x022d63fb",
+    "0x0aa6220b",
+    "0x248a9ca3",
+    "0x25b9eb6a",
+    "0x2f2ff15d",
+    "0x36035eba",
+    "0x36568abe",
+    "0x3b0f3289",
+    "0x46b5cb59",
+    "0x631ffbf3",
+    "0x634e93da",
+    "0x649a5ec7",
+    "0x68569be7",
+    "0x6b54f8b1",
+    "0x6e6a9042",
+    "0x6f39feec",
+    "0x779e3693",
+    "0x7d726b0d",
+    "0x84ef8ffc",
+    "0x8da5cb5b",
+    "0x91d14854",
+    "0xa1eda53c",
+    "0xa217fddf",
+    "0xb8778946",
+    "0xcc8463c8",
+    "0xcefc1429",
+    "0xcf6eefb7",
+    "0xd547741f",
+    "0xd602b9fd",
+    "0xd737d0c7",
+    "0xd9c45357",
+    "0xe4310066",
+    "0xeaf1b14b",
+    "0xf2fde38b"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1414,
+   "candidatesConsidered": 1,
+   "similarIncidents": [
+    {
+     "id": "2024-08-29_Unverified667d_AccessControl",
+     "score": 0.14142135623730953,
+     "bytecodeSim": 0,
+     "selectorSim": 0.7071067811865476,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (0x667d)",
+     "date": "2024-08-29",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "The grantRole function lacked access control, allowing anyone to grant themselves admin privileges",
+     "lossUsd": 10000
+    }
+   ],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x8157a9d65807521fbb8db8f37eeecefdd247e9b1",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x884c0566f0544b83df0b89221589c8fa2bc856e97f533e1bfb83d34d4f4f2682",
+   "codeBytes": 1610,
+   "opcodeCount": 866,
+   "ngramCount": 563,
+   "selectors": [
+    "0x0a5ea466",
+    "0x12ec8dcc",
+    "0x23b872dd",
+    "0x43000811",
+    "0x616c6c65",
+    "0x63657373",
+    "0x6f6e7472",
+    "0x715018a6",
+    "0x74206973",
+    "0x8da5cb5b",
+    "0xaad0ae5b",
+    "0xc4d66de8",
+    "0xf2fde38b",
+    "0xf4059071"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1293,
+   "candidatesConsidered": 4,
+   "similarIncidents": [
+    {
+     "id": "2024-03-XX_SSS_TransferLimitBypass",
+     "score": 0.12933088809955204,
+     "bytecodeSim": 0,
+     "selectorSim": 0.6466544404977602,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "SSS (Blast)",
+     "date": "2024-03",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "Bypassed maxAmountPerTx() transfer limit via recursive self-transfer, then sent the excessively accumulated SSS tokens to the pool and swapped for WETH",
+     "lossUsd": 4800000
+    },
+    {
+     "id": "2025-02-12_Unverified_d4f1_UninitializedProxy",
+     "score": 0.10283033554688795,
+     "bytecodeSim": 0,
+     "selectorSim": 0.5141516777344397,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (d4f1)",
+     "date": "2025-02-12",
+     "categories": [
+      "proxy-storage"
+     ],
+     "rootCause": "The proxy contract's initialize() function was never called after deployment, allowing anyone to initialize it and execute withdrawFees() without authorization",
+     "lossUsd": 15200
+    },
+    {
+     "id": "2023-08-16_EAC_FlashLoanProxy",
+     "score": 0.08127492894906785,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4063746447453392,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-08-16",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-12-13_HyprNetwork_BusinessLogic_ETH",
+     "score": 0.07172224476729681,
+     "bytecodeSim": 0,
+     "selectorSim": 0.358611223836484,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Hypr Network (OP Stack-based L2 Bridge)",
+     "date": "2023-12-13",
+     "categories": [
+      "business-logic",
+      "proxy-storage"
+     ],
+     "rootCause": "The clearLegacySlot modifier resets Initializable's initialization flag (storage slot 0), allowing re-initialization",
+     "lossUsd": 220000
+    }
+   ],
+   "rules": [],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xa324bc7db3d091b6f1a2d526e48a9c7039e03b3cc35f7d44b15ac7a1544c11d2",
+   "codeBytes": 21943,
+   "opcodeCount": 11012,
+   "ngramCount": 2910,
+   "selectors": [
+    "0x02751cec",
+    "0x054d50d4",
+    "0x18cbafe5",
+    "0x1f00ca74",
+    "0x2195995c",
+    "0x38ed1739",
+    "0x4a25d94a",
+    "0x5b0d5984",
+    "0x5c11d795",
+    "0x791ac947",
+    "0x7ff36ab5",
+    "0x85f8c259",
+    "0x8803dbee",
+    "0xad5c4648",
+    "0xad615dec",
+    "0xaf2979eb",
+    "0xb6f9de95",
+    "0xbaa2abde",
+    "0xc45a0155",
+    "0xd06ca61f",
+    "0xded9382a",
+    "0xe8e33700",
+    "0xf305d719",
+    "0xfb3bdb41"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1273,
+   "candidatesConsidered": 30,
+   "similarIncidents": [
+    {
+     "id": "2023-05-xx_NeverFall_BuySellPriceManipulation",
+     "score": 0.12725505934315812,
+     "bytecodeSim": 0,
+     "selectorSim": 0.38627529671579064,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "",
+     "date": "",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-04-14_OLIFE_DeliverReflectionDrain",
+     "score": 0.07725505934315813,
+     "bytecodeSim": 0,
+     "selectorSim": 0.38627529671579064,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-04-14",
+     "categories": [
+      "defl-tax-token"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2021-05-28_BurgerSwap_Reentrancy_StaleReserves",
+     "score": 0.07396215267185176,
+     "bytecodeSim": 0,
+     "selectorSim": 0.11981076335925878,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "reentrancy"
+     ],
+     "protocol": "BurgerSwap",
+     "date": "2021-05-28",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "Reentrancy via a fake token with a custom transferFrom() hook causes swap amounts to be calculated using stale reserve values before the internal swap completes",
+     "lossUsd": 7200000
+    },
+    {
+     "id": "2024-03-XX_MO_BorrowRedeemLogicFlaw",
+     "score": 0.06470777250358872,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3235388625179436,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "MO Finance",
+     "date": "2024-03",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "Loan.borrow() can be called repeatedly without proper collateral or duplicate borrow validation, and redeem() executes without position validity checks, drainin",
+     "lossUsd": 413000
+    },
+    {
+     "id": "2022-09_Shadowfi_BurnReserveManipulation",
+     "score": 0.06260089823547195,
+     "bytecodeSim": 0,
+     "selectorSim": 0.06300449117735972,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "Shadowfi (SDF Token)",
+     "date": "2022-09",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Directly burn()ing SDF from the LP pair to reduce reserves, then calling sync() to inflate the price",
+     "lossUsd": null
+    }
+   ],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xeff6cb8b614999d130e537751ee99724d01aa167",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x4587d0bc1cc9767840f30dc8356a0d634dc53bce536cec25518f1a822765460d",
+   "codeBytes": 22429,
+   "opcodeCount": 8560,
+   "ngramCount": 4213,
+   "selectors": [
+    "0x109a411c",
+    "0x23a69e75",
+    "0x4cf8a597",
+    "0x5f31516f",
+    "0x5f6f56f1",
+    "0x68e419d8",
+    "0x7f3a34e9",
+    "0x910cd747",
+    "0x91dd7346",
+    "0x92928cad",
+    "0x95305e90",
+    "0xa41e223e",
+    "0xa90bc6eb",
+    "0xbd2bc36e",
+    "0xc08d58bb",
+    "0xd78fd74d",
+    "0xf17f3fb2",
+    "0xf5537ede",
+    "0xfa461e33"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1269,
+   "candidatesConsidered": 12,
+   "similarIncidents": [
+    {
+     "id": "2024-03-20_ParaSwap_AccessControl_Multichain",
+     "score": 0.12691324049271638,
+     "bytecodeSim": 0,
+     "selectorSim": 0.38456620246358186,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "arbitrary-call"
+     ],
+     "protocol": "ParaSwap (Augustus V6)",
+     "date": "2024-03-20 (Deployed: 2024-03-18, Discovered and exploited: 2024-03-20)",
+     "categories": [
+      "access-control",
+      "arbitrary-call"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3SwapCallback() — a fake Uniswap V3 pool triggers the callback to gain control of fromAddress and drain victim tokens",
+     "lossUsd": 300000
+    },
+    {
+     "id": "2024-11-07_CoW_SwapCallbackDrain",
+     "score": 0.12462840737980455,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3731420368990227,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "arbitrary-call"
+     ],
+     "protocol": "CoW Protocol (GPv2Settlement)",
+     "date": "2024-11-07",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "No msg.sender validation in GPv2Settlement's uniswapV3SwapCallback or its integrated contract (addr2)",
+     "lossUsd": 59000
+    },
+    {
+     "id": "2024-07-18_MEVbot_0xdd7c_UniswapV3CallbackExploit",
+     "score": 0.09041485939775891,
+     "bytecodeSim": 0,
+     "selectorSim": 0.45207429698879453,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "MEV Bot (0xDd7c)",
+     "date": "2024-07-18",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3SwapCallback() allowing arbitrary token withdrawal",
+     "lossUsd": 18000
+    },
+    {
+     "id": "2024-07-28_UnverifiedContr_0x452E25_UniswapV3CallbackExploit",
+     "score": 0.09041485939775891,
+     "bytecodeSim": 0,
+     "selectorSim": 0.45207429698879453,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (0x452E25)",
+     "date": "2024-07-28",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing msg.sender validation in uniswapV3SwapCallback(), allowing arbitrary WETH withdrawal",
+     "lossUsd": 27
+    },
+    {
+     "id": "2025-08-10_0x8d2e_MissingAccessControl-SwapCallback",
+     "score": 0.09041485939775891,
+     "bytecodeSim": 0,
+     "selectorSim": 0.45207429698879453,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "0x8d2e (Anonymous Protocol)",
+     "date": "2025-08-10",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "uniswapV3SwapCallback function has no caller validation, allowing anyone to call it arbitrarily",
+     "lossUsd": 40000
+    }
+   ],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xbc530bfa3fca1a731149248afc7f750c18360de1",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x40802296c24793f9d86e9e09d87c4e03606856c98cbdd749d6499bea4467d07c",
+   "codeBytes": 6565,
+   "opcodeCount": 3570,
+   "ngramCount": 1480,
+   "selectors": [
+    "0x0c6df5e4",
+    "0x3f91d69d",
+    "0x4a27affb",
+    "0x60248201",
+    "0x616c6c65",
+    "0x61d027b3",
+    "0x6520696d",
+    "0x65496d70",
+    "0x6573736f",
+    "0x68616e67",
+    "0x715018a6",
+    "0x7420746f",
+    "0x74426173",
+    "0x7a81085c",
+    "0x8da5cb5b",
+    "0x9be3d69c",
+    "0xb6044b68",
+    "0xb7bd0848",
+    "0xc2510346",
+    "0xc6512cc1",
+    "0xdc8f7fa5",
+    "0xe613b1cd",
+    "0xf0f44260",
+    "0xf2fde38b",
+    "0xf3fef3a3",
+    "0xf887ea40",
+    "0xfc0c546a"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1251,
+   "candidatesConsidered": 7,
+   "similarIncidents": [
+    {
+     "id": "2023-07-25_Platypus02_PriceManipulation",
+     "score": 0.12514760820573811,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3757380410286905,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "",
+     "date": "2023-07-25",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2020-04-19_LendfMe_Reentrancy",
+     "score": 0.08649569309926976,
+     "bytecodeSim": 0.0625,
+     "selectorSim": 0.33247846549634874,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [],
+     "protocol": "Lendf.Me (dForce)",
+     "date": "2020-04-19",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "Reentrancy via ERC777 token's tokensToSend hook allows withdrawal before balance update",
+     "lossUsd": 25000000
+    },
+    {
+     "id": "2026-03-10_AlkemiEarn_Self_Liquidation",
+     "score": 0.06649569309926975,
+     "bytecodeSim": 0,
+     "selectorSim": 0.33247846549634874,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "AlkemiEarn",
+     "date": "2026-03-10",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "Post-withdrawal health check absence in withdraw() combined with self-liquidation permitted in liquidateBorrow(), enabling abnormal withdrawal of 93.49 ETH",
+     "lossUsd": 43.45
+    },
+    {
+     "id": "2024-04-27_EmberSword_AccessControl_Polygon",
+     "score": 0.0627753168443127,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3138765842215635,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Ember Sword (Blockchain MMORPG Game)",
+     "date": "2024-04-27",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Access Control vulnerability — missing authorization validation logic to prevent unauthorized transferFrom calls in the NFT auction contract; attacker drained t",
+     "lossUsd": 196000
+    },
+    {
+     "id": "2023-10-11_Astrid_WithdrawExploit",
+     "score": 0.05579051666214087,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2789525833107043,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-10-11",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xaddc26a3854feabfd20d6bf658254088d83a425a",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xffdce6016c0efe4a2503f44f26cefdca5b0a563455b4712081078d933623ff34",
+   "codeBytes": 23470,
+   "opcodeCount": 14040,
+   "ngramCount": 9240,
+   "selectors": [
+    "0x06b8524c",
+    "0x1a15a3cc",
+    "0x1fff991f",
+    "0x4e487b71",
+    "0x70a08231",
+    "0xb7e59b04",
+    "0xe758b8d5",
+    "0xf9ade075"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1182,
+   "candidatesConsidered": 9,
+   "similarIncidents": [
+    {
+     "id": "2025-07-22_MulticallWithETH_ValueForwarding",
+     "score": 0.11819462807164063,
+     "bytecodeSim": 0,
+     "selectorSim": 0.5909731403582031,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "MulticallWithETH (BSC)",
+     "date": "2025-07-22",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "The Multicall contract repeatedly reuses msg.value across each sub-call, enabling ETH double-spending",
+     "lossUsd": 10000
+    },
+    {
+     "id": "2025-03-14_H2O_PriceManipulation",
+     "score": 0.10205803995679834,
+     "bytecodeSim": 0,
+     "selectorSim": 0.26029019978399165,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "H2O Token",
+     "date": "2025-03-14",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Missing access control on skim() allows anyone to trigger reserve imbalances and manipulate AMM pricing",
+     "lossUsd": 22470
+    },
+    {
+     "id": "2025-03-15_wKeyDAO_NFTReentrancy",
+     "score": 0.07378488561642836,
+     "bytecodeSim": 0,
+     "selectorSim": 0.36892442808214176,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "wKeyDAO",
+     "date": "2025-03-15",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "Reentrancy attack possible via onERC721Received callback during NFT transfer in the buy() function",
+     "lossUsd": 767
+    },
+    {
+     "id": "2024-01-26_Freedom_FlashLoanPriceManipulation",
+     "score": 0.06352582305971272,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3176291152985636,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Freedom (FREEB)",
+     "date": "2024-01-26",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "The buyToken() function uses PancakeSwap pair's getReserves() spot reserves as a price oracle, enabling below-market purchases via single-block reserve manipula",
+     "lossUsd": 74
+    },
+    {
+     "id": "2024-04-XX_BigBangSwap_SellRewardTokenAccessControl",
+     "score": 0.062268073179491526,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3113403658974576,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "BigBangSwap (BGG)",
+     "date": "2024-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "sellRewardToken(uint256 amount) has no access control, allowing anyone to sell BGG for BUSD; the reward pool was drained via repeated calls from multiple attack",
+     "lossUsd": 5000000000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x4cd00e387622c35bddb9b4c962c136462338bc31",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x27fed69438cf2a1e69f053e52d5ee6f9637963c44da6035fb9241063240c799e",
+   "codeBytes": 8628,
+   "opcodeCount": 5307,
+   "ngramCount": 2368,
+   "selectors": [
+    "0x25692962",
+    "0x2d9fb478",
+    "0x49290c1c",
+    "0x4e487b71",
+    "0x54d1f13d",
+    "0x5a1ee3ac",
+    "0x610bb756",
+    "0x715018a6",
+    "0x84b0196e",
+    "0x8da5cb5b",
+    "0xaa5dcecc",
+    "0xbf83f2a2",
+    "0xcf5905d7",
+    "0xd52bfcc8",
+    "0xe8017952",
+    "0xeae335b3",
+    "0xf04e283e",
+    "0xf2fde38b",
+    "0xfee81cf4"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1182,
+   "candidatesConsidered": 9,
+   "similarIncidents": [
+    {
+     "id": "2025-07-22_MulticallWithETH_ValueForwarding",
+     "score": 0.11819462807164063,
+     "bytecodeSim": 0,
+     "selectorSim": 0.5909731403582031,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "MulticallWithETH (BSC)",
+     "date": "2025-07-22",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "The Multicall contract repeatedly reuses msg.value across each sub-call, enabling ETH double-spending",
+     "lossUsd": 10000
+    },
+    {
+     "id": "2025-03-14_H2O_PriceManipulation",
+     "score": 0.10205803995679834,
+     "bytecodeSim": 0,
+     "selectorSim": 0.26029019978399165,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "oracle-price-manipulation"
+     ],
+     "protocol": "H2O Token",
+     "date": "2025-03-14",
+     "categories": [
+      "oracle-price-manipulation"
+     ],
+     "rootCause": "Missing access control on skim() allows anyone to trigger reserve imbalances and manipulate AMM pricing",
+     "lossUsd": 22470
+    },
+    {
+     "id": "2025-03-15_wKeyDAO_NFTReentrancy",
+     "score": 0.07378488561642836,
+     "bytecodeSim": 0,
+     "selectorSim": 0.36892442808214176,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "wKeyDAO",
+     "date": "2025-03-15",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "Reentrancy attack possible via onERC721Received callback during NFT transfer in the buy() function",
+     "lossUsd": 767
+    },
+    {
+     "id": "2024-01-26_Freedom_FlashLoanPriceManipulation",
+     "score": 0.06352582305971272,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3176291152985636,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Freedom (FREEB)",
+     "date": "2024-01-26",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "The buyToken() function uses PancakeSwap pair's getReserves() spot reserves as a price oracle, enabling below-market purchases via single-block reserve manipula",
+     "lossUsd": 74
+    },
+    {
+     "id": "2024-04-XX_BigBangSwap_SellRewardTokenAccessControl",
+     "score": 0.062268073179491526,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3113403658974576,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "BigBangSwap (BGG)",
+     "date": "2024-04",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "sellRewardToken(uint256 amount) has no access control, allowing anyone to sell BGG for BUSD; the reward pool was drained via repeated calls from multiple attack",
+     "lossUsd": 5000000000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x00000011f84b9aa48e5f8aa8b9897600006289be",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xb9a2f8c1e26718dcbfd6b091dc077b3e3412f3cb3841913865a4f8dbbc835400",
+   "codeBytes": 13220,
+   "opcodeCount": 7151,
+   "ngramCount": 3683,
+   "selectors": [
+    "0x0d335884",
+    "0x0d7a16c3",
+    "0x12261ee7",
+    "0x13fb72c7",
+    "0x2d771389",
+    "0x3f62192e",
+    "0x585da628",
+    "0x6999b377",
+    "0x8da5cb5b",
+    "0xf2fde38b"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.1,
+   "candidatesConsidered": 1,
+   "similarIncidents": [
+    {
+     "id": "2022-03-27_Revest_FNFTReentrancyMint",
+     "score": 0.1,
+     "bytecodeSim": 0.15625,
+     "selectorSim": 0,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": true,
+     "matchedRules": [
+      "reentrancy"
+     ],
+     "protocol": "Revest Finance",
+     "date": "2022-03-27",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "During withdrawFNFT() execution, an ERC1155 onERC1155Received callback is triggered; within this callback, depositAdditionalToFNFT() can be reentered to inflate",
+     "lossUsd": 2000000
+    }
+   ],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x51c72848c68a965f66fa7a88855f9f7784502a7f",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x2643a93e20c87973a77d1e8912dab01918639d02a816331a4206f77a8ad9e4c5",
+   "codeBytes": 20805,
+   "opcodeCount": 12442,
+   "ngramCount": 4550,
+   "selectors": [
+    "0x029074ce",
+    "0x0329dd62",
+    "0x09b0d50a",
+    "0x0b683721",
+    "0x10a43720",
+    "0x1132fb89",
+    "0x122067ed",
+    "0x1626ba7e",
+    "0x1c02708d",
+    "0x1ce9ae07",
+    "0x1e6934b6",
+    "0x2197159c",
+    "0x22f3e2d4",
+    "0x2a455199",
+    "0x2e1a7d4d",
+    "0x30a28ffc",
+    "0x34248ee5",
+    "0x3794bbc4",
+    "0x394b1de1",
+    "0x3bb6ea1e",
+    "0x3c54863c",
+    "0x3cbe46f8",
+    "0x4103f237",
+    "0x47503b3d",
+    "0x481c42a2",
+    "0x484e39c3",
+    "0x48ea3731",
+    "0x4e487b71",
+    "0x59733e7f",
+    "0x5afcf03d",
+    "0x5bc6665d",
+    "0x628bcd8b",
+    "0x6650eb1e",
+    "0x692e3a95",
+    "0x6b410e34",
+    "0x6d66ea05",
+    "0x771d503f",
+    "0x8b954c70",
+    "0xa03dc130",
+    "0xa1c20303",
+    "0xa5fd3043",
+    "0xa93f9118",
+    "0xada00694",
+    "0xae9779c6",
+    "0xb0c39a1e",
+    "0xb221bd4b",
+    "0xb87d3b28",
+    "0xbb25faea",
+    "0xc249597c",
+    "0xc4da52dc",
+    "0xcf1346bc",
+    "0xd3487997",
+    "0xd368093d",
+    "0xd73c2f66",
+    "0xe2f48005",
+    "0xe457acdd",
+    "0xe6ac82d2",
+    "0xea3c986d",
+    "0xecfdae1a",
+    "0xf203c1b1",
+    "0xf7e846e9",
+    "0xfa461e33",
+    "0xfb034fb2",
+    "0xfc6594ef",
+    "0xfcdd595a"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0969,
+   "candidatesConsidered": 44,
+   "similarIncidents": [
+    {
+     "id": "2024-07-18_MEVbot_0xdd7c_UniswapV3CallbackExploit",
+     "score": 0.09694656829502757,
+     "bytecodeSim": 0,
+     "selectorSim": 0.48473284147513784,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "MEV Bot (0xDd7c)",
+     "date": "2024-07-18",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3SwapCallback() allowing arbitrary token withdrawal",
+     "lossUsd": 18000
+    },
+    {
+     "id": "2024-07-28_UnverifiedContr_0x452E25_UniswapV3CallbackExploit",
+     "score": 0.09694656829502757,
+     "bytecodeSim": 0,
+     "selectorSim": 0.48473284147513784,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (0x452E25)",
+     "date": "2024-07-28",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing msg.sender validation in uniswapV3SwapCallback(), allowing arbitrary WETH withdrawal",
+     "lossUsd": 27
+    },
+    {
+     "id": "2025-08-10_0x8d2e_MissingAccessControl-SwapCallback",
+     "score": 0.09694656829502757,
+     "bytecodeSim": 0,
+     "selectorSim": 0.48473284147513784,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "0x8d2e (Anonymous Protocol)",
+     "date": "2025-08-10",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "uniswapV3SwapCallback function has no caller validation, allowing anyone to call it arbitrarily",
+     "lossUsd": 40000
+    },
+    {
+     "id": "2025-03-15_wKeyDAO_NFTReentrancy",
+     "score": 0.08655617103284652,
+     "bytecodeSim": 0,
+     "selectorSim": 0.18278085516423256,
+     "sourceSim": 0,
+     "ruleScore": 0.5,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [
+      "reentrancy"
+     ],
+     "protocol": "wKeyDAO",
+     "date": "2025-03-15",
+     "categories": [
+      "reentrancy"
+     ],
+     "rootCause": "Reentrancy attack possible via onERC721Received callback during NFT transfer in the buy() function",
+     "lossUsd": 767
+    },
+    {
+     "id": "2024-03-20_ParaSwap_AccessControl_Multichain",
+     "score": 0.08246957161561244,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4123478580780622,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "ParaSwap (Augustus V6)",
+     "date": "2024-03-20 (Deployed: 2024-03-18, Discovered and exploited: 2024-03-20)",
+     "categories": [
+      "access-control",
+      "arbitrary-call"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3SwapCallback() — a fake Uniswap V3 pool triggers the callback to gain control of fromAddress and drain victim tokens",
+     "lossUsd": 300000
+    }
+   ],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xe0554a476a092703abdb3ef35c80e0d76d32939f",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x65154c5c5a7a171a3d89df22d2a11319ddcb60bdf00ff9a4e3bd7312cb6badce",
+   "codeBytes": 22142,
+   "opcodeCount": 14788,
+   "ngramCount": 7359,
+   "selectors": [
+    "0x0dfe1681",
+    "0x128acb08",
+    "0x1a686502",
+    "0x1ad8b03b",
+    "0x252c09d7",
+    "0x32148f67",
+    "0x3850c7bd",
+    "0x3c8a7d8d",
+    "0x46141319",
+    "0x490e6cbc",
+    "0x4f1eb3d8",
+    "0x514ea4bf",
+    "0x5339c296",
+    "0x57600080",
+    "0x61161656",
+    "0x70cf754a",
+    "0x8206a4d1",
+    "0x85b66729",
+    "0x883bdbfd",
+    "0xa34123a7",
+    "0xa38807f2",
+    "0xc45a0155",
+    "0xd0c93a7c",
+    "0xd21220a7",
+    "0xddca3f43",
+    "0xf3058399",
+    "0xf30dba93",
+    "0xf637731d"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0932,
+   "candidatesConsidered": 19,
+   "similarIncidents": [
+    {
+     "id": "2023-12-20_TransitFinance_UntrustedInput_BSC",
+     "score": 0.09318744330373134,
+     "bytecodeSim": 0,
+     "selectorSim": 0.46593721651865666,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-12-20",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-07-08_CIVNFT_AccessControl_ETH",
+     "score": 0.08969674307485888,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4484837153742944,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "CIVNFT (CivTrade — CivFund Ecosystem)",
+     "date": "2023-07-08",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3MintCallback — a fake Uniswap V3 Pool triggers the callback to drain victim's approved tokens",
+     "lossUsd": 180000
+    },
+    {
+     "id": "2026-03-22_CyrusFinance_BusinessLogic_BSC",
+     "score": 0.06818463022828607,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3409231511414303,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Cyrus Finance",
+     "date": "2026-03-22",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "slot0() spot price dependency in withdrawUSDTFromAny() → price manipulable within the same transaction (Business Logic Flaw)",
+     "lossUsd": 512000
+    },
+    {
+     "id": "2025-03-01_ZeUSD_SlippageProtection_ETH",
+     "score": 0.05974465273007175,
+     "bytecodeSim": 0,
+     "selectorSim": 0.29872326365035873,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Zoth (ZeUSD — RWA Restaking Stablecoin)",
+     "date": "2025-03-01",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "LTV validation inside mintWithStable() references the initial deposit amount (amount) instead of actual collateral received (collateralReceived) + zero swap sli",
+     "lossUsd": 285000
+    },
+    {
+     "id": "2025-04-11_Unverified6077_CallbackExploit",
+     "score": 0.05141671673112688,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2570835836556344,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (Base)",
+     "date": "2025-04-11",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in the Uniswap V3 swap callback function of an unverified contract",
+     "lossUsd": 62300
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x5ae13baaef0620fdae1d355495dc51a17adb4082",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x30c2a1ff16a59035ec217eae84e75d937d204e0504eb1b8a003b6af9934ee598",
+   "codeBytes": 22142,
+   "opcodeCount": 14788,
+   "ngramCount": 7359,
+   "selectors": [
+    "0x0dfe1681",
+    "0x128acb08",
+    "0x1a686502",
+    "0x1ad8b03b",
+    "0x252c09d7",
+    "0x32148f67",
+    "0x3850c7bd",
+    "0x3c8a7d8d",
+    "0x46141319",
+    "0x490e6cbc",
+    "0x4f1eb3d8",
+    "0x514ea4bf",
+    "0x5339c296",
+    "0x57600080",
+    "0x61161656",
+    "0x70cf754a",
+    "0x8206a4d1",
+    "0x85b66729",
+    "0x883bdbfd",
+    "0xa34123a7",
+    "0xa38807f2",
+    "0xc45a0155",
+    "0xd0c93a7c",
+    "0xd21220a7",
+    "0xddca3f43",
+    "0xf3058399",
+    "0xf30dba93",
+    "0xf637731d"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0932,
+   "candidatesConsidered": 19,
+   "similarIncidents": [
+    {
+     "id": "2023-12-20_TransitFinance_UntrustedInput_BSC",
+     "score": 0.09318744330373134,
+     "bytecodeSim": 0,
+     "selectorSim": 0.46593721651865666,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-12-20",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-07-08_CIVNFT_AccessControl_ETH",
+     "score": 0.08969674307485888,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4484837153742944,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "CIVNFT (CivTrade — CivFund Ecosystem)",
+     "date": "2023-07-08",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3MintCallback — a fake Uniswap V3 Pool triggers the callback to drain victim's approved tokens",
+     "lossUsd": 180000
+    },
+    {
+     "id": "2026-03-22_CyrusFinance_BusinessLogic_BSC",
+     "score": 0.06818463022828607,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3409231511414303,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Cyrus Finance",
+     "date": "2026-03-22",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "slot0() spot price dependency in withdrawUSDTFromAny() → price manipulable within the same transaction (Business Logic Flaw)",
+     "lossUsd": 512000
+    },
+    {
+     "id": "2025-03-01_ZeUSD_SlippageProtection_ETH",
+     "score": 0.05974465273007175,
+     "bytecodeSim": 0,
+     "selectorSim": 0.29872326365035873,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Zoth (ZeUSD — RWA Restaking Stablecoin)",
+     "date": "2025-03-01",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "LTV validation inside mintWithStable() references the initial deposit amount (amount) instead of actual collateral received (collateralReceived) + zero swap sli",
+     "lossUsd": 285000
+    },
+    {
+     "id": "2025-04-11_Unverified6077_CallbackExploit",
+     "score": 0.05141671673112688,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2570835836556344,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (Base)",
+     "date": "2025-04-11",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in the Uniswap V3 swap callback function of an unverified contract",
+     "lossUsd": 62300
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x09c5f9b273de8d41e5dce0867ca67e78c92a3a32",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x684b4be3640d5e50c658cbcd0a433d549c67ebdb28679f7f0e8a6d9808e6ddd0",
+   "codeBytes": 22142,
+   "opcodeCount": 14788,
+   "ngramCount": 7359,
+   "selectors": [
+    "0x0dfe1681",
+    "0x128acb08",
+    "0x1a686502",
+    "0x1ad8b03b",
+    "0x252c09d7",
+    "0x32148f67",
+    "0x3850c7bd",
+    "0x3c8a7d8d",
+    "0x46141319",
+    "0x490e6cbc",
+    "0x4f1eb3d8",
+    "0x514ea4bf",
+    "0x5339c296",
+    "0x57600080",
+    "0x61161656",
+    "0x70cf754a",
+    "0x8206a4d1",
+    "0x85b66729",
+    "0x883bdbfd",
+    "0xa34123a7",
+    "0xa38807f2",
+    "0xc45a0155",
+    "0xd0c93a7c",
+    "0xd21220a7",
+    "0xddca3f43",
+    "0xf3058399",
+    "0xf30dba93",
+    "0xf637731d"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0932,
+   "candidatesConsidered": 19,
+   "similarIncidents": [
+    {
+     "id": "2023-12-20_TransitFinance_UntrustedInput_BSC",
+     "score": 0.09318744330373134,
+     "bytecodeSim": 0,
+     "selectorSim": 0.46593721651865666,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-12-20",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-07-08_CIVNFT_AccessControl_ETH",
+     "score": 0.08969674307485888,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4484837153742944,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "CIVNFT (CivTrade — CivFund Ecosystem)",
+     "date": "2023-07-08",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3MintCallback — a fake Uniswap V3 Pool triggers the callback to drain victim's approved tokens",
+     "lossUsd": 180000
+    },
+    {
+     "id": "2026-03-22_CyrusFinance_BusinessLogic_BSC",
+     "score": 0.06818463022828607,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3409231511414303,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Cyrus Finance",
+     "date": "2026-03-22",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "slot0() spot price dependency in withdrawUSDTFromAny() → price manipulable within the same transaction (Business Logic Flaw)",
+     "lossUsd": 512000
+    },
+    {
+     "id": "2025-03-01_ZeUSD_SlippageProtection_ETH",
+     "score": 0.05974465273007175,
+     "bytecodeSim": 0,
+     "selectorSim": 0.29872326365035873,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Zoth (ZeUSD — RWA Restaking Stablecoin)",
+     "date": "2025-03-01",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "LTV validation inside mintWithStable() references the initial deposit amount (amount) instead of actual collateral received (collateralReceived) + zero swap sli",
+     "lossUsd": 285000
+    },
+    {
+     "id": "2025-04-11_Unverified6077_CallbackExploit",
+     "score": 0.05141671673112688,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2570835836556344,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (Base)",
+     "date": "2025-04-11",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in the Uniswap V3 swap callback function of an unverified contract",
+     "lossUsd": 62300
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xa981b66c747a3d9fa29d7e200d5faaa2826960523d0e5a0df8148e8868c480b4",
+   "codeBytes": 22142,
+   "opcodeCount": 14788,
+   "ngramCount": 7359,
+   "selectors": [
+    "0x0dfe1681",
+    "0x128acb08",
+    "0x1a686502",
+    "0x1ad8b03b",
+    "0x252c09d7",
+    "0x32148f67",
+    "0x3850c7bd",
+    "0x3c8a7d8d",
+    "0x46141319",
+    "0x490e6cbc",
+    "0x4f1eb3d8",
+    "0x514ea4bf",
+    "0x5339c296",
+    "0x57600080",
+    "0x61161656",
+    "0x70cf754a",
+    "0x8206a4d1",
+    "0x85b66729",
+    "0x883bdbfd",
+    "0xa34123a7",
+    "0xa38807f2",
+    "0xc45a0155",
+    "0xd0c93a7c",
+    "0xd21220a7",
+    "0xddca3f43",
+    "0xf3058399",
+    "0xf30dba93",
+    "0xf637731d"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0932,
+   "candidatesConsidered": 19,
+   "similarIncidents": [
+    {
+     "id": "2023-12-20_TransitFinance_UntrustedInput_BSC",
+     "score": 0.09318744330373134,
+     "bytecodeSim": 0,
+     "selectorSim": 0.46593721651865666,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-12-20",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-07-08_CIVNFT_AccessControl_ETH",
+     "score": 0.08969674307485888,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4484837153742944,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "CIVNFT (CivTrade — CivFund Ecosystem)",
+     "date": "2023-07-08",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3MintCallback — a fake Uniswap V3 Pool triggers the callback to drain victim's approved tokens",
+     "lossUsd": 180000
+    },
+    {
+     "id": "2026-03-22_CyrusFinance_BusinessLogic_BSC",
+     "score": 0.06818463022828607,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3409231511414303,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Cyrus Finance",
+     "date": "2026-03-22",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "slot0() spot price dependency in withdrawUSDTFromAny() → price manipulable within the same transaction (Business Logic Flaw)",
+     "lossUsd": 512000
+    },
+    {
+     "id": "2025-03-01_ZeUSD_SlippageProtection_ETH",
+     "score": 0.05974465273007175,
+     "bytecodeSim": 0,
+     "selectorSim": 0.29872326365035873,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Zoth (ZeUSD — RWA Restaking Stablecoin)",
+     "date": "2025-03-01",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "LTV validation inside mintWithStable() references the initial deposit amount (amount) instead of actual collateral received (collateralReceived) + zero swap sli",
+     "lossUsd": 285000
+    },
+    {
+     "id": "2025-04-11_Unverified6077_CallbackExploit",
+     "score": 0.05141671673112688,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2570835836556344,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (Base)",
+     "date": "2025-04-11",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in the Uniswap V3 swap callback function of an unverified contract",
+     "lossUsd": 62300
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xc7bbec68d12a0d1830360f8ec58fa599ba1b0e9b",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x61bb013bc7f8bed8e3c050464e93985787d254f4236d2e3ef846700c07e00aed",
+   "codeBytes": 22142,
+   "opcodeCount": 14788,
+   "ngramCount": 7359,
+   "selectors": [
+    "0x0dfe1681",
+    "0x128acb08",
+    "0x1a686502",
+    "0x1ad8b03b",
+    "0x252c09d7",
+    "0x32148f67",
+    "0x3850c7bd",
+    "0x3c8a7d8d",
+    "0x46141319",
+    "0x490e6cbc",
+    "0x4f1eb3d8",
+    "0x514ea4bf",
+    "0x5339c296",
+    "0x57600080",
+    "0x61161656",
+    "0x70cf754a",
+    "0x8206a4d1",
+    "0x85b66729",
+    "0x883bdbfd",
+    "0xa34123a7",
+    "0xa38807f2",
+    "0xc45a0155",
+    "0xd0c93a7c",
+    "0xd21220a7",
+    "0xddca3f43",
+    "0xf3058399",
+    "0xf30dba93",
+    "0xf637731d"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0932,
+   "candidatesConsidered": 19,
+   "similarIncidents": [
+    {
+     "id": "2023-12-20_TransitFinance_UntrustedInput_BSC",
+     "score": 0.09318744330373134,
+     "bytecodeSim": 0,
+     "selectorSim": 0.46593721651865666,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-12-20",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-07-08_CIVNFT_AccessControl_ETH",
+     "score": 0.08969674307485888,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4484837153742944,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "CIVNFT (CivTrade — CivFund Ecosystem)",
+     "date": "2023-07-08",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3MintCallback — a fake Uniswap V3 Pool triggers the callback to drain victim's approved tokens",
+     "lossUsd": 180000
+    },
+    {
+     "id": "2026-03-22_CyrusFinance_BusinessLogic_BSC",
+     "score": 0.06818463022828607,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3409231511414303,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Cyrus Finance",
+     "date": "2026-03-22",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "slot0() spot price dependency in withdrawUSDTFromAny() → price manipulable within the same transaction (Business Logic Flaw)",
+     "lossUsd": 512000
+    },
+    {
+     "id": "2025-03-01_ZeUSD_SlippageProtection_ETH",
+     "score": 0.05974465273007175,
+     "bytecodeSim": 0,
+     "selectorSim": 0.29872326365035873,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Zoth (ZeUSD — RWA Restaking Stablecoin)",
+     "date": "2025-03-01",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "LTV validation inside mintWithStable() references the initial deposit amount (amount) instead of actual collateral received (collateralReceived) + zero swap sli",
+     "lossUsd": 285000
+    },
+    {
+     "id": "2025-04-11_Unverified6077_CallbackExploit",
+     "score": 0.05141671673112688,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2570835836556344,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (Base)",
+     "date": "2025-04-11",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in the Uniswap V3 swap callback function of an unverified contract",
+     "lossUsd": 62300
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x6546055f46e866a4b9a4a13e81273e3152bae5da",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x07fdb9ec96125c16c7576c42595edb4c29449747d4f700f0d01deee71cf86f72",
+   "codeBytes": 22142,
+   "opcodeCount": 14788,
+   "ngramCount": 7359,
+   "selectors": [
+    "0x0dfe1681",
+    "0x128acb08",
+    "0x1a686502",
+    "0x1ad8b03b",
+    "0x252c09d7",
+    "0x32148f67",
+    "0x3850c7bd",
+    "0x3c8a7d8d",
+    "0x46141319",
+    "0x490e6cbc",
+    "0x4f1eb3d8",
+    "0x514ea4bf",
+    "0x5339c296",
+    "0x57600080",
+    "0x61161656",
+    "0x70cf754a",
+    "0x8206a4d1",
+    "0x85b66729",
+    "0x883bdbfd",
+    "0xa34123a7",
+    "0xa38807f2",
+    "0xc45a0155",
+    "0xd0c93a7c",
+    "0xd21220a7",
+    "0xddca3f43",
+    "0xf3058399",
+    "0xf30dba93",
+    "0xf637731d"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0932,
+   "candidatesConsidered": 19,
+   "similarIncidents": [
+    {
+     "id": "2023-12-20_TransitFinance_UntrustedInput_BSC",
+     "score": 0.09318744330373134,
+     "bytecodeSim": 0,
+     "selectorSim": 0.46593721651865666,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-12-20",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-07-08_CIVNFT_AccessControl_ETH",
+     "score": 0.08969674307485888,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4484837153742944,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "CIVNFT (CivTrade — CivFund Ecosystem)",
+     "date": "2023-07-08",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3MintCallback — a fake Uniswap V3 Pool triggers the callback to drain victim's approved tokens",
+     "lossUsd": 180000
+    },
+    {
+     "id": "2026-03-22_CyrusFinance_BusinessLogic_BSC",
+     "score": 0.06818463022828607,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3409231511414303,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Cyrus Finance",
+     "date": "2026-03-22",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "slot0() spot price dependency in withdrawUSDTFromAny() → price manipulable within the same transaction (Business Logic Flaw)",
+     "lossUsd": 512000
+    },
+    {
+     "id": "2025-03-01_ZeUSD_SlippageProtection_ETH",
+     "score": 0.05974465273007175,
+     "bytecodeSim": 0,
+     "selectorSim": 0.29872326365035873,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Zoth (ZeUSD — RWA Restaking Stablecoin)",
+     "date": "2025-03-01",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "LTV validation inside mintWithStable() references the initial deposit amount (amount) instead of actual collateral received (collateralReceived) + zero swap sli",
+     "lossUsd": 285000
+    },
+    {
+     "id": "2025-04-11_Unverified6077_CallbackExploit",
+     "score": 0.05141671673112688,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2570835836556344,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (Base)",
+     "date": "2025-04-11",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in the Uniswap V3 swap callback function of an unverified contract",
+     "lossUsd": 62300
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xe5d028350093a743a9769e6fd7f5546eeddaa320",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x3b497d0ef2c72fe9df645ea9f2ce281a6f6dac43816601437b48fd6ef4391dd7",
+   "codeBytes": 22142,
+   "opcodeCount": 14788,
+   "ngramCount": 7359,
+   "selectors": [
+    "0x0dfe1681",
+    "0x128acb08",
+    "0x1a686502",
+    "0x1ad8b03b",
+    "0x252c09d7",
+    "0x32148f67",
+    "0x3850c7bd",
+    "0x3c8a7d8d",
+    "0x46141319",
+    "0x490e6cbc",
+    "0x4f1eb3d8",
+    "0x514ea4bf",
+    "0x5339c296",
+    "0x57600080",
+    "0x61161656",
+    "0x70cf754a",
+    "0x8206a4d1",
+    "0x85b66729",
+    "0x883bdbfd",
+    "0xa34123a7",
+    "0xa38807f2",
+    "0xc45a0155",
+    "0xd0c93a7c",
+    "0xd21220a7",
+    "0xddca3f43",
+    "0xf3058399",
+    "0xf30dba93",
+    "0xf637731d"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0932,
+   "candidatesConsidered": 19,
+   "similarIncidents": [
+    {
+     "id": "2023-12-20_TransitFinance_UntrustedInput_BSC",
+     "score": 0.09318744330373134,
+     "bytecodeSim": 0,
+     "selectorSim": 0.46593721651865666,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "",
+     "date": "2023-12-20",
+     "categories": [
+      "arbitrary-call"
+     ],
+     "rootCause": "",
+     "lossUsd": null
+    },
+    {
+     "id": "2023-07-08_CIVNFT_AccessControl_ETH",
+     "score": 0.08969674307485888,
+     "bytecodeSim": 0,
+     "selectorSim": 0.4484837153742944,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "CIVNFT (CivTrade — CivFund Ecosystem)",
+     "date": "2023-07-08",
+     "categories": [
+      "access-control"
+     ],
+     "rootCause": "Missing caller validation in uniswapV3MintCallback — a fake Uniswap V3 Pool triggers the callback to drain victim's approved tokens",
+     "lossUsd": 180000
+    },
+    {
+     "id": "2026-03-22_CyrusFinance_BusinessLogic_BSC",
+     "score": 0.06818463022828607,
+     "bytecodeSim": 0,
+     "selectorSim": 0.3409231511414303,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Cyrus Finance",
+     "date": "2026-03-22",
+     "categories": [
+      "business-logic"
+     ],
+     "rootCause": "slot0() spot price dependency in withdrawUSDTFromAny() → price manipulable within the same transaction (Business Logic Flaw)",
+     "lossUsd": 512000
+    },
+    {
+     "id": "2025-03-01_ZeUSD_SlippageProtection_ETH",
+     "score": 0.05974465273007175,
+     "bytecodeSim": 0,
+     "selectorSim": 0.29872326365035873,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Zoth (ZeUSD — RWA Restaking Stablecoin)",
+     "date": "2025-03-01",
+     "categories": [
+      "slippage-amm"
+     ],
+     "rootCause": "LTV validation inside mintWithStable() references the initial deposit amount (amount) instead of actual collateral received (collateralReceived) + zero swap sli",
+     "lossUsd": 285000
+    },
+    {
+     "id": "2025-04-11_Unverified6077_CallbackExploit",
+     "score": 0.05141671673112688,
+     "bytecodeSim": 0,
+     "selectorSim": 0.2570835836556344,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Unverified Contract (Base)",
+     "date": "2025-04-11",
+     "categories": [
+      "unprotected-callback"
+     ],
+     "rootCause": "Missing caller validation in the Uniswap V3 swap callback function of an unverified contract",
+     "lossUsd": 62300
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "IDF-weighted selector cosine > 0.30",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131",
+   "codeBytes": 9152,
+   "opcodeCount": 4285,
+   "ngramCount": 3158,
+   "selectors": [
+    "0x0d58b1db",
+    "0x137c29fe",
+    "0x2a2d80d1",
+    "0x2b67b570",
+    "0x30f28b7a",
+    "0x3644e515",
+    "0x36c78516",
+    "0x3ff9dcb1",
+    "0x4fe02b44",
+    "0x652c7569",
+    "0x65d9723c",
+    "0x68576974",
+    "0x87517c45",
+    "0x927da105",
+    "0xcc53287f",
+    "0xedd9444b",
+    "0xfe8ec1a7"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0.0567,
+   "candidatesConsidered": 1,
+   "similarIncidents": [
+    {
+     "id": "2022-08_Circle_MakerCDP_FlashLoan",
+     "score": 0.056737165695427694,
+     "bytecodeSim": 0,
+     "selectorSim": 0.28368582847713847,
+     "sourceSim": 0,
+     "ruleScore": 0,
+     "ioc": 0,
+     "bytecodeEvidence": false,
+     "matchedRules": [],
+     "protocol": "Maker Protocol (CDP)",
+     "date": "2022-08",
+     "categories": [
+      "flash-loan"
+     ],
+     "rootCause": "Insufficient access control in frob() and flux() allowing withdrawal of collateral from another user's CDP position",
+     "lossUsd": null
+    }
+   ],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x6fa5b6d93e2539caea358518d3fe8f75418e5a1d",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x22bcbefe2dacbb6289d731af9eabb98fdfb6480f4c59c9b2f45f574f008ef68f",
+   "codeBytes": 209,
+   "opcodeCount": 79,
+   "ngramCount": 46,
+   "selectors": [
+    "0x43000818"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": true,
+    "unprotectedInitialize": false,
+    "proxyish": true
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    },
+    {
+     "category": "proxy-storage",
+     "from": "bytecode",
+     "why": "EIP-1967 implementation slot + DELEGATECALL (proxy layout)"
+    }
+   ],
+   "evidence": [
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata",
+    "rule proxy-storage (bytecode): EIP-1967 implementation slot + DELEGATECALL (proxy layout)"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xf38521f130fccf29db1961597bc5d2b60f995f85",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xd6bf99c95a0c5e0084ccf033be834ba022c7300e629f1c593ee2a69213d75142",
+   "codeBytes": 1990,
+   "opcodeCount": 817,
+   "ngramCount": 611,
+   "selectors": [
+    "0x02691bcb",
+    "0x2fc2f907",
+    "0x4300081d",
+    "0x70a08231",
+    "0x8da5cb5b",
+    "0x9e68ab7c",
+    "0xa7d092b2",
+    "0xf2fde38b"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x2b9d5c7f2ead1a221d771fb6bb5e35df04d60ab0",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xaea7d4252f6245f301e540cfbee27d3a88de543af8e49c5c62405d5499fab7e5",
+   "codeBytes": 170,
+   "opcodeCount": 68,
+   "ngramCount": 64,
+   "selectors": [
+    "0x4300050e"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x0f7ae28de1c8532170ad4ee566b5801485c13a0e",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x2a70f9d1b1c80cc0430bbffe16283cf067d915bee05f9812715cd94ad082b76a",
+   "codeBytes": 3758,
+   "opcodeCount": 1964,
+   "ngramCount": 1711,
+   "selectors": [
+    "0x3a5be8cb",
+    "0xa58d50d3",
+    "0xc41e8295",
+    "0xef8738d3"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": true,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "reentrancy",
+     "from": "bytecode",
+     "why": "external CALL occurs before the first SSTORE and no reentrancy guard token in source"
+    },
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule reentrancy (bytecode): external CALL occurs before the first SSTORE and no reentrancy guard token in source",
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xb300000b72deaeb607a12d5f54773d1c19c7028d",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xa9e9d5c129cfbdd7924803fdc1b3f66f5ba3067f3903a59b44db23f3a1f13677",
+   "codeBytes": 180,
+   "opcodeCount": 74,
+   "ngramCount": 68,
+   "selectors": [
+    "0x1535ac5f",
+    "0x43000817"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xe0080d2f853ecddbd81a643dc10da075df26fd3f",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x396da758bc40db6b33ba8e0c0eaa8f4cd6d9115b976804befeede2046898cec3",
+   "codeBytes": 170,
+   "opcodeCount": 70,
+   "ngramCount": 66,
+   "selectors": [
+    "0x43000818"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": true,
+    "unprotectedInitialize": false,
+    "proxyish": true
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    },
+    {
+     "category": "proxy-storage",
+     "from": "bytecode",
+     "why": "EIP-1967 implementation slot + DELEGATECALL (proxy layout)"
+    }
+   ],
+   "evidence": [
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata",
+    "rule proxy-storage (bytecode): EIP-1967 implementation slot + DELEGATECALL (proxy layout)"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x955dd8143855db09ab94c908e4d4727738c46f41",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x768662834da6ab0a60e3cdb9732ae68af991545a2aabc7dd47f5032db5e0271f",
+   "codeBytes": 23,
+   "opcodeCount": 20,
+   "ngramCount": 16,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": true,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x0ba9bf6ece534ef7d43ec50f6f08c899ddecebbe",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xae84c77e5908e1e4cf980fe535cf1a94f5da5377c5260d9d92e32d303930948b",
+   "codeBytes": 23,
+   "opcodeCount": 7,
+   "ngramCount": 3,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [
+    "6 freshly deployed contracts share identical bytecode"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x161b721ca7e418791383567e67416027a6a45e2f",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xae84c77e5908e1e4cf980fe535cf1a94f5da5377c5260d9d92e32d303930948b",
+   "codeBytes": 23,
+   "opcodeCount": 7,
+   "ngramCount": 3,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [
+    "6 freshly deployed contracts share identical bytecode"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x3920187e61877d4744dc58a619a73907a41e5463",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xae84c77e5908e1e4cf980fe535cf1a94f5da5377c5260d9d92e32d303930948b",
+   "codeBytes": 23,
+   "opcodeCount": 7,
+   "ngramCount": 3,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [
+    "6 freshly deployed contracts share identical bytecode"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x5069008931fdd9ada584a4bb7b149676132f0981",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xae84c77e5908e1e4cf980fe535cf1a94f5da5377c5260d9d92e32d303930948b",
+   "codeBytes": 23,
+   "opcodeCount": 7,
+   "ngramCount": 3,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [
+    "6 freshly deployed contracts share identical bytecode"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x785f1014552b7ce7d5fb7d0c970ca60edee94fd00425d7ca21609acac7ce1293",
+   "codeBytes": 24009,
+   "opcodeCount": 10418,
+   "ngramCount": 6862,
+   "selectors": [
+    "0x01ffc9a7",
+    "0x095bcdb6",
+    "0x0b0d9c09",
+    "0x11da60b4",
+    "0x156e29f6",
+    "0x1e2eaeaf",
+    "0x234266d7",
+    "0x2d771389",
+    "0x35fd631a",
+    "0x3dd45adb",
+    "0x426a8493",
+    "0x48c89491",
+    "0x52759651",
+    "0x558a7297",
+    "0x598af9e7",
+    "0x5a6bcfda",
+    "0x6276cbbe",
+    "0x708daca9",
+    "0x7e87ce7d",
+    "0x80f0b44c",
+    "0x8161b874",
+    "0x8da5cb5b",
+    "0x97e8cd4e",
+    "0x9bf6645f",
+    "0xa5841194",
+    "0xb6363cf2",
+    "0xc7d39266",
+    "0xdbd035ff",
+    "0xf02de3b2",
+    "0xf135baaa",
+    "0xf2fde38b",
+    "0xf3cd914c",
+    "0xf5298aca",
+    "0xfe99049a"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x5844c49760bebc0f8c566f3a88724c84826c4502",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xae84c77e5908e1e4cf980fe535cf1a94f5da5377c5260d9d92e32d303930948b",
+   "codeBytes": 23,
+   "opcodeCount": 7,
+   "ngramCount": 3,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [
+    "6 freshly deployed contracts share identical bytecode"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x8cc14565736f89fbe3ebf05720c0dc8bdba6468b",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xc4ccbe092743099a70ae6a593d1eb2c827b3fec98da78fef9063a2d5e4a10699",
+   "codeBytes": 23,
+   "opcodeCount": 7,
+   "ngramCount": 3,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xddfb5c6eaca4ebac981fef8c71676976429dea33",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xd7d408ebcd99b2b70be43e20253d6d92a8ea8fab29bd3be7f55b10032331fb4c",
+   "codeBytes": 171,
+   "opcodeCount": 50,
+   "ngramCount": 46,
+   "selectors": [
+    "0x43000706"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xa743cd05e2a3508c6cf59c766b02a784b3ba5051",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xc4ccbe092743099a70ae6a593d1eb2c827b3fec98da78fef9063a2d5e4a10699",
+   "codeBytes": 23,
+   "opcodeCount": 7,
+   "ngramCount": 3,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xe797085683b66d784d423204e2d9ac6400369476",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xae84c77e5908e1e4cf980fe535cf1a94f5da5377c5260d9d92e32d303930948b",
+   "codeBytes": 23,
+   "opcodeCount": 7,
+   "ngramCount": 3,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [
+    "6 freshly deployed contracts share identical bytecode"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x5979458912f80b96d30d4220af8e2e4925a33320",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xca319a470c38112abe9d54b1a61ffc9c4cd45108cd2e1092f63fbb160603d9a5",
+   "codeBytes": 13886,
+   "opcodeCount": 6381,
+   "ngramCount": 2517,
+   "selectors": [
+    "0x013526fc",
+    "0x01ffc9a7",
+    "0x1072cbea",
+    "0x12f351a3",
+    "0x1f57256f",
+    "0x2822bb06",
+    "0x300aa47f",
+    "0x404177c0",
+    "0x4239db68",
+    "0x519af30e",
+    "0x51ed0ee3",
+    "0x7020df95",
+    "0x767eb5ef",
+    "0x822d8ce0",
+    "0x85535cc5",
+    "0x87015b87",
+    "0x9908fc8b",
+    "0xae131deb",
+    "0xb6466384",
+    "0xc27eeada",
+    "0xca7004e7",
+    "0xca89d04b",
+    "0xdbda983b",
+    "0xf57f2e12",
+    "0xffa1ad74"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x585d44727129b9c69791b10238ca605932938b4f",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xaceaafcc9b2510c0679c18e1890fe76774d80021af1d4079bc4f792358108896",
+   "codeBytes": 5914,
+   "opcodeCount": 2666,
+   "ngramCount": 1441,
+   "selectors": [
+    "0x01352646",
+    "0x1072cbea",
+    "0x12f351a3",
+    "0x1f57256f",
+    "0x404177c0",
+    "0x519af30e",
+    "0x67170281",
+    "0x85535cc5",
+    "0x91906115",
+    "0xf57f2e12",
+    "0xffa1ad74"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x9135eb92dc77c34bf9da63ad0116ecb254002f03",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xe87f6b3ea165f93a9ac537fd26f4dd8cf418b9f556422cb71acefb36698e939c",
+   "codeBytes": 23,
+   "opcodeCount": 8,
+   "ngramCount": 4,
+   "selectors": [],
+   "flags": {
+    "delegatecall": false,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x958a0904940f744f8c6b72c043ceee3ea34ae888",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x71e12d0ae763018f3f4cae5abe862b6de419326db94ea8de6826afd03e22fe2e",
+   "codeBytes": 15967,
+   "opcodeCount": 7318,
+   "ngramCount": 3291,
+   "selectors": [
+    "0x1ce4c78b",
+    "0x21d0ee70",
+    "0x234da362",
+    "0x259982e5",
+    "0x2c2efcac",
+    "0x2d910fb4",
+    "0x3f7d1179",
+    "0x3ffd12f6",
+    "0x4010f777",
+    "0x490c98f5",
+    "0x54165fa8",
+    "0x575e24b4",
+    "0x6c2bbe7e",
+    "0x6fe7e6eb",
+    "0x9f063efc",
+    "0xa9d75b2b",
+    "0xb47b2fb1",
+    "0xb6a8b0fa",
+    "0xc4e833ce",
+    "0xcd272714",
+    "0xdc4c90d3",
+    "0xdc98354e",
+    "0xe1b4af69",
+    "0xf777ce22",
+    "0xff2fb57c"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xa188eec8f81263234da3622a406892f3d630f98c",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xdb80fb170ac7485426a6fb64f66514387e76fe21ed67d39e8dee510b47d1404d",
+   "codeBytes": 2972,
+   "opcodeCount": 1442,
+   "ngramCount": 480,
+   "selectors": [
+    "0x01664f66",
+    "0x04bda262",
+    "0x15232515",
+    "0x23b872dd",
+    "0x36569e77",
+    "0x3b4da69f",
+    "0x4010f777",
+    "0x4cf282fb",
+    "0x568d4b6f",
+    "0x626cb3c5",
+    "0x678d7732",
+    "0x7bd2bea7",
+    "0x8d7ef9bb",
+    "0x957aa58c",
+    "0x95991276",
+    "0xb3bcfa82",
+    "0xc5ce281e",
+    "0xcccef9e2",
+    "0xef693bed",
+    "0xf4b9fa75",
+    "0xfa1e2e86",
+    "0xfae036d5"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xf6e72db5454dd049d0788e411b06cfaf16853042",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xd351b6020bfa630893dc7a52b63c894643d52de5643d5d81bfc0305eab665b2a",
+   "codeBytes": 8414,
+   "opcodeCount": 4196,
+   "ngramCount": 1340,
+   "selectors": [
+    "0x01664f66",
+    "0x067d9274",
+    "0x15232515",
+    "0x1d1bdd5d",
+    "0x29ae8114",
+    "0x36569e77",
+    "0x3b4da69f",
+    "0x4010f777",
+    "0x40d9c0e3",
+    "0x4fce7a2a",
+    "0x568d4b6f",
+    "0x626cb3c5",
+    "0x65c4ce7a",
+    "0x65fae35e",
+    "0x678d7732",
+    "0x6f676e69",
+    "0x7bd2bea7",
+    "0x86c34f42",
+    "0x881eb14e",
+    "0x8d7ef9bb",
+    "0x957aa58c",
+    "0x95991276",
+    "0x9b652df6",
+    "0x9c52a7f1",
+    "0xb3bcfa82",
+    "0xbf353dbb",
+    "0xc11645bc",
+    "0xc5ce281e",
+    "0xcbf0bfac",
+    "0xcccef9e2",
+    "0xd4e8be83",
+    "0xd9c55ce1",
+    "0xe6fd604c",
+    "0xf29c29c4",
+    "0xf4b9fa75",
+    "0xfae036d5"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": false,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x6131b5fae19ea4f9d964eac0408e4408b66337b5",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0x06468e29bde518202bb725caad5eaaf8184c1b5338d8228e7c779248dbc9e2a3",
+   "codeBytes": 18652,
+   "opcodeCount": 8533,
+   "ngramCount": 3858,
+   "selectors": [
+    "0x33320de3",
+    "0x59e50fed",
+    "0x616c6c65",
+    "0x715018a6",
+    "0x78e3214f",
+    "0x8af033fb",
+    "0x8da5cb5b",
+    "0xad5c4648",
+    "0xc683630d",
+    "0xe21fd0e9",
+    "0xf2fde38b"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": true,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "oracle-price-manipulation",
+     "from": "bytecode",
+     "why": "spot reserve/balanceOf read combined with an external call"
+    }
+   ],
+   "evidence": [
+    "rule oracle-price-manipulation (bytecode): spot reserve/balanceOf read combined with an external call"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x0439e60f02a8900a951603950d8d4527f400c3f1",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xd970e18227cfdbd1b5e238117adfcd02d45df280dac1caf154840463c41c05ee",
+   "codeBytes": 6000,
+   "opcodeCount": 2611,
+   "ngramCount": 1413,
+   "selectors": [
+    "0x39122461",
+    "0x3ce33bff",
+    "0x3ef11fd7",
+    "0x4cfee326",
+    "0x5c975abb",
+    "0x6a13bb1d",
+    "0x715018a6",
+    "0x7dd0480f",
+    "0x8da5cb5b",
+    "0xa82f143c",
+    "0xab138240",
+    "0xb5268389",
+    "0xb84f5d1e",
+    "0xe8edc816",
+    "0xf2fde38b"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x9a47f3289794e9bbc6a3c571f6d96ad4e7baed16",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xb6da44d88c7df9a1c9fd424c35801d60b9612909eff166f291fb6f0622f85d8a",
+   "codeBytes": 1245,
+   "opcodeCount": 600,
+   "ngramCount": 518,
+   "selectors": [
+    "0x43000801",
+    "0x4cfee326",
+    "0x4ed6ef19",
+    "0x616c6c20",
+    "0x6f6e7472",
+    "0x74000000"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xe6b738da243e8fa2a0ed5915645789add5de5152",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
+   "codeBytes": 171,
+   "opcodeCount": 50,
+   "ngramCount": 46,
+   "selectors": [
+    "0x43000706"
+   ],
+   "flags": {
+    "delegatecall": true,
+    "call": false,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": false,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [
+    {
+     "category": "arbitrary-call",
+     "from": "bytecode",
+     "why": "DELEGATECALL combined with caller-supplied calldata"
+    }
+   ],
+   "evidence": [
+    "rule arbitrary-call (bytecode): DELEGATECALL combined with caller-supplied calldata"
+   ],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x881d40237659c251811cec9c364ef91dc08d300c",
+   "creator": null,
+   "block": 26346861,
+   "codeHash": "0xcc34a85a74e46f422c2b06b16156799b7c313a71390b4465cbc463bd99d76764",
+   "codeBytes": 8320,
+   "opcodeCount": 3994,
+   "ngramCount": 1734,
+   "selectors": [
+    "0x3ef11fd7",
+    "0x459a39fb",
+    "0x558b7dd1",
+    "0x5c975abb",
+    "0x5f575529",
+    "0x616c6c65",
+    "0x6b68764c",
+    "0x715018a6",
+    "0x8da5cb5b",
+    "0x9804a380",
+    "0xb5268389",
+    "0xb84f5d1e",
+    "0xc92aecc4",
+    "0xe8edc816",
+    "0xf2fde38b"
+   ],
+   "flags": {
+    "delegatecall": false,
+    "call": true,
+    "staticcall": false,
+    "create2": false,
+    "selfdestruct": false,
+    "calldatacopy": true,
+    "callvalue": true,
+    "callBeforeSstore": false,
+    "eip1967ImplSlot": false,
+    "unprotectedInitialize": false,
+    "proxyish": false
+   },
+   "verdict": "INFO",
+   "score": 0,
+   "candidatesConsidered": 0,
+   "similarIncidents": [],
+   "rules": [],
+   "evidence": [],
+   "sourceAvailable": false,
+   "disclaimer": "Similarity ranking for human review. Not a vulnerability proof."
+  }
+ ]
+}

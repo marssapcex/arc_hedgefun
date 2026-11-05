@@ -1,6 +1,6 @@
 {
  "meta": {
-  "builtAt": "2026-11-05T06:30:34.544Z",
+  "builtAt": "2026-11-05T06:33:04.448Z",
   "sources": [
    "kismp123/BugChainIndexer",
    "kismp123/DeFi-Security-Incident"
@@ -8,8 +8,8 @@
   "incidentCount": 821,
   "withMetadataTable": 726,
   "reportsWithVulnerableSnippets": 773,
-  "derivedSelectors": 3147,
-  "uniqueSelectors": 1619,
+  "derivedSelectors": 3146,
+  "uniqueSelectors": 1618,
   "genericSelectorsDownweighted": 17,
   "ethereumVulnerableAddresses": 102,
   "note": "Similarity corpus for triage. Not a vulnerability oracle."
@@ -766,12 +766,12 @@
   "0xddca3f43": 6.018593214496234,
   "0x8456cb59": 5.6131281063880705,
   "0x6516b6c8": 6.018593214496234,
-  "0x8dfa4351": 6.018593214496234,
+  "0xb0c97919": 6.018593214496234,
   "0x9c34d880": 5.32544603393629,
   "0x5325208f": 6.018593214496234,
   "0xd348b409": 6.018593214496234,
   "0xd8b45f9f": 6.018593214496234,
-  "0xfaab517e": 6.018593214496234,
+  "0xda95691a": 6.018593214496234,
   "0x9c687a2f": 6.018593214496234,
   "0xe8051261": 6.018593214496234,
   "0xbb3c97f0": 6.018593214496234,
@@ -1462,7 +1462,6 @@
   "0x1a6c9c0d": 6.018593214496234,
   "0x990e1c9b": 6.018593214496234,
   "0x9ebb1250": 6.018593214496234,
-  "0x7cf7d3e5": 6.018593214496234,
   "0xac9650d8": 6.018593214496234,
   "0x782661bc": 6.018593214496234,
   "0x2d0335ab": 6.018593214496234,
@@ -1607,7 +1606,7 @@
   "0x4af04c79": 6.018593214496234,
   "0xd588acc4": 6.018593214496234,
   "0xf67db628": 6.018593214496234,
-  "0xa76a67c2": 6.018593214496234,
+  "0x18fc597a": 6.018593214496234,
   "0x35043116": 6.018593214496234,
   "0xc5623f54": 6.018593214496234,
   "0xe61604cf": 6.018593214496234,
@@ -87879,12 +87878,12 @@
     "simhash": "5041a6823b542096",
     "selectors": [
      "0x6516b6c8",
-     "0x8dfa4351",
+     "0xb0c97919",
      "0xbb913f41"
     ],
     "signatures": [
      "withdraw(address,uint256,uint8,bytes32,uint8[],bytes32[],bytes32[])",
-     "withdraw(address,string,bytes,bytes,bytes,bytes32[],uint[],uint8[],bytes32[],bytes32[])",
+     "withdraw(address,string,bytes,bytes,bytes,bytes32[],uint256[],uint8[],bytes32[],bytes32[])",
      "_setImplementation(address)"
     ],
     "functionNames": [
@@ -87929,7 +87928,7 @@
    ],
    "selectorVector": {
     "0x6516b6c8": 1,
-    "0x8dfa4351": 1,
+    "0xb0c97919": 1,
     "0xbb913f41": 1
    },
    "bytecodeFingerprints": []
@@ -88519,12 +88518,12 @@
     "simhash": "a476424a455cd0da",
     "selectors": [
      "0xd8b45f9f",
-     "0xfaab517e",
+     "0xda95691a",
      "0x9c687a2f"
     ],
     "signatures": [
      "castVoteInternal(address,uint256,uint8)",
-     "propose(address[],uint[],string[],bytes[],string)",
+     "propose(address[],uint256[],string[],bytes[],string)",
      "_propose(address,address)"
     ],
     "functionNames": [
@@ -88560,7 +88559,7 @@
    ],
    "selectorVector": {
     "0xd8b45f9f": 1,
-    "0xfaab517e": 1,
+    "0xda95691a": 1,
     "0x9c687a2f": 1
    },
    "bytecodeFingerprints": []
@@ -148649,15 +148648,13 @@
      "0x1a6c9c0d",
      "0x990e1c9b",
      "0x9ebb1250",
-     "0xe2bbb158",
-     "0x7cf7d3e5"
+     "0xe2bbb158"
     ],
     "signatures": [
      "withdrawStart(uint256[],uint256,uint256,uint256)",
      "withdrawStep()",
      "withdrawFinal()",
-     "deposit(uint256,uint256)",
-     "withdrawStart(uint[],uint256,uint256,uint256)"
+     "deposit(uint256,uint256)"
     ],
     "functionNames": [
      "withdrawStart",
@@ -148696,8 +148693,7 @@
     "0x1a6c9c0d": 1,
     "0x990e1c9b": 1,
     "0x9ebb1250": 1,
-    "0xe2bbb158": 1,
-    "0x7cf7d3e5": 1
+    "0xe2bbb158": 1
    },
    "bytecodeFingerprints": []
   },
@@ -168940,10 +168936,10 @@
     ],
     "simhash": "f5a927bfc1a6acee",
     "selectors": [
-     "0xa76a67c2"
+     "0x18fc597a"
     ],
     "signatures": [
-     "collect(uint[2],uint[2][2],uint[2],uint256,uint256,address,address,uint256,uint256,uint256,uint256)"
+     "collect(uint256[2],uint256[2],uint256[2],uint256,uint256,address,address,uint256,uint256,uint256,uint256)"
     ],
     "functionNames": [
      "collect"
@@ -168994,7 +168990,7 @@
     "zero"
    ],
    "selectorVector": {
-    "0xa76a67c2": 1
+    "0x18fc597a": 1
    },
    "bytecodeFingerprints": []
   },
