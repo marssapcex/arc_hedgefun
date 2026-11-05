@@ -94,6 +94,10 @@ node src/cli.js full-scan --network mychain --full --resume
 
 `npm test 25/25`.
 
+**CI `42018924770` (2026-11-05 11:26 UTC):** success, `Unit tests 25`, `Key-backed scan` **skipped** vì repo chưa set secret (đúng thiết kế — không có key thì không chạy step đó), live report `chainId 1`, `rpcSource "public RPC (no key)"`, `explorerKeyConfigured false`, `etherscanHits 0`. Muốn bật: Settings → Secrets → `ETHERSCAN_API_KEY` (và tuỳ `ALCHEMY_API_KEY` / `RPC_URL_ETHEREUM`), push lại là step tự chạy và report có `etherscanHits > 0` nếu contract verified.
+
+HEAD `19c767b` (data CI) / `9f09628` (code).
+
 ## Vẫn là 1 codebase
 
 `incidents/` 821 report nguyên · `scanners/` BugChainIndexer nguyên · `lightScanner.js` subclass `Scanner` gốc, gọi `LogFetcher.fetchLogs` + `EOAFilter.filterAddresses`. Corpus **2.485 hàm lỗi / 731 incident / 24 category**, 32 feature. Không IOC, không cluster, không rules tĩnh, không seed bytecode contract đã hack, không `REVIEW/INFO`.
@@ -111,4 +115,4 @@ node src/cli.js full-scan --full --resume
 node src/cli.js full-scan --full --resume --rpc https://<ARCHIVE_RPC> --chunk 5000
 ```
 
-Commit: `b20fa00` (data CI) trên `arena/fbf9cf32-arc-hedgefun`.
+Branch `arena/fbf9cf32-arc-hedgefun`.
