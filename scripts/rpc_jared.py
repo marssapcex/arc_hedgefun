@@ -248,6 +248,10 @@ def main():
         print(label, windows[label], flush=True)
     doc["baitApprovals"] = windows
 
+    sample = doc["baitApprovals"]["armedWindow"]["spenders"]
+    sample_line = "Sample spenders (armed window): " + (
+        ", ".join("`" + x + "`" for x in sample) if sample else "—")
+
     json.dump(doc, open(a.out, "w"), indent=2, default=str)
     d = doc["drain"]
     L = ["# JaredFromSubway drain — read-only on-chain check", "",
