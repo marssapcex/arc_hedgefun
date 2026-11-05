@@ -33,6 +33,8 @@ Regression test `REGRESSION: onlyOwner withdraw(address,uint256) is NOT labelled
 
 `npm test 17/17`, `selftest 19/19`.
 
+**Kết quả CI sau khi sửa (2026-11-05 08:35 UTC, 40 block, `26347424–26347463`):** `60` contract / `730` hàm / **0 nhãn** / `errors 0`. Cái `1 nhãn oracle-price-manipulation` ở bản cũ biến mất — đúng, vì nó là `withdraw(address,uint256)` onlyOwner. **0 nhãn trong 40 block không có nghĩa tool không tìm được gì; nó nghĩa là không còn dán bừa.**
+
 ## 3. Quét FULL CHAIN, không quét block gần nhất
 
 `src/fullscan.js` — **checkpointed range scanner**:
@@ -50,7 +52,7 @@ node src/cli.js full-scan --from-block 12000000 --to-block 13000000 --chunk 2000
 - `data/full_scan_state.json` ghi `lastBlock` sau **mỗi chunk**; `--resume` tiếp tục từ `lastBlock + 1` sau crash / rate-limit.
 - Chỉ append contract **có nhãn** vào `data/full_scan_labels.jsonl`.
 - Chunk lỗi **không** nhảy checkpoint (quét lại lần sau).
-- CI có step `Full-chain checkpoint smoke` chạy 400 block đầu từ genesis để chứng minh path này hoạt động.
+- CI có step `Full-chain checkpoint smoke` chạy 400 block đầu từ genesis: `4` chunk, `lastBlock 399`, checkpoint `data/full_scan_state.json`, `data/full_scan_labels.jsonl`. **Kết quả `contractsScanned 0`**: public full node prune receipt năm 2015 nên không lấy được `contractAddress`. Checkpoint vẫn ghi để `--resume` tiếp tục; quét thật lịch sử cần archive RPC riêng qua `--rpc`. Code ghi `zeroContractChunks` để không im lặng kiểu "0 contract nên 0 lỗi".
 
 **Nói thẳng:** Ethereum >26 triệu block. Không có lệnh nào quét xong trong một CI run, và tao không giả vờ đã quét xong. Đây là job chạy dài hạn có checkpoint; muốn chạy thật toàn chain cần archive RPC riêng qua `--rpc` và để nó chạy nhiều giờ/ngày. `scan --blocks 40` vẫn giữ để kiểm nhanh, không còn là chế độ mặc định được coi là "kết quả".
 
@@ -69,4 +71,8 @@ node src/cli.js full-scan --from-block 12000000 --to-block 13000000 --chunk 2000
 ```bash
 cd vulnchain && npm ci && npm test && node src/cli.js selftest
 node src/cli.js full-scan --full --resume
+# production: trỏ archive node, để chạy nhiều giờ, resume khi bị rate-limit
+node src/cli.js full-scan --full --resume --rpc https://<ARCHIVE_RPC> --chunk 5000
 ```
+
+Commit: `b20fa00` (data CI) trên `arena/fbf9cf32-arc-hedgefun`.

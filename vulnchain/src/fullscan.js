@@ -76,6 +76,11 @@ async function fullScan(opts = {}) {
         updatedAt: new Date().toISOString() }, null, 1));
       continue;
     }
+    if (doc.stats.contractsScanned === 0) {
+      // public full nodes often prune 2015-era receipts: say so instead of
+      // silently reporting "0 vulnerable contracts"
+      state.zeroContractChunks = (state.zeroContractChunks || 0) + 1;
+    }
     const labelled = doc.contracts.filter(c => c.labelled);
     if (labelled.length) {
       fs.appendFileSync(OUT, labelled.map(c => JSON.stringify({
