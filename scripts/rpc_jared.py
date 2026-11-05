@@ -32,6 +32,7 @@ OPERATOR = "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13"
 IMPL_SLOT = "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"  # EIP-1967
 APPROVAL = "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
 FIRST_BAIT = 25354425
+ARM_TX = "0xa2c9d0a13cc985e3fe445ad8d8bc2d156eec2580b8b6700ab057f5f1f881de3f"
 CHILD_SLOTS = {"0": "owner/payout", "7": "real WETH target",
                "10": "coordinator", "11": "bot operator (targeting marker)"}
 DRAIN_TX = "0x2be8704f5a59b69e0b71f64aefdb99eb0e8ae9fb3926147c581910d71bcf3e65"
@@ -223,34 +224,28 @@ def main():
     doc["childStorage"] = slots
     print("childStorage", {k: v["address"] for k, v in slots.items()}, flush=True)
 
-    # 9) real WETH Approvals from the bot: early bait window vs armed window.
-    def approvals(lo, hi):
-        flt = {"fromBlock": h(lo), "toBlock": h(hi), "address": TOKENS["WETH"][0],
-               "topics": [APPROVAL, "0x" + BOT.lower().replace("0x", "").rjust(64, "0")]}
-        empty = None
-        for u in URLS:
-            v = r(u, "eth_getLogs", [flt], timeout=20, tries=2)
-            if isinstance(v, list):
-                if v:
-                    return v, u
-                if empty is None:
-                    empty = (v, u)
-        return empty or ([], None)
+    # 9) the arming round's receipt: who did the bot actually approve?
+    arc, arc_url = r_any("eth_getTransactionReceipt", [ARM_TX])
+    aps = []
+    if isinstance(arc, dict):
+        for lg in arc.get("logs", []):
+            t = lg.get("topics") or []
+            if ((lg.get("address") or "").lower() != TOKENS["WETH"][0]
+                    or len(t) < 3 or t[0].lower() != APPROVAL):
+                continue
+            aps.append({"owner": "0x" + t[1][-40:], "spender": "0x" + t[2][-40:],
+                        "amountWETH": int(lg.get("data", "0x0"), 16) / 1e18})
+    doc["armingApproval"] = {"tx": ARM_TX, "source": arc_url,
+                             "status": arc.get("status") if isinstance(arc, dict) else None,
+                             "count": len(aps), "approvals": aps}
+    print("armingApproval", doc["armingApproval"], flush=True)
 
-    windows = {}
-    for label, lo, hi in [("earlyBait", FIRST_BAIT, FIRST_BAIT + 500),
-                          ("armedWindow", 25360400, DRAIN_BLOCK)]:
-        logs, src = approvals(lo, hi)
-        spenders = sorted({"0x" + lg["topics"][2][-40:] for lg in logs
-                           if len(lg.get("topics", [])) >= 3})
-        windows[label] = {"range": [lo, hi], "source": src, "count": len(logs),
-                          "uniqueSpenders": len(spenders), "spenders": spenders[:8]}
-        print(label, windows[label], flush=True)
-    doc["baitApprovals"] = windows
-
-    sample = doc["baitApprovals"]["armedWindow"]["spenders"]
-    sample_line = "Sample spenders (armed window): " + (
-        ", ".join("`" + x + "`" for x in sample) if sample else "—")
+    arm = doc["armingApproval"]
+    bits = ", ".join("`" + a["spender"] + "` (" + str(round(a["amountWETH"], 6))
+                     + " WETH)" for a in arm["approvals"])
+    sample_line = (f"Arming tx `{ARM_TX}` (`{arm['source']}`, status {arm['status']}): "
+                   f"**{arm['count']}** WETH `Approval` logs. Spender(s): "
+                   + (bits if bits else "—") + ".")
 
     json.dump(doc, open(a.out, "w"), indent=2, default=str)
     d = doc["drain"]
@@ -281,10 +276,8 @@ def main():
           f"Child `{CHILD}` storage at deploy time:", "",
           "| Slot | Meaning | Address |", "|---|---|---|"] + [
           f"| {k} | {v['label']} | `{v['address']}` |" for k, v in doc["childStorage"].items()
-    ] + ["", f"WETH `Approval` logs with `owner` = bot in blocks "
-          f"{FIRST_BAIT}–{FIRST_BAIT+500}: {doc['baitApprovals']['count']} "
-          f"(via `{doc['baitApprovals']['source']}`).", "",
-          "Raw: `rpc_jared_raw.json`."]
+    ] + ["", "WETH `Approval` decode (spender is `topic2`, **not** the pool):", "",
+          sample_line, "", "Raw: `rpc_jared_raw.json`."]
     open(a.md, "w").write("\n".join(L) + "\n")
     print(f"wrote {a.out}, {a.md}", flush=True)
 
