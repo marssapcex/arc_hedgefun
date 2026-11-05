@@ -1,6 +1,6 @@
 {
  "summary": {
-  "generatedAt": "2026-11-05T06:00:41.606172+00:00",
+  "generatedAt": "2026-11-05T06:02:58.236368+00:00",
   "incidentCount": 821,
   "derivedSelectors": 2234,
   "genericSelectorsDropped": 7,
@@ -8,12 +8,19 @@
   "newContractsScanned": 0,
   "indexerMode": "creation",
   "blockRange": [
-   26346696,
-   26346698
+   26346684,
+   26346703
   ],
   "verdictCounts": {},
   "identicalBytecodeClusters": 0,
-  "indexerErrors": 0,
+  "indexerErrors": 2,
+  "indexerStats": {
+   "blocksScanned": 20,
+   "txSeen": 5775,
+   "hashOnlyTx": 0,
+   "creationTxSeen": 2,
+   "receiptMissing": 0
+  },
   "disclaimer": "Heuristic triage. Selector overlap is NOT a vulnerability. No exploit, no tx, no claim of drainable value."
  },
  "findings": []

@@ -1,14 +1,32 @@
 {
  "meta": {
-  "generatedAt": "2026-11-05T06:00:41.515819+00:00",
+  "generatedAt": "2026-11-05T06:02:58.161494+00:00",
   "mode": "creation",
-  "fromBlock": 26346696,
-  "toBlock": 26346698,
+  "fromBlock": 26346684,
+  "toBlock": 26346703,
   "rpc": "https://ethereum-rpc.publicnode.com",
   "contractCount": 0,
   "note": "Newly observed contracts / candidate selectors. Discovery only, no vulnerability claim."
  },
+ "stats": {
+  "blocksScanned": 20,
+  "txSeen": 5775,
+  "hashOnlyTx": 0,
+  "creationTxSeen": 2,
+  "receiptMissing": 0
+ },
  "clusters": [],
- "errors": [],
+ "errors": [
+  {
+   "block": 26346685,
+   "address": "0xcda13db8f7d64b9690fd57210cda63afdc98c50f",
+   "reason": "no runtime code"
+  },
+  {
+   "block": 26346686,
+   "address": "0xb12ff3ec6017ae2981fef5b40ace2fe106c43120",
+   "reason": "no runtime code"
+  }
+ ],
  "contracts": []
 }

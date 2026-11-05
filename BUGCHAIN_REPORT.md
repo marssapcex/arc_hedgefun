@@ -1,6 +1,6 @@
 # BugChain integration — triage report
 
-Generated 2026-11-05T06:00:41.606172+00:00. Read-only: RPC discovery + local incident database.
+Generated 2026-11-05T06:02:58.236368+00:00. Read-only: RPC discovery + local incident database.
 
 **Đây là xếp hạng để đọc tiếp, không phải kết luận có lỗ hổng.** Selector trùng ≠ bug (mọi ERC20 đều có `transfer(address,uint256)`).
 
@@ -12,10 +12,11 @@ Generated 2026-11-05T06:00:41.606172+00:00. Read-only: RPC discovery + local inc
 | genericCutoff | `82` |
 | newContractsScanned | `0` |
 | indexerMode | `"creation"` |
-| blockRange | `[26346696, 26346698]` |
+| blockRange | `[26346684, 26346703]` |
 | verdictCounts | `{}` |
 | identicalBytecodeClusters | `0` |
-| indexerErrors | `0` |
+| indexerErrors | `2` |
+| indexerStats | `{"blocksScanned": 20, "txSeen": 5775, "hashOnlyTx": 0, "creationTxSeen": 2, "receiptMissing": 0}` |
 
 ## Findings (top 30)
 
