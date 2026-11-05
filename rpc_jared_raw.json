@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-05T02:06:37.804166+00:00",
+  "generatedAt": "2026-11-05T02:11:36.956051+00:00",
   "rpc": "https://ethereum-rpc.publicnode.com",
-  "headBlock": 26345529,
+  "headBlock": 26345554,
   "blocks": {
     "drain": {
       "number": 25360696,
@@ -183,11 +183,25 @@
     }
   },
   "baitApprovals": {
-    "range": [
-      25354425,
-      25354925
-    ],
-    "source": "https://rpc.flashbots.net",
-    "count": 0
+    "earlyBait": {
+      "range": [
+        25354425,
+        25354925
+      ],
+      "source": "https://rpc.flashbots.net",
+      "count": 0,
+      "uniqueSpenders": 0,
+      "spenders": []
+    },
+    "armedWindow": {
+      "range": [
+        25360400,
+        25360696
+      ],
+      "source": null,
+      "count": 0,
+      "uniqueSpenders": 0,
+      "spenders": []
+    }
   }
 }
