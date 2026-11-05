@@ -1,27 +1,469 @@
 {
  "summary": {
-  "generatedAt": "2026-11-05T06:02:58.236368+00:00",
+  "generatedAt": "2026-11-05T06:12:20.257358+00:00",
   "incidentCount": 821,
   "derivedSelectors": 2234,
   "genericSelectorsDropped": 7,
   "genericCutoff": 82,
-  "newContractsScanned": 0,
+  "newContractsScanned": 11,
   "indexerMode": "creation",
   "blockRange": [
-   26346684,
-   26346703
+   26346656,
+   26346715
   ],
-  "verdictCounts": {},
+  "verdictCounts": {
+   "REVIEW": 9,
+   "INFO": 2
+  },
   "identicalBytecodeClusters": 0,
-  "indexerErrors": 2,
+  "indexerErrors": 7,
   "indexerStats": {
-   "blocksScanned": 20,
-   "txSeen": 5775,
+   "blocksScanned": 60,
+   "txSeen": 16209,
    "hashOnlyTx": 0,
-   "creationTxSeen": 2,
+   "creationTxSeen": 18,
    "receiptMissing": 0
   },
   "disclaimer": "Heuristic triage. Selector overlap is NOT a vulnerability. No exploit, no tx, no claim of drainable value."
  },
- "findings": []
+ "findings": [
+  {
+   "address": "0x062a5dd04f1f4c5848a0c7ceb422cdef192c1402",
+   "block": 26346681,
+   "txHash": "0x5b5458492dd5e66674ddcd4b5a9d6ea6d80075f46d03da89d7581412d47060ef",
+   "creator": "0xd19b1367271c7f371aeaec790fa521eb71c67c50",
+   "codeBytes": 1786,
+   "codeHash": "0xdf903f179e222c57039a1afed41e6df34c981ffdde6d32053e0b7e9aac927a2d",
+   "candidateSelectorCount": 20,
+   "verdict": "REVIEW",
+   "score": 30,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0x06fdde03",
+     "signatures": [
+      "name()",
+      "transfer_attention_tg_invmru_6e7aa58(bool,address,address)"
+     ],
+     "incidents": [
+      "2022-07-25_LPC_FeeTokenSelfTransfer",
+      "2023-10-18_MicDao_HelperContractArbitrage",
+      "2024-04-XX_Z123_ConsecutiveSwapLiquidityBurn",
+      "2024-05-XX_SCROLL_UniversalRouterExecute",
+      "2024-06-XX_NCD_PreStartTimeRewardsAck"
+     ]
+    },
+    {
+     "selector": "0x18160ddd",
+     "signatures": [
+      "totalSupply()"
+     ],
+     "incidents": [
+      "2023-10-18_MicDao_HelperContractArbitrage",
+      "2024-04-XX_Z123_ConsecutiveSwapLiquidityBurn",
+      "2024-05-XX_SCROLL_UniversalRouterExecute",
+      "2024-06-XX_NCD_PreStartTimeRewardsAck",
+      "2024-06-XX_YYS_UpdateAllowanceSellExploit"
+     ]
+    },
+    {
+     "selector": "0x23b872dd",
+     "signatures": [
+      "transferFrom(address,address,uint256)"
+     ],
+     "incidents": [
+      "2020-11-12_Akropolis_ReentrancyDAI",
+      "2021-05-21_JulSwap_FlashLoan_AddBNB_Manipulation",
+      "2021-07-20_Levyathan_PrivateKeyLeak_MintOwnership",
+      "2021-11-04_Ploutoz_DOP_FlashLoan_OracleManipulation",
+      "2021-12-18_Grim_Finance_Reentrancy_DepositFor"
+     ]
+    },
+    {
+     "selector": "0x313ce567",
+     "signatures": [
+      "decimals()"
+     ],
+     "incidents": [
+      "2023-10-18_MicDao_HelperContractArbitrage",
+      "2024-04-XX_HoppyFrogERC_V3FlashSwapCycle",
+      "2024-04-XX_Z123_ConsecutiveSwapLiquidityBurn",
+      "2024-05-XX_SCROLL_UniversalRouterExecute",
+      "2024-06-XX_NCD_PreStartTimeRewardsAck"
+     ]
+    },
+    {
+     "selector": "0x4e487b71",
+     "signatures": [
+      "Panic(uint256)"
+     ],
+     "incidents": [
+      "2024-01-26_Freedom_FlashLoanPriceManipulation",
+      "2024-04-XX_BigBangSwap_SellRewardTokenAccessControl",
+      "2024-04-XX_OpenLeverage2_MarginTradeArbitraryDEX",
+      "2024-06-XX_YYS_UpdateAllowanceSellExploit",
+      "2024-09-11_WXETA_InitializeMintExploit"
+     ]
+    },
+    {
+     "selector": "0x95d89b41",
+     "signatures": [
+      "symbol()"
+     ],
+     "incidents": [
+      "2023-05-xx_NOON_TransferVisibilityError",
+      "2023-10-18_MicDao_HelperContractArbitrage",
+      "2024-04-XX_Z123_ConsecutiveSwapLiquidityBurn",
+      "2024-05-XX_SCROLL_UniversalRouterExecute",
+      "2024-06-XX_NCD_PreStartTimeRewardsAck"
+     ]
+    },
+    {
+     "selector": "0xdd62ed3e",
+     "signatures": [
+      "allowance(address,address)"
+     ],
+     "incidents": [
+      "2022-03-13_Paraluni_ReentrancyDepositLP",
+      "2022-03-15_HundredFinance_ERC677ReentrancyLending",
+      "2022-04-15_Rikkei_OracleManipulationBorrow",
+      "2022-10-02_TransitSwap_TransferFromOwnerBypass",
+      "2022-10_RabbyWallet_SwapRouterArbitraryCall"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "arbitrary-call": 8,
+    "flash-loan": 5,
+    "oracle-price-manipulation": 5,
+    "slippage-amm": 4,
+    "staking-reward": 4,
+    "reentrancy": 4,
+    "business-logic": 2,
+    "defl-tax-token": 1,
+    "private-key-compromise": 1,
+    "access-control": 1,
+    "approval-abuse": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0x87a7d0d096c3a761515a1dd7fb9e6f34ad8d1dce",
+   "block": 26346682,
+   "txHash": "0xfb791ead334d3e47636f5e5b1570ca25658ae926d0a20ac298bf01f6189180fd",
+   "creator": "0xb20aae0fe007519b7ce6f090a2ab8353b3da5d80",
+   "codeBytes": 23732,
+   "codeHash": "0x73c40d803f0905b1099a03fa076d6da2cc500ac6cd989a25a6177b0e1d2f30d4",
+   "candidateSelectorCount": 43,
+   "verdict": "REVIEW",
+   "score": 20,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0x01ffc9a7",
+     "signatures": [
+      "supportsInterface(bytes4)"
+     ],
+     "incidents": [
+      "2023-09-12_uniclyNFT_Reentrancy",
+      "2024-01-27_PeapodsFinance_FlashLoanBondAccumulation",
+      "2024-09-11_WXETA_InitializeMintExploit"
+     ]
+    },
+    {
+     "selector": "0x8da5cb5b",
+     "signatures": [
+      "owner()"
+     ],
+     "incidents": [
+      "2021-12-21_Visor_Finance_DepositUnprotected",
+      "2022-04-19_CFToken_PublicTransferDrain",
+      "2023-05-xx_FAPEN_UnstakeWrongBalanceCheck",
+      "2023-10-18_MicDao_HelperContractArbitrage",
+      "2024-02-14_Babyloogn_AirdropApprovalExploit"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "business-logic": 2,
+    "reentrancy": 1,
+    "flash-loan": 1,
+    "access-control": 1,
+    "staking-reward": 1,
+    "oracle-price-manipulation": 1,
+    "approval-abuse": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0xcd3dde21bbe447984ae6a9f5c6a57234efe0976e",
+   "block": 26346656,
+   "txHash": "0xa0aab27539b391a7a7051ed3575d9c98c79aaeba42cab57e2bc7514123f8c9e3",
+   "creator": "0xfcfd2946b92747a41d283b8f586742bc465b5fcb",
+   "codeBytes": 678,
+   "codeHash": "0xce6b14bfe31ba3ac71b375ef15791f2851c60209b7debb22f9c28ad6d8344cb8",
+   "candidateSelectorCount": 4,
+   "verdict": "REVIEW",
+   "score": 10,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0x4e487b71",
+     "signatures": [
+      "Panic(uint256)"
+     ],
+     "incidents": [
+      "2024-01-26_Freedom_FlashLoanPriceManipulation",
+      "2024-04-XX_BigBangSwap_SellRewardTokenAccessControl",
+      "2024-04-XX_OpenLeverage2_MarginTradeArbitraryDEX",
+      "2024-06-XX_YYS_UpdateAllowanceSellExploit",
+      "2024-09-11_WXETA_InitializeMintExploit"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "arbitrary-call": 2,
+    "flash-loan": 1,
+    "access-control": 1,
+    "business-logic": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0xeadd919e5b3f3ba19865654bd67860219bf98599",
+   "block": 26346657,
+   "txHash": "0xd017c33525b604c93822d923d23f1b27782e5f661a66fc856678f0b2c54a528d",
+   "creator": "0x8457ef5137e8dd7e5ee1a8a69e4a7efdd23c72ab",
+   "codeBytes": 1102,
+   "codeHash": "0x6ee5f533205b923ba8161fcbd29ad856efb222e15fa924613328194dab027b3a",
+   "candidateSelectorCount": 9,
+   "verdict": "REVIEW",
+   "score": 10,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0x4e487b71",
+     "signatures": [
+      "Panic(uint256)"
+     ],
+     "incidents": [
+      "2024-01-26_Freedom_FlashLoanPriceManipulation",
+      "2024-04-XX_BigBangSwap_SellRewardTokenAccessControl",
+      "2024-04-XX_OpenLeverage2_MarginTradeArbitraryDEX",
+      "2024-06-XX_YYS_UpdateAllowanceSellExploit",
+      "2024-09-11_WXETA_InitializeMintExploit"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "arbitrary-call": 2,
+    "flash-loan": 1,
+    "access-control": 1,
+    "business-logic": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0xae2e109227e69f6bcb36529ff6f249a2347f706f",
+   "block": 26346661,
+   "txHash": "0x006a3ebc9bd5611910a3fbd17b8c1d23d07c1b050573a00a55b88a85230a560c",
+   "creator": "0x90ce9053b35e6432fa3e641709d3f010b7d442ff",
+   "codeBytes": 956,
+   "codeHash": "0x79794fcfa862a4f25382f05a71454c722d747d2e4dbeebc7036702907db8d071",
+   "candidateSelectorCount": 7,
+   "verdict": "REVIEW",
+   "score": 10,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0x8da5cb5b",
+     "signatures": [
+      "owner()"
+     ],
+     "incidents": [
+      "2021-12-21_Visor_Finance_DepositUnprotected",
+      "2022-04-19_CFToken_PublicTransferDrain",
+      "2023-05-xx_FAPEN_UnstakeWrongBalanceCheck",
+      "2023-10-18_MicDao_HelperContractArbitrage",
+      "2024-02-14_Babyloogn_AirdropApprovalExploit"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "business-logic": 1,
+    "access-control": 1,
+    "staking-reward": 1,
+    "oracle-price-manipulation": 1,
+    "approval-abuse": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0xf1a7b87b28bfe5a3fd5fc6426f0edd5c0d238024",
+   "block": 26346663,
+   "txHash": "0x131055ef2fd0a75f7751661803b29428d1fe87af97964e514a078f3e26229f9e",
+   "creator": "0x8457ef5137e8dd7e5ee1a8a69e4a7efdd23c72ab",
+   "codeBytes": 1483,
+   "codeHash": "0x45c148ffb1b1750553a38205ae30ba744ca9e65ee61481ecfb4906eb9f689316",
+   "candidateSelectorCount": 9,
+   "verdict": "REVIEW",
+   "score": 10,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0x4e487b71",
+     "signatures": [
+      "Panic(uint256)"
+     ],
+     "incidents": [
+      "2024-01-26_Freedom_FlashLoanPriceManipulation",
+      "2024-04-XX_BigBangSwap_SellRewardTokenAccessControl",
+      "2024-04-XX_OpenLeverage2_MarginTradeArbitraryDEX",
+      "2024-06-XX_YYS_UpdateAllowanceSellExploit",
+      "2024-09-11_WXETA_InitializeMintExploit"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "arbitrary-call": 2,
+    "flash-loan": 1,
+    "access-control": 1,
+    "business-logic": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0xcda13db8f7d64b9690fd57210cda63afdc98c50f",
+   "block": 26346685,
+   "txHash": "0xd2b077b3d64f87f02ce308754029a678bccd9aead394f06fcdc4d660cc41cbcb",
+   "creator": "0x8457ef5137e8dd7e5ee1a8a69e4a7efdd23c72ab",
+   "codeBytes": 1297,
+   "codeHash": "0x0a743416ef451e8183927ca0c8f92bc21a8d0b8a1c0e50e3c9d2783d7d0121c3",
+   "candidateSelectorCount": 12,
+   "verdict": "REVIEW",
+   "score": 10,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0x4e487b71",
+     "signatures": [
+      "Panic(uint256)"
+     ],
+     "incidents": [
+      "2024-01-26_Freedom_FlashLoanPriceManipulation",
+      "2024-04-XX_BigBangSwap_SellRewardTokenAccessControl",
+      "2024-04-XX_OpenLeverage2_MarginTradeArbitraryDEX",
+      "2024-06-XX_YYS_UpdateAllowanceSellExploit",
+      "2024-09-11_WXETA_InitializeMintExploit"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "arbitrary-call": 2,
+    "flash-loan": 1,
+    "access-control": 1,
+    "business-logic": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0x4151b39532fb1cc130cdbe6a5258cb223e05e991",
+   "block": 26346705,
+   "txHash": "0x787fe74c36c850a9914046d47ef18f51555f1f0a69d7c5076454911fdacef3f0",
+   "creator": "0x8457ef5137e8dd7e5ee1a8a69e4a7efdd23c72ab",
+   "codeBytes": 1243,
+   "codeHash": "0x2ca82462e7e0935c6e05563a3e7d43299b810234e7ce9acd089c456e20cc00e2",
+   "candidateSelectorCount": 10,
+   "verdict": "REVIEW",
+   "score": 10,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0x4e487b71",
+     "signatures": [
+      "Panic(uint256)"
+     ],
+     "incidents": [
+      "2024-01-26_Freedom_FlashLoanPriceManipulation",
+      "2024-04-XX_BigBangSwap_SellRewardTokenAccessControl",
+      "2024-04-XX_OpenLeverage2_MarginTradeArbitraryDEX",
+      "2024-06-XX_YYS_UpdateAllowanceSellExploit",
+      "2024-09-11_WXETA_InitializeMintExploit"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "arbitrary-call": 2,
+    "flash-loan": 1,
+    "access-control": 1,
+    "business-logic": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0x7931b843fe4531f19d6964262754d75f1d87747e",
+   "block": 26346714,
+   "txHash": "0xf0600ddbe5ec76ab8226ac644908612128a870902c2bb780881073ca9cefe0c5",
+   "creator": "0x7c3b8d8e3bed9bfc4ccc03250ad14eabebe6336b",
+   "codeBytes": 11986,
+   "codeHash": "0x69fe53a87eff0fd544efafa3bc99d5a2d9197a9d9fc9c789dd242f87f2683259",
+   "candidateSelectorCount": 7,
+   "verdict": "REVIEW",
+   "score": 10,
+   "knownAddressHits": [],
+   "selectorHits": [
+    {
+     "selector": "0xfa461e33",
+     "signatures": [
+      "uniswapV3SwapCallback(int256,int256,bytes)"
+     ],
+     "incidents": [
+      "2023-04-09_SushiSwap_RouteProcessor_ETH",
+      "2024-03-20_ParaSwap_AccessControl_Multichain",
+      "2024-05-XX_TSURU_OnERC1155ReceivedUnauthorized",
+      "2024-07-18_MEVbot_0xdd7c_UniswapV3CallbackExploit",
+      "2024-07-28_UnverifiedContr_0x452E25_UniswapV3CallbackExploit"
+     ]
+    }
+   ],
+   "incidentCategories": {
+    "arbitrary-call": 2,
+    "unprotected-callback": 2,
+    "approval-abuse": 1,
+    "access-control": 1,
+    "nft": 1
+   },
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0x883debcb0391fdc0ed26209fd339aeaacc2d766a",
+   "block": 26346669,
+   "txHash": "0x9e61a71165a4f4930b022ea4ade5ea2148a5e52243ed6284da106446d4895836",
+   "creator": "0xd3fa1e7df965440b8717e05643edd34ba3bc1631",
+   "codeBytes": 687,
+   "codeHash": "0xd52d45ac9ac4f87c94db70d734b67f47105ea9ddb86de2765dc99328a59410a3",
+   "candidateSelectorCount": 5,
+   "verdict": "INFO",
+   "score": 0,
+   "knownAddressHits": [],
+   "selectorHits": [],
+   "incidentCategories": {},
+   "identicalBytecodeClusterSize": 1
+  },
+  {
+   "address": "0x4fbb9f45d1c82b732c4e816c5737208179375a6f",
+   "block": 26346673,
+   "txHash": "0x81a6459e3e7964f3d8c55c49c65326b4765a90618a8449a3aea654f5797bb5b3",
+   "creator": "0xd3fa1e7df965440b8717e05643edd34ba3bc1631",
+   "codeBytes": 687,
+   "codeHash": "0xc9a1f90613fa4a223803259d19eb47c5299947cdf13c9bbf5e6e9c624c73b6e5",
+   "candidateSelectorCount": 5,
+   "verdict": "INFO",
+   "score": 0,
+   "knownAddressHits": [],
+   "selectorHits": [],
+   "incidentCategories": {},
+   "identicalBytecodeClusterSize": 1
+  }
+ ]
 }
