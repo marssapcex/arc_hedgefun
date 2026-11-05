@@ -44,7 +44,6 @@ jobs:
           git config user.name "arena-bot"
           git config user.email "arena-bot@users.noreply.github.com"
           git add -f vulnchain/data/corpus.json vulnchain/data/vulnerableBytecode.json \
-                     vulnchain/data/scan_result.json vulnchain/data/scan_debug.log \
-                     VULNCHAIN_REPORT.md || true
+                     vulnchain/data/scan_result.json VULNCHAIN_REPORT.md || true
           git commit -m "data: vulnchain live similarity scan [skip ci]" || echo nothing
           for i in 1 2 3 4 5; do git push origin HEAD:arena/fbf9cf32-arc-hedgefun && break || sleep 5; done

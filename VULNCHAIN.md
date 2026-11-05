@@ -53,10 +53,21 @@ Output chỉ `INFO / REVIEW / HIGH_SIMILARITY`. **Không có `VULNERABLE`** — 
 1.619 selector · 17 selector generic bị triệt · 381 địa chỉ IOC
 102 địa chỉ vulnerable contract trên Ethereum (để seed bytecode)
 corpus.json 4.386.583 B
-npm test 15/15 PASS · selftest xanh
+npm test 15/15 PASS · selftest 19/19 PASS
 ```
 
 CI `vulnchain.yml`: `npm ci` → test → build-corpus → selftest → seed bytecode → **scan live trên 1 chain EVM** (`--network ethereum --mode hybrid --sourcify`) → publish `VULNCHAIN_REPORT.md`.
+
+**Kết quả CI live cuối (2026-11-05 06:40 UTC, blocks `26346846–26346885`):**
+
+```
+npm ci · 15/15 test · selftest 19/19 · corpus 821
+seed 37 bytecode của contract từng bị khai thác (102 địa chỉ, 2 lỗi)
+logs 28.154 · contract quét 60 · REVIEW 4 · INFO 56 · cluster bytecode trùng 4 · errors 0
+25.720 LSH band key · 1.617 selector key · 381 IOC · 18 selector generic bị triệt
+```
+
+Top finding `bc 0.88 / sel 0.29` với incident `2021-11-30_MonoSwap_SelfSwap_PriceManipulation`, kèm 2 rule hit (`arbitrary-call`, `proxy-storage`) — tức **có lý do cụ thể để mở bytecode ra đọc**, không phải "đã tìm ra lỗi". Có một lần CI fail ở bước live do RPC transient; chạy lại xanh, đã bật log tee để lần sau không phải đoán.
 
 ---
 
