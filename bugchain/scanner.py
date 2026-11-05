@@ -94,6 +94,7 @@ def scan(signatures, database, contracts, generic_ratio=0.10):
         "verdictCounts": dict(collections.Counter(f["verdict"] for f in findings)),
         "identicalBytecodeClusters": len(contracts.get("clusters", [])),
         "indexerErrors": len(contracts.get("errors", [])),
+        "indexerStats": contracts.get("stats", {}),
         "disclaimer": "Heuristic triage. Selector overlap is NOT a vulnerability. No exploit, no tx, no claim of drainable value.",
     }
     return {"summary": summary, "findings": findings}
@@ -108,7 +109,8 @@ def markdown(result):
          "| Metric | Value |", "|---|---|"]
     for k in ["incidentCount", "derivedSelectors", "genericSelectorsDropped",
               "genericCutoff", "newContractsScanned", "indexerMode", "blockRange",
-              "verdictCounts", "identicalBytecodeClusters", "indexerErrors"]:
+              "verdictCounts", "identicalBytecodeClusters", "indexerErrors",
+              "indexerStats"]:
         L.append(f"| {k} | `{json.dumps(s[k])}` |")
     L += ["", "## Findings (top 30)", "",
           "| Verdict | Score | Address | Block | Creator | Selector hits | Identical code |",

@@ -104,19 +104,29 @@ def _record(block, tx_hash, creator, address, code, source):
 
 def index_creation(urls, first, last, max_contracts=200):
     contracts, errors = [], []
+    stats = {"blocksScanned": 0, "txSeen": 0, "hashOnlyTx": 0,
+             "creationTxSeen": 0, "receiptMissing": 0}
     for n in range(first, last + 1):
         blk, src = rpc_any(urls, "eth_getBlockByNumber", [h(n), True])
         if not isinstance(blk, dict):
             errors.append({"block": n, "reason": "block unavailable"})
             continue
+        stats["blocksScanned"] += 1
         for tx in blk.get("transactions", []):
+            stats["txSeen"] += 1
+            if isinstance(tx, str):
+                # some public endpoints ignore the `true` flag and return hashes
+                stats["hashOnlyTx"] += 1
+                tx, _ = rpc_any(urls, "eth_getTransactionByHash", [tx])
             if not isinstance(tx, dict) or tx.get("to") not in (None, "0x", ""):
                 continue
+            stats["creationTxSeen"] += 1
             if len(contracts) >= max_contracts:
                 break
             rc, rsrc = rpc_any(urls, "eth_getTransactionReceipt", [tx["hash"]])
             addr = rc.get("contractAddress") if isinstance(rc, dict) else None
             if not addr:
+                stats["receiptMissing"] += 1
                 errors.append({"block": n, "tx": tx["hash"], "reason": "no contractAddress in receipt"})
                 continue
             code, csrc = rpc_any(urls, "eth_getCode", [addr, "latest"])
@@ -126,24 +136,28 @@ def index_creation(urls, first, last, max_contracts=200):
             contracts.append(_record(n, tx["hash"], tx.get("from"), addr, code, csrc))
         if len(contracts) >= max_contracts:
             break
-    return contracts, errors
+    return contracts, errors, stats
 
 
 def index_events(urls, first, last, max_contracts=200):
     """BugChainIndexer-style discovery from Transfer + Approval logs."""
     seen, contracts, errors = set(), [], []
+    stats = {"chunks": 0, "logsSeen": 0, "addressesSeen": 0}
     for lo in range(first, last + 1, 50):
         hi = min(lo + 49, last)
         flt = {"fromBlock": h(lo), "toBlock": h(hi), "topics": [[TRANSFER, APPROVAL]]}
+        stats["chunks"] += 1
         logs, src = rpc_any(urls, "eth_getLogs", [flt])
         if not isinstance(logs, list):
             errors.append({"range": [lo, hi], "reason": "eth_getLogs unavailable (public RPC limits)"})
             continue
+        stats["logsSeen"] += len(logs)
         addrs = set()
         for lg in logs:
             for t in (lg.get("topics") or [])[1:3]:
                 if len(t) >= 42:
                     addrs.add("0x" + t[-40:].lower())
+        stats["addressesSeen"] += len(addrs)
         for a in sorted(addrs):
             if a in seen or len(contracts) >= max_contracts:
                 continue
@@ -153,7 +167,7 @@ def index_events(urls, first, last, max_contracts=200):
                 contracts.append(_record(hi, None, None, a, code, csrc))
         if len(contracts) >= max_contracts:
             break
-    return contracts, errors
+    return contracts, errors, stats
 
 
 def cluster_by_code(contracts):
@@ -174,7 +188,7 @@ def run(rpc_urls=None, mode="creation", blocks=5, first=None, last=None,
         contracts = [_record(c["block"], c.get("txHash"), c.get("creator"),
                              c["address"], c["code"], "fixture")
                      for c in data["contracts"]]
-        errors, meta_mode, first, last = [], "fixture", data.get("first"), data.get("last")
+        errors, stats, meta_mode, first, last = [], {}, "fixture", data.get("first"), data.get("last")
     else:
         head, head_src = rpc_any(urls, "eth_blockNumber", [])
         if not head:
@@ -183,9 +197,9 @@ def run(rpc_urls=None, mode="creation", blocks=5, first=None, last=None,
         last = last if last is not None else head_n
         first = first if first is not None else max(0, last - blocks + 1)
         if mode == "creation":
-            contracts, errors = index_creation(urls, first, last, max_contracts)
+            contracts, errors, stats = index_creation(urls, first, last, max_contracts)
         elif mode == "events":
-            contracts, errors = index_events(urls, first, last, max_contracts)
+            contracts, errors, stats = index_events(urls, first, last, max_contracts)
         else:
             raise SystemExit("mode must be creation|events")
         meta_mode = mode
@@ -197,6 +211,7 @@ def run(rpc_urls=None, mode="creation", blocks=5, first=None, last=None,
             "contractCount": len(contracts),
             "note": "Newly observed contracts / candidate selectors. Discovery only, no vulnerability claim.",
         },
+        "stats": stats,
         "clusters": cluster_by_code(contracts),
         "errors": errors,
         "contracts": contracts,

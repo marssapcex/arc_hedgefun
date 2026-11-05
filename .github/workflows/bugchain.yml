@@ -20,8 +20,8 @@ jobs:
           python3 -m bugchain.cli selftest
       - name: Index newly deployed contracts (read-only RPC)
         run: |
-          python3 -m bugchain.cli index --mode creation --blocks 3 \
-            --max-contracts 60 --out bugchain/data/new_contracts.json
+          python3 -m bugchain.cli index --mode creation --blocks 20 \
+            --max-contracts 80 --out bugchain/data/new_contracts.json
       - name: Scan against the 821-incident database
         run: |
           python3 -m bugchain.cli scan \
