@@ -1,13 +1,16 @@
 {
  "network": "ethereum",
- "lastBlock": 399,
- "chunksDone": 4,
+ "chainId": 1,
+ "rpcSource": "public RPC (no key)",
+ "explorerKeyConfigured": false,
+ "lastBlock": 400,
+ "chunksDone": 5,
  "contractsScanned": 0,
  "functionsExamined": 0,
  "labelledTotal": 0,
  "targetBlock": 400,
- "head": 26347456,
+ "head": 26348323,
  "chunkSize": 100,
- "updatedAt": "2026-11-05T08:33:38.290Z",
+ "updatedAt": "2026-11-05T11:26:23.123Z",
  "errors": 0
 }
