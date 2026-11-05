@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-05T02:11:36.956051+00:00",
+  "generatedAt": "2026-11-05T02:13:51.215353+00:00",
   "rpc": "https://ethereum-rpc.publicnode.com",
-  "headBlock": 26345554,
+  "headBlock": 26345566,
   "blocks": {
     "drain": {
       "number": 25360696,
@@ -157,7 +157,7 @@
     "botCodeBytes": 13835,
     "eip1967ImplSlot": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "looksLikeProxy": false,
-    "operatorNonce": 6611474,
+    "operatorNonce": 6611478,
     "operatorCodeBytes": 0
   },
   "childStorage": {
@@ -182,26 +182,92 @@
       "address": "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13"
     }
   },
-  "baitApprovals": {
-    "earlyBait": {
-      "range": [
-        25354425,
-        25354925
-      ],
-      "source": "https://rpc.flashbots.net",
-      "count": 0,
-      "uniqueSpenders": 0,
-      "spenders": []
-    },
-    "armedWindow": {
-      "range": [
-        25360400,
-        25360696
-      ],
-      "source": null,
-      "count": 0,
-      "uniqueSpenders": 0,
-      "spenders": []
-    }
+  "armingApproval": {
+    "tx": "0xa2c9d0a13cc985e3fe445ad8d8bc2d156eec2580b8b6700ab057f5f1f881de3f",
+    "source": "https://1rpc.io/eth",
+    "status": "0x1",
+    "count": 16,
+    "approvals": [
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x32ed8c7512a4766ac0aaab4a26a25519159d00a2",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x155596a9be8942afd0f9d368fbf8089cf02fada3",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x80ba9b35cf5db6c56af43d7925ce8098e32fead1",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x45c4ae5cc9c8a0334fc18c75add87a866eba3255",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x4ee0b6e9f9c4886beeef2ebd7fc27223169531ce",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x0b52db096a26a1b8cfaab9d92184f289e3e5b0b3",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x757230bd24489b8d8817f4ff8e5a35ebeb3dde39",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x265ea50a6ded45299c7d8cfa112c125ee14f87fd",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x69216c47c5aab95f0f90db3ffa8d16970506ad0e",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x5b646681cf3d4ed2ed1d93d3627ab6f1374e22fc",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x052cb08c527c46a65647982d668d8084c980a784",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x2f34f74c3eb35426bb53c0328a54570cfa478f82",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x2e32c187513e8296917c4c2e6b88bda7f3ad3fd9",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x069eab79e3bbe25b4d9d6d3fbe9b1f911f4e90ca",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0xa61d15479e0aee1fca32fb0f4f9865102d13b7c8",
+        "amountWETH": 92.16140768781219
+      },
+      {
+        "owner": "0x1f2f10d1c40777ae1da742455c65828ff36df387",
+        "spender": "0x4556deb2280ca13e5e5109efc0ce5d89ca8ea183",
+        "amountWETH": 92.16140768781219
+      }
+    ]
   }
 }
