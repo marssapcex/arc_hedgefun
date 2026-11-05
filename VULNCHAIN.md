@@ -79,7 +79,16 @@ corpus 821 incident → 2.485 hàm lỗi / 731 incident / 24 category
 fixture: 1 contract được gắn nhãn reentrancy, contract rỗng KHÔNG bị dán nhãn
 ```
 
-CI `vulnchain.yml`: `npm ci` → test → build-corpus → fixture + selftest → **scan live 1 chain EVM** → publish `VULNCHAIN_REPORT.md`. Kết quả live nằm ở report đó.
+CI `vulnchain.yml`: `npm ci` → test → build-corpus → fixture + selftest → **scan live 1 chain EVM** → publish `VULNCHAIN_REPORT.md`.
+
+**Kết quả live (2026-11-05 07:17 UTC, Ethereum blocks `26347036–26347075`):**
+
+```
+60 contract · 1.123 hàm được bóc tách · 23.998 logs · errors 0
+labelledContracts 1 · labelsByCategory {"oracle-price-manipulation": 1}
+```
+
+Contract `0x0000000aa232…` (23 hàm) có **`withdraw(address,uint256)` `0xf3fef3a3`** trùng hàm lỗi trong `2023-07-25_Platypus02_PriceManipulation`: `score 0.5824`, `featureCos 0.739`, `body 0.18`, selector khớp, 11 feature bật (`externalCall, staticcall, stateWrite, stateRead, callerCheck, loop, math, division, timestamp, create, revert`). 59 contract còn lại **không bị dán nhãn** — không dán bừa.
 
 ---
 

@@ -1,85 +1,83 @@
-# VulnChain — một codebase duy nhất
+# VulnChain — 1 codebase, gắn nhãn contract theo HÀM LỖI của 821 vụ hack
 
-Ghép **hai mã nguồn thật** vào một repo, một `package.json`, một entrypoint:
+Ghép **hai mã nguồn thật**, một `package.json`, một entrypoint:
 
-| Thành phần | Nguồn | Vai trò |
+| | Nguồn | Vai trò |
 |---|---|---|
-| `scanners/`, `server/`, `contract/`, `docs/`, `SETUP.md` | [`kismp123/BugChainIndexer`](https://github.com/kismp123/BugChainIndexer) | engine quét địa chỉ/contract: `LogFetcher` (adaptive `eth_getLogs`), `EOAFilter` (EOA vs contract + code hash), `ContractVerifier`, `UnifiedScanner`, REST backend, cron, contract helper |
-| `incidents/` (821 report + 25 `vulns/*.md`) | [`kismp123/DeFi-Security-Incident`](https://github.com/kismp123/DeFi-Security-Incident) | database sự cố thật 2020–2026 |
-| `src/` | mới | engine đối chiếu: MinHash/LSH bytecode, SimHash source, IDF selector, rule engine, IOC, ranking |
+| `scanners/`, `server/`, `contract/`, `docs/`, `SETUP.md` | [`kismp123/BugChainIndexer`](https://github.com/kismp123/BugChainIndexer) | `LogFetcher` (adaptive `eth_getLogs`), `EOAFilter`, `ContractVerifier`, `UnifiedScanner`, REST backend, cron |
+| `incidents/` | [`kismp123/DeFi-Security-Incident`](https://github.com/kismp123/DeFi-Security-Incident) | 821 report + 25 `vulns/*.md` |
+| `src/` | mới | engine **mức hàm**: trích hàm lỗi → so từng hàm → gắn nhãn |
 
-Không viết lại scanner. `src/lightScanner.js` **subclass `scanners/common/Scanner.js`** và chỉ thay phần I/O (Alchemy/Postgres → RPC public). `pipeline.js` gọi thẳng `LogFetcher.fetchLogs()` và `EOAFilter.filterAddresses()` từ mã gốc. `ContractVerifier.verify()` được nối sẵn, tự bật khi có `DEFAULT_ETHERSCAN_KEYS`.
+`src/lightScanner.js` **subclass `scanners/common/Scanner.js`**, chỉ thay I/O (Alchemy/Postgres → RPC public). `pipeline.js` gọi thẳng `LogFetcher.fetchLogs()` và `EOAFilter.filterAddresses()` từ mã gốc. Không viết lại scanner.
 
----
+## Không có
 
-## Thuật toán — gắn nhãn theo HÀM LỖI
+- ❌ IOC attacker address / identical-bytecode cluster
+- ❌ rules tĩnh `CALL` trước `SSTORE`
+- ❌ whole-contract bytecode Jaccard, ❌ seed bytecode contract đã bị hack (*không ai deploy lại code bị hack*)
+- ❌ `REVIEW`/`INFO` verdict, ❌ `VULNERABLE`
+
+## Thuật toán
 
 ```
-incidents/*.md  ──corpus.js──▶ 821 record
-                                ├ metadata / IOC / category / root cause
-                                ├ vulnerable Solidity snippet → token 4-gram
-                                │        → 128-perm MinHash + 64-bit SimHash
-                                └ function declarations → Keccak selector (ethers.id)
-                                          → IDF (generic ERC20 selector = 0)
+incidents/*.md ──corpus.js──▶ 2.485 hàm lỗi / 731 incident / 24 category
+   mỗi hàm: selector (Keccak canonical signature)
+          + 29 feature ngữ nghĩa (callerCheck / usesMsgValue / callWithValue /
+             stateWrite / balanceRead / getReserves / loop / userArrayParam /
+             unchecked / reentrancyGuard / slippageGuard / delegatecall ...)
+          + body 3-gram → MinHash 64 + SimHash 64 + 16 LSH band
+          + nhãn category + incidentId + rootCause
 
-RPC (1 chain EVM)
-  ├ LogFetcher.fetchLogs(scanner,...)        [mã BugChainIndexer gốc]
-  ├ EOAFilter.filterAddresses(scanner,...)  [mã BugChainIndexer gốc]
-  ├ creation tx (to == null) → receipt.contractAddress → eth_getCode
-  ├ Sourcify (optional) → verified source
-  └ bytecode.js: strip CBOR metadata + PUSH immediates → opcode 5-gram
-                 → MinHash + LSH bands + PUSH4 selector + static flags
+RPC 1 chain EVM
+   LogFetcher.fetchLogs + EOAFilter.filterAddresses  [mã gốc]
+   + creation tx (to == null) → eth_getCode
+   + Sourcify (optional) → verified source
+   + EIP-1167 proxy → resolve implementation
 
-matcher.js
-  LSH banding lấy ứng viên (không so 821 × N)
-  0.32 bytecode Jaccard   (so với bytecode contract ĐÃ BỊ KHAI THÁC, seed từ 102 địa chỉ Ethereum)
-  0.20 IDF selector cosine
-  0.16 source SimHash/MinHash
-  0.10 rule engine (9 rule có giải thích)
-  0.22 IOC exact + identical-bytecode cluster
-  → INFO / REVIEW / HIGH_SIMILARITY + top-5 incident tương tự + evidence
+functions.js
+   splitBytecodeFunctions(): PUSH4 sel; EQ; PUSH2 dest; JUMPI
+       → cắt runtime bytecode theo JUMPDEST thành 1 segment / hàm
+   verified source → brace-matched body, merge theo selector
+
+matcher.js  FunctionLabeler
+   LSH band + selector index → ứng viên hàm lỗi
+   score = 0.50 featureCosine + 0.35 body(MinHash+SimHash) + 0.15 selectorEqual
+   ngưỡng: score ≥ 0.46 · featureCos ≥ 0.55 · ≥4 feature bật
+           · (selector trùng hoặc body > 0.10)
+   → labels[] = {category, confidence, functionCount, incidents, examples}
+   → matchedFunctions[] = {selector, score, activeFeatures, incidentId, rootCause}
 ```
 
-**Không bao giờ** xuất `VULNERABLE`. Selector trùng ≠ lỗi; đây là xếp hạng để mở bytecode/source ra đọc tiếp.
-
-`seed-vulnerable-bytecode` là điểm khác biệt lớn nhất so với bản chỉ đọc markdown: nó **lấy bytecode thật của các contract từng bị khai thác** trên Ethereum, fingerprint lại, rồi so opcode-normalized với contract mới. Hai bản compile cùng một source (khác địa chỉ, khác metadata hash) vẫn có Jaccard cao dù `codeHash` khác hẳn.
-
----
+`featureCosine` là chỗ bắt được "hàm này cũng đọc reserve sống, lặp mảng caller đưa, chuyển ETH rồi mới ghi state" dù tên hàm/selector khác. Đó là cái so nguyên bytecode không làm được.
 
 ## Chạy
 
 ```bash
 cd vulnchain
-npm ci                     # MỘT install point, MỘT package-lock
-
+npm ci                     # MỘT install point
 npm test                   # 15 unit test
 node src/cli.js build-corpus
 node src/cli.js make-fixture
-node src/cli.js selftest
+node src/cli.js selftest   # 19 check, hoàn toàn offline
 
-# nạp bytecode của contract từng bị khai thác (read-only RPC)
-# quét 1 chain EVM
-node src/cli.js scan --network ethereum --blocks 60 --mode hybrid --max-contracts 60 --sourcify
+node src/cli.js scan --network ethereum --blocks 40 --mode hybrid --max-contracts 60 --sourcify
 node src/cli.js scan --network bsc --mode events --blocks 30
-node src/cli.js scan --fixture          # hoàn toàn offline
+node src/cli.js scan --fixture
 ```
 
-`mode`: `events` (đúng BugChainIndexer gốc), `creation` (tx tạo contract), `hybrid` (cả hai, mặc định).
-Chain hỗ trợ RPC public: `ethereum`, `bsc`, `arbitrum`, `base`, `optimism`, `polygon`. Thêm chain bằng cách sửa `PUBLIC_RPCS` trong `src/lightScanner.js` — config `scanners/config/networks.js` của bản gốc vẫn được `Scanner` nạp.
+`mode`: `events` (đúng BugChainIndexer gốc), `creation` (tx tạo contract), `hybrid` (mặc định). Chain public RPC: `ethereum`, `bsc`, `arbitrum`, `base`, `optimism`, `polygon` (`PUBLIC_RPCS` trong `src/lightScanner.js`). Config `scanners/config/networks.js` của bản gốc vẫn được `Scanner` nạp.
 
-Output: `data/corpus.json` (821 record), `data/vulnerableBytecode.json`, `data/scan_result.json`, `VULNCHAIN_REPORT.md` ở repository root.
+Output: `data/corpus.json`, `data/scan_result.json`, `VULNCHAIN_REPORT.md` ở repository root.
 
-## REST backend & cron (từ mã gốc)
+## Backend / cron (mã gốc)
 
-`server/backend/index.js` và `scanners/cron/` vẫn còn nguyên, dùng chung `node_modules` ở root. Chúng cần PostgreSQL + Alchemy key (xem `SETUP.md`, `.env.example`). `src/` không cần thứ đó — chạy được trên CI không credentials.
+`server/backend/index.js`, `scanners/cron/` vẫn nguyên, dùng chung `node_modules` root, cần PostgreSQL + Alchemy key (`SETUP.md`, `.env.example`). `src/` không cần thứ đó.
 
 ## Giới hạn
 
-- `PUSH4` selector là heuristic; PUSH4 cũng dùng để đẩy hằng số. IDF + giao với corpus triệt phần lớn nhiễu, không triệt hết.
-- 95/821 report không có bảng metadata; 48 report không trích được vulnerable snippet. `hasMetadataTable` / `vulnerableSnippetCount` có trong từng record.
-- Nhiều report dùng `pseudocode` → selector suy ra best-effort.
-- EIP-1167 minimal proxy được resolve sang implementation trước khi fingerprint; bytecode dưới 64 opcode n-gram không tính similarity (tránh mọi clone 45-byte đều "giống hệt" nhau).
-- Không symbolic execution, không fuzz, không trace, không đọc storage. **Không thay audit.**
-- Chỉ đọc RPC. Không tx, không fork, không PoC, không claim rút được tiền.
+- 90/821 bài không trích được hàm (pseudocode / chỉ mô tả).
+- Dispatcher decomposition là heuristic; Vyper / assembly lạ ghi `decomposition: fallback`.
+- Feature vector là **hình dạng**, không chứng minh ngữ nghĩa. Nhãn `reentrancy` = "giống các hàm reentrancy trong corpus", **không** = "đã chứng minh reentrancy".
+- Không symbolic execution / fuzz / trace / đọc storage. Không thay audit. Chỉ đọc RPC; không tx, fork, PoC, `sweep`.
 
-`docs/UPSTREAM_BUGCHAIN.md` là README gốc của BugChainIndexer; `incidents/README.md` là README gốc của DeFi-Security-Incident.
+`docs/UPSTREAM_BUGCHAIN.md` là README gốc BugChainIndexer; `incidents/README.md` là README gốc DeFi-Security-Incident.
