@@ -1,13 +1,14 @@
 /**
- * pipeline.js — single-chain end-to-end scan.
+ * pipeline.js — single-chain function-level LABELLING pipeline.
  *
- * Uses the ORIGINAL BugChainIndexer modules:
- *   LogFetcher.fetchLogs(scanner, ...)         adaptive eth_getLogs
- *   EOAFilter.filterAddresses(scanner, ...)   EOA/contract classification
- *   ContractVerifier.verify(scanner, ...)     only when an explorer key exists
- * plus literal creation-tx discovery, bytecode fingerprinting and Matcher.
+ * Still uses the ORIGINAL BugChainIndexer modules for discovery:
+ *   LogFetcher.fetchLogs(scanner, ...)        adaptive eth_getLogs
+ *   EOAFilter.filterAddresses(scanner, ...)  EOA vs contract classification
+ *   ContractVerifier.verify(scanner, ...)    optional, needs explorer key
+ * plus literal creation-tx discovery and Sourcify source lookup.
  *
- * Read-only. No tx, no fork, no PoC.
+ * No IOC matching, no identical-code clusters, no static opcode rules,
+ * no seeded bytecode of already-hacked contracts. Output is LABELS.
  */
 'use strict';
 
@@ -15,22 +16,19 @@ const { fetchLogs } = require('../scanners/common/LogFetcher');
 const { filterAddresses } = require('../scanners/common/EOAFilter');
 const { verify } = require('../scanners/common/ContractVerifier');
 const { LightScanner } = require('./lightScanner');
-const { Matcher } = require('./matcher');
-const { fingerprint } = require('./bytecode');
+const { FunctionLabeler } = require('./matcher');
 
 const TRANSFER = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
 const APPROVAL = '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925';
 
 async function fetchWindow(scanner, lo, hi) {
   try {
-    const r = await fetchLogs(scanner, lo, hi, [[TRANSFER, APPROVAL]]);
-    return r.logs || [];
+    return (await fetchLogs(scanner, lo, hi, [[TRANSFER, APPROVAL]])).logs || [];
   } catch (_) {
-    // some public endpoints reject nested topic OR; fall back to two calls
     const out = [];
     for (const t of [TRANSFER, APPROVAL]) {
       try { out.push(...((await fetchLogs(scanner, lo, hi, [t])).logs || [])); }
-      catch (_) { /* skip this chunk */ }
+      catch (_) { /* chunk unavailable on public RPC */ }
     }
     return out;
   }
@@ -65,7 +63,7 @@ async function sourcifySource(chainId, address) {
 async function runScan(opts = {}) {
   const corpus = opts.corpus;
   if (!corpus) throw new Error('corpus required');
-  const matcher = new Matcher(corpus);
+  const labeler = new FunctionLabeler(corpus);
   const network = opts.network || 'ethereum';
   const blocks = opts.blocks || 20;
   const maxContracts = opts.maxContracts || 80;
@@ -75,8 +73,7 @@ async function runScan(opts = {}) {
 
   if (opts.fixture) {
     contracts = opts.fixture.contracts.map(c => ({ ...c }));
-    from = opts.fixture.first; to = opts.fixture.last;
-    head = to;
+    from = opts.fixture.first; to = opts.fixture.last; head = to;
   } else {
     scanner = new LightScanner({ network, rpcUrls: opts.rpcUrls });
     await scanner.initialize();
@@ -95,12 +92,8 @@ async function runScan(opts = {}) {
         try {
           const res = await filterAddresses(scanner, addrs);
           for (const c of res.contracts) {
-            if (!found.has(c.address.toLowerCase())) {
-              found.set(c.address.toLowerCase(), {
-                address: c.address.toLowerCase(), creator: null,
-                block: hi, code: null, codeHashFromIndexer: c.codeHash,
-              });
-            }
+            const a = c.address.toLowerCase();
+            if (!found.has(a)) found.set(a, { address: a, creator: null, block: hi, code: null });
           }
         } catch (e) { errors.push({ range: [lo, hi], reason: String(e.message).slice(0, 120) }); }
       }
@@ -116,7 +109,7 @@ async function runScan(opts = {}) {
     for (const c of [...found.values()].slice(0, maxContracts)) {
       try {
         if (!c.code) {
-          const eff = await scanner.getEffectiveCode(c.address);
+          const eff = await scanner.getEffectiveCode(c.address);  // resolve EIP-1167 proxy -> implementation
           c.code = eff.code;
           c.viaProxy = eff.viaProxy;
         }
@@ -131,28 +124,14 @@ async function runScan(opts = {}) {
     }
   }
 
-  // identical-bytecode clusters (the 66-child pattern)
-  const byHash = new Map();
-  for (const c of contracts) {
-    const fp = fingerprint(c.code);
-    c._fp = fp;
-    if (!byHash.has(fp.codeHash)) byHash.set(fp.codeHash, []);
-    byHash.get(fp.codeHash).push(c.address);
-  }
-  const clusters = [...byHash.entries()].filter(([, a]) => a.length > 1)
-    .map(([h, a]) => ({ codeHash: h, count: a.length, addresses: a }))
-    .sort((a, b) => b.count - a.count);
-  const clusterSize = Object.fromEntries(clusters.flatMap(c => c.addresses.map(a => [a, c.count])));
-
-  const findings = contracts.map(c => matcher.match({
+  const labelled = contracts.map(c => labeler.labelContract({
     address: c.address, creator: c.creator, block: c.block,
-    code: c.code, verifiedSource: c.verifiedSource,
-    viaProxy: c.viaProxy || null,
-    clusterSize: clusterSize[c.address] || 1,
-  })).sort((a, b) => b.score - a.score);
-
-  const verdicts = {};
-  for (const f of findings) verdicts[f.verdict] = (verdicts[f.verdict] || 0) + 1;
+    code: c.code, verifiedSource: c.verifiedSource, viaProxy: c.viaProxy,
+  }));
+  const byCategory = Object.create(null);
+  for (const r of labelled) for (const l of r.labels) {
+    byCategory[l.category] = (byCategory[l.category] || 0) + 1;
+  }
 
   return {
     meta: {
@@ -160,57 +139,68 @@ async function runScan(opts = {}) {
       network, mode, fromBlock: from, toBlock: to, head,
       rpc: opts.fixture ? 'fixture' : scanner.rpcUrls[0],
       incidentCount: corpus.meta.incidentCount,
-      note: 'Ranked similarity to known incidents. Not a vulnerability proof.',
+      vulnerableFunctionCount: corpus.meta.vulnerableFunctionCount,
+      note: 'Function-shape similarity labels. Not a vulnerability proof.',
     },
     stats: {
-      contractsScanned: contracts.length, logsSeen, verdicts,
-      clusters: clusters.length, errors: errors.length,
-      matcher: matcher.stats(),
-      sourcifyHits: contracts.filter(c => c.verifiedSource).length,
+      contractsScanned: contracts.length,
+      functionsExamined: labelled.reduce((s, r) => s + r.functionCount, 0),
+      labelledContracts: labelled.filter(r => r.labelled).length,
+      labelsByCategory: byCategory,
+      logsSeen, sourcifyHits: contracts.filter(c => c.verifiedSource).length,
+      errors: errors.length,
+      labeler: labeler.stats(),
     },
-    clusters, errors, findings,
+    contracts: labelled.sort((a, b) =>
+      (b.labels[0]?.confidence || 0) - (a.labels[0]?.confidence || 0)),
+    errors,
   };
 }
 
 function markdown(doc) {
   const s = doc.stats;
   const L = [
-    '# VulnChain — live triage report', '',
+    '# VulnChain — function-level labels', '',
     `Generated ${doc.meta.generatedAt} · chain \`${doc.meta.network}\` · mode \`${doc.meta.mode}\` · blocks ${doc.meta.fromBlock}–${doc.meta.toBlock}`, '',
-    '**Đây là xếp hạng độ giống với 821 sự cố đã biết, không phải kết luận có lỗ hổng.**', '',
+    '**Nhãn = hàm của contract này giống hàm lỗi trong 821 vụ đã biết. Không phải kết luận có lỗ hổng.**', '',
     '| Metric | Value |', '|---|---|',
   ];
   for (const [k, v] of Object.entries({
     incidentCount: doc.meta.incidentCount,
-    contractsScanned: s.contractsScanned, logsSeen: s.logsSeen,
-    verdicts: JSON.stringify(s.verdicts), clusters: s.clusters,
-    sourcifyHits: s.sourcifyHits, errors: s.errors,
-    bandKeys: s.matcher.bandKeys, selectorKeys: s.matcher.selectorKeys,
-    knownAddresses: s.matcher.knownAddresses,
-    seededBytecodeFingerprints: s.matcher.seededBytecodeFingerprints,
+    vulnerableFunctionCount: doc.meta.vulnerableFunctionCount,
+    contractsScanned: s.contractsScanned, functionsExamined: s.functionsExamined,
+    labelledContracts: s.labelledContracts,
+    labelsByCategory: JSON.stringify(s.labelsByCategory),
+    logsSeen: s.logsSeen, sourcifyHits: s.sourcifyHits, errors: s.errors,
+    bandKeys: s.labeler.bandKeys, selectorKeys: s.labeler.selectorKeys,
   })) L.push(`| ${k} | \`${v}\` |`);
-  L.push('', '## Top findings', '',
-    '| Verdict | Score | Address | Creator | Similar incident | Bytecode sim | Selector sim | Rules |',
-    '|---|---|---|---|---|---|---|---|');
-  for (const f of doc.findings.slice(0, 30)) {
-    const t = f.similarIncidents[0];
-    L.push(`| ${f.verdict} | ${f.score} | \`${f.address}\` | \`${f.creator || '—'}\` | ` +
-      `${t ? t.id.slice(0, 44) : '—'} | ${t ? t.bytecodeSim.toFixed(2) : '—'} | ` +
-      `${t ? t.selectorSim.toFixed(2) : '—'} | ${f.rules.map(r => r.category).join(', ') || '—'} |`);
+
+  L.push('', '## Labelled contracts', '',
+    '| Address | Functions | Labels | Top confidence | Creator |',
+    '|---|---|---|---|---|');
+  for (const c of doc.contracts.filter(x => x.labelled).slice(0, 40)) {
+    L.push(`| \`${c.address}\` | ${c.functionCount} | ` +
+      `${c.labels.map(l => `${l.category}(${l.confidence})`).join(', ')} | ` +
+      `${c.labels[0]?.confidence ?? '—'} | \`${c.creator || '—'}\` |`);
   }
-  if (!doc.findings.length) L.push('', '_No contracts in range._');
-  L.push('', '## Evidence (top 5)', '');
-  for (const f of doc.findings.slice(0, 5)) {
-    L.push(`### \`${f.address}\` — ${f.verdict} (${f.score})`, '');
-    for (const e of f.evidence) L.push(`- ${e}`);
-    for (const t of f.similarIncidents.slice(0, 3)) {
-      L.push(`- → \`${t.id}\` (${t.protocol}, ${t.date}) score ${t.score.toFixed(3)}: ` +
-        `bc=${t.bytecodeSim.toFixed(2)} sel=${t.selectorSim.toFixed(2)} src=${t.sourceSim.toFixed(2)}`);
+  if (!doc.contracts.some(c => c.labelled)) L.push('', '_Không contract nào trong range có hàm vượt ngưỡng tương đồng._');
+
+  L.push('', '## Evidence (top 10 matched functions)', '');
+  let n = 0;
+  for (const c of doc.contracts) {
+    for (const m of c.matchedFunctions) {
+      if (n++ >= 10) break;
+      L.push(`- \`${c.address}\` · \`${m.selector}\` **${m.name || m.matchedVulnerableFunction}** ` +
+        `→ \`${m.incidentId}\` (${m.incidentProtocol || '—'}) · ` +
+        `score ${m.score} (feature ${m.featureCos}, body ${m.body}, selector ${m.selectorEqual ? '=' : '≠'}) · ` +
+        `labels ${m.categories.join(', ')}`);
+      L.push(`  - features: ${m.activeFeatures.join(', ')}`);
+      if (m.rootCause) L.push(`  - root cause: ${m.rootCause.slice(0, 150)}`);
     }
-    L.push('');
+    if (n >= 10) break;
   }
-  L.push('---', '', `_${doc.meta.note}_`, '',
-    'Artifacts: `vulnchain/data/corpus.json`, `vulnchain/data/vulnerableBytecode.json`, `vulnchain/data/scan_result.json`.');
+  L.push('', '---', '', `_${doc.meta.note}_`, '',
+    'Artifacts: `vulnchain/data/corpus.json`, `vulnchain/data/scan_result.json`.');
   return L.join('\n') + '\n';
 }
 

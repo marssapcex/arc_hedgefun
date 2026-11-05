@@ -12,8 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const { id } = require('ethers');
 const { fingerprintSource } = require('./source');
-const { buildIdf, lshBands } = require('./hashing');
-const { RULES } = require('./rules');
+const { extractSourceFunctions } = require('./functions');
 
 const ROOT = path.join(__dirname, '..');
 const INC = path.join(ROOT, 'incidents');
@@ -141,39 +140,43 @@ function build() {
       hasMetadataTable: Object.keys(meta).length > 0,
       vulnerableSnippetCount: sn.vulnerable.length,
       fixedSnippetCount: sn.fixed.length,
-      source: src,
       keywords: keywords(`${meta['Root Cause']} ${title} ${(catMap[base] || []).join(' ')}`),
-      selectorVector: Object.fromEntries(src.selectors.map(s => [s, 1])),
-      // filled in by seed-vulnerable-bytecode
-      bytecodeFingerprints: [],
     };
     incidents.push(rec);
   }
-  const idf = buildIdf(incidents.map(i => i.selectorVector));
-  // Universal generic prior: these selectors are ubiquitous on EVERY chain,
-  // even when they happen to appear in only a few incident snippets. Corpus
-  // IDF alone cannot know that, so explicitly collapse them to zero weight.
-  const GENERIC_SIGS = [
-    'transfer(address,uint256)', 'approve(address,uint256)', 'balanceOf(address)',
-    'transferFrom(address,address,uint256)', 'totalSupply()', 'allowance(address,address)',
-    'name()', 'symbol()', 'decimals()', 'owner()', 'renounceOwnership()',
-    'transferOwnership(address)', 'supportsInterface(bytes4)',
-    'safeTransferFrom(address,address,uint256)', 'ownerOf(uint256)',
-    'totalAssets()', 'deposit()', 'implementation()'
-  ];
-  let genericDownweighted = 0;
-  for (const sig of GENERIC_SIGS) {
-    const sel = id(sig).slice(0, 10);
-    if (idf[sel] !== undefined && idf[sel] !== 0) genericDownweighted++;
-    idf[sel] = 0;
+
+  // FUNCTION-LEVEL corpus: every vulnerable function becomes its own record.
+  const vulnerableFunctions = [];
+  for (const inc of incidents) {
+    const text = fs.readFileSync(path.join(ROOT, inc.file), 'utf8');
+    const sn = snippets(text);
+    const fns = sn.vulnerable.flatMap(b => extractSourceFunctions(b));
+    const seen = new Set();
+    for (const fn of fns) {
+      const key = fn.selector + ':' + fn.simhash;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      vulnerableFunctions.push({
+        ...fn,
+        incidentId: inc.id,
+        incidentDate: inc.date,
+        incidentProtocol: inc.protocol,
+        incidentCategories: inc.categories,
+        rootCause: (inc.rootCause || '').slice(0, 240),
+        lossUsd: inc.lossUsd,
+        labels: inc.categories.length ? inc.categories : ['other'],
+      });
+    }
+    inc.vulnerableFunctionCount = fns.length;
   }
   const catCount = Object.create(null), chainCount = Object.create(null);
-  let snippetCount = 0, selectorCount = 0;
+  let snippetCount = 0;
+  const uniqueSelectors = new Set();
   for (const i of incidents) {
     for (const c of i.categories) catCount[c] = (catCount[c] || 0) + 1;
     chainCount[i.chain] = (chainCount[i.chain] || 0) + 1;
     snippetCount += i.vulnerableSnippetCount;
-    selectorCount += i.source.selectors.length;
+    for (const f of vulnerableFunctions) if (f.incidentId === i.id) uniqueSelectors.add(f.selector);
   }
   return {
     meta: {
@@ -182,23 +185,20 @@ function build() {
       incidentCount: incidents.length,
       withMetadataTable: incidents.filter(i => i.hasMetadataTable).length,
       reportsWithVulnerableSnippets: incidents.filter(i => i.vulnerableSnippetCount > 0).length,
-      derivedSelectors: selectorCount,
-      uniqueSelectors: Object.keys(idf).length,
-      genericSelectorsDownweighted: genericDownweighted,
-      ethereumVulnerableAddresses: incidents.filter(i => i.chain === 'ethereum')
-        .flatMap(i => i.vulnerableContracts).length,
-      note: 'Similarity corpus for triage. Not a vulnerability oracle.',
+      uniqueSelectors: uniqueSelectors.size,
+      vulnerableFunctionCount: vulnerableFunctions.length,
+      incidentsWithFunctions: incidents.filter(i => i.vulnerableFunctionCount > 0).length,
+      note: 'Function-level similarity corpus for labelling. Not a vulnerability oracle.',
     },
     stats: { categories: catCount, chains: chainCount, vulnerableSnippets: snippetCount },
-    idf,
-    categoryRules: RULES.map(r => ({ category: r.category, why: r.why })),
     incidents,
+    vulnerableFunctions,
   };
 }
 
 function write(corpus, out = path.join(ROOT, 'data', 'corpus.json')) {
   fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, JSON.stringify(corpus, null, 1));
+  fs.writeFileSync(out, JSON.stringify(corpus));
   return out;
 }
 

@@ -1,36 +1,33 @@
 {
- "first": 26346656,
- "last": 26346715,
+ "first": 26346846,
+ "last": 26346885,
  "_info": {
-  "attacker": "0xa9bf70a420d364e923c74448d9d817d3f2a77822",
-  "baseSel": [
-   "0x95e3c50b",
-   "0xf3fef3a3",
-   "0xabdb5ea8",
-   "0x0a9254e4",
-   "0x3630ac4e",
-   "0x8201aa3f"
-  ],
-  "usedRealSeedSelectors": false
+  "referenceVulnerableFunction": "tokenToEthSwapInput(uint256,uint256,uint256)",
+  "incidentId": "2020-04-18_UniswapV1_ERC777Reentrancy",
+  "selector": "0x95e3c50b",
+  "labels": [
+   "reentrancy"
+  ]
  },
  "contracts": [
   {
-   "block": 26346713,
+   "block": 26346883,
    "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
    "creator": "0x2222222222222222222222222222222222222222",
-   "code": "0x6395e3c50b8063f3fef3a38063abdb5ea880630a9254e480633630ac4e80638201aa3f8060006000f3"
+   "code": "0x60003560e01c806395e3c50b14610011575b00",
+   "verifiedSource": "pragma solidity ^0.8.0; contract X { function tokenToEthSwapInput(uint256,uint256,uint256) public {\n    uint256 eth_bought = getInputPrice(tokens_sold, token.balanceOf(this), address(this).balance);\n\n     \n     \n    token.transferFrom(msg.sender, address(this), tokens_sold);\n\n     \n    msg.sender.transfer(eth_bought);\n    return eth_bought;\n} }"
   },
   {
-   "block": 26346714,
+   "block": 26346884,
    "address": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
    "creator": "0x3333333333333333333333333333333333333333",
-   "code": "0x6395e3c50b8063f3fef3a38063abdb5ea880630a9254e480633630ac4e80638201aa3f8060006000f3"
+   "code": "0x60006000f3"
   },
   {
-   "block": 26346715,
+   "block": 26346885,
    "address": "0xcccccccccccccccccccccccccccccccccccccccc",
-   "creator": "0xa9bf70a420d364e923c74448d9d817d3f2a77822",
-   "code": "0x6395e3c50b8063f3fef3a38063abdb5ea880630a9254e480633630ac4e8060016000556000f160006000f3"
+   "creator": "0x4444444444444444444444444444444444444444",
+   "code": "0x60006000fd"
   }
  ]
 }

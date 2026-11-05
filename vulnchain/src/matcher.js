@@ -1,184 +1,175 @@
 /**
- * matcher.js — the actual "smart" part.
+ * matcher.js — FUNCTION-LEVEL LABELLER (rewritten).
  *
- * For each newly discovered contract it fuses five independent signals,
- * weighted, with per-signal explanations:
+ * Removed, because nobody redeploys hacked code byte-for-byte:
+ *   - whole-contract bytecode Jaccard / seeded vulnerable bytecode
+ *   - IOC address matching + identical-code clusters (22%)
+ *   - static opcode rules like CALL-before-SSTORE (10%)
+ *   - contract-level REVIEW/INFO verdicts
  *
- *   0.34  bytecode similarity   MinHash-Jaccard over normalized opcode 5-grams
- *                               vs bytecode of known-vulnerable contracts
- *   0.24  selector similarity   IDF-weighted cosine (generic ERC20 selectors
- *                               collapse to ~0 automatically)
- *   0.18  source similarity     SimHash Hamming + MinHash over Solidity 4-grams
- *   0.14  category rules        explainable static patterns from rules.js
- *   0.10  IOC / cluster         exact attacker address, mass-deployed code
+ * What remains, per user request: for every FUNCTION of a newly deployed
+ * contract, find the most similar VULNERABLE FUNCTION among the 821 incident
+ * reports, then LABEL the contract with that function's incident categories.
  *
- * LSH banding restricts comparisons to plausible candidates. Output is a
- * ranked list of SIMILAR INCIDENTS, never a "this contract is vulnerable"
- * verdict.
+ * Similarity for one function pair:
+ *   0.50  semantic feature cosine  (caller check / msg.value / state write /
+ *                                  spot-price read / loop over user array ...)
+ *   0.35  body n-gram similarity   (MinHash Jaccard + SimHash Hamming)
+ *   0.15  exact selector equality  (same canonical signature)
+ *
+ * LSH banding + selector inverted index restrict candidates. No address
+ * lookups, no clusters, no generic opcode rules.
  */
 'use strict';
 
-const { fingerprint, MIN_OPCODE_NGRAMS } = require('./bytecode');
-const { fingerprintSource } = require('./source');
-const { evaluateRules } = require('./rules');
 const {
-  lshBands, jaccardMinhash, hammingSimilarity, idfCosine
-} = require('./hashing');
+  splitBytecodeFunctions, extractSourceFunctions, functionSimilarity,
+  mergeFeatures, activeFeatures, FEATURE_KEYS
+} = require('./functions');
+const { detectMinimalProxy } = require('./bytecode');
 
-const W = { bytecode: 0.32, selector: 0.20, source: 0.16, rules: 0.10, ioc: 0.22 };
+const MIN_SCORE = 0.46;
+const MIN_FEATURE_COS = 0.55;
+const MIN_ACTIVE_FEATURES = 4;
+const MIN_BODY_OR_SELECTOR = 0.10;
 
-class Matcher {
+class FunctionLabeler {
   constructor(corpus) {
     this.corpus = corpus;
-    this.incidents = corpus.incidents;
-    this.idf = corpus.idf || {};
-    this.byId = new Map(this.incidents.map(i => [i.id, i]));
-    this.bandIndex = new Map();
-    this.selectorIndex = new Map();
-    this.addressIndex = new Map();
-    this.bytecodeEntries = [];
-    this._index();
-  }
-
-  _addBand(key, id) {
-    if (!this.bandIndex.has(key)) this.bandIndex.set(key, new Set());
-    this.bandIndex.get(key).add(id);
-  }
-
-  _index() {
-    for (const inc of this.incidents) {
-      // source-similarity bands
-      for (const b of lshBands(inc.source.minhash)) this._addBand(b, inc.id);
-      // known-vulnerable bytecode bands (seeded from on-chain addresses)
-      for (const bf of (inc.bytecodeFingerprints || [])) {
-        // a 45-byte EIP-1167 proxy or a stub has no informative opcode stream
-        if ((bf.ngramCount || 0) < MIN_OPCODE_NGRAMS || bf.minimalProxy) continue;
-        this.bytecodeEntries.push({ id: inc.id, fp: bf });
-        for (const b of bf.bands || lshBands(bf.minhash)) this._addBand(b, inc.id);
+    this.fns = corpus.vulnerableFunctions || [];
+    this.byBand = new Map();
+    this.bySelector = new Map();
+    this.categoryHistogram = Object.create(null);
+    for (let i = 0; i < this.fns.length; i++) {
+      const f = this.fns[i];
+      for (const b of f.bands || []) {
+        if (!this.byBand.has(b)) this.byBand.set(b, new Set());
+        this.byBand.get(b).add(i);
       }
-      // selector inverted index
-      for (const s of inc.source.selectors) {
-        if (!this.selectorIndex.has(s)) this.selectorIndex.set(s, new Set());
-        this.selectorIndex.get(s).add(inc.id);
+      if (f.selector) {
+        if (!this.bySelector.has(f.selector)) this.bySelector.set(f.selector, new Set());
+        this.bySelector.get(f.selector).add(i);
       }
-      // exact IOC
-      for (const a of [...inc.attackerAddresses, ...inc.vulnerableContracts]) {
-        if (!this.addressIndex.has(a)) this.addressIndex.set(a, new Set());
-        this.addressIndex.get(a).add(inc.id);
-      }
+      for (const c of f.labels || []) this.categoryHistogram[c] = (this.categoryHistogram[c] || 0) + 1;
     }
   }
 
   stats() {
     return {
-      incidents: this.incidents.length,
-      bandKeys: this.bandIndex.size,
-      selectorKeys: this.selectorIndex.size,
-      knownAddresses: this.addressIndex.size,
-      seededBytecodeFingerprints: this.bytecodeEntries.length,
-      genericSelectors: Object.values(this.idf).filter(v => v < 0.05).length,
+      vulnerableFunctions: this.fns.length,
+      incidents: this.corpus.meta.incidentsWithFunctions,
+      bandKeys: this.byBand.size,
+      selectorKeys: this.bySelector.size,
+      categories: Object.keys(this.categoryHistogram).length,
+      featureKeys: FEATURE_KEYS.length,
     };
   }
 
-  /**
-   * @param {{address:string, creator?:string, code:string,
-   *          verifiedSource?:string, clusterSize?:number}} contract
-   */
-  match(contract) {
-    const fp = fingerprint(contract.code || '0x');
-    const srcFp = contract.verifiedSource ? fingerprintSource(contract.verifiedSource) : null;
-    const rules = evaluateRules(fp, srcFp);
-    const candidates = new Set();
+  _candidates(fn) {
+    const out = new Set();
+    for (const b of fn.bands || []) for (const i of (this.byBand.get(b) || [])) out.add(i);
+    for (const i of (this.bySelector.get(fn.selector) || [])) out.add(i);
+    return out;
+  }
 
-    for (const b of fp.bands) for (const id of (this.bandIndex.get(b) || [])) candidates.add(id);
-    if (srcFp) for (const b of lshBands(srcFp.minhash)) for (const id of (this.bandIndex.get(b) || [])) candidates.add(id);
-    // selector-driven candidates, only selectors with meaningful IDF
-    const contractVec = Object.fromEntries(fp.selectors.map(s => [s, 1]));
-    for (const s of fp.selectors) {
-      if ((this.idf[s] || 0) < 0.05) continue;
-      for (const id of (this.selectorIndex.get(s) || [])) candidates.add(id);
-    }
-    const exact = new Set();
-    for (const a of [contract.address, contract.creator].filter(Boolean).map(x => x.toLowerCase())) {
-      for (const id of (this.addressIndex.get(a) || [])) { candidates.add(id); exact.add(id); }
-    }
-    // always keep a small global floor so a totally new pattern still gets a baseline
-    const scored = [];
-    for (const id of candidates) {
-      const inc = this.byId.get(id);
-      if (!inc) continue;
-      let bytecodeSim = 0, bcEvidence = false, suppressed = false;
-      if (fp.lowCoverage || fp.minimalProxy) {
-        suppressed = true;
+  _functionsOf(contract) {
+    const code = contract.code || '0x';
+    const bytecodeFns = splitBytecodeFunctions(code);
+    const sourceFns = contract.verifiedSource ? extractSourceFunctions(contract.verifiedSource) : [];
+    // merge by selector: source gives the name + richer features, bytecode gives the body
+    const bySel = new Map();
+    for (const f of bytecodeFns) bySel.set(f.selector, { ...f });
+    for (const s of sourceFns) {
+      if (bySel.has(s.selector)) {
+        const b = bySel.get(s.selector);
+        b.name = s.name; b.signature = s.signature;
+        b.features = mergeFeatures(b.features, s.features);
+        b.activeFeatures = activeFeatures(b.features);
+        b.sourceBody = true;
       } else {
-        for (const e of this.bytecodeEntries) {
-          if (e.id !== id) continue;
-          bcEvidence = true;
-          bytecodeSim = Math.max(bytecodeSim, jaccardMinhash(fp.minhash, e.fp.minhash));
-        }
+        bySel.set(s.selector, { ...s, sourceOnly: true });
       }
-      const selectorSim = idfCosine(contractVec, inc.selectorVector, this.idf);
-      let sourceSim = 0;
-      if (srcFp) {
-        const h = hammingSimilarity(srcFp.simhash, inc.source.simhash);
-        const j = jaccardMinhash(srcFp.minhash, inc.source.minhash);
-        sourceSim = 0.5 * h + 0.5 * j;
+    }
+    return [...bySel.values()];
+  }
+
+  /**
+   * @returns {{address, labelled:boolean, labels:Array, matchedFunctions:Array,
+   *            functionCount:number, proxyImplementation:string|null}}
+   */
+  labelContract(contract) {
+    const fns = this._functionsOf(contract);
+    const matched = [];
+    for (const fn of fns) {
+      if ((fn.activeFeatures || []).length < MIN_ACTIVE_FEATURES) continue;
+      let best = null;
+      for (const i of this._candidates(fn)) {
+        const ref = this.fns[i];
+        if ((ref.activeFeatures || []).length < MIN_ACTIVE_FEATURES) continue;
+        const sim = functionSimilarity(fn, ref);
+        // a bare feature-vector coincidence is not a label
+        if (sim.featureCos < MIN_FEATURE_COS) continue;
+        if (sim.sel === 0 && sim.body < MIN_BODY_OR_SELECTOR) continue;
+        if (sim.score < MIN_SCORE) continue;
+        if (!best || sim.score > best.sim.score) best = { sim, ref };
       }
-      const matchedRules = rules.filter(r => inc.categories.includes(r.category));
-      const ruleScore = Math.min(1, matchedRules.length / 2);
-      const ioc = exact.has(id) ? 1 : 0;
-      const cluster = Math.min(1, Math.max(0, ((contract.clusterSize || 1) - 1) / 10));
-      const score =
-        W.bytecode * bytecodeSim +
-        W.selector * selectorSim +
-        W.source * sourceSim +
-        W.rules * ruleScore +
-        W.ioc * Math.max(ioc, cluster * 0.5);
-      scored.push({
-        id, score, bytecodeSim, selectorSim, sourceSim, ruleScore, ioc,
-        bytecodeEvidence: bcEvidence, bytecodeSuppressed: suppressed,
-        matchedRules: matchedRules.map(r => r.category),
-        protocol: inc.protocol, date: inc.date, categories: inc.categories,
-        rootCause: (inc.rootCause || '').slice(0, 160),
-        lossUsd: inc.lossUsd,
+      if (!best) continue;
+      matched.push({
+        selector: fn.selector,
+        name: fn.name || null,
+        signature: fn.signature || null,
+        sourceBody: !!fn.sourceBody,
+        score: Number(best.sim.score.toFixed(4)),
+        featureCos: Number(best.sim.featureCos.toFixed(3)),
+        body: Number(best.sim.body.toFixed(3)),
+        selectorEqual: best.sim.sel === 1,
+        activeFeatures: fn.activeFeatures,
+        matchedVulnerableFunction: best.ref.signature || best.ref.name || best.ref.selector,
+        incidentId: best.ref.incidentId,
+        incidentProtocol: best.ref.incidentProtocol,
+        rootCause: best.ref.rootCause,
+        categories: best.ref.labels,
       });
     }
-    scored.sort((a, b) => b.score - a.score);
-    const top = scored.slice(0, 5);
-    const final = top.length ? top[0].score : 0;
-    // An exact IOC hit is a hard match, not a heuristic: never demote to INFO.
-    const exactHit = top.some(t => t.ioc === 1);
-    const verdict = final >= 0.60 ? 'HIGH_SIMILARITY'
-      : (final >= 0.25 || exactHit) ? 'REVIEW' : 'INFO';
-    const evidence = [];
-    if (top[0]?.bytecodeSim > 0.4) evidence.push(`bytecode opcode-5gram Jaccard ≈ ${top[0].bytecodeSim.toFixed(2)} vs a known-vulnerable deployment`);
-    if (fp.minimalProxy) evidence.push(`EIP-1167 minimal proxy → implementation resolved at ${fp.delegateTo}; proxy bytecode itself carries no logic`);
-    else if (fp.lowCoverage) evidence.push(`bytecode similarity suppressed: only ${fp.ngramCount} opcode n-grams (< ${MIN_OPCODE_NGRAMS}), too small for a meaningful fingerprint`);
-    if (top[0]?.selectorSim > 0.3) evidence.push('IDF-weighted selector cosine > 0.30');
-    if (srcFp && top[0]?.sourceSim > 0.4) evidence.push('verified source shares token 4-grams with a vulnerable snippet');
-    for (const r of rules) evidence.push(`rule ${r.category} (${r.from}): ${r.why}`);
-    if (exact.size) evidence.push('creator/address is an exact IOC from the incident database');
-    if ((contract.clusterSize || 1) >= 5) evidence.push(`${contract.clusterSize} freshly deployed contracts share identical bytecode`);
+    matched.sort((a, b) => b.score - a.score);
+
+    // aggregate into contract labels, one per incident category
+    const byCat = new Map();
+    for (const m of matched) {
+      for (const c of m.categories) {
+        if (!byCat.has(c)) byCat.set(c, {
+          category: c, confidence: 0, functionCount: 0,
+          incidents: new Set(), examples: [],
+        });
+        const e = byCat.get(c);
+        e.confidence = Math.max(e.confidence, m.score);
+        e.functionCount++;
+        e.incidents.add(m.incidentId);
+        if (e.examples.length < 3) e.examples.push({
+          selector: m.selector, name: m.name, score: m.score,
+          incidentId: m.incidentId, matchedVulnerableFunction: m.matchedVulnerableFunction,
+        });
+      }
+    }
+    const labels = [...byCat.values()]
+      .map(e => ({ category: e.category, confidence: Number(e.confidence.toFixed(4)),
+        functionCount: e.functionCount, incidents: [...e.incidents].slice(0, 5),
+        examples: e.examples }))
+      .sort((a, b) => b.confidence - a.confidence);
 
     return {
       address: contract.address,
       creator: contract.creator || null,
       block: contract.block || null,
-      codeHash: fp.codeHash,
-      proxyImplementation: contract.viaProxy || fp.delegateTo || null,
-      codeBytes: fp.codeBytes,
-      opcodeCount: fp.opcodeCount,
-      ngramCount: fp.ngramCount,
-      selectors: fp.selectors,
-      flags: fp.flags,
-      verdict, score: Number(final.toFixed(4)),
-      candidatesConsidered: candidates.size,
-      similarIncidents: top,
-      rules, evidence,
-      sourceAvailable: !!srcFp,
-      disclaimer: 'Similarity ranking for human review. Not a vulnerability proof.',
+      labelled: labels.length > 0,
+      labels,
+      matchedFunctions: matched,
+      functionCount: fns.length,
+      proxyImplementation: contract.viaProxy || detectMinimalProxy(contract.code || '0x'),
+      decomposition: fns.some(f => f.from === 'bytecode') ? 'dispatcher' : 'fallback',
+      disclaimer: 'Function-shape similarity labels for human review. Not a vulnerability proof.',
     };
   }
 }
 
-module.exports = { Matcher, W };
+module.exports = { FunctionLabeler, MIN_SCORE, MIN_FEATURE_COS, MIN_ACTIVE_FEATURES };

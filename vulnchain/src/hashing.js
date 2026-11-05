@@ -7,8 +7,6 @@
  *     being different between two compiles of the same vulnerable code.
  *   - LSH banding turns an O(821 x N) comparison into a candidate lookup.
  *   - SimHash gives a cheap 64-bit source fingerprint (Hamming distance).
- *   - IDF down-weights selectors that appear in hundreds of incident reports
- *     (transfer/approve/balanceOf) smoothly instead of a hard cutoff.
  *
  * Pure JS, deterministic, no dependency.
  */
@@ -103,34 +101,7 @@ function hammingSimilarity(a, b) {
   return (64 - d) / 64;
 }
 
-/** IDF-weighted cosine over sparse selector vectors. */
-function idfCosine(vec, incidentVec, idf) {
-  let dot = 0, na = 0, nb = 0;
-  for (const [k, v] of Object.entries(vec)) {
-    const w = (idf[k] || 0) * v;
-    na += w * w;
-    if (incidentVec[k]) dot += w * (idf[k] || 0) * incidentVec[k];
-  }
-  for (const [k, v] of Object.entries(incidentVec)) {
-    const w = (idf[k] || 0) * v;
-    nb += w * w;
-  }
-  return (na && nb) ? dot / Math.sqrt(na * nb) : 0;
-}
-
-function buildIdf(docVectors) {
-  const df = Object.create(null);
-  const N = docVectors.length || 1;
-  for (const v of docVectors) for (const k of Object.keys(v)) df[k] = (df[k] || 0) + 1;
-  const idf = Object.create(null);
-  for (const k of Object.keys(df)) {
-    // selectors in almost every report collapse to ~0 weight
-    idf[k] = Math.max(0, Math.log((N + 1) / (df[k] + 1)));
-  }
-  return idf;
-}
-
 module.exports = {
   M64, fnv1a64, minhash, jaccardMinhash, lshBands, simhash,
-  hammingSimilarity, idfCosine, buildIdf, PERMS
+  hammingSimilarity, PERMS
 };

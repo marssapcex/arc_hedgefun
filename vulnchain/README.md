@@ -12,7 +12,7 @@ Không viết lại scanner. `src/lightScanner.js` **subclass `scanners/common/S
 
 ---
 
-## Thuật toán
+## Thuật toán — gắn nhãn theo HÀM LỖI
 
 ```
 incidents/*.md  ──corpus.js──▶ 821 record
@@ -58,8 +58,6 @@ node src/cli.js make-fixture
 node src/cli.js selftest
 
 # nạp bytecode của contract từng bị khai thác (read-only RPC)
-node src/cli.js seed-vulnerable-bytecode --max 40
-
 # quét 1 chain EVM
 node src/cli.js scan --network ethereum --blocks 60 --mode hybrid --max-contracts 60 --sourcify
 node src/cli.js scan --network bsc --mode events --blocks 30

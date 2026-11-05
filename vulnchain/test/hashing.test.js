@@ -3,7 +3,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const {
   minhash, jaccardMinhash, lshBands, simhash, hammingSimilarity,
-  buildIdf, idfCosine, fnv1a64
+  fnv1a64
 } = require('../src/hashing');
 
 const S = a => new Set(a);
@@ -39,14 +39,3 @@ test('SimHash Hamming similarity', () => {
   assert.ok(hammingSimilarity(simhash(S(['x'])), simhash(S(['y']))) < 1);
 });
 
-test('IDF down-weights selectors that appear in most documents', () => {
-  const docs = [
-    { '0xaaaa': 1, '0xbbbb': 1 },
-    { '0xaaaa': 1, '0xcccc': 1 },
-    { '0xaaaa': 1, '0xdddd': 1 },
-  ];
-  const idf = buildIdf(docs);
-  assert.ok(idf['0xaaaa'] < idf['0xbbbb']);
-  // a contract carrying only the ubiquitous selector cannot score highly
-  assert.equal(idfCosine({ '0xaaaa': 1 }, { '0xaaaa': 1, '0xbbbb': 1 }, idf) < 1, true);
-});
