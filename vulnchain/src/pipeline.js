@@ -14,6 +14,22 @@
 const { fetchLogs } = require('../scanners/common/LogFetcher');
 const { filterAddresses } = require('../scanners/common/EOAFilter');
 const { LightScanner } = require('./lightScanner');
+const { resolveChain, redactRpc } = require('./chainConfig');
+const { verify } = require('../scanners/common/ContractVerifier');
+
+/** Etherscan returns either a flat .sol file or a {{"path":{"content":...}}} bundle. */
+function flattenSource(sc) {
+  if (typeof sc !== 'string') return '';
+  const t = sc.trim();
+  if (t.startsWith('{{') && t.endsWith('}}')) {
+    try {
+      const o = JSON.parse(t.slice(1, -1));
+      const src = o.sources || o;
+      return Object.entries(src).map(([k, v]) => `// ${k}\n${(v && v.content) || ''}`).join('\n\n');
+    } catch (_) { return t; }
+  }
+  return t;
+}
 const { FunctionLabeler } = require('./matcher');
 
 const TRANSFER = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
@@ -68,12 +84,14 @@ async function runScan(opts = {}) {
   const mode = opts.mode || 'hybrid';
   let contracts = [], logsSeen = 0, errors = [], head = null, from = null, to = null;
   let scanner = null;
+  const chain = opts.fixture ? null : (opts.chain || resolveChain(network, opts));
+  let etherscanHits = 0;
 
   if (opts.fixture) {
     contracts = opts.fixture.contracts.map(c => ({ ...c }));
     from = opts.fixture.first; to = opts.fixture.last; head = to;
   } else {
-    scanner = new LightScanner({ network, rpcUrls: opts.rpcUrls });
+    scanner = new LightScanner({ network: chain.network, chain });
     await scanner.initialize();
     head = await scanner.getBlockNumber();
     to = opts.toBlock ?? head;
@@ -112,10 +130,26 @@ async function runScan(opts = {}) {
           c.viaProxy = eff.viaProxy;
         }
         if (c.code.length <= 2) { errors.push({ address: c.address, reason: 'no runtime code' }); continue; }
-        if (opts.sourcify) c.verifiedSource = await sourcifySource(scanner.config.chainId || 1, c.address);
+        if (opts.sourcify) c.verifiedSource = await sourcifySource(chain.chainId, c.address);
         contracts.push(c);
       } catch (e) { errors.push({ address: c.address, reason: String(e.message).slice(0, 120) }); }
     }
+  }
+
+  // Etherscan V2: user-supplied key -> real ContractVerifier source lookup.
+  // Skipped entirely when no key is configured (the zero-key default still works).
+  if (chain && chain.hasEtherscan && contracts.length) {
+    try {
+      const batch = contracts.slice(0, opts.maxVerify || 25).map(c => ({ address: c.address }));
+      const results = await verify(scanner, batch);
+      for (const r of results || []) {
+        if (!r.verified || !r.sourceCode) continue;
+        const c = contracts.find(x => String(x.address).toLowerCase() === String(r.address).toLowerCase());
+        if (!c || c.verifiedSource) continue;
+        c.verifiedSource = flattenSource(r.sourceCode);
+        etherscanHits++;
+      }
+    } catch (e) { errors.push({ reason: 'etherscan: ' + String(e.message).slice(0, 120) }); }
   }
 
   const labelled = contracts.map(c => labeler.labelContract({
@@ -131,7 +165,10 @@ async function runScan(opts = {}) {
     meta: {
       generatedAt: new Date().toISOString(),
       network, mode, fromBlock: from, toBlock: to, head,
-      rpc: opts.fixture ? 'fixture' : scanner.rpcUrls[0],
+      rpc: opts.fixture ? 'fixture' : redactRpc(chain.rpcUrls[0]),
+      chainId: chain ? chain.chainId : 1,
+      rpcSource: chain ? chain.rpcSource : 'fixture',
+      explorerKeyConfigured: !!(chain && chain.hasEtherscan),
       incidentCount: corpus.meta.incidentCount,
       vulnerableFunctionCount: corpus.meta.vulnerableFunctionCount,
       note: 'Function-shape similarity labels. Not a vulnerability proof.',
@@ -141,8 +178,8 @@ async function runScan(opts = {}) {
       functionsExamined: labelled.reduce((s, r) => s + r.functionCount, 0),
       labelledContracts: labelled.filter(r => r.labelled).length,
       labelsByCategory: byCategory,
-      logsSeen, sourcifyHits: contracts.filter(c => c.verifiedSource).length,
-      errors: errors.length,
+      logsSeen, sourcifyHits: contracts.filter(c => c.verifiedSource).length - etherscanHits,
+      etherscanHits, errors: errors.length,
       labeler: labeler.stats(),
     },
     contracts: labelled.sort((a, b) =>
@@ -160,12 +197,15 @@ function markdown(doc) {
     '| Metric | Value |', '|---|---|',
   ];
   for (const [k, v] of Object.entries({
+    chainId: doc.meta.chainId, rpcSource: doc.meta.rpcSource,
+    explorerKeyConfigured: doc.meta.explorerKeyConfigured,
     incidentCount: doc.meta.incidentCount,
     vulnerableFunctionCount: doc.meta.vulnerableFunctionCount,
     contractsScanned: s.contractsScanned, functionsExamined: s.functionsExamined,
     labelledContracts: s.labelledContracts,
     labelsByCategory: JSON.stringify(s.labelsByCategory),
-    logsSeen: s.logsSeen, sourcifyHits: s.sourcifyHits, errors: s.errors,
+    logsSeen: s.logsSeen, sourcifyHits: s.sourcifyHits, etherscanHits: s.etherscanHits,
+    errors: s.errors,
     bandKeys: s.labeler.bandKeys, selectorKeys: s.labeler.selectorKeys,
   })) L.push(`| ${k} | \`${v}\` |`);
 

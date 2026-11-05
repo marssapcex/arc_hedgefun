@@ -1,12 +1,13 @@
 /**
  * lightScanner.js — reuse BugChainIndexer's REAL scanner classes without
- * requiring Alchemy keys, Etherscan keys or PostgreSQL.
+ * REQUIRING Alchemy keys, Etherscan keys or PostgreSQL — but all three can now
+ * be supplied per-chain via src/chainConfig.js.
  *
  * Scanner (scanners/common/Scanner.js) is subclassed. We override only the
- * I/O boundary (RPC + DB) so that the original
+ * I/O boundary (RPC + DB + explorer) so that the original
  *   LogFetcher.fetchLogs()      (adaptive eth_getLogs)
  *   EOAFilter.filterAddresses()(isContracts / getCodeHashes / deploy cache)
- *   ContractVerifier.verify()  (optional, degrades gracefully without a key)
+ *   ContractVerifier.verify()  (Etherscan V2 when a key is configured)
  * keep running unmodified. This is the integration point, not a rewrite.
  */
 'use strict';
@@ -14,30 +15,24 @@
 const Scanner = require('../scanners/common/Scanner');
 const { keccak256 } = require('ethers');
 const { detectMinimalProxy } = require('./bytecode');
+const { resolveChain, PUBLIC_RPCS } = require('./chainConfig');
 
-const PUBLIC_RPCS = {
-  ethereum: [
-    'https://ethereum-rpc.publicnode.com',
-    'https://eth.llamarpc.com',
-    'https://1rpc.io/eth',
-    'https://rpc.flashbots.net',
-  ],
-  bsc: ['https://bsc-rpc.publicnode.com', 'https://binance.llamarpc.com'],
-  arbitrum: ['https://arbitrum-one-rpc.publicnode.com'],
-  base: ['https://base-rpc.publicnode.com'],
-  optimism: ['https://optimism-rpc.publicnode.com'],
-  polygon: ['https://polygon-bor-rpc.publicnode.com'],
-};
+
 
 class LightScanner extends Scanner {
   constructor(opts = {}) {
+    // resolve BEFORE super(): registering a custom network must happen first,
+    // because the upstream Scanner constructor throws on unknown network names.
+    const chain = opts.chain || resolveChain(opts.network || 'ethereum', opts);
     super('VulnChain', {
-      network: opts.network || 'ethereum',
+      network: chain.network,
       timeout: 600,
       maxRetries: 2,
       batchSizes: { default: 200, rpc: 50 },
     });
-    this.rpcUrls = opts.rpcUrls || PUBLIC_RPCS[this.network] || PUBLIC_RPCS.ethereum;
+    this.chain = chain;
+    this.rpcUrls = chain.rpcUrls;
+    this.config.chainId = this.chain.chainId;
     this.etherscanEnabled = false;
     this._codeCache = new Map();
   }
@@ -54,7 +49,8 @@ class LightScanner extends Scanner {
     };
     this.rpc = this.alchemyClient;
     this.logsClient = this.alchemyClient;
-    this.log('LightScanner ready (public RPC, no DB, no API keys)');
+    this.log(`LightScanner ready: network=${this.network} chainId=${this.chain.chainId} ` +
+      `rpc=${this.chain.rpcSource} explorerKey=${this.chain.hasEtherscan ? 'set' : 'none'}`);
     return this;
   }
 
@@ -83,7 +79,20 @@ class LightScanner extends Scanner {
   async getBlockNumber() { return parseInt(await this.rpcAny('eth_blockNumber', []), 16); }
   async getBlockByNumber(n) { return this.rpcAny('eth_getBlockByNumber', [n, true]); }
   async queryDB() { return { rows: [] }; }
-  async etherscanCall() { throw new Error('no explorer API key configured'); }
+  /** Etherscan V2 multichain API — one key, chainid selects the chain. */
+  async etherscanCall(params = {}) {
+    const key = this.chain.etherscanKey;
+    if (!key) throw new Error('no explorer API key configured (use --etherscan-key / ETHERSCAN_API_KEY)');
+    const q = new URLSearchParams({
+      chainid: String(this.chain.chainId), apikey: key, ...params,
+    });
+    const url = `${this.chain.explorerApi}?${q}`;
+    const r = await fetch(url, { signal: AbortSignal.timeout(15000) });
+    if (!r.ok) throw new Error(`explorer HTTP ${r.status}`);
+    const j = await r.json();
+    if (j.status === '1' || Array.isArray(j.result)) return j.result;
+    throw new Error(String(j.result || j.message || 'explorer error').slice(0, 140));
+  }
 
   async getCode(address, tag = 'latest') {
     const key = `${address.toLowerCase()}:${tag}`;

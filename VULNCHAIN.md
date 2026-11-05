@@ -58,6 +58,42 @@ node src/cli.js full-scan --from-block 12000000 --to-block 13000000 --chunk 2000
 
 ---
 
+## Tự gắn key RPC + key Etherscan, quét chain mình muốn
+
+`src/chainConfig.js`. Vẫn chạy được **0 key**, nhưng giờ có thể tự gắn:
+
+```bash
+# 1. key RPC riêng từng chain + 1 key Etherscan V2 dùng cho mọi chain
+cp vulnchain/.env.example vulnchain/.env
+#   RPC_URL_BASE=https://base-mainnet.g.alchemy.com/v2/<KEY>
+#   ETHERSCAN_API_KEY=<KEY>
+
+node src/cli.js chains --network base        # xem config đã resolve (key bị che)
+node src/cli.js scan --network base --blocks 40 --sourcify
+node src/cli.js full-scan --network base --full --resume
+
+# 2. không dùng .env, truyền thẳng CLI
+node src/cli.js scan --network arbitrum --rpc https://arb-mainnet.g.alchemy.com/v2/<KEY> \
+  --etherscan-key <KEY> --chain-id 42161
+
+# 3. chain tự định nghĩa (không có trong 11 network của BugChainIndexer)
+RPC_URL_MYCHAIN=https://rpc.mychain.example/<KEY> \
+CHAIN_ID_MYCHAIN=12345 \
+node src/cli.js scan --network mychain --etherscan-key <KEY>
+
+# hoặc khai đầy đủ, kể cả explorer riêng:
+VULNCHAIN_CHAINS='{"mychain":{"chainId":12345,"rpcUrls":["https://..."],"explorerApi":"https://.../api"}}' \
+node src/cli.js full-scan --network mychain --full --resume
+```
+
+**Thứ tự ưu tiên RPC:** `--rpc` → `RPC_URL_<CHAIN>` → `RPC_URL` → `--rpc-key`/`ALCHEMY_API_KEY` → `INFURA_PROJECT_ID` → `VULNCHAIN_CHAINS` → public RPC. `chainId`: `--chain-id` → `CHAIN_ID_<CHAIN>` → `CHAIN_ID` → `VULNCHAIN_CHAINS` → config gốc.
+
+**Key Etherscan giờ có tác dụng thật:** `LightScanner.etherscanCall()` gọi Etherscan V2 (`chainid` tự chọn theo network), nối vào `ContractVerifier.verify()` của BugChainIndexer để lấy `SourceCode` (kể cả bundle `{{...}}` nhiều file) → đưa vào `labelContract` giống Sourcify. Stats có `etherscanHits`, report có `explorerKeyConfigured`. Không có key → bỏ qua hoàn toàn, không chậm thêm.
+
+**Bảo mật:** `redactRpc()` che `/v2/<key>`, `/v3/<key>`, `?apikey=` trước khi ghi `meta.rpc`. Không có key nào lọt vào `data/*.json` hay report. CI đọc `ETHERSCAN_API_KEY` / `ALCHEMY_API_KEY` / `RPC_URL_ETHEREUM` từ repo secrets nếu mày set; không set thì chạy public như cũ.
+
+`npm test 25/25`.
+
 ## Vẫn là 1 codebase
 
 `incidents/` 821 report nguyên · `scanners/` BugChainIndexer nguyên · `lightScanner.js` subclass `Scanner` gốc, gọi `LogFetcher.fetchLogs` + `EOAFilter.filterAddresses`. Corpus **2.485 hàm lỗi / 731 incident / 24 category**, 32 feature. Không IOC, không cluster, không rules tĩnh, không seed bytecode contract đã hack, không `REVIEW/INFO`.

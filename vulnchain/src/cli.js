@@ -20,10 +20,23 @@ const { fingerprint, extractSelectors } = require('./bytecode');
 const { LightScanner } = require('./lightScanner');
 const { minhash, jaccardMinhash, simhash, hammingSimilarity } = require('./hashing');
 
+const { resolveChain } = require('./chainConfig');
+
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
 const CORPUS = path.join(DATA, 'corpus.json');
 const FIXTURE = path.join(DATA, 'fixture.json');
+
+/** CLI -> chainConfig overrides. `true` means a bare flag (no value) -> ignore. */
+function chainOverrides(a) {
+  const str = k => (typeof a[k] === 'string' ? a[k] : undefined);
+  const num = k => (a[k] !== undefined && a[k] !== true ? parseInt(a[k], 10) : undefined);
+  return {
+    rpcUrl: str('rpc'), rpcKey: str('rpc-key'),
+    etherscanKey: str('etherscan-key'), explorerApi: str('explorer-api'),
+    chainId: num('chain-id'), maxVerify: num('max-verify'),
+  };
+}
 
 function args() {
   const out = { _: [] };
@@ -96,7 +109,7 @@ async function scan(a) {
     sourcify: !!a.sourcify,
     fromBlock: a['from-block'] !== undefined ? parseInt(a['from-block'], 10) : undefined,
     toBlock: a['to-block'] !== undefined ? parseInt(a['to-block'], 10) : undefined,
-    rpcUrls: a.rpc ? [a.rpc] : undefined,
+    ...chainOverrides(a),
   });
   const outPath = a.out || (a.fixture
     ? path.join(DATA, 'demo_result.json')
@@ -125,7 +138,7 @@ async function fullScanCmd(a) {
     maxChunks: a['max-chunks'] !== undefined ? parseInt(a['max-chunks'], 10) : Infinity,
     resume: !!a.resume || !!a.full,
     maxContracts: parseInt(a['max-contracts'] || '200', 10),
-    rpcUrls: a.rpc ? [a.rpc] : undefined,
+    ...chainOverrides(a),
   });
   console.log(`full-scan: blocks ${r.meta.fromBlock}–${r.meta.toBlock} (head ${r.meta.head}), ` +
     `${r.state.chunksDone} chunks done, ${r.state.contractsScanned} contracts, ` +
@@ -195,9 +208,16 @@ async function main() {
     else if (cmd === 'make-fixture') await makeFixture();
     else if (cmd === 'scan') await scan(a);
     else if (cmd === 'full-scan') await fullScanCmd(a);
+    else if (cmd === 'chains') {
+      const c = resolveChain(a.network || 'ethereum', chainOverrides(a));
+      console.log(JSON.stringify({ network: c.network, chainId: c.chainId,
+        rpc: require('./chainConfig').redactRpc(c.rpcUrls[0]),
+        rpcSource: c.rpcSource, explorerApi: c.explorerApi,
+        etherscanKey: c.hasEtherscan ? 'set' : 'none' }, null, 2));
+    }
     else if (cmd === 'selftest') await selftest();
     else {
-      console.log('commands: build-corpus | make-fixture | scan | full-scan | selftest');
+      console.log('commands: build-corpus | make-fixture | scan | full-scan | chains | selftest');
       process.exit(2);
     }
   } catch (e) {

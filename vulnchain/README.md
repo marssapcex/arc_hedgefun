@@ -68,6 +68,18 @@ node src/cli.js full-scan --full --resume
 node src/cli.js full-scan --from-block 0 --to-block 400 --chunk 100 --max-chunks 4 --resume
 ```
 
+### Key RPC / key Etherscan theo chain mình muốn
+
+```bash
+cp .env.example .env        # RPC_URL_<CHAIN>, ETHERSCAN_API_KEY, ALCHEMY_API_KEY ...
+node src/cli.js chains --network base                 # kiểm tra config (key bị che)
+node src/cli.js scan --network base --blocks 40 --sourcify
+node src/cli.js scan --network arbitrum --rpc https://.../<KEY> --etherscan-key <KEY>
+RPC_URL_MYCHAIN=https://... CHAIN_ID_MYCHAIN=12345 node src/cli.js scan --network mychain
+```
+
+Thứ tự: `--rpc` → `RPC_URL_<CHAIN>` → `RPC_URL` → `ALCHEMY_API_KEY` / `INFURA_PROJECT_ID` → `VULNCHAIN_CHAINS` → public RPC. Etherscan V2 (`--etherscan-key` / `ETHERSCAN_API_KEY`) nối vào `ContractVerifier.verify()` để lấy verified source; `chainid` tự theo `--network`. Custom chain qua `VULNCHAIN_CHAINS` JSON hoặc cặp `RPC_URL_*` + `CHAIN_ID_*`. Key được redact khỏi report. Xem `src/chainConfig.js`.
+
 `full-scan` là checkpointed range scanner: `data/full_scan_state.json` lưu `lastBlock` sau mỗi chunk, append contract có nhãn vào `data/full_scan_labels.jsonl`. Quét >26M block là job dài hạn, không phải một lệnh; dùng `--rpc` trỏ archive node riêng để chạy thật.
 
 `mode`: `events` (đúng BugChainIndexer gốc), `creation` (tx tạo contract), `hybrid` (mặc định). Chain public RPC: `ethereum`, `bsc`, `arbitrum`, `base`, `optimism`, `polygon` (`PUBLIC_RPCS` trong `src/lightScanner.js`). Config `scanners/config/networks.js` của bản gốc vẫn được `Scanner` nạp.

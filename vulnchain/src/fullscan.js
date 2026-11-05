@@ -31,8 +31,9 @@ async function fullScan(opts = {}) {
   const network = opts.network || 'ethereum';
   const chunk = opts.chunk || 2000;
   const maxChunks = opts.maxChunks ?? Infinity;
-  const scanner = new LightScanner({ network, rpcUrls: opts.rpcUrls });
+  const scanner = new LightScanner({ network, ...opts });
   await scanner.initialize();
+  const chain = scanner.chain;
   const head = await scanner.getBlockNumber();
   const to = opts.toBlock ?? head;
   let from = opts.fromBlock ?? 0;
@@ -63,10 +64,15 @@ async function fullScan(opts = {}) {
     let doc;
     try {
       doc = await runScan({
-        corpus: opts.corpus, network, mode: 'creation',
+        corpus: opts.corpus, network: chain.network, chain, mode: 'creation',
         fromBlock: lo, toBlock: hi,
         maxContracts: opts.maxContracts || 200,
-        sourcify: false, rpcUrls: opts.rpcUrls,
+        sourcify: false,
+        // pass ONLY chain overrides — spreading opts here would overwrite
+        // fromBlock/toBlock and make every chunk rescan the whole range.
+        rpcUrl: opts.rpcUrl, rpcKey: opts.rpcKey,
+        etherscanKey: opts.etherscanKey, explorerApi: opts.explorerApi,
+        chainId: opts.chainId, maxVerify: opts.maxVerify,
       });
     } catch (e) {
       errors.push({ range: [lo, hi], reason: String(e.message).slice(0, 160) });
@@ -90,7 +96,8 @@ async function fullScan(opts = {}) {
       })).join('\n') + '\n');
     }
     state = {
-      network, lastBlock: hi,
+      network: chain.network, chainId: chain.chainId, rpcSource: chain.rpcSource,
+      explorerKeyConfigured: chain.hasEtherscan, lastBlock: hi,
       chunksDone: state.chunksDone + 1,
       contractsScanned: state.contractsScanned + doc.stats.contractsScanned,
       functionsExamined: state.functionsExamined + doc.stats.functionsExamined,

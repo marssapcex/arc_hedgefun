@@ -14,7 +14,8 @@
     "test": "node --test test/*.test.js",
     "server": "node server/backend/index.js",
     "full": "node src/cli.js full-scan --full --resume",
-    "full:smoke": "node src/cli.js full-scan --from-block 0 --to-block 400 --chunk 100 --max-chunks 4 --resume"
+    "full:smoke": "node src/cli.js full-scan --from-block 0 --to-block 400 --chunk 100 --max-chunks 4 --resume",
+    "chains": "node src/cli.js chains"
   },
   "engines": {
     "node": ">=18"

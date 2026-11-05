@@ -11,6 +11,10 @@ jobs:
   scan:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    env:
+      ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+      ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
+      RPC_URL_ETHEREUM: ${{ secrets.RPC_URL_ETHEREUM }}
     defaults:
       run:
         working-directory: vulnchain
@@ -29,6 +33,13 @@ jobs:
         run: |
           node src/cli.js make-fixture
           node src/cli.js selftest
+      - name: Key-backed scan (optional; uses repo secrets if set)
+        if: env.ETHERSCAN_API_KEY != ''
+        run: |
+          node src/cli.js chains --network ethereum
+          node src/cli.js scan --network ethereum --blocks 20 --mode hybrid \
+            --max-contracts 30 --sourcify \
+            --out data/keyed_scan_result.json --md ../VULNCHAIN_KEYED_REPORT.md
       - name: Full-chain checkpoint smoke (genesis range)
         continue-on-error: true
         run: |
@@ -48,5 +59,7 @@ jobs:
           git add -f vulnchain/data/corpus.json vulnchain/data/scan_result.json VULNCHAIN_REPORT.md || true
           git add -f vulnchain/data/full_scan_state.json || true
           git add -f vulnchain/data/full_scan_labels.jsonl || true
+          git add -f vulnchain/data/keyed_scan_result.json || true
+          git add -f VULNCHAIN_KEYED_REPORT.md || true
           git commit -m "data: vulnchain live similarity scan [skip ci]" || echo nothing
           for i in 1 2 3 4 5; do git push origin HEAD:arena/fbf9cf32-arc-hedgefun && break || sleep 5; done
