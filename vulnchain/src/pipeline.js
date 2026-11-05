@@ -76,8 +76,8 @@ async function runScan(opts = {}) {
     scanner = new LightScanner({ network, rpcUrls: opts.rpcUrls });
     await scanner.initialize();
     head = await scanner.getBlockNumber();
-    to = opts.toBlock || head;
-    from = opts.fromBlock || Math.max(0, to - blocks + 1);
+    to = opts.toBlock ?? head;
+    from = opts.fromBlock ?? Math.max(0, to - blocks + 1);
     const found = new Map();
 
     if (mode === 'events' || mode === 'hybrid') {

@@ -5,6 +5,8 @@
  *   node src/cli.js make-fixture
  *   node src/cli.js scan --network ethereum --blocks 60 --mode hybrid
  *   node src/cli.js scan --fixture
+ *   node src/cli.js full-scan --full --resume
+ *   node src/cli.js full-scan --from-block 0 --to-block 400 --chunk 100 --max-chunks 4
  *   node src/cli.js selftest
  */
 'use strict';
@@ -92,6 +94,8 @@ async function scan(a) {
     mode: a.mode || 'hybrid',
     maxContracts: parseInt(a['max-contracts'] || '80', 10),
     sourcify: !!a.sourcify,
+    fromBlock: a['from-block'] !== undefined ? parseInt(a['from-block'], 10) : undefined,
+    toBlock: a['to-block'] !== undefined ? parseInt(a['to-block'], 10) : undefined,
     rpcUrls: a.rpc ? [a.rpc] : undefined,
   });
   const outPath = a.out || (a.fixture
@@ -107,6 +111,26 @@ async function scan(a) {
   console.log('labels by category:', JSON.stringify(doc.stats.labelsByCategory));
   console.log('labeler index:', JSON.stringify(doc.stats.labeler));
   console.log('report:', mdPath);
+}
+
+
+async function fullScanCmd(a) {
+  const c = loadCorpus();
+  const r = await require('./fullscan').fullScan({
+    corpus: c,
+    network: a.network || 'ethereum',
+    fromBlock: a.full ? 0 : (a['from-block'] !== undefined ? parseInt(a['from-block'], 10) : 0),
+    toBlock: a['to-block'] !== undefined ? parseInt(a['to-block'], 10) : undefined,
+    chunk: parseInt(a.chunk || '2000', 10),
+    maxChunks: a['max-chunks'] !== undefined ? parseInt(a['max-chunks'], 10) : Infinity,
+    resume: !!a.resume || !!a.full,
+    maxContracts: parseInt(a['max-contracts'] || '200', 10),
+    rpcUrls: a.rpc ? [a.rpc] : undefined,
+  });
+  console.log(`full-scan: blocks ${r.meta.fromBlock}–${r.meta.toBlock} (head ${r.meta.head}), ` +
+    `${r.state.chunksDone} chunks done, ${r.state.contractsScanned} contracts, ` +
+    `${r.state.labelledTotal} labelled, ${r.errors.length} chunk errors`);
+  console.log('checkpoint:', r.statePath, '| labels:', r.labelsPath);
 }
 
 async function selftest() {
@@ -170,9 +194,10 @@ async function main() {
     if (cmd === 'build-corpus') await buildCorpus();
     else if (cmd === 'make-fixture') await makeFixture();
     else if (cmd === 'scan') await scan(a);
+    else if (cmd === 'full-scan') await fullScanCmd(a);
     else if (cmd === 'selftest') await selftest();
     else {
-      console.log('commands: build-corpus | make-fixture | scan | selftest');
+      console.log('commands: build-corpus | make-fixture | scan | full-scan | selftest');
       process.exit(2);
     }
   } catch (e) {

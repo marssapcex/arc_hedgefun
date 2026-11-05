@@ -71,7 +71,7 @@ test('semantic feature cosine: identical shapes 1, unrelated shapes low', () => 
   const c = featuresFromSource('function c(){ return 7; }');
   assert.ok(featureCosine(a, b) > 0.7, String(featureCosine(a, b)));
   assert.ok(featureCosine(a, c) < 0.4, String(featureCosine(a, c)));
-  assert.equal(FEATURE_KEYS.length, 29);
+  assert.equal(FEATURE_KEYS.length, 32);
 });
 
 test('functionSimilarity of a record with itself is high', () => {
@@ -116,5 +116,50 @@ test('a trivial contract gets no label (no blanket labelling)', () => {
   const c = JSON.parse(fs.readFileSync(CORPUS, 'utf8'));
   const l = new FunctionLabeler(c);
   const r = l.labelContract({ address: '0x' + '55'.repeat(20), code: '0x60006000f3' });
+  assert.equal(r.labelled, false);
+});
+
+test('REGRESSION: onlyOwner withdraw(address,uint256) is NOT labelled reentrancy', () => {
+  if (!fs.existsSync(CORPUS)) return;
+  const c = JSON.parse(fs.readFileSync(CORPUS, 'utf8'));
+  const l = new FunctionLabeler(c);
+  // the exact case: 0xf3fef3a3 collides with Lendf.Me / Platypus incident reports
+  const src = `contract SearcherBot {
+    address immutable owner = 0x12182b03cf82e0f5339711c56fe9abdb3aa5dd4;
+    error NotOwner(); error TransferFailed();
+    function withdraw(address _token, uint256 _amount) public {
+      require(msg.sender == owner, NotOwner());
+      (bool ok,) = _token.call{value: _amount}("");
+      require(ok, TransferFailed());
+    }
+    function withdrawToken(address _t, address _a, uint256 _n) public {
+      require(msg.sender == owner, NotOwner());
+      _t.call(abi.encodeWithSignature("transfer(address,uint256)", _a, _n));
+    }
+  }`;
+  // dispatcher: PUSH4 f3fef3a3 -> JUMPDEST; body = CALLER PUSH20<owner> EQ ... CALL
+  const code = '0x60003560e01c80' + '63f3fef3a3' + '14610011575b' +
+    '33' + '73' + '12'.repeat(20) + '14' + '6000' + '57' + '34' + '6000f1' + '00';
+  const r = l.labelContract({ address: '0x' + 'e5'.repeat(20), code, verifiedSource: src });
+  assert.equal(r.labelled, false, JSON.stringify(r.labels));
+  assert.ok(r.vetoes.some(v => /owner guard|self-call/.test(v.reason)), JSON.stringify(r.vetoes));
+  assert.ok(r.matchedFunctions.length === 0);
+});
+
+test('REGRESSION: selector equality alone never produces a label', () => {
+  if (!fs.existsSync(CORPUS)) return;
+  const c = JSON.parse(fs.readFileSync(CORPUS, 'utf8'));
+  const l = new FunctionLabeler(c);
+  const { functionSimilarity } = require('../src/functions');
+  const a = extractSourceFunctions('function withdraw(address a, uint256 n) public { balances[msg.sender] -= n; a.call{value:n}(""); }')[0];
+  const b = extractSourceFunctions('function withdraw(address a, uint256 n) public { uint256 x = n + 1; require(x > 0, "zero"); }')[0];
+  const sim = functionSimilarity(a, b);
+  assert.equal(sim.sel, 1);
+  assert.ok(sim.body < 0.30, String(sim.body));
+  const { MIN_BODY } = require('../src/matcher');
+  assert.ok(sim.body < MIN_BODY, JSON.stringify(sim));
+  assert.ok(sim.score < 0.60, JSON.stringify(sim));
+  const r = l.labelContract({ address: '0x' + '66'.repeat(20),
+    code: '0x60003560e01c80' + '63f3fef3a3' + '14610011575b' + '00' });
   assert.equal(r.labelled, false);
 });

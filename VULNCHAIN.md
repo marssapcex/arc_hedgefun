@@ -1,107 +1,72 @@
-# VulnChain — gắn nhãn contract theo HÀM LỖI của 821 vụ hack
+# VulnChain — sửa đúng cái mày bắt được
 
-Sửa đúng chỗ mày chê. **Bỏ hết**:
+Mày đúng, và chỗ sai cụ thể là đây: tool bóc được **21 hàm** của `0xe5c8…0d0f` (đúng), rồi gắn nhãn `reentrancy` / `oracle-price-manipulation` chỉ vì `withdraw(address,uint256)` = `0xf3fef3a3` trùng chữ ký với Lendf.Me / Platypus. Trong khi decompile cho thấy **`onlyOwner` hardcode `0x0121…5dd4`**, không có số dư người dùng, `withdraw` chỉ là owner gửi ETH ra. Đó là báo động giả, không phải phát hiện.
 
-| Bỏ | Lý do |
-|---|---|
-| 22% IOC + cluster | So địa chỉ ví độc hại / cụm contract giống hệt nhau không trả lời "hàm nào lỗi" |
-| 10% Rules tĩnh (`CALL` trước `SSTORE`) | Luật chung dính mọi proxy, không phải hàm lỗi cụ thể |
-| **0.32 whole-bytecode Jaccard + seed 102 contract đã bị hack** | **`ko ai deploy lại code bị hack đâu`** — so nguyên runtime bytecode của contract cũ là sai hướng, nên xóa luôn bước `seed-vulnerable-bytecode`, file `rules.js`, `vulnerableBytecode.json`, và mọi field IOC/cluster/verdict |
-
-Còn lại đúng một việc: **tích hợp 2 repo → quét 1 chain EVM → gắn nhãn các contract có hàm lỗi giống 821 vụ hack**.
+Đã sửa 3 chỗ, có regression test khoá lại.
 
 ---
 
-## Vẫn là 1 codebase duy nhất
+## 1. Selector không còn là bằng chứng
+
+Trước: `score = 0.50 featureCos + 0.35 body + 0.15 selectorEqual`, và `selectorEqual = 1` cho phép bỏ qua yêu cầu body. Kết quả: `featureCos 0.739`, `body 0.18`, selector trùng → **0.5824 → dán nhãn**.
+
+Bây giờ:
 
 ```
-vulnchain/
-├── package.json                  ← 1 install point
-├── incidents/                    ← 821 report + 25 vulns (DeFi-Security-Incident, nguyên)
-├── scanners/ server/ contract/ docs/ SETUP.md   ← BugChainIndexer, nguyên
-├── src/
-│   ├── lightScanner.js            extends Scanner gốc, gọi LogFetcher + EOAFilter
-│   ├── pipeline.js                discovery 1 chain → danh sách contract + source
-│   ├── functions.js              ★ trích TỪNG HÀM (dispatcher + Solidity body)
-│   ├── corpus.js                 ★ 821 bài → 2.485 hàm lỗi
-│   ├── matcher.js                ★ FunctionLabeler: so hàm → gắn nhãn
-│   └── hashing.js / source.js / bytecode.js / cli.js
-├── data/corpus.json (2.485 hàm) · data/scan_result.json
-└── test/ 15 unit test
+score = 0.60 featureCos + 0.40 body        (0 cho selector)
+MIN_SCORE 0.58 · MIN_FEATURE_COS 0.70 · MIN_BODY 0.30  (bắt buộc, không có ngoại lệ)
 ```
 
-`src/rules.js` đã xóa. `seed-vulnerable-bytecode` đã xóa khỏi CLI lẫn workflow. Không còn `REVIEW/INFO`, không còn `verdict`, không còn `knownAddressHits`, không còn `identicalBytecodeClusterSize`.
+`selectorEqual` vẫn được lưu để hiển thị, và selector index vẫn dùng để **lấy ứng viên** — nhưng không cộng một điểm nào. Thêm `GENERIC_SIGNATURES` (`withdraw(address,uint256)`, `transfer`, `approve`, `deposit`, `wrapEth`, `withdrawToken`…): nếu là chữ ký phổ biến thì phải có `body ≥ 0.45` **và** `featureCos ≥ 0.85` mới được xét.
+
+## 2. Hard veto cho hàm có guard (đúng case bot MEV của mày)
+
+Thêm 3 feature: `ownerGuard`, `selfCallGuard`, `userBalanceAccounting`.
+
+- `ownerGuard` từ bytecode: `CALLER (0x33) → PUSH20 <địa chỉ cố định> → EQ (0x14)`. Từ source: `onlyOwner` / `Ownable` / `NotOwner` / `require(msg.sender == owner)`.
+- `selfCallGuard`: `msg.sender == address(this)` / `msg.sender - this` (đúng 2 hàm tự gọi trong decompile).
+- `userBalanceAccounting`: `balances[msg.sender]` / mapping write (`KECCAK256 + SLOAD + SSTORE + CALLER`).
+
+`FunctionLabeler` **bỏ hàm ngay từ đầu** nếu có `ownerGuard` hoặc `selfCallGuard`: một hàm chỉ owner hoặc chính contract gọi được **không thể là điểm vào của exploit không cần quyền**. Thêm đối kháng: hàm corpus có `userBalanceAccounting` mà hàm mới không có → loại ứng viên.
+
+Regression test `REGRESSION: onlyOwner withdraw(address,uint256) is NOT labelled reentrancy` dựng đúng source + dispatcher bytecode `0xf3fef3a3` có `CALLER PUSH20<owner> EQ` → `labelled: false`, `vetoes: ["immutable owner guard"]`. Test thứ hai: selector trùng nhưng `body 0.22 < 0.30` → không nhãn.
+
+`npm test 17/17`, `selftest 19/19`.
+
+## 3. Quét FULL CHAIN, không quét block gần nhất
+
+`src/fullscan.js` — **checkpointed range scanner**:
+
+```
+node src/cli.js full-scan --full --resume
+# = --from-block 0 --to-block latest --resume
+
+node src/cli.js full-scan --from-block 0 --to-block 400 --chunk 100 --max-chunks 4 --resume
+node src/cli.js full-scan --from-block 12000000 --to-block 13000000 --chunk 2000 \
+  --rpc https://...archive-node...
+```
+
+- Chia lịch sử thành chunk (mặc định 2000 block), discovery `creation` (tx `to == null` → receipt → `eth_getCode`).
+- `data/full_scan_state.json` ghi `lastBlock` sau **mỗi chunk**; `--resume` tiếp tục từ `lastBlock + 1` sau crash / rate-limit.
+- Chỉ append contract **có nhãn** vào `data/full_scan_labels.jsonl`.
+- Chunk lỗi **không** nhảy checkpoint (quét lại lần sau).
+- CI có step `Full-chain checkpoint smoke` chạy 400 block đầu từ genesis để chứng minh path này hoạt động.
+
+**Nói thẳng:** Ethereum >26 triệu block. Không có lệnh nào quét xong trong một CI run, và tao không giả vờ đã quét xong. Đây là job chạy dài hạn có checkpoint; muốn chạy thật toàn chain cần archive RPC riêng qua `--rpc` và để nó chạy nhiều giờ/ngày. `scan --blocks 40` vẫn giữ để kiểm nhanh, không còn là chế độ mặc định được coi là "kết quả".
 
 ---
 
-## Thuật toán: mức HÀM, không mức contract
+## Vẫn là 1 codebase
 
-**Corpus.** Với 821 bài, `snippets()` lấy các block `❌ Vulnerable`, rồi `extractSourceFunctions()` bóc **từng hàm** bằng brace matching. Kết quả **2.485 hàm lỗi từ 731 incident**. Mỗi hàm lưu:
+`incidents/` 821 report nguyên · `scanners/` BugChainIndexer nguyên · `lightScanner.js` subclass `Scanner` gốc, gọi `LogFetcher.fetchLogs` + `EOAFilter.filterAddresses`. Corpus **2.485 hàm lỗi / 731 incident / 24 category**, 32 feature. Không IOC, không cluster, không rules tĩnh, không seed bytecode contract đã hack, không `REVIEW/INFO`.
 
-- `selector` (Keccak của canonical signature), `name`, `signature`
-- **29 feature ngữ nghĩa**: `callerCheck`, `usesMsgValue`, `callWithValue`, `stateWrite`, `balanceRead`, `getReserves`, `loop`, `userArrayParam`, `unchecked`, `reentrancyGuard`, `slippageGuard`, `delegatecall`…
-- body token 3-gram → MinHash 64 perm + SimHash 64-bit + 16 LSH band
-- nhãn = category của incident (`reentrancy`, `oracle-price-manipulation`, `access-control`…) + `incidentId` + `rootCause`
+## Giới hạn
 
-**Contract mới.** `splitBytecodeFunctions()` đọc dispatcher Solidity/Vyper (`PUSH4 sel; EQ; PUSH2 dest; JUMPI`), cắt runtime bytecode thành **một segment cho mỗi hàm** theo `JUMPDEST`. Có Sourcify thì merge thêm body Solidity vào đúng selector. EIP-1167 proxy được resolve sang implementation trước khi cắt.
-
-**So khớp.** Với **mỗi hàm** của contract mới, LSH band + selector index lấy ứng viên hàm lỗi, rồi:
-
-```
-score = 0.50 × featureCosine      (hình dạng ngữ nghĩa của hàm)
-      + 0.35 × bodySimilarity     (0.65 MinHash Jaccard + 0.35 SimHash)
-      + 0.15 × selectorEqual      (cùng chữ ký hàm)
-
-giữ nếu score ≥ 0.46, featureCos ≥ 0.55, ≥ 4 feature bật,
-và (selector trùng HOẶC body > 0.10)
-```
-
-**Output = NHÃN**, không phải điểm contract:
-
-```
-0xabc…  functionCount 7
-  labels: [ oracle-price-manipulation (0.71, 2 hàm, incidents: 2021-…, 2022-…),
-            reentrancy (0.52, 1 hàm, …) ]
-  matchedFunctions: [ {selector, name, score, featureCos, body, activeFeatures,
-                        matchedVulnerableFunction, incidentId, rootCause} ]
-```
-
-`featureCosine` là chỗ "thông minh": nó bắt được *"hàm này cũng đọc reserve sống, lặp trên mảng do caller đưa, chuyển ETH rồi mới ghi state"* dù tên hàm, thứ tự biến, thậm chí selector khác hẳn. Đó là cái so nguyên bytecode không làm được.
-
----
-
-## Kiểm
-
-```
-npm test 15/15 PASS
-node src/cli.js selftest 19/19 PASS
-corpus 821 incident → 2.485 hàm lỗi / 731 incident / 24 category
-fixture: 1 contract được gắn nhãn reentrancy, contract rỗng KHÔNG bị dán nhãn
-```
-
-CI `vulnchain.yml`: `npm ci` → test → build-corpus → fixture + selftest → **scan live 1 chain EVM** → publish `VULNCHAIN_REPORT.md`.
-
-**Kết quả live (2026-11-05 07:17 UTC, Ethereum blocks `26347036–26347075`):**
-
-```
-60 contract · 1.123 hàm được bóc tách · 23.998 logs · errors 0
-labelledContracts 1 · labelsByCategory {"oracle-price-manipulation": 1}
-```
-
-Contract `0x0000000aa232…` (23 hàm) có **`withdraw(address,uint256)` `0xf3fef3a3`** trùng hàm lỗi trong `2023-07-25_Platypus02_PriceManipulation`: `score 0.5824`, `featureCos 0.739`, `body 0.18`, selector khớp, 11 feature bật (`externalCall, staticcall, stateWrite, stateRead, callerCheck, loop, math, division, timestamp, create, revert`). 59 contract còn lại **không bị dán nhãn** — không dán bừa.
-
----
-
-## Giới hạn, nói thẳng
-
-- 90/821 bài không trích được hàm (chỉ có pseudocode / mô tả) → thiếu mẫu cho category đó.
-- Dispatcher decomposition là heuristic; Vyper / optimizer lạ / fallbackassembly có thể cắt sai → `decomposition: fallback` được ghi rõ.
-- Feature vector là **hình dạng**, không phải ngữ nghĩa thật sự. Nhãn `reentrancy` nghĩa là "hàm này giống các hàm reentrancy trong corpus", **không** nghĩa là "đã chứng minh reentrancy".
-- Chỉ đọc RPC. Không tx, không fork, không PoC, không `sweep`. `0 bug không cần quyền, 0 đô` vẫn đứng.
+- Decompiler/verified source không phải lúc nào có; `sourcifyHits` trên CI live vẫn thường = 0. Khi chỉ có bytecode, `ownerGuard` bắt được qua opcode pattern nhưng có thể sót với optimizer lạ.
+- Veto `ownerGuard` là âm tính giả có chủ đích: thà bỏ sót một hàm owner-only bị lỗi còn hơn dán nhãn bừa như vừa rồi.
+- Nhãn = "hình dạng hàm giống hàm lỗi trong corpus", **không** = "đã chứng minh lỗ hổng". Không tx, fork, PoC, `sweep`. `0 bug không cần quyền, 0 đô` vẫn đứng.
 
 ```bash
 cd vulnchain && npm ci && npm test && node src/cli.js selftest
-node src/cli.js scan --network ethereum --blocks 40 --mode hybrid --max-contracts 60 --sourcify
+node src/cli.js full-scan --full --resume
 ```
-
-Đã push lên `arena/fbf9cf32-arc-hedgefun`.

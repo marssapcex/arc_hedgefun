@@ -41,9 +41,10 @@ functions.js
 
 matcher.js  FunctionLabeler
    LSH band + selector index → ứng viên hàm lỗi
-   score = 0.50 featureCosine + 0.35 body(MinHash+SimHash) + 0.15 selectorEqual
-   ngưỡng: score ≥ 0.46 · featureCos ≥ 0.55 · ≥4 feature bật
-           · (selector trùng hoặc body > 0.10)
+   score = 0.60 featureCosine + 0.40 body(MinHash+SimHash) + 0 selectorEqual
+   ngưỡng: score ≥ 0.58 · featureCos ≥ 0.70 · ≥4 feature bật · body ≥ 0.30 (bắt buộc)
+   HARD VETO: ownerGuard / selfCallGuard -> bỏ hàm ngay (không phải điểm vào
+              của exploit không cần quyền). Chữ ký generic đòi body ≥ 0.45.
    → labels[] = {category, confidence, functionCount, incidents, examples}
    → matchedFunctions[] = {selector, score, activeFeatures, incidentId, rootCause}
 ```
@@ -55,7 +56,7 @@ matcher.js  FunctionLabeler
 ```bash
 cd vulnchain
 npm ci                     # MỘT install point
-npm test                   # 15 unit test
+npm test                   # 17 unit test
 node src/cli.js build-corpus
 node src/cli.js make-fixture
 node src/cli.js selftest   # 19 check, hoàn toàn offline
@@ -63,7 +64,11 @@ node src/cli.js selftest   # 19 check, hoàn toàn offline
 node src/cli.js scan --network ethereum --blocks 40 --mode hybrid --max-contracts 60 --sourcify
 node src/cli.js scan --network bsc --mode events --blocks 30
 node src/cli.js scan --fixture
+node src/cli.js full-scan --full --resume
+node src/cli.js full-scan --from-block 0 --to-block 400 --chunk 100 --max-chunks 4 --resume
 ```
+
+`full-scan` là checkpointed range scanner: `data/full_scan_state.json` lưu `lastBlock` sau mỗi chunk, append contract có nhãn vào `data/full_scan_labels.jsonl`. Quét >26M block là job dài hạn, không phải một lệnh; dùng `--rpc` trỏ archive node riêng để chạy thật.
 
 `mode`: `events` (đúng BugChainIndexer gốc), `creation` (tx tạo contract), `hybrid` (mặc định). Chain public RPC: `ethereum`, `bsc`, `arbitrum`, `base`, `optimism`, `polygon` (`PUBLIC_RPCS` trong `src/lightScanner.js`). Config `scanners/config/networks.js` của bản gốc vẫn được `Scanner` nạp.
 

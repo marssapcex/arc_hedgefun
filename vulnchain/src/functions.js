@@ -33,6 +33,9 @@ const FEATURE_KEYS = [
   'usesMsgValue', 'loop', 'math', 'division', 'unchecked', 'timestamp', 'create',
   'selfdestruct', 'revert', 'transferFrom', 'approve', 'getReserves', 'oracleRead',
   'initializer', 'reentrancyGuard', 'slippageGuard', 'userArrayParam', 'payable',
+  // guard/context features: a function only the owner (or the contract itself)
+  // can call CANNOT be the entry point of a permissionless exploit.
+  'ownerGuard', 'selfCallGuard', 'userBalanceAccounting',
 ];
 
 function blank() { return Object.fromEntries(FEATURE_KEYS.map(k => [k, 0])); }
@@ -59,6 +62,13 @@ function featuresFromOpcodes(stream) {
   f.create = +['f0', 'f5'].some(has);
   f.selfdestruct = +has('ff');
   f.revert = +has('fd');
+  // CALLER; PUSH20 <hardcoded owner>; EQ  -> immutable owner check
+  // CALLER; ADDRESS; EQ                   -> self-call only
+  for (let i = 0; i + 4 < stream.length; i++) {
+    if (stream[i] === '33' && stream[i + 1] === 'PUSH20' && stream.slice(i + 2, i + 6).includes('14')) f.ownerGuard = 1;
+    if (stream[i] === '33' && stream[i + 1] === '30' && stream.slice(i + 2, i + 5).includes('14')) f.selfCallGuard = 1;
+  }
+  if (has('20') && has('54') && has('55') && has('33')) f.userBalanceAccounting = 1;
   return f;
 }
 
@@ -93,6 +103,9 @@ function featuresFromSource(body) {
   f.slippageGuard = t('amountOutMin|minAmountOut|deadline|slippage');
   f.userArrayParam = t('\\[\\]\\s*(memory|calldata)');
   f.payable = t('payable');
+  f.ownerGuard = t('onlyOwner|Ownable|NotOwner|require\\s*\\(\\s*msg\\.sender\\s*==\\s*(owner|_owner|0x[0-9a-fA-F]{40})|msg\\.sender\\s*!=\\s*owner');
+  f.selfCallGuard = t('msg\\.sender\\s*==\\s*(address\\(this\\)|this)|msg\\.sender\\s*-\\s*this|msg\\.sender\\s*!=\\s*this');
+  f.userBalanceAccounting = t('balances?\\s*\\[\\s*msg\\.sender|_balances\\s*\\[|userBalance|deposits?\\s*\\[');
   return f;
 }
 
@@ -218,13 +231,19 @@ function extractSourceFunctions(text) {
 }
 
 /** Similarity of ONE new function against ONE corpus function. */
+/**
+ * Selector equality is NOT evidence. `withdraw(address,uint256)` exists in
+ * thousands of harmless owner-only bots and in Lendf.Me/Platypus incident
+ * reports; matching that 4-byte value once produced exactly the false alarm
+ * the user called out. Score now uses only shape + body.
+ */
 function functionSimilarity(a, b) {
   const featureCos = featureCosine(a.features, b.features);
   const bodyJ = jaccardMinhash(a.minhash, b.minhash);
   const bodyH = hammingSimilarity(a.simhash, b.simhash);
   const body = 0.65 * bodyJ + 0.35 * bodyH;
-  const sel = a.selector && a.selector === b.selector ? 1 : 0;
-  const score = 0.50 * featureCos + 0.35 * body + 0.15 * sel;
+  const sel = a.selector && a.selector === b.selector ? 1 : 0;   // display only
+  const score = 0.60 * featureCos + 0.40 * body;
   return { score, featureCos, body, sel };
 }
 
