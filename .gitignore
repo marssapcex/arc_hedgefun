@@ -3,3 +3,7 @@ cache/
 broadcast/
 deploy/*.dryrun.json
 .env
+
+# Python bytecode
+__pycache__/
+*.pyc

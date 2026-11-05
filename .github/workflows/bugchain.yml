@@ -1,0 +1,37 @@
+name: bugchain
+on:
+  push:
+    paths:
+      - 'bugchain/**'
+      - 'tests/**'
+      - '.github/workflows/bugchain.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline unit tests and self-test
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 -m bugchain.cli selftest
+      - name: Index newly deployed contracts (read-only RPC)
+        run: |
+          python3 -m bugchain.cli index --mode creation --blocks 3 \
+            --max-contracts 60 --out bugchain/data/new_contracts.json
+      - name: Scan against the 821-incident database
+        run: |
+          python3 -m bugchain.cli scan \
+            --contracts bugchain/data/new_contracts.json \
+            --out bugchain/data/bugchain_findings.json \
+            --md BUGCHAIN_REPORT.md
+      - name: Publish results
+        run: |
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add -f bugchain/data/new_contracts.json bugchain/data/bugchain_findings.json BUGCHAIN_REPORT.md || true
+          git commit -m "data: bugchain live triage scan [skip ci]" || echo nothing
+          for i in 1 2 3 4 5; do git push origin HEAD:arena/fbf9cf32-arc-hedgefun && break || sleep 5; done
