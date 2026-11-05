@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-04T17:02:23.521758+00:00",
+  "generatedAt": "2026-11-05T02:06:37.804166+00:00",
   "rpc": "https://ethereum-rpc.publicnode.com",
-  "headBlock": 26342814,
+  "headBlock": 26345529,
   "blocks": {
     "drain": {
       "number": 25360696,
@@ -157,7 +157,37 @@
     "botCodeBytes": 13835,
     "eip1967ImplSlot": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "looksLikeProxy": false,
-    "operatorNonce": 6611259,
+    "operatorNonce": 6611474,
     "operatorCodeBytes": 0
+  },
+  "childStorage": {
+    "0": {
+      "label": "owner/payout",
+      "raw": "0x0000000000000000000000003e37f4a10d771ba9de44b6d301410b1bedea65d0",
+      "address": "0x3e37f4a10d771ba9de44b6d301410b1bedea65d0"
+    },
+    "7": {
+      "label": "real WETH target",
+      "raw": "0x000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    },
+    "10": {
+      "label": "coordinator",
+      "raw": "0x000000000000000000000000b84db016324e8f2bfdd8dd9c260338aee0a8df52",
+      "address": "0xb84db016324e8f2bfdd8dd9c260338aee0a8df52"
+    },
+    "11": {
+      "label": "bot operator (targeting marker)",
+      "raw": "0x000000000000000000000000ae2fc483527b8ef99eb5d9b44875f005ba1fae13",
+      "address": "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13"
+    }
+  },
+  "baitApprovals": {
+    "range": [
+      25354425,
+      25354925
+    ],
+    "source": "https://rpc.flashbots.net",
+    "count": 0
   }
 }
