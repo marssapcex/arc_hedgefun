@@ -30,6 +30,10 @@ DRAIN_BLOCK = 25360696
 BOUNTY_BLOCK = 25370085
 OPERATOR = "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13"
 IMPL_SLOT = "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"  # EIP-1967
+APPROVAL = "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
+FIRST_BAIT = 25354425
+CHILD_SLOTS = {"0": "owner/payout", "7": "real WETH target",
+               "10": "coordinator", "11": "bot operator (targeting marker)"}
 DRAIN_TX = "0x2be8704f5a59b69e0b71f64aefdb99eb0e8ae9fb3926147c581910d71bcf3e65"
 BOUNTY_TX = "0x3d30d74d8e9c625b44e5ce9b15ea8301d69f0a405e9267c0cf618e2ecd674ab3"
 BOT = "0x1f2f10d1c40777ae1da742455c65828ff36df387"
@@ -210,6 +214,24 @@ def main():
     doc["postFix"] = post
     print("postFix", post, flush=True)
 
+    # 8) what did the attacker bake into a bait child at DEPLOY time?
+    slots = {}
+    for k, label in CHILD_SLOTS.items():
+        v = r(url, "eth_getStorageAt", [CHILD, h(int(k)), "latest"])
+        slots[k] = {"label": label, "raw": v,
+                    "address": ("0x" + v[-40:]) if isinstance(v, str) else None}
+    doc["childStorage"] = slots
+    print("childStorage", {k: v["address"] for k, v in slots.items()}, flush=True)
+
+    # 9) were there real WETH Approvals from the bot during the bait window?
+    flt = {"fromBlock": h(FIRST_BAIT), "toBlock": h(FIRST_BAIT + 500),
+           "address": TOKENS["WETH"][0],
+           "topics": [APPROVAL, "0x" + BOT.lower().replace("0x", "").rjust(64, "0")]}
+    gl, gl_url = r_any("eth_getLogs", [flt])
+    doc["baitApprovals"] = {"range": [FIRST_BAIT, FIRST_BAIT + 500], "source": gl_url,
+                            "count": len(gl) if isinstance(gl, list) else None}
+    print("baitApprovals", doc["baitApprovals"], flush=True)
+
     json.dump(doc, open(a.out, "w"), indent=2, default=str)
     d = doc["drain"]
     L = ["# JaredFromSubway drain — read-only on-chain check", "",
@@ -235,6 +257,13 @@ def main():
           f"proxy = **{doc['postFix']['looksLikeProxy']}**. " +
           f"Operator `{OPERATOR}` nonce: {doc['postFix']['operatorNonce']}, " +
           f"code: {doc['postFix']['operatorCodeBytes']} bytes.", "",
+          "", "## Recon evidence baked into a bait child", "",
+          f"Child `{CHILD}` storage at deploy time:", "",
+          "| Slot | Meaning | Address |", "|---|---|---|"] + [
+          f"| {k} | {v['label']} | `{v['address']}` |" for k, v in doc["childStorage"].items()
+    ] + ["", f"WETH `Approval` logs with `owner` = bot in blocks "
+          f"{FIRST_BAIT}–{FIRST_BAIT+500}: {doc['baitApprovals']['count']} "
+          f"(via `{doc['baitApprovals']['source']}`).", "",
           "Raw: `rpc_jared_raw.json`."]
     open(a.md, "w").write("\n".join(L) + "\n")
     print(f"wrote {a.out}, {a.md}", flush=True)
