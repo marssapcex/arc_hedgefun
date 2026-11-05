@@ -48,7 +48,12 @@ async function fullScan(opts = {}) {
       }
     } catch (_) { /* corrupt checkpoint -> restart */ }
   }
-  if (!opts.resume && fs.existsSync(OUT)) fs.writeFileSync(OUT, '');
+  // Always make both artifacts exist, even when every chunk errors out
+  // (public full nodes often prune 2015-era receipts). Downstream git add
+  // must not fail on a missing pathspec.
+  if (!opts.resume || !fs.existsSync(OUT)) fs.writeFileSync(OUT, '');
+  fs.writeFileSync(STATE, JSON.stringify({ ...state, targetBlock: to, head,
+    chunkSize: chunk, updatedAt: new Date().toISOString() }, null, 1));
 
   const errors = [];
   let chunks = 0;
@@ -65,7 +70,11 @@ async function fullScan(opts = {}) {
       });
     } catch (e) {
       errors.push({ range: [lo, hi], reason: String(e.message).slice(0, 160) });
-      continue;   // do NOT advance the checkpoint on a failed chunk
+      // do NOT advance lastBlock on a failed chunk, but persist the error list
+      fs.writeFileSync(STATE, JSON.stringify({ ...state, targetBlock: to, head,
+        chunkSize: chunk, lastError: errors[errors.length - 1],
+        updatedAt: new Date().toISOString() }, null, 1));
+      continue;
     }
     const labelled = doc.contracts.filter(c => c.labelled);
     if (labelled.length) {
@@ -89,6 +98,9 @@ async function fullScan(opts = {}) {
     console.log(`chunk ${lo}–${hi}: ${doc.stats.contractsScanned} contracts, ` +
       `${doc.stats.labelledContracts} labelled, errors ${doc.stats.errors}`);
   }
+  fs.writeFileSync(STATE, JSON.stringify({ ...state, targetBlock: to, head,
+    chunkSize: chunk, errors: errors.length,
+    updatedAt: new Date().toISOString() }, null, 1));
   return {
     meta: {
       generatedAt: new Date().toISOString(), network,
