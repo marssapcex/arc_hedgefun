@@ -40,6 +40,8 @@ Bản cũ chỉ đếm selector trùng → vớ vẩn. Bản này 5 tín hiệu 
 
 **LSH banding** (32 band × 4 row) giới hạn ứng viên trước khi so — không duyệt 821 × N. Corpus build ra **24.610 band key**, 381 IOC, 1.619 selector. Mỗi finding trả `top-5 incident tương tự` kèm `bc=… sel=… src=…` và danh sách evidence.
 
+**Lỗi đã bắt và sửa trong lần CI đầu:** 6 contract 45-byte cho `bytecodeSim = 1.00` với cùng một incident. Đó là **EIP-1167 minimal proxy** — runtime code chỉ có `DELEGATECALL`, không chứa logic, nên mọi clone trông giống hệt nhau và so sánh là vô nghĩa. `getEffectiveCode()` giờ đọc địa chỉ implementation ngay từ bytecode rồi fingerprint **implementation**; thêm ngưỡng `ngramCount ≥ 64`, dưới ngưỡng thì triệt tiêu tín hiệu bytecode thay vì cho điểm. Có unit test khoá lại.
+
 Output chỉ `INFO / REVIEW / HIGH_SIMILARITY`. **Không có `VULNERABLE`** — vẫn không dám nói "contract này có lỗi" từ 821 bài markdown. Nói được là "nó giống sự cố X ở mức này, vì những lý do này, mở ra đọc tiếp".
 
 ---
@@ -51,7 +53,7 @@ Output chỉ `INFO / REVIEW / HIGH_SIMILARITY`. **Không có `VULNERABLE`** — 
 1.619 selector · 17 selector generic bị triệt · 381 địa chỉ IOC
 102 địa chỉ vulnerable contract trên Ethereum (để seed bytecode)
 corpus.json 4.386.583 B
-npm test 14/14 PASS · selftest 18/18 PASS
+npm test 15/15 PASS · selftest xanh
 ```
 
 CI `vulnchain.yml`: `npm ci` → test → build-corpus → selftest → seed bytecode → **scan live trên 1 chain EVM** (`--network ethereum --mode hybrid --sourcify`) → publish `VULNCHAIN_REPORT.md`.

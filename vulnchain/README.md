@@ -52,7 +52,7 @@ matcher.js
 cd vulnchain
 npm ci                     # MỘT install point, MỘT package-lock
 
-npm test                   # 14 unit test
+npm test                   # 15 unit test
 node src/cli.js build-corpus
 node src/cli.js make-fixture
 node src/cli.js selftest
@@ -80,6 +80,7 @@ Output: `data/corpus.json` (821 record), `data/vulnerableBytecode.json`, `data/s
 - `PUSH4` selector là heuristic; PUSH4 cũng dùng để đẩy hằng số. IDF + giao với corpus triệt phần lớn nhiễu, không triệt hết.
 - 95/821 report không có bảng metadata; 48 report không trích được vulnerable snippet. `hasMetadataTable` / `vulnerableSnippetCount` có trong từng record.
 - Nhiều report dùng `pseudocode` → selector suy ra best-effort.
+- EIP-1167 minimal proxy được resolve sang implementation trước khi fingerprint; bytecode dưới 64 opcode n-gram không tính similarity (tránh mọi clone 45-byte đều "giống hệt" nhau).
 - Không symbolic execution, không fuzz, không trace, không đọc storage. **Không thay audit.**
 - Chỉ đọc RPC. Không tx, không fork, không PoC, không claim rút được tiền.
 

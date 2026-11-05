@@ -115,7 +115,11 @@ async function runScan(opts = {}) {
     }
     for (const c of [...found.values()].slice(0, maxContracts)) {
       try {
-        c.code = c.code || await scanner.getCode(c.address);
+        if (!c.code) {
+          const eff = await scanner.getEffectiveCode(c.address);
+          c.code = eff.code;
+          c.viaProxy = eff.viaProxy;
+        }
         if (c.code.length <= 2) { errors.push({ address: c.address, reason: 'no runtime code' }); continue; }
         if (opts.sourcify) c.verifiedSource = await sourcifySource(scanner.config.chainId || 1, c.address);
         contracts.push(c);
@@ -143,6 +147,7 @@ async function runScan(opts = {}) {
   const findings = contracts.map(c => matcher.match({
     address: c.address, creator: c.creator, block: c.block,
     code: c.code, verifiedSource: c.verifiedSource,
+    viaProxy: c.viaProxy || null,
     clusterSize: clusterSize[c.address] || 1,
   })).sort((a, b) => b.score - a.score);
 

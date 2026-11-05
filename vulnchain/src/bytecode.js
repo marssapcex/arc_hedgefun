@@ -19,6 +19,18 @@ const METADATA_MARKERS = [
 const EIP1967_IMPL_SLOT =
   '360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc';
 const INITIALIZE_SEL = '8129fc1c';
+const MIN_OPCODE_NGRAMS = 64;   // below this a fingerprint is not informative
+const EIP1167_PREFIX = '363d3d373d3d3d363d73';
+const EIP1167_SUFFIX = '5af43d82803e903d91602b57fd5bf3';
+
+/** EIP-1167 minimal proxy: runtime code holds NO implementation logic. */
+function detectMinimalProxy(hex) {
+  const h = (hex && hex.startsWith('0x') ? hex.slice(2) : hex || '').toLowerCase();
+  if (!h.startsWith(EIP1167_PREFIX) || !h.includes(EIP1167_SUFFIX)) return null;
+  const start = EIP1167_PREFIX.length;
+  const impl = h.slice(start, start + 40);
+  return /^[0-9a-f]{40}$/.test(impl) ? '0x' + impl : null;
+}
 
 function stripMetadata(hex) {
   let h = hex.startsWith('0x') ? hex.slice(2) : hex;
@@ -103,6 +115,9 @@ function fingerprint(runtimeHex) {
     codeBytes: Math.max(0, (hex.length - 2) / 2),
     opcodeCount: stream.length,
     ngramCount: g.size,
+    minimalProxy: !!detectMinimalProxy(hex),
+    delegateTo: detectMinimalProxy(hex),
+    lowCoverage: g.size < MIN_OPCODE_NGRAMS,
     selectors,
     minhash: sig,
     simhash: simhash(g),
@@ -111,4 +126,7 @@ function fingerprint(runtimeHex) {
   };
 }
 
-module.exports = { stripMetadata, opcodeStream, extractSelectors, ngrams, flags, fingerprint };
+module.exports = {
+  stripMetadata, opcodeStream, extractSelectors, ngrams, flags, fingerprint,
+  detectMinimalProxy, MIN_OPCODE_NGRAMS
+};

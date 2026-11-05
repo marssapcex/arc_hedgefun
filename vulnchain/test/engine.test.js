@@ -83,3 +83,17 @@ test('end-to-end fixture: cluster + IOC + never VULNERABLE', async () => {
   assert.ok(doc.findings.every(f => ['INFO', 'REVIEW', 'HIGH_SIMILARITY'].includes(f.verdict)));
   assert.ok(doc.stats.matcher.bandKeys > 100);
 });
+
+test('EIP-1167 minimal proxy is detected and never scores bytecode similarity 1', () => {
+  const { detectMinimalProxy } = require('../src/bytecode');
+  const proxy = '0x363d3d373d3d3d363d73' + 'aa'.repeat(20) + '5af43d82803e903d91602b57fd5bf3';
+  assert.equal(detectMinimalProxy(proxy), '0x' + 'aa'.repeat(20));
+  assert.equal(fingerprint(proxy).minimalProxy, true);
+  assert.equal(fingerprint(proxy).lowCoverage, true);
+  if (!fs.existsSync(CORPUS)) return;
+  const c = JSON.parse(fs.readFileSync(CORPUS, 'utf8'));
+  const m = new Matcher(c);
+  const f = m.match({ address: '0x' + '77'.repeat(20), code: proxy });
+  for (const t of f.similarIncidents) assert.equal(t.bytecodeSim, 0);
+  assert.ok(f.evidence.some(e => /suppressed|minimal proxy/i.test(e)));
+});

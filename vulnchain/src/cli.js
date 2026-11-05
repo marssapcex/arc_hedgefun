@@ -83,9 +83,12 @@ async function seedBytecode(a) {
   const entries = [], errors = [];
   for (const p of pairs.slice(0, max)) {
     try {
-      const code = await scanner.getCode(p.address);
-      if (code.length <= 2) { errors.push({ ...p, reason: 'no code' }); continue; }
-      entries.push({ ...p, fp: fingerprint(code) });
+      const eff = await scanner.getEffectiveCode(p.address);
+      if (eff.code.length <= 2) { errors.push({ ...p, reason: 'no code' }); continue; }
+      const fp = fingerprint(eff.code);
+      fp.viaProxy = eff.viaProxy;
+      fp.originalAddress = p.address;
+      entries.push({ ...p, fp });
     } catch (e) { errors.push({ ...p, reason: String(e.message).slice(0, 100) }); }
   }
   writeJson(SEED, {

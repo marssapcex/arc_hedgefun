@@ -18,7 +18,7 @@
  */
 'use strict';
 
-const { fingerprint } = require('./bytecode');
+const { fingerprint, MIN_OPCODE_NGRAMS } = require('./bytecode');
 const { fingerprintSource } = require('./source');
 const { evaluateRules } = require('./rules');
 const {
@@ -51,6 +51,8 @@ class Matcher {
       for (const b of lshBands(inc.source.minhash)) this._addBand(b, inc.id);
       // known-vulnerable bytecode bands (seeded from on-chain addresses)
       for (const bf of (inc.bytecodeFingerprints || [])) {
+        // a 45-byte EIP-1167 proxy or a stub has no informative opcode stream
+        if ((bf.ngramCount || 0) < MIN_OPCODE_NGRAMS || bf.minimalProxy) continue;
         this.bytecodeEntries.push({ id: inc.id, fp: bf });
         for (const b of bf.bands || lshBands(bf.minhash)) this._addBand(b, inc.id);
       }
@@ -105,11 +107,15 @@ class Matcher {
     for (const id of candidates) {
       const inc = this.byId.get(id);
       if (!inc) continue;
-      let bytecodeSim = 0, bcEvidence = false;
-      for (const e of this.bytecodeEntries) {
-        if (e.id !== id) continue;
-        bcEvidence = true;
-        bytecodeSim = Math.max(bytecodeSim, jaccardMinhash(fp.minhash, e.fp.minhash));
+      let bytecodeSim = 0, bcEvidence = false, suppressed = false;
+      if (fp.lowCoverage || fp.minimalProxy) {
+        suppressed = true;
+      } else {
+        for (const e of this.bytecodeEntries) {
+          if (e.id !== id) continue;
+          bcEvidence = true;
+          bytecodeSim = Math.max(bytecodeSim, jaccardMinhash(fp.minhash, e.fp.minhash));
+        }
       }
       const selectorSim = idfCosine(contractVec, inc.selectorVector, this.idf);
       let sourceSim = 0;
@@ -130,7 +136,7 @@ class Matcher {
         W.ioc * Math.max(ioc, cluster * 0.5);
       scored.push({
         id, score, bytecodeSim, selectorSim, sourceSim, ruleScore, ioc,
-        bytecodeEvidence: bcEvidence,
+        bytecodeEvidence: bcEvidence, bytecodeSuppressed: suppressed,
         matchedRules: matchedRules.map(r => r.category),
         protocol: inc.protocol, date: inc.date, categories: inc.categories,
         rootCause: (inc.rootCause || '').slice(0, 160),
@@ -146,6 +152,8 @@ class Matcher {
       : (final >= 0.25 || exactHit) ? 'REVIEW' : 'INFO';
     const evidence = [];
     if (top[0]?.bytecodeSim > 0.4) evidence.push(`bytecode opcode-5gram Jaccard ≈ ${top[0].bytecodeSim.toFixed(2)} vs a known-vulnerable deployment`);
+    if (fp.minimalProxy) evidence.push(`EIP-1167 minimal proxy → implementation resolved at ${fp.delegateTo}; proxy bytecode itself carries no logic`);
+    else if (fp.lowCoverage) evidence.push(`bytecode similarity suppressed: only ${fp.ngramCount} opcode n-grams (< ${MIN_OPCODE_NGRAMS}), too small for a meaningful fingerprint`);
     if (top[0]?.selectorSim > 0.3) evidence.push('IDF-weighted selector cosine > 0.30');
     if (srcFp && top[0]?.sourceSim > 0.4) evidence.push('verified source shares token 4-grams with a vulnerable snippet');
     for (const r of rules) evidence.push(`rule ${r.category} (${r.from}): ${r.why}`);
@@ -157,6 +165,7 @@ class Matcher {
       creator: contract.creator || null,
       block: contract.block || null,
       codeHash: fp.codeHash,
+      proxyImplementation: contract.viaProxy || fp.delegateTo || null,
       codeBytes: fp.codeBytes,
       opcodeCount: fp.opcodeCount,
       ngramCount: fp.ngramCount,

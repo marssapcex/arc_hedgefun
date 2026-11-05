@@ -13,6 +13,7 @@
 
 const Scanner = require('../scanners/common/Scanner');
 const { keccak256 } = require('ethers');
+const { detectMinimalProxy } = require('./bytecode');
 
 const PUBLIC_RPCS = {
   ethereum: [
@@ -90,6 +91,22 @@ class LightScanner extends Scanner {
     const code = await this.rpcAny('eth_getCode', [address, tag]);
     this._codeCache.set(key, code || '0x');
     return code || '0x';
+  }
+
+  /**
+   * EIP-1167 proxies contain only delegation code; fingerprinting them makes
+   * every clone look identical to every known-vulnerable proxy. Resolve the
+   * implementation address from the runtime code and fingerprint THAT instead.
+   */
+  async getEffectiveCode(address) {
+    const code = await this.getCode(address);
+    const impl = detectMinimalProxy(code);
+    if (!impl) return { code, viaProxy: null };
+    try {
+      const ic = await this.getCode(impl);
+      if (ic && ic.length > 2) return { code: ic, viaProxy: impl };
+    } catch (_) { /* implementation not deployed / pruned */ }
+    return { code, viaProxy: impl };
   }
 
   async isContracts(addresses) {
