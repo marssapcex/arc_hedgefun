@@ -4,7 +4,6 @@
  * Still uses the ORIGINAL BugChainIndexer modules for discovery:
  *   LogFetcher.fetchLogs(scanner, ...)        adaptive eth_getLogs
  *   EOAFilter.filterAddresses(scanner, ...)  EOA vs contract classification
- *   ContractVerifier.verify(scanner, ...)    optional, needs explorer key
  * plus literal creation-tx discovery and Sourcify source lookup.
  *
  * No IOC matching, no identical-code clusters, no static opcode rules,
@@ -14,7 +13,6 @@
 
 const { fetchLogs } = require('../scanners/common/LogFetcher');
 const { filterAddresses } = require('../scanners/common/EOAFilter');
-const { verify } = require('../scanners/common/ContractVerifier');
 const { LightScanner } = require('./lightScanner');
 const { FunctionLabeler } = require('./matcher');
 
@@ -117,10 +115,6 @@ async function runScan(opts = {}) {
         if (opts.sourcify) c.verifiedSource = await sourcifySource(scanner.config.chainId || 1, c.address);
         contracts.push(c);
       } catch (e) { errors.push({ address: c.address, reason: String(e.message).slice(0, 120) }); }
-    }
-    if (process.env.DEFAULT_ETHERSCAN_KEYS && contracts.length) {
-      try { await verify(scanner, contracts.slice(0, 10).map(c => ({ address: c.address }))); }
-      catch (_) { /* explorer optional */ }
     }
   }
 

@@ -94,12 +94,19 @@ async function scan(a) {
     sourcify: !!a.sourcify,
     rpcUrls: a.rpc ? [a.rpc] : undefined,
   });
-  writeJson(path.join(DATA, 'scan_result.json'), doc);
-  fs.writeFileSync(a.md || path.join(ROOT, '..', 'VULNCHAIN_REPORT.md'), markdown(doc));
+  const outPath = a.out || (a.fixture
+    ? path.join(DATA, 'demo_result.json')
+    : path.join(DATA, 'scan_result.json'));
+  writeJson(outPath, doc);
+  const mdPath = a.md || (a.fixture
+    ? path.join(ROOT, '..', 'VULNCHAIN_DEMO_REPORT.md')
+    : path.join(ROOT, '..', 'VULNCHAIN_REPORT.md'));
+  fs.writeFileSync(mdPath, markdown(doc));
   console.log(`scanned ${doc.stats.contractsScanned} contracts · ${doc.stats.functionsExamined} functions · ` +
     `labelled ${doc.stats.labelledContracts} · logs ${doc.stats.logsSeen} · errors ${doc.stats.errors}`);
   console.log('labels by category:', JSON.stringify(doc.stats.labelsByCategory));
-  console.log('matcher index:', JSON.stringify(doc.stats.matcher));
+  console.log('labeler index:', JSON.stringify(doc.stats.labeler));
+  console.log('report:', mdPath);
 }
 
 async function selftest() {
