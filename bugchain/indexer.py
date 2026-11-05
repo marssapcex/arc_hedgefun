@@ -124,14 +124,28 @@ def index_creation(urls, first, last, max_contracts=200):
             if len(contracts) >= max_contracts:
                 break
             rc, rsrc = rpc_any(urls, "eth_getTransactionReceipt", [tx["hash"]])
+            if isinstance(rc, dict) and rc.get("status") == "0x0":
+                errors.append({"block": n, "tx": tx["hash"], "reason": "creation tx reverted"})
+                continue
             addr = rc.get("contractAddress") if isinstance(rc, dict) else None
             if not addr:
                 stats["receiptMissing"] += 1
                 errors.append({"block": n, "tx": tx["hash"], "reason": "no contractAddress in receipt"})
                 continue
-            code, csrc = rpc_any(urls, "eth_getCode", [addr, "latest"])
-            if not isinstance(code, str) or len(code) <= 2:
-                errors.append({"block": n, "address": addr, "reason": "no runtime code"})
+            # "0x" is a valid JSON-RPC result, so rpc_any would stop too early.
+            # Try every endpoint, then the deployment block (archive) as fallback.
+            code, csrc = None, None
+            for u in urls:
+                for blk_tag in ("latest", h(n)):
+                    v = rpc(u, "eth_getCode", [addr, blk_tag], timeout=20, tries=2)
+                    if isinstance(v, str) and len(v) > 2:
+                        code, csrc = v, u
+                        break
+                if code:
+                    break
+            if not code:
+                errors.append({"block": n, "address": addr,
+                               "reason": "no runtime code on any endpoint (self-destruct or transient)"})
                 continue
             contracts.append(_record(n, tx["hash"], tx.get("from"), addr, code, csrc))
         if len(contracts) >= max_contracts:
