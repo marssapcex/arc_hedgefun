@@ -223,14 +223,30 @@ def main():
     doc["childStorage"] = slots
     print("childStorage", {k: v["address"] for k, v in slots.items()}, flush=True)
 
-    # 9) were there real WETH Approvals from the bot during the bait window?
-    flt = {"fromBlock": h(FIRST_BAIT), "toBlock": h(FIRST_BAIT + 500),
-           "address": TOKENS["WETH"][0],
-           "topics": [APPROVAL, "0x" + BOT.lower().replace("0x", "").rjust(64, "0")]}
-    gl, gl_url = r_any("eth_getLogs", [flt])
-    doc["baitApprovals"] = {"range": [FIRST_BAIT, FIRST_BAIT + 500], "source": gl_url,
-                            "count": len(gl) if isinstance(gl, list) else None}
-    print("baitApprovals", doc["baitApprovals"], flush=True)
+    # 9) real WETH Approvals from the bot: early bait window vs armed window.
+    def approvals(lo, hi):
+        flt = {"fromBlock": h(lo), "toBlock": h(hi), "address": TOKENS["WETH"][0],
+               "topics": [APPROVAL, "0x" + BOT.lower().replace("0x", "").rjust(64, "0")]}
+        empty = None
+        for u in URLS:
+            v = r(u, "eth_getLogs", [flt], timeout=20, tries=2)
+            if isinstance(v, list):
+                if v:
+                    return v, u
+                if empty is None:
+                    empty = (v, u)
+        return empty or ([], None)
+
+    windows = {}
+    for label, lo, hi in [("earlyBait", FIRST_BAIT, FIRST_BAIT + 500),
+                          ("armedWindow", 25360400, DRAIN_BLOCK)]:
+        logs, src = approvals(lo, hi)
+        spenders = sorted({"0x" + lg["topics"][2][-40:] for lg in logs
+                           if len(lg.get("topics", [])) >= 3})
+        windows[label] = {"range": [lo, hi], "source": src, "count": len(logs),
+                          "uniqueSpenders": len(spenders), "spenders": spenders[:8]}
+        print(label, windows[label], flush=True)
+    doc["baitApprovals"] = windows
 
     json.dump(doc, open(a.out, "w"), indent=2, default=str)
     d = doc["drain"]
