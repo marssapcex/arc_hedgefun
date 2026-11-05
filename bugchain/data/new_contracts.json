@@ -1,0 +1,14 @@
+{
+ "meta": {
+  "generatedAt": "2026-11-05T06:00:41.515819+00:00",
+  "mode": "creation",
+  "fromBlock": 26346696,
+  "toBlock": 26346698,
+  "rpc": "https://ethereum-rpc.publicnode.com",
+  "contractCount": 0,
+  "note": "Newly observed contracts / candidate selectors. Discovery only, no vulnerability claim."
+ },
+ "clusters": [],
+ "errors": [],
+ "contracts": []
+}
