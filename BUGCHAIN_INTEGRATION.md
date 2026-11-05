@@ -80,6 +80,17 @@ category index                   24 slug (flash-loan 116, business-logic 137,
 
 `python3 -m unittest discover -s tests -v` → **10/10 PASS**. `python3 -m bugchain.cli selftest` → **12/12 PASS**, gồm end-to-end offline: fixture 3 contract → 1 cluster bytecode trùng → 1 `KNOWN_ACTOR` (creator nằm trong IOC thật) + 2 `REVIEW`.
 
+**CI live 2026-11-05 06:03 UTC** (`bugchain.yml`, Ethereum head, `--mode creation --blocks 60`):
+
+```
+blocksScanned 60 · txSeen 16.209 · creationTxSeen 18 · hashOnlyTx 0
+contracts with runtime code 11 · indexerErrors 7 (self-destruct / transient)
+verdicts REVIEW 9, INFO 2, KNOWN_ACTOR 0 · identical-code clusters 0
+blockRange 26346656–26346715
+```
+
+Đọc đúng cái `REVIEW 9`: **không phải 9 contract có lỗi.** Đó là 9 contract có ít nhất một `PUSH4` trùng selector hiếm trong DB — và PUSH4 cũng dùng để đẩy hằng số. Đây là nhiễu đã biết, là lý do có mục 5 bên dưới. `KNOWN_ACTOR 0` mới là kết luận đáng tin: không creator nào trong 60 block đó trùng 381 địa chỉ IOC.
+
 ---
 
 ## 4. Chạy
@@ -92,7 +103,7 @@ python3 -m bugchain.cli build-db \
   --signatures bugchain/data/incident_signatures.json
 
 # B. index contract mới (read-only public RPC)
-python3 -m bugchain.cli index --mode creation --blocks 5 \
+python3 -m bugchain.cli index --mode creation --blocks 60 \
   --out bugchain/data/new_contracts.json
 python3 -m bugchain.cli index --mode events --from-block 26342000 --to-block 26342050 \
   --out bugchain/data/events_contracts.json
@@ -117,7 +128,7 @@ python3 -m bugchain.cli selftest
 
 ## 5. Giới hạn, nói thẳng
 
-- `PUSH4` cũng dùng để đẩy hằng số → `candidateSelectors` là **ứng viên**, không phải ABI. Việc giao với 2.234 selector thật sẽ triệt phần lớn nhiễu, vẫn còn sót.
+- `PUSH4` cũng dùng để đẩy hằng số → `candidateSelectors` là **ứng viên**, không phải ABI. Việc giao với 2.234 selector thật sẽ triệt phần lớn nhiễu, **vẫn còn sót** — chính là 9 `REVIEW` ở lần CI live. Đừng đọc `REVIEW` thành "có bug"; đọc thành "có lý do để mở bytecode ra xem". Muốn giảm nhiễu hơn nữa phải đọc verified ABI / Sourcify, không phải chỉ PUSH4.
 - Selector suy ra từ Solidity snippets **best-effort**: nhiều bài dùng pseudocode, param có tên biến, tuple, `@override`; parser bỏ qua cái không canonical hoá được. Không có nghĩa là thiếu selector ⇒ an toàn.
 - 95/821 bài không có bảng metadata → thiếu IOC cho những bài đó. `hasMetadataTable` có trong từng record để biết chỗ nào mỏng.
 - Không phân tích control flow, không symbolic execution, không fuzz, không đọc storage, không so sánh implementation/proxy, không kiểm tra `msg.sender`/modifier. **Không thay được audit.**
