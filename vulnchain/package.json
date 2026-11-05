@@ -1,0 +1,25 @@
+{
+  "name": "vulnchain",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Merged BugChainIndexer + DeFi-Security-Incident (821 reports) into one deployable codebase: single-EVM-chain similarity scanner",
+  "main": "src/cli.js",
+  "scripts": {
+    "build-corpus": "node src/cli.js build-corpus",
+    "seed-vulnerable-bytecode": "node src/cli.js seed-vulnerable-bytecode",
+    "scan": "node src/cli.js scan",
+    "selftest": "node src/cli.js selftest",
+    "test": "node --test test/*.test.js",
+    "server": "node server/backend/index.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "ethers": "^6.15.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "license": "MIT"
+}
