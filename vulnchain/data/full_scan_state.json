@@ -1,0 +1,13 @@
+{
+ "network": "ethereum",
+ "lastBlock": 399,
+ "chunksDone": 4,
+ "contractsScanned": 0,
+ "functionsExamined": 0,
+ "labelledTotal": 0,
+ "targetBlock": 400,
+ "head": 26347456,
+ "chunkSize": 100,
+ "updatedAt": "2026-11-05T08:33:38.290Z",
+ "errors": 0
+}
