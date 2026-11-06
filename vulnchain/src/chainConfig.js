@@ -33,6 +33,34 @@ const { NETWORKS } = require('../scanners/config/networks');
 
 const DEFAULT_EXPLORER = 'https://api.etherscan.io/v2/api';
 
+// Some keys are issued by the per-chain explorers (BscScan, Polygonscan...)
+// and only work against the V1 endpoint, which rejects `chainid`. Auto-try
+// both so a free key works regardless of where it was issued.
+const LEGACY_EXPLORER = {
+  1: 'https://api.etherscan.io/api',
+  56: 'https://api.bscscan.com/api',
+  97: 'https://api-testnet.bscscan.com/api',
+  137: 'https://api.polygonscan.com/api',
+  42161: 'https://api.arbiscan.io/api',
+  8453: 'https://api.basescan.org/api',
+  10: 'https://api-optimistic.etherscan.io/api',
+  43114: 'https://api.snowtrace.io/api',
+};
+
+function isV2Explorer(url) { return /etherscan\.io\/v2\/api|\/v2\/api/.test(String(url)); }
+
+function explorerParams(chainId, apikey, params, url) {
+  return isV2Explorer(url)
+    ? { chainid: String(chainId), apikey, ...params }
+    : { apikey, ...params };   // V1 explorers reject unknown chainid
+}
+
+function explorerCandidates(chainId, primary) {
+  const out = [primary];
+  if (isV2Explorer(primary) && LEGACY_EXPLORER[chainId]) out.push(LEGACY_EXPLORER[chainId]);
+  return out;
+}
+
 // Zero-key fallback, kept stable so CI behaviour does not change when the
 // upstream config happens to list a flaky public endpoint first.
 const PUBLIC_RPCS = {
@@ -161,4 +189,5 @@ function resolveChain(network, opts = {}) {
 module.exports = {
   resolveChain, redactRpc, envKey, customChains,
   DEFAULT_EXPLORER, ALCHEMY_SLUG, INFURA_SLUG, PUBLIC_RPCS,
+  LEGACY_EXPLORER, isV2Explorer, explorerParams, explorerCandidates,
 };

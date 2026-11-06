@@ -15,7 +15,9 @@
 const Scanner = require('../scanners/common/Scanner');
 const { keccak256 } = require('ethers');
 const { detectMinimalProxy } = require('./bytecode');
-const { resolveChain, PUBLIC_RPCS } = require('./chainConfig');
+const {
+  resolveChain, PUBLIC_RPCS, explorerParams, explorerCandidates,
+} = require('./chainConfig');
 
 
 
@@ -79,19 +81,27 @@ class LightScanner extends Scanner {
   async getBlockNumber() { return parseInt(await this.rpcAny('eth_blockNumber', []), 16); }
   async getBlockByNumber(n) { return this.rpcAny('eth_getBlockByNumber', [n, true]); }
   async queryDB() { return { rows: [] }; }
-  /** Etherscan V2 multichain API — one key, chainid selects the chain. */
+  /**
+   * Explorer API. Etherscan V2 (chainid) first; if that rejects the key,
+   * auto-retry the chain's legacy V1 explorer (BscScan for chainId 56, ...).
+   * A free key from either issuer therefore works without config changes.
+   */
   async etherscanCall(params = {}) {
     const key = this.chain.etherscanKey;
-    if (!key) throw new Error('no explorer API key configured (use --etherscan-key / ETHERSCAN_API_KEY)');
-    const q = new URLSearchParams({
-      chainid: String(this.chain.chainId), apikey: key, ...params,
-    });
-    const url = `${this.chain.explorerApi}?${q}`;
-    const r = await fetch(url, { signal: AbortSignal.timeout(15000) });
-    if (!r.ok) throw new Error(`explorer HTTP ${r.status}`);
-    const j = await r.json();
-    if (j.status === '1' || Array.isArray(j.result)) return j.result;
-    throw new Error(String(j.result || j.message || 'explorer error').slice(0, 140));
+    if (!key) throw new Error('no explorer API key configured');
+    const bases = explorerCandidates(this.chain.chainId, this.chain.explorerApi);
+    let lastErr;
+    for (const base of bases) {
+      try {
+        const q = new URLSearchParams(explorerParams(this.chain.chainId, key, params, base));
+        const r = await fetch(`${base}?${q}`, { signal: AbortSignal.timeout(15000) });
+        if (!r.ok) throw new Error(`explorer HTTP ${r.status}`);
+        const j = await r.json();
+        if (j.status === '1' || Array.isArray(j.result)) return j.result;
+        throw new Error(String(j.result || j.message || 'explorer error').slice(0, 140));
+      } catch (e) { lastErr = e; }
+    }
+    throw lastErr || new Error('explorer call failed');
   }
 
   async getCode(address, tag = 'latest') {

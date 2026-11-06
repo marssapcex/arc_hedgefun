@@ -83,3 +83,32 @@ test('redactRpc masks query apikey and provider keys', () => {
   assert.equal(redactRpc('https://mainnet.infura.io/v3/PROJ123456789'), 'https://mainnet.infura.io/v3/***');
   assert.equal(redactRpc('https://public.example/'), 'https://public.example/');
 });
+
+const {
+  isV2Explorer, explorerParams, explorerCandidates, LEGACY_EXPLORER,
+} = require('../src/chainConfig');
+
+test('explorer V2 sends chainid, legacy BscScan V1 does not', () => {
+  assert.equal(isV2Explorer('https://api.etherscan.io/v2/api'), true);
+  assert.equal(isV2Explorer('https://api.bscscan.com/api'), false);
+  const v2 = explorerParams(56, 'KEY', { module: 'contract' }, 'https://api.etherscan.io/v2/api');
+  assert.equal(v2.chainid, '56');
+  assert.equal(v2.apikey, 'KEY');
+  const v1 = explorerParams(56, 'KEY', { module: 'contract' }, 'https://api.bscscan.com/api');
+  assert.equal(v1.chainid, undefined);
+  assert.equal(v1.apikey, 'KEY');
+  assert.equal(v1.module, 'contract');
+});
+
+test('BSC key auto-falls back from Etherscan V2 to BscScan V1', () => {
+  const c = explorerCandidates(56, 'https://api.etherscan.io/v2/api');
+  assert.deepEqual(c, ['https://api.etherscan.io/v2/api', LEGACY_EXPLORER[56]]);
+  assert.deepEqual(explorerCandidates(56, 'https://api.bscscan.com/api'), ['https://api.bscscan.com/api']);
+});
+
+test('DEFAULT_ETHERSCAN_KEYS (legacy upstream name) is accepted', () => {
+  process.env.DEFAULT_ETHERSCAN_KEYS = 'KEYONE,KEYTWO';
+  const c = resolveChain('binance');
+  assert.equal(c.hasEtherscan, true);
+  assert.equal(c.chainId, 56);
+});
