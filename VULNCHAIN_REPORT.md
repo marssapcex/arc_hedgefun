@@ -1,6 +1,6 @@
 # VulnChain — function-level labels
 
-Generated 2026-11-06T08:19:23.445Z · chain `ethereum` · mode `hybrid` · blocks 26354528–26354567
+Generated 2026-11-06T08:44:39.434Z · chain `ethereum` · mode `hybrid` · blocks 26354656–26354695
 
 **Nhãn = hàm của contract này giống hàm lỗi trong 821 vụ đã biết. Không phải kết luận có lỗ hổng.**
 
@@ -8,11 +8,15 @@ Generated 2026-11-06T08:19:23.445Z · chain `ethereum` · mode `hybrid` · block
 |---|---|
 | chainId | `1` |
 | rpcSource | `public RPC (no key)` |
+| minUsd | `0` |
+| priceSource | `n/a` |
+| skippedBelowMinUsd | `0` |
+| pricedContracts | `0` |
 | explorerKeyConfigured | `false` |
 | incidentCount | `821` |
 | vulnerableFunctionCount | `2485` |
-| contractsScanned | `7` |
-| functionsExamined | `136` |
+| contractsScanned | `2` |
+| functionsExamined | `21` |
 | labelledContracts | `0` |
 | labelsByCategory | `{}` |
 | logsSeen | `0` |
