@@ -152,6 +152,8 @@ def block_at(url, target_unix, lo, hi):
 
 
 def logs(url, address, topics, lo, hi, depth=0):
+    """NEVER ask for a >5k-block range: some public nodes silently return []
+    for wide ranges instead of erroring. Small chunks or nothing."""
     flt = {"fromBlock": h(lo), "toBlock": h(hi), "address": address, "topics": topics}
     v = r(url, "eth_getLogs", [flt], timeout=20, tries=1)
     if isinstance(v, list):
@@ -163,11 +165,20 @@ def logs(url, address, topics, lo, hi, depth=0):
             v2 = r(u, "eth_getLogs", [flt], timeout=15, tries=1)
             if isinstance(v2, list):
                 return v2
-    if hi - lo <= 20_000 or depth >= 5:
+    if hi - lo <= 5_000 or depth >= 6:
         return []
     mid = (lo + hi) // 2
     return logs(url, address, topics, lo, mid, depth + 1) + \
         logs(url, address, topics, mid + 1, hi, depth + 1)
+
+
+def logs_chunked(url, address, topics, lo, hi, step=5_000):
+    out = []
+    x = lo
+    while x <= hi:
+        out.extend(logs(url, address, topics, x, min(x + step - 1, hi)))
+        x += step
+    return out
 
 
 def decode_log(lg):
@@ -232,19 +243,30 @@ def main():
     if b_start and b_end and b_end > b_start:
         for label, qid in Q.items():
             got = []
-            # single topic0 + questionId as topic1, no OR arrays
-            for tname in ["LogNewAnswer", "LogFinalize", "LogAnswerReveal",
-                          "LogNotifyOfArbitrationRequest"]:
-                for lg in logs(url, ORACLE, [TOPIC[tname], qid], b_start, b_end):
+            # BROAD: any oracle event with this questionId at topic1, chunked 5k
+            for lg in logs_chunked(url, ORACLE, [None, qid], b_start, b_end):
+                got.append(decode_log(lg))
+            # narrow: named events too (some nodes index differently)
+            for tname in ["LogNewAnswer", "LogFinalize", "LogNotifyOfArbitrationRequest"]:
+                for lg in logs_chunked(url, ORACLE, [TOPIC[tname], qid], b_start, b_end):
                     got.append(decode_log(lg))
-            # module events for the same window
             for tname in ["ProposalQuestionCreated", "ProposalExecuted"]:
-                for lg in logs(url, MODULE, [TOPIC[tname]], b_start, b_end):
+                for lg in logs_chunked(url, MODULE, [TOPIC[tname]], b_start, b_end):
                     got.append(decode_log(lg))
-            doc["logs"][label] = got
-            print(f"  logs {label}: {len(got)}", flush=True)
+            # de-duplicate by (tx, logIndex-ish)
+            seen = set()
+            uniq = []
+            for g in got:
+                k = (g["tx"], tuple(g["topics"]), g.get("data") if "data" in g else None)
+                if k in seen:
+                    continue
+                seen.add(k)
+                uniq.append(g)
+            doc["logs"][label] = uniq
+            print(f"  logs {label}: {len(uniq)} (raw {len(got)})", flush=True)
         doc["logs"]["safe"] = [decode_log(x) for x in
-                               logs(url, SAFE, [TOPIC["ExecutionSuccess"]], b_start, b_end)]
+                               logs_chunked(url, SAFE, [TOPIC["ExecutionSuccess"]],
+                                            b_start, b_end)]
         print(f"  logs safe: {len(doc['logs']['safe'])}", flush=True)
     else:
         doc["logs"]["error"] = "binary search for window blocks failed"
@@ -255,8 +277,12 @@ def main():
                 for v in c.values())
     real = doc["real"]
     w3 = real["wave3-drain"]
+    import math
     bond = (w3.get("getBond(bytes32)") or {}).get("eth")
     res = (w3.get("resultFor(bytes32)") or {}).get("uint")
+    # Reality.eth doubles the required bond on each new answer.
+    # bond = 0.1 * 2^(n-1)  ->  n = log2(bond/0.1) + 1 answers, n-1 disputes.
+    steps = int(round(math.log2(bond / 0.1))) + 1 if bond else None
     ans = [x for x in doc["logs"].get("wave3-drain", [])
            if x.get("answerUint") is not None]
     doc["verdict"] = {
@@ -268,7 +294,8 @@ def main():
         "wave3_finalized": w3.get("isFinalized(bytes32)"),
         "wave3_result": res,
         "wave3_bondEth": bond,
-        "wave3_bondStepsFrom0_1ETH": (int(bond / 0.1) if bond else None),
+        "wave3_answerCountFromBond": steps,
+        "wave3_disputeCountFromBond": (steps - 1) if steps else None,
         "wave3_finalizeUTC": (w3.get("getFinalizeTS(bytes32)") or {}).get("utc"),
         "decodedAnswerCount": len(ans),
         "decodedBondsEth": [x.get("bondEth") for x in ans],
@@ -296,9 +323,10 @@ def main():
           f"`resultFor` = **{res}** (0 = NO), finalizeTS = "
           f"**{(w3.get('getFinalizeTS(bytes32)') or {}).get('utc')}**.",
           f"- `getBond` = **{bond} ETH**. Voi `minimumBond = 0,1 ETH` va "
-          " Reality.eth nhan doi bond moi lan dispute, day la dau vet cua "
-          f"**{doc['verdict']['wave3_bondStepsFrom0_1ETH']} lan tra loi** "
-          "(0,1 → 0,2 → 0,4 → 0,8).",
+          "Reality.eth nhan doi bond moi lan co answer moi, day la dau vet cua "
+          f"**{doc['verdict']['wave3_answerCountFromBond']} lan tra loi / "
+          f"{doc['verdict']['wave3_disputeCountFromBond']} lan dispute** "
+          "(0,1 → 0,2 → 0,4 → 0,8 ETH).",
           f"- Log giai ma duoc: **{len(ans)}** `LogNewAnswer`; bond = "
           f"`{doc['verdict']['decodedBondsEth']}`; answer = `{doc['verdict']['decodedAnswers']}`.",
           f"- `ExecutionSuccess` tu Safe trong cua so: "
