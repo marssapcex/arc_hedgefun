@@ -188,7 +188,8 @@ def decode_log(lg):
     out = {"block": int(lg["blockNumber"], 16) if lg.get("blockNumber") else None,
            "tx": lg.get("transactionHash"), "topic0": tops[0] if tops else None,
            "topics": tops, "words": words}
-    t0 = (tops[0] or "").lower()
+    # topics[0] is a full 32-byte hash; our constants are the 4-byte selectors.
+    t0 = (tops[0] or "")[:10].lower()
     if t0 == TOPIC["LogNewAnswer"] and len(words) >= 5:
         out["answer"] = "0x" + words[0]
         out["answerUint"] = int(words[0], 16) if words[0] else None
