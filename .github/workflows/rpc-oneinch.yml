@@ -1,0 +1,28 @@
+name: rpc-oneinch
+on:
+  push:
+    paths:
+      - '.github/workflows/rpc-oneinch.yml'
+      - 'scripts/rpc_oneinch_reality.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read-only on-chain verdict for 1inch wave3-drain
+        run: |
+          python3 scripts/rpc_oneinch_reality.py --out rpc_oneinch_raw.json --md ONEINCH_REALITY_ONCHAIN.md
+          echo "=== VERDICT ==="
+          python3 -c "import json; d=json.load(open('rpc_oneinch_raw.json')); print(json.dumps(d['verdict'], indent=2)); print('discovered:', json.dumps(d.get('discoveredQuestionIds',{}), indent=2)[:3000])"
+          cat ONEINCH_REALITY_ONCHAIN.md
+      - name: Publish results
+        run: |
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add -f rpc_oneinch_raw.json ONEINCH_REALITY_ONCHAIN.md || true
+          git commit -m "data: 1inch wave3-drain read-only on-chain verdict [skip ci]" || echo nothing
+          for i in 1 2 3 4 5; do git pull --rebase origin arena/fbf9cf32-arc-hedgefun && git push origin HEAD:arena/fbf9cf32-arc-hedgefun && break || sleep 5; done
