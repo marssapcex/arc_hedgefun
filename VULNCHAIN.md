@@ -58,6 +58,27 @@ node src/cli.js full-scan --from-block 12000000 --to-block 13000000 --chunk 2000
 
 ---
 
+## Lần test BSC ra rác: bản CŨ, không phải BSC
+
+`git rev-parse HEAD` trả `2315651` → pull chưa thành công (`VULNCHAIN_REPORT.md` sửa local chặn merge), nên mày chạy bản cũ: `15 tests`, `featureKeys 29`, `etherscanHits undefined`, `commands: ... scan | selftest` (không có `full-scan`/`chains`). Bản cũ `PUBLIC_RPCS` **không có key `binance`** → `--network binance` fallback thẳng sang **Ethereum RPC**: block `26354521` là Ethereum, và 3 địa chỉ mày mở trên BscScan hiện `0 BNB / $0.00` vì chúng là địa chỉ Ethereum. Bản mới `chainConfig.js` có `binance: https://bsc-rpc.publicnode.com`, `chainId 56`.
+
+3 nhãn `0.5824` / `0.5509` / `0.5378` đều là lỗi selector-driven **đã sửa** ở bản mới: `withdraw(address,uint256)` / `transfer` / `transferFrom` trùng chữ ký corpus. Bản mới bỏ 0.15 selector, yêu cầu `body ≥ 0.30`, generic signature `body ≥ 0.45 && featureCos ≥ 0.85`, và veto `ownerGuard`/`selfCallGuard`. `0x0000000aa232...` chính là contract từng bị dán nhãn sai hôm trước.
+
+`215 EOAs, 185 smart contracts` là log của `EOAFilter`; pipeline chỉ giữ `res.contracts`. Nhưng bản cũ lấy **events trước** nên 80 slot toàn contract hạ tầng. Bản mới đưa **creation tx lên trước**, events sau.
+
+Và database có thật: `vulnchain/incidents/` 821 report + `vulnchain/data/corpus.json` 9.6 MB / 2.485 hàm lỗi / 731 incident / 24 category. Đúng là đó là văn bản sự cố, không phải 821 bytecode lỗi — nên nhãn vẫn chỉ là "giống hình dạng", không phải "có bug đã chứng minh".
+
+## Chỉ quét contract có ≥ $10k
+
+Mặc định `--min-usd 10000`. Đo trên chain, không gọi API giá off-chain:
+
+```
+eth_getBalance(native) + balanceOf(USDT/USDC/WETH/WBNB)
+giá native = Chainlink latestRoundData() trên chính chain đó
+```
+
+Feed lỗi → `priceSource: stables-only`, native/wrapped đóng góp 0, **không bịa giá**. Muốn tính BNB/ETH: `--native-price 690`. Override token: `VULNCHAIN_TOKENS`. Stats có `skippedBelowMinUsd`, `pricedContracts`, `priceSource`. `--min-usd 0` tắt hẳn.
+
 ## Tự gắn key RPC + key Etherscan, quét chain mình muốn
 
 `src/chainConfig.js`. Vẫn chạy được **0 key**, nhưng giờ có thể tự gắn:
@@ -92,7 +113,7 @@ node src/cli.js full-scan --network mychain --full --resume
 
 **Bảo mật:** `redactRpc()` che `/v2/<key>`, `/v3/<key>`, `?apikey=` trước khi ghi `meta.rpc`. Không có key nào lọt vào `data/*.json` hay report. CI đọc `ETHERSCAN_API_KEY` / `ALCHEMY_API_KEY` / `RPC_URL_ETHEREUM` từ repo secrets nếu mày set; không set thì chạy public như cũ.
 
-`npm test 25/25`.
+`npm test 34/34`.
 
 **CI `42018924770` (2026-11-05 11:26 UTC):** success, `Unit tests 25`, `Key-backed scan` **skipped** vì repo chưa set secret (đúng thiết kế — không có key thì không chạy step đó), live report `chainId 1`, `rpcSource "public RPC (no key)"`, `explorerKeyConfigured false`, `etherscanHits 0`. Muốn bật: Settings → Secrets → `ETHERSCAN_API_KEY` (và tuỳ `ALCHEMY_API_KEY` / `RPC_URL_ETHEREUM`), push lại là step tự chạy và report có `etherscanHits > 0` nếu contract verified.
 

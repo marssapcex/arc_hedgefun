@@ -16,6 +16,7 @@ const { filterAddresses } = require('../scanners/common/EOAFilter');
 const { LightScanner } = require('./lightScanner');
 const { resolveChain, redactRpc } = require('./chainConfig');
 const { verify } = require('../scanners/common/ContractVerifier');
+const { createValueFilter } = require('./valueFilter');
 
 /** Etherscan returns either a flat .sol file or a {{"path":{"content":...}}} bundle. */
 function flattenSource(sc) {
@@ -82,10 +83,13 @@ async function runScan(opts = {}) {
   const blocks = opts.blocks || 20;
   const maxContracts = opts.maxContracts || 80;
   const mode = opts.mode || 'hybrid';
+  const minUsd = opts.fixture ? 0 : (opts.minUsd ?? 10000);
+  const maxCandidates = opts.maxCandidates || 400;
   let contracts = [], logsSeen = 0, errors = [], head = null, from = null, to = null;
   let scanner = null;
   const chain = opts.fixture ? null : (opts.chain || resolveChain(network, opts));
-  let etherscanHits = 0;
+  let etherscanHits = 0, skippedBelowMinUsd = 0, pricedContracts = 0;
+  let priceSource = 'n/a';
 
   if (opts.fixture) {
     contracts = opts.fixture.contracts.map(c => ({ ...c }));
@@ -98,6 +102,14 @@ async function runScan(opts = {}) {
     from = opts.fromBlock ?? Math.max(0, to - blocks + 1);
     const found = new Map();
 
+    if (mode === 'creation' || mode === 'hybrid') {
+      try {
+        for (const c of await scanner.creationContracts(from, to)) {
+          if (!found.has(c.address)) found.set(c.address, c);
+          else Object.assign(found.get(c.address), { creator: c.creator, block: c.block, code: c.code });
+        }
+      } catch (e) { errors.push({ reason: 'creation scan: ' + String(e.message).slice(0, 120) }); }
+    }
     if (mode === 'events' || mode === 'hybrid') {
       for (let lo = from; lo <= to; lo += 50) {
         const hi = Math.min(lo + 49, to);
@@ -114,15 +126,9 @@ async function runScan(opts = {}) {
         } catch (e) { errors.push({ range: [lo, hi], reason: String(e.message).slice(0, 120) }); }
       }
     }
-    if (mode === 'creation' || mode === 'hybrid') {
-      try {
-        for (const c of await scanner.creationContracts(from, to)) {
-          if (!found.has(c.address)) found.set(c.address, c);
-          else Object.assign(found.get(c.address), { creator: c.creator, block: c.block, code: c.code });
-        }
-      } catch (e) { errors.push({ reason: 'creation scan: ' + String(e.message).slice(0, 120) }); }
-    }
-    for (const c of [...found.values()].slice(0, maxContracts)) {
+    const value = createValueFilter(scanner, chain.chainId, opts);
+    for (const c of [...found.values()].slice(0, maxCandidates)) {
+      if (contracts.length >= maxContracts) break;
       try {
         if (!c.code) {
           const eff = await scanner.getEffectiveCode(c.address);  // resolve EIP-1167 proxy -> implementation
@@ -130,6 +136,15 @@ async function runScan(opts = {}) {
           c.viaProxy = eff.viaProxy;
         }
         if (c.code.length <= 2) { errors.push({ address: c.address, reason: 'no runtime code' }); continue; }
+        // only contracts holding real on-chain value are worth labelling
+        if (minUsd > 0) {
+          const v = await value.estimate(c.address);
+          priceSource = v.priceSource;
+          c.valueUsd = v.usd;
+          c.priceSource = v.priceSource;
+          if (v.usd < minUsd) { skippedBelowMinUsd++; continue; }
+          pricedContracts++;
+        }
         if (opts.sourcify) c.verifiedSource = await sourcifySource(chain.chainId, c.address);
         contracts.push(c);
       } catch (e) { errors.push({ address: c.address, reason: String(e.message).slice(0, 120) }); }
@@ -169,6 +184,7 @@ async function runScan(opts = {}) {
       chainId: chain ? chain.chainId : 1,
       rpcSource: chain ? chain.rpcSource : 'fixture',
       explorerKeyConfigured: !!(chain && chain.hasEtherscan),
+      minUsd, priceSource,
       incidentCount: corpus.meta.incidentCount,
       vulnerableFunctionCount: corpus.meta.vulnerableFunctionCount,
       note: 'Function-shape similarity labels. Not a vulnerability proof.',
@@ -179,7 +195,8 @@ async function runScan(opts = {}) {
       labelledContracts: labelled.filter(r => r.labelled).length,
       labelsByCategory: byCategory,
       logsSeen, sourcifyHits: contracts.filter(c => c.verifiedSource).length - etherscanHits,
-      etherscanHits, errors: errors.length,
+      etherscanHits, skippedBelowMinUsd, pricedContracts, priceSource,
+      minUsd, errors: errors.length,
       labeler: labeler.stats(),
     },
     contracts: labelled.sort((a, b) =>
@@ -197,7 +214,9 @@ function markdown(doc) {
     '| Metric | Value |', '|---|---|',
   ];
   for (const [k, v] of Object.entries({
-    chainId: doc.meta.chainId, rpcSource: doc.meta.rpcSource,
+    chainId: doc.meta.chainId, rpcSource: doc.meta.rpcSource, minUsd: doc.meta.minUsd,
+    priceSource: doc.meta.priceSource, skippedBelowMinUsd: s.skippedBelowMinUsd,
+    pricedContracts: s.pricedContracts,
     explorerKeyConfigured: doc.meta.explorerKeyConfigured,
     incidentCount: doc.meta.incidentCount,
     vulnerableFunctionCount: doc.meta.vulnerableFunctionCount,

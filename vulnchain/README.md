@@ -73,12 +73,16 @@ node src/cli.js full-scan --from-block 0 --to-block 400 --chunk 100 --max-chunks
 ```bash
 cp .env.example .env        # RPC_URL_<CHAIN>, ETHERSCAN_API_KEY, ALCHEMY_API_KEY ...
 node src/cli.js chains --network base                 # kiểm tra config (key bị che)
-node src/cli.js scan --network base --blocks 40 --sourcify
+node src/cli.js scan --network base --blocks 40 --sourcify         # mặc định --min-usd 10000
+node src/cli.js scan --network binance --mode creation --min-usd 10000
+node src/cli.js full-scan --network binance --full --resume
 node src/cli.js scan --network arbitrum --rpc https://.../<KEY> --etherscan-key <KEY>
 RPC_URL_MYCHAIN=https://... CHAIN_ID_MYCHAIN=12345 node src/cli.js scan --network mychain
 ```
 
 Thứ tự: `--rpc` → `RPC_URL_<CHAIN>` → `RPC_URL` → `ALCHEMY_API_KEY` / `INFURA_PROJECT_ID` → `VULNCHAIN_CHAINS` → public RPC. Etherscan V2 (`--etherscan-key` / `ETHERSCAN_API_KEY`) nối vào `ContractVerifier.verify()` để lấy verified source; `chainid` tự theo `--network`. Custom chain qua `VULNCHAIN_CHAINS` JSON hoặc cặp `RPC_URL_*` + `CHAIN_ID_*`. Key được redact khỏi report. Xem `src/chainConfig.js`.
+
+**Chỉ contract giữ ≥ $10k trên chain mới được xét** (mặc định `--min-usd 10000`). Đo bằng RPC read-only: `eth_getBalance` + `balanceOf` stablecoin + giá `Chainlink.latestRoundData()` on-chain; feed lỗi thì chỉ đếm stablecoin (`priceSource: stables-only`), không bịa giá. `--min-usd 0` tắt, `--native-price <usd>` tự khai giá, `VULNCHAIN_TOKENS` override danh sách token. Discovery ưu tiên **creation tx** trước, events sau — không còn lấy 80 contract hạ tầng (Uniswap/Aave/1inch) từ logs.
 
 `full-scan` là checkpointed range scanner: `data/full_scan_state.json` lưu `lastBlock` sau mỗi chunk, append contract có nhãn vào `data/full_scan_labels.jsonl`. Quét >26M block là job dài hạn, không phải một lệnh; dùng `--rpc` trỏ archive node riêng để chạy thật.
 

@@ -73,6 +73,8 @@ async function fullScan(opts = {}) {
         rpcUrl: opts.rpcUrl, rpcKey: opts.rpcKey,
         etherscanKey: opts.etherscanKey, explorerApi: opts.explorerApi,
         chainId: opts.chainId, maxVerify: opts.maxVerify,
+        minUsd: opts.minUsd, maxCandidates: opts.maxCandidates,
+        nativePrice: opts.nativePrice,
       });
     } catch (e) {
       errors.push({ range: [lo, hi], reason: String(e.message).slice(0, 160) });
@@ -101,6 +103,7 @@ async function fullScan(opts = {}) {
       chunksDone: state.chunksDone + 1,
       contractsScanned: state.contractsScanned + doc.stats.contractsScanned,
       functionsExamined: state.functionsExamined + doc.stats.functionsExamined,
+      skippedBelowMinUsd: (state.skippedBelowMinUsd || 0) + (doc.stats.skippedBelowMinUsd || 0),
       labelledTotal: state.labelledTotal + doc.stats.labelledContracts,
       targetBlock: to, head, chunkSize: chunk,
       updatedAt: new Date().toISOString(),

@@ -35,6 +35,9 @@ function chainOverrides(a) {
     rpcUrl: str('rpc'), rpcKey: str('rpc-key'),
     etherscanKey: str('etherscan-key'), explorerApi: str('explorer-api'),
     chainId: num('chain-id'), maxVerify: num('max-verify'),
+    minUsd: num('min-usd'), maxCandidates: num('max-candidates'),
+    nativePrice: a['native-price'] !== undefined && a['native-price'] !== true
+      ? parseFloat(a['native-price']) : undefined,
   };
 }
 

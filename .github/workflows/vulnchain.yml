@@ -48,7 +48,7 @@ jobs:
       - name: Live single-chain function labelling
         run: |
           node src/cli.js scan --network ethereum --blocks 40 --mode hybrid \
-            --max-contracts 60 --sourcify 2>&1 | tee /tmp/vulnchain_scan.log
+            --max-contracts 60 --sourcify --min-usd 0 2>&1 | tee /tmp/vulnchain_scan.log
       - name: Publish results
         if: always()
         working-directory: .
