@@ -1,0 +1,28 @@
+name: rpc-oneinch-control
+on:
+  push:
+    paths:
+      - '.github/workflows/rpc-oneinch-control.yml'
+      - 'scripts/rpc_oneinch_control.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Control experiment + dispute reconstruction
+        run: |
+          python3 scripts/rpc_oneinch_control.py --out rpc_oneinch_control_raw.json --md ONEINCH_CONTROL_ONCHAIN.md
+          echo "=== VERDICT ==="
+          python3 -c "import json; print(json.dumps(json.load(open('rpc_oneinch_control_raw.json'))['verdict'], indent=2))"
+          cat ONEINCH_CONTROL_ONCHAIN.md
+      - name: Publish results
+        run: |
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add -f rpc_oneinch_control_raw.json ONEINCH_CONTROL_ONCHAIN.md || true
+          git commit -m "data: 1inch control experiment + dispute reconstruction [skip ci]" || echo nothing
+          for i in 1 2 3 4 5; do git pull --rebase origin arena/fbf9cf32-arc-hedgefun && git push origin HEAD:arena/fbf9cf32-arc-hedgefun && break || sleep 5; done
