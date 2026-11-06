@@ -1,6 +1,6 @@
 # 1inch wave3-drain — CONTROL experiment (doc tu chain)
 
-Generated 2026-11-06T15:13:47.374961+00:00 · `https://ethereum-rpc.publicnode.com` · head **26356633**. Read-only, khong key/tx/fork.
+Generated 2026-11-06T15:20:27.651230+00:00 · `https://ethereum-rpc.publicnode.com` · head **26356667**. Read-only, khong key/tx/fork.
 
 ## A) Co phai dang doc default cua contract khong?
 
