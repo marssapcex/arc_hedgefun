@@ -1,0 +1,235 @@
+{
+  "generatedAt": "2026-11-06T15:10:00.369623+00:00",
+  "rpc": "https://ethereum-rpc.publicnode.com",
+  "headBlock": 26356614,
+  "real": {
+    "wave3-drain": {
+      "questionId": "0x03b47cdd30ffa3f228f186bf7123ab6e73671c5b0c36bed8006eb84249e79f7d",
+      "resultFor(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "uint": 0
+      },
+      "isFinalized(bytes32)": true,
+      "getFinalizeTS(bytes32)": {
+        "raw": 1789738079,
+        "utc": "2026-09-18T13:27:59+00:00",
+        "eth": null
+      },
+      "getBestAnswer(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "uint": 0
+      },
+      "getHistoryHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "getBond(bytes32)": {
+        "raw": 800000000000000000,
+        "utc": null,
+        "eth": 0.8
+      },
+      "getOpeningTS(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getTimeout(bytes32)": {
+        "raw": 259200,
+        "utc": null,
+        "eth": null
+      },
+      "getMinBond(bytes32)": {
+        "raw": 100000000000000000,
+        "utc": null,
+        "eth": 0.1
+      },
+      "getArbitrator(bytes32)": "0xf72cfd1b34a91a64f9a98537fe63fbab7530adca",
+      "getContentHash(bytes32)": "0xe24db667f0d1643789f035d43f4ef9b7b28210696b6321ff995e120d7d9ae99e",
+      "exists": true
+    },
+    "wave5-accumulation-001": {
+      "questionId": "0xf84299c435bfe991936dfdfec377cc4e700a70b7fddd465385cbe832d786dae1",
+      "resultFor(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "uint": 0
+      },
+      "isFinalized(bytes32)": true,
+      "getFinalizeTS(bytes32)": {
+        "raw": 1789493963,
+        "utc": "2026-09-15T17:39:23+00:00",
+        "eth": null
+      },
+      "getBestAnswer(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "uint": 0
+      },
+      "getHistoryHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "getBond(bytes32)": {
+        "raw": 200000000000000000,
+        "utc": null,
+        "eth": 0.2
+      },
+      "getOpeningTS(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getTimeout(bytes32)": {
+        "raw": 86400,
+        "utc": null,
+        "eth": null
+      },
+      "getMinBond(bytes32)": {
+        "raw": 100000000000000000,
+        "utc": null,
+        "eth": 0.1
+      },
+      "getArbitrator(bytes32)": "0x5b7dd1e86623548af054a4985f7fc8ccbb554e2c",
+      "getContentHash(bytes32)": "0x9373beffa93eeb3de59c5fe1cad2a76c5369e1db21c37f2b4fc4518a39d1ecdc",
+      "exists": true
+    }
+  },
+  "control": {
+    "all-zero": {
+      "questionId": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "resultFor(bytes32)": {
+        "error": "{'code': 3, 'message': 'execution reverted: question must be finalized', 'data': '0x08c379a000000000000000000000000000000000000000000000000000000000000000200000"
+      },
+      "isFinalized(bytes32)": false,
+      "getFinalizeTS(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getBestAnswer(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "uint": 0
+      },
+      "getHistoryHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "getBond(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getOpeningTS(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getTimeout(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getMinBond(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getArbitrator(bytes32)": null,
+      "getContentHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "exists": false
+    },
+    "all-ff": {
+      "questionId": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "resultFor(bytes32)": {
+        "error": "{'code': 3, 'message': 'execution reverted: question must be finalized', 'data': '0x08c379a000000000000000000000000000000000000000000000000000000000000000200000"
+      },
+      "isFinalized(bytes32)": false,
+      "getFinalizeTS(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getBestAnswer(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "uint": 0
+      },
+      "getHistoryHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "getBond(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getOpeningTS(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getTimeout(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getMinBond(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getArbitrator(bytes32)": null,
+      "getContentHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "exists": false
+    },
+    "keccak-fake": {
+      "questionId": "0xabababababababababababababababababababababababababababababababab",
+      "resultFor(bytes32)": {
+        "error": "{'code': 3, 'message': 'execution reverted: question must be finalized', 'data': '0x08c379a000000000000000000000000000000000000000000000000000000000000000200000"
+      },
+      "isFinalized(bytes32)": false,
+      "getFinalizeTS(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getBestAnswer(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "uint": 0
+      },
+      "getHistoryHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "getBond(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getOpeningTS(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getTimeout(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getMinBond(bytes32)": {
+        "raw": 0,
+        "utc": null,
+        "eth": null
+      },
+      "getArbitrator(bytes32)": null,
+      "getContentHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "exists": false
+    }
+  },
+  "logs": {
+    "wave3-drain": [],
+    "wave5-accumulation-001": [],
+    "safe": []
+  },
+  "blocks": {
+    "windowStartUnix": 1789257600,
+    "windowEndUnix": 1790294400,
+    "startBlock": 25964781,
+    "endBlock": 26050749
+  },
+  "verdict": {
+    "controlPassed": true,
+    "controlMeaning": "Real question_ids differ from fabricated ones: getters are reading real storage, not a fallback/default.",
+    "wave3_finalized": true,
+    "wave3_result": 0,
+    "wave3_bondEth": 0.8,
+    "wave3_bondStepsFrom0_1ETH": 8,
+    "wave3_finalizeUTC": "2026-09-18T13:27:59+00:00",
+    "decodedAnswerCount": 0,
+    "decodedBondsEth": [],
+    "decodedAnswers": [],
+    "executionSuccessLogs": 0
+  }
+}
