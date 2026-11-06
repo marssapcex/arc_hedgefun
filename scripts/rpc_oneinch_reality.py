@@ -184,19 +184,31 @@ def answer_label(v):
     return f"other uint256 ({n})", n
 
 
-def get_logs(url, address, topics, lo, hi):
+def logs_range(url, address, topics, lo, hi, depth=0):
+    """Try the whole range first; only bisect when the node rejects a wide range.
+
+    Public nodes usually allow a wide eth_getLogs when `address` + `topics`
+    are selective. This avoids hundreds of tiny requests on a 400k-block scan.
+    """
     flt = {"fromBlock": h(lo), "toBlock": h(hi), "address": address, "topics": topics}
-    v = r(url, "eth_getLogs", [flt], timeout=25, tries=2)
+    v = r(url, "eth_getLogs", [flt], timeout=20, tries=1)
     if isinstance(v, list):
-        return v
-    # some public nodes reject wide ranges; retry across other endpoints
-    for u in URLS:
-        if u == url:
-            continue
-        v2 = r(u, "eth_getLogs", [flt], timeout=25, tries=1)
-        if isinstance(v2, list):
-            return v2
-    return []
+        return v, 1
+    # Before bisecting, try the SAME wide range on other endpoints — some nodes
+    # allow it with a selective filter, which is far cheaper than 100 chunks.
+    if depth <= 1:
+        for u in URLS:
+            if u == url:
+                continue
+            v2 = r(u, "eth_getLogs", [flt], timeout=15, tries=1)
+            if isinstance(v2, list):
+                return v2, 1
+    if hi - lo <= 20_000 or depth >= 5:
+        return [], 1
+    mid = (lo + hi) // 2
+    left, nl = logs_range(url, address, topics, lo, mid, depth + 1)
+    right, nr = logs_range(url, address, topics, mid + 1, hi, depth + 1)
+    return left + right, nl + nr
 
 
 def main():
@@ -285,35 +297,63 @@ def main():
               f"finalized={d['isFinalized(bytes32)']}", flush=True)
 
     # ---------------------------------------------------------- 5. logs
-    lo = FROM_BLOCK
-    while lo <= head:
-        hi = min(lo + CHUNK - 1, head)
+    # ---- FAST PATH: one very selective query. If the node allows this range,
+    # we get the real questionId + its block immediately and skip wide scans.
+    fast, nc_fast = logs_range(
+        url, MODULE_LIVE,
+        [TOPIC["ProposalQuestionCreated"], None, PROPOSAL_HASH["wave3-drain"]],
+        FROM_BLOCK, head)
+    total_calls = nc_fast
+    print(f"  fast-path: {len(fast)} logs in {nc_fast} getLogs calls", flush=True)
+    for lg in fast:
+        doc["logs"].append({
+            "source": "module", "address": lg.get("address"),
+            "blockNumber": int(lg["blockNumber"], 16) if lg.get("blockNumber") else None,
+            "txHash": lg.get("transactionHash"), "topics": lg.get("topics"),
+            "data": lg.get("data"),
+        })
+
+    # eth_getLogs `topics` entries may be arrays = OR. 4 scans instead of 9.
+    batch = [
+        # A) module events on the live module (address as scalar: widest node support)
+        ("module", MODULE_LIVE,
+         [[TOPIC["ProposalQuestionCreated"], TOPIC["ProposalExecuted"]]]),
+        # A2) the disabled/decoy module
+        ("module", MODULE_DEAD,
+         [[TOPIC["ProposalQuestionCreated"], TOPIC["ProposalExecuted"]]]),
+        # B) oracle events for either questionId
+        ("oracle", ORACLE,
+         [[TOPIC["LogNewAnswer"], TOPIC["LogFinalize"],
+           TOPIC["LogNotifyOfArbitrationRequest"]],
+          [Q["wave3-drain"], Q["wave5-accumulation-001"]]]),
+        # C) Safe execution outcomes
+        ("safe", SAFE, [[TOPIC["ExecutionSuccess"], TOPIC["ExecutionFailure"]]]),
+    ]
+    if fast:
+        # narrow the remaining scans to a window around the discovered proposal
+        fb = min(x["blockNumber"] for x in fast if x.get("blockNumber")) or head
+        lo_scan, hi_scan = max(FROM_BLOCK, fb - 60_000), min(head, fb + 260_000)
         batch = [
-            # 1) discover the REAL questionId from the module's own event log,
-            #    matched by keccak(proposalId) — no reliance on the blog's value
-            ("module", MODULE_LIVE, [TOPIC["ProposalQuestionCreated"], None,
-                                     PROPOSAL_HASH["wave3-drain"]]),
-            ("module", MODULE_LIVE, [TOPIC["ProposalQuestionCreated"], None,
-                                     PROPOSAL_HASH["wave5-accumulation-001"]]),
-            ("module", MODULE_DEAD, [TOPIC["ProposalQuestionCreated"], None,
-                                     PROPOSAL_HASH["wave3-drain"]]),
-            ("oracle", ORACLE, [None, Q["wave3-drain"]]),
-            ("oracle", ORACLE, [None, Q["wave5-accumulation-001"]]),
-            ("module", MODULE_LIVE, [TOPIC["ProposalQuestionCreated"]]),
-            ("module", MODULE_LIVE, [TOPIC["ProposalExecuted"]]),
-            ("safe", SAFE, [TOPIC["ExecutionSuccess"]]),
-            ("safe", SAFE, [TOPIC["ExecutionFailure"]]),
+            ("module", MODULE_LIVE, [[TOPIC["ProposalExecuted"]]]),
+            ("safe", SAFE, [[TOPIC["ExecutionSuccess"], TOPIC["ExecutionFailure"]]]),
         ]
-        for src, adr, tops in batch:
-            for lg in get_logs(url, adr, tops, lo, hi):
-                doc["logs"].append({
-                    "source": src, "address": lg.get("address"),
-                    "blockNumber": int(lg["blockNumber"], 16) if lg.get("blockNumber") else None,
-                    "txHash": lg.get("transactionHash"), "topics": lg.get("topics"),
-                    "data": lg.get("data"),
-                })
-        lo = hi + 1
-    print(f"logs collected: {len(doc['logs'])}", flush=True)
+        print(f"  fast-path hit at block {fb}; narrow window {lo_scan}..{hi_scan}", flush=True)
+    else:
+        lo_scan, hi_scan = FROM_BLOCK, head
+
+    for src, adr, tops in batch:
+        logs, nc = logs_range(url, adr, tops, lo_scan, hi_scan)
+        total_calls += nc
+        print(f"  scan {src}: {len(logs)} logs in {nc} getLogs calls", flush=True)
+        for lg in logs:
+            doc["logs"].append({
+                "source": src, "address": lg.get("address"),
+                "blockNumber": int(lg["blockNumber"], 16) if lg.get("blockNumber") else None,
+                "txHash": lg.get("transactionHash"), "topics": lg.get("topics"),
+                "data": lg.get("data"),
+            })
+    doc["getLogsCalls"] = total_calls
+    print(f"logs collected: {len(doc['logs'])} via {total_calls} getLogs calls", flush=True)
 
     # ------------------------------------------- 5b. discover real questionIds
     created = [x for x in doc["logs"] if x["source"] == "module" and
