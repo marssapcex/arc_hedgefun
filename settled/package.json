@@ -1,0 +1,15 @@
+{
+  "name": "settled",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Doi chieu bien lai: tracker noi bao nhieu, on-chain con bao nhieu. Zero-key, zero-tx, zero-dependency.",
+  "main": "src/analyze.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "report": "node src/cli.js report",
+    "json": "node src/cli.js report --json",
+    "serve": "node src/cli.js serve"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

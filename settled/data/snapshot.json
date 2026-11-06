@@ -1,0 +1,117 @@
+{
+  "capturedAt": "2026-11-06",
+  "note": "Moi so deu kem nguon. kind=api: doc truc tiep tu DefiLlama. kind=reported: trich dan bai bao/forum, KHONG phai so on-chain. kind=measured: tu RPC tu do, co block number.",
+  "defillama": {
+    "kind": "api",
+    "fees": {
+      "total24h": 78150844.48,
+      "total7d": 517965215.57,
+      "total30d": 2265821607.64,
+      "total1y": 23626281000.91,
+      "source": "https://api.llama.fi/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true"
+    },
+    "dexs": {
+      "total24h": 11683627079.82,
+      "total7d": 64598413791.76,
+      "total30d": 254776350045.63,
+      "total1y": 3273535017367.55,
+      "source": "https://api.llama.fi/overview/dexs?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true"
+    },
+    "moonwellApollo": {
+      "currentChainTvls": {
+        "Moonriver": 0,
+        "Moonriver-borrowed": 0,
+        "Moonriver-staking": 0,
+        "borrowed": 0,
+        "staking": 0
+      },
+      "mcap": 7127.989076595345,
+      "chain": "Moonriver",
+      "source": "https://api.llama.fi/protocol/moonwell-apollo"
+    }
+  },
+  "measured": {
+    "kind": "measured",
+    "source": "rpc_target_raw.json / rpc_zombie_raw.json / rpc_votes_raw.json trong repo",
+    "generatedAt": "2026-11-04T14:57:01Z",
+    "chainId": 1285,
+    "block": 17381654,
+    "chainsProbed": 224,
+    "statusCounts": {
+      "FROZEN": 8,
+      "DEAD_RPC": 83,
+      "LIVE": 111,
+      "STALLED": 4,
+      "SUSPECT_RPC": 17,
+      "CHAINID_MISMATCH": 1
+    }
+  },
+  "moonwellCashHuman": {
+    "kind": "measured",
+    "source": "RPC_ONCHAIN_TARGETS.md (so token tho, KHONG quy doi USD)",
+    "rows": [
+      { "match": "market MOVR", "amount": 86942.7185, "unit": "MOVR" },
+      { "match": "Unitroller", "amount": 8512.5877, "unit": "MOVR" },
+      { "match": "market USDC.multi", "amount": 216974.46, "unit": "USDC" },
+      { "match": "market FRAX", "amount": 39943.7015, "unit": "FRAX" },
+      { "match": "market USDT.multi", "amount": 22779.279, "unit": "USDT" },
+      { "match": "market ETH.multi", "amount": 15.3041, "unit": "ETH" },
+      { "match": "market xcKSM", "amount": 4548.2294, "unit": "xcKSM" },
+      { "match": "market BTC.multi", "amount": 0.093, "unit": "BTC" }
+    ]
+  },
+  "reported": {
+    "kind": "reported",
+    "hyperliquid": {
+      "volume30d": 216900000000,
+      "fees30d": 75400000,
+      "source": "https://www.datawallet.com/crypto/hyperliquid-statistics"
+    },
+    "kalshi": {
+      "contractVolumeWeekly": 19030000000,
+      "executionPriceUsdWeekly": 4420000000,
+      "cryptoNotionalWeekly": 2700000000,
+      "shareFrom15MinMarkets": 0.86,
+      "sources": [
+        "https://defirate.com/news/kalshi-hits-record-19-billion-week-as-polymarket-us-triples/",
+        "https://cryptobriefing.com/kalshi-polymarket-record-weekly-crypto-volume/",
+        "https://news.bitcoin.com/market-updates/kalshi-polymarket-crypto-volume-record-2-7-billion/"
+      ]
+    },
+    "x402": {
+      "transactions": 138500000,
+      "settlementUsd": 52700000,
+      "agentDrivenLow": 0.006,
+      "agentDrivenHigh": 0.075,
+      "sources": [
+        "https://www.cryptopolitan.com/base-logs-138-million-x402-payments-as-ai-agent-revenue-draws-scrutiny/",
+        "https://github.com/Ricosworks1/blockchain-payment-flow-analysis/releases/tag/deep-dive-x402-ai-agent-payments-138m-reality-check-oct-2026"
+      ]
+    },
+    "mipR39": {
+      "date": "2026-03-24",
+      "costUsd": 1808,
+      "quorumTokensAtTime": 40000000,
+      "forVotes": 41570000,
+      "treasuryUsd": 1080000,
+      "ratioCostToTreasury": 597,
+      "outcome": "khong execute, khong mat tien",
+      "sources": [
+        "https://forum.moonwell.fi/t/governance-notice-unverified-proposal-on-moonriver-mip-r39/2143",
+        "https://forum.moonwell.fi/t/monthly-governance-calls/788?page=2"
+      ]
+    },
+    "mipR41": {
+      "date": "2026-07-21",
+      "claimedThresholdTokens": 100000000,
+      "claimedQuorumTokens": 100000000,
+      "source": "https://forum.moonwell.fi/t/monthly-governance-reports/787?page=2"
+    },
+    "bugBounty": {
+      "medianCriticalUsd": 20000,
+      "meanCriticalUsd": 114355,
+      "programs": 593,
+      "source": "https://www.stingrai.io/blog/bug-bounty-statistics-2026"
+    }
+  }
+}
