@@ -1,6 +1,6 @@
 # 1inch wave3-drain — CONTROL experiment (doc tu chain)
 
-Generated 2026-11-06T15:10:00.369623+00:00 · `https://ethereum-rpc.publicnode.com` · head **26356614**. Read-only, khong key/tx/fork.
+Generated 2026-11-06T15:13:47.374961+00:00 · `https://ethereum-rpc.publicnode.com` · head **26356633**. Read-only, khong key/tx/fork.
 
 ## A) Co phai dang doc default cua contract khong?
 
@@ -17,7 +17,7 @@ Generated 2026-11-06T15:10:00.369623+00:00 · `https://ethereum-rpc.publicnode.c
 ## B) Ket cuc
 
 - `wave3-drain`: finalized = **True**, `resultFor` = **0** (0 = NO), finalizeTS = **2026-09-18T13:27:59+00:00**.
-- `getBond` = **0.8 ETH**. Voi `minimumBond = 0,1 ETH` va  Reality.eth nhan doi bond moi lan dispute, day la dau vet cua **8 lan tra loi** (0,1 → 0,2 → 0,4 → 0,8).
+- `getBond` = **0.8 ETH**. Voi `minimumBond = 0,1 ETH` va Reality.eth nhan doi bond moi lan co answer moi, day la dau vet cua **4 lan tra loi / 3 lan dispute** (0,1 → 0,2 → 0,4 → 0,8 ETH).
 - Log giai ma duoc: **0** `LogNewAnswer`; bond = `[]`; answer = `[]`.
 - `ExecutionSuccess` tu Safe trong cua so: **0**.
 
