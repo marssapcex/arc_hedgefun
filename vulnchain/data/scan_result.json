@@ -1,11 +1,11 @@
 {
  "meta": {
-  "generatedAt": "2026-11-06T08:44:39.434Z",
+  "generatedAt": "2026-11-06T13:23:48.509Z",
   "network": "ethereum",
   "mode": "hybrid",
-  "fromBlock": 26354656,
-  "toBlock": 26354695,
-  "head": 26354695,
+  "fromBlock": 26356044,
+  "toBlock": 26356083,
+  "head": 26356083,
   "rpc": "https://ethereum-rpc.publicnode.com",
   "chainId": 1,
   "rpcSource": "public RPC (no key)",
@@ -17,8 +17,8 @@
   "note": "Function-shape similarity labels. Not a vulnerability proof."
  },
  "stats": {
-  "contractsScanned": 2,
-  "functionsExamined": 21,
+  "contractsScanned": 7,
+  "functionsExamined": 75,
   "labelledContracts": 0,
   "labelsByCategory": {},
   "logsSeen": 0,
@@ -40,27 +40,112 @@
  },
  "contracts": [
   {
-   "address": "0x633748d72ed0d53fb118a95726ee4a98730e1fe2",
-   "creator": "0x248c38b6d21b46483216f4b81c2fc92625e3eb39",
-   "block": 26354675,
+   "address": "0x608923befffb2499aebac40fc2058ba3de2a6dc7",
+   "creator": "0xb3d70e1fec3d433aeb4c41f315e337f15fa7d4a6",
+   "block": 26356050,
    "labelled": false,
    "labels": [],
    "matchedFunctions": [],
-   "functionCount": 19,
+   "functionCount": 4,
+   "vetoes": [
+    {
+     "selector": "0xc244709f",
+     "reason": "self-call-only guard"
+    }
+   ],
+   "proxyImplementation": null,
+   "decomposition": "dispatcher",
+   "disclaimer": "Function-shape similarity labels for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x80199a27f8604be8504f785c00bb2cadac51c4d8",
+   "creator": "0xf5000215e7014487522a2cbbf601c365acf96356",
+   "block": 26356061,
+   "labelled": false,
+   "labels": [],
+   "matchedFunctions": [],
+   "functionCount": 5,
    "vetoes": [],
    "proxyImplementation": null,
    "decomposition": "dispatcher",
    "disclaimer": "Function-shape similarity labels for human review. Not a vulnerability proof."
   },
   {
-   "address": "0x46d5e6105c6c196670e5a4a4f3bf3cc2c48880fa",
-   "creator": "0x37cd341cbdc07d53c65ddb8094fe81ac9d2de95a",
-   "block": 26354692,
+   "address": "0xe2b9eb3d04576ef2951e71b9a923465fde890092",
+   "creator": "0x434dd715804c70fdc4dd84fa23152d85273cd501",
+   "block": 26356062,
+   "labelled": false,
+   "labels": [],
+   "matchedFunctions": [],
+   "functionCount": 56,
+   "vetoes": [],
+   "proxyImplementation": null,
+   "decomposition": "dispatcher",
+   "disclaimer": "Function-shape similarity labels for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x57647f76b9a5b7dc5a23016d53fcbc931346f466",
+   "creator": "0x60f226da4fbcb40304dc80534f79e5100116b05d",
+   "block": 26356066,
+   "labelled": false,
+   "labels": [],
+   "matchedFunctions": [],
+   "functionCount": 0,
+   "vetoes": [],
+   "proxyImplementation": null,
+   "decomposition": "fallback",
+   "disclaimer": "Function-shape similarity labels for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xfb33386233a0114def00094b04c8293052a2caa8",
+   "creator": "0xb3d70e1fec3d433aeb4c41f315e337f15fa7d4a6",
+   "block": 26356066,
+   "labelled": false,
+   "labels": [],
+   "matchedFunctions": [],
+   "functionCount": 4,
+   "vetoes": [
+    {
+     "selector": "0xc244709f",
+     "reason": "self-call-only guard"
+    }
+   ],
+   "proxyImplementation": null,
+   "decomposition": "dispatcher",
+   "disclaimer": "Function-shape similarity labels for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0xc1f3e8652d4dcc641b158bf08a5c1b7f05c53296",
+   "creator": "0xc3d4818544634330cb785b0eb65ffe8e535bde79",
+   "block": 26356070,
    "labelled": false,
    "labels": [],
    "matchedFunctions": [],
    "functionCount": 2,
-   "vetoes": [],
+   "vetoes": [
+    {
+     "selector": "0x57ea89b6",
+     "reason": "immutable owner guard"
+    }
+   ],
+   "proxyImplementation": null,
+   "decomposition": "dispatcher",
+   "disclaimer": "Function-shape similarity labels for human review. Not a vulnerability proof."
+  },
+  {
+   "address": "0x626db51a078bcf4e18bfd96326b03960ef962cec",
+   "creator": "0xb3d70e1fec3d433aeb4c41f315e337f15fa7d4a6",
+   "block": 26356076,
+   "labelled": false,
+   "labels": [],
+   "matchedFunctions": [],
+   "functionCount": 4,
+   "vetoes": [
+    {
+     "selector": "0xc244709f",
+     "reason": "self-call-only guard"
+    }
+   ],
    "proxyImplementation": null,
    "decomposition": "dispatcher",
    "disclaimer": "Function-shape similarity labels for human review. Not a vulnerability proof."
