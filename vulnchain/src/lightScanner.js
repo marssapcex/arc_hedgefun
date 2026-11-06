@@ -94,9 +94,21 @@ class LightScanner extends Scanner {
     for (const base of bases) {
       try {
         const q = new URLSearchParams(explorerParams(this.chain.chainId, key, params, base));
-        const r = await fetch(`${base}?${q}`, { signal: AbortSignal.timeout(15000) });
+        const r = await fetch(`${base}?${q}`, {
+          signal: AbortSignal.timeout(15000),
+          headers: { Accept: 'application/json', 'User-Agent': 'vulnchain/1.0' },
+        });
         if (!r.ok) throw new Error(`explorer HTTP ${r.status}`);
-        const j = await r.json();
+        const ct = String(r.headers.get('content-type') || '');
+        const text = await r.text();
+        // Rate-limited / Cloudflare / V1 endpoints often answer with an HTML
+        // page. r.json() on that throws "Unexpected token '<'" and silently
+        // downgrades the contract to unverified. Detect it explicitly so the
+        // fallback endpoint actually gets a chance.
+        if (!ct.includes('json') || text.trimStart().startsWith('<')) {
+          throw new Error(`explorer returned HTML (${ct || 'no content-type'}, HTTP ${r.status})`);
+        }
+        const j = JSON.parse(text);
         if (j.status === '1' || Array.isArray(j.result)) return j.result;
         throw new Error(String(j.result || j.message || 'explorer error').slice(0, 140));
       } catch (e) { lastErr = e; }

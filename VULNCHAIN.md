@@ -113,7 +113,7 @@ node src/cli.js full-scan --network mychain --full --resume
 
 **Bảo mật:** `redactRpc()` che `/v2/<key>`, `/v3/<key>`, `?apikey=` trước khi ghi `meta.rpc`. Không có key nào lọt vào `data/*.json` hay report. CI đọc `ETHERSCAN_API_KEY` / `ALCHEMY_API_KEY` / `RPC_URL_ETHEREUM` từ repo secrets nếu mày set; không set thì chạy public như cũ.
 
-`npm test 34/34`.
+`npm test 36/36`. Explorer trả HTML khi rate-limit giờ được nhận diện rõ (`explorer returned HTML`) rồi fallback sang V1, thay vì `Unexpected token '<'` làm rớt contract thành unverified im lặng.
 
 **CI `42018924770` (2026-11-05 11:26 UTC):** success, `Unit tests 25`, `Key-backed scan` **skipped** vì repo chưa set secret (đúng thiết kế — không có key thì không chạy step đó), live report `chainId 1`, `rpcSource "public RPC (no key)"`, `explorerKeyConfigured false`, `etherscanHits 0`. Muốn bật: Settings → Secrets → `ETHERSCAN_API_KEY` (và tuỳ `ALCHEMY_API_KEY` / `RPC_URL_ETHEREUM`), push lại là step tự chạy và report có `etherscanHits > 0` nếu contract verified.
 
