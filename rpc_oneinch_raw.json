@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-11-06T15:05:58.230573+00:00",
+  "rpc": "https://ethereum-rpc.publicnode.com",
+  "headBlock": 26356594,
+  "addresses": {
+    "safe": "0x7951c7ef839e26F63DA87a42C9a87986507f1c07",
+    "moduleLive": "0xa62d2a75eb39c12e908e9f6bf50f189641692f2e",
+    "moduleDead": "0xa7456392eb978a756264d54968f55baf227fcbcf",
+    "oracle": "0x5b7dD1E86623548AF054A4985F7fc8Ccbb554E2c",
+    "attacker": "0x6f25Cc4d6bD161e7F4514948AF1aE1B8bafF5AE1"
+  },
+  "code": {
+    "safe": 171,
+    "moduleLive": 45,
+    "moduleDead": 45,
+    "oracle": 16917
+  },
+  "safe": {
+    "isModuleEnabled_moduleLive": true,
+    "isModuleEnabled_moduleDead": false,
+    "nonce": 21,
+    "threshold": 7,
+    "balanceWei": 257530586533889985361,
+    "balanceEth": 257.53058653389
+  },
+  "module": {
+    "questionTimeout()": {
+      "seconds": 259200,
+      "days": 3.0
+    },
+    "questionCooldown()": {
+      "seconds": 259200,
+      "days": 3.0
+    },
+    "answerExpiration()": {
+      "seconds": 604800,
+      "days": 7.0
+    },
+    "minimumBond()": {
+      "wei": 100000000000000000,
+      "eth": 0.1
+    },
+    "oracle()": "0x5b7dd1e86623548af054a4985f7fc8ccbb554e2c",
+    "avatar()": "0x7951c7ef839e26f63da87a42c9a87986507f1c07",
+    "target()": "0x7951c7ef839e26f63da87a42c9a87986507f1c07",
+    "executor()": null,
+    "owner()": "0x7951c7ef839e26f63da87a42c9a87986507f1c07",
+    "questionArbitrator()": "0xf72cfd1b34a91a64f9a98537fe63fbab7530adca"
+  },
+  "questions": {
+    "wave3-drain": {
+      "questionId": "0x03b47cdd30ffa3f228f186bf7123ab6e73671c5b0c36bed8006eb84249e79f7d",
+      "resultFor(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "label": "NO (0)",
+        "num": 0
+      },
+      "isFinalized(bytes32)": true,
+      "getFinalizeTS(bytes32)": {
+        "raw": 1789738079,
+        "utc": null
+      },
+      "getBestAnswer(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "label": "NO (0)",
+        "num": 0
+      },
+      "getHistoryHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "getBond(bytes32)": {
+        "raw": 800000000000000000,
+        "utc": null
+      },
+      "getOpeningTS(bytes32)": {
+        "raw": 0,
+        "utc": null
+      },
+      "getTimeout(bytes32)": {
+        "raw": 259200,
+        "utc": null
+      },
+      "getMinBond(bytes32)": {
+        "raw": 100000000000000000,
+        "utc": null
+      },
+      "getArbitrator(bytes32)": "0xf72cfd1b34a91a64f9a98537fe63fbab7530adca",
+      "getContentHash(bytes32)": "0xe24db667f0d1643789f035d43f4ef9b7b28210696b6321ff995e120d7d9ae99e",
+      "exists": true
+    },
+    "wave5-accumulation-001": {
+      "questionId": "0xf84299c435bfe991936dfdfec377cc4e700a70b7fddd465385cbe832d786dae1",
+      "resultFor(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "label": "NO (0)",
+        "num": 0
+      },
+      "isFinalized(bytes32)": true,
+      "getFinalizeTS(bytes32)": {
+        "raw": 1789493963,
+        "utc": null
+      },
+      "getBestAnswer(bytes32)": {
+        "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "label": "NO (0)",
+        "num": 0
+      },
+      "getHistoryHash(bytes32)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "getBond(bytes32)": {
+        "raw": 200000000000000000,
+        "utc": null
+      },
+      "getOpeningTS(bytes32)": {
+        "raw": 0,
+        "utc": null
+      },
+      "getTimeout(bytes32)": {
+        "raw": 86400,
+        "utc": null
+      },
+      "getMinBond(bytes32)": {
+        "raw": 100000000000000000,
+        "utc": null
+      },
+      "getArbitrator(bytes32)": "0x5b7dd1e86623548af054a4985f7fc8ccbb554e2c",
+      "getContentHash(bytes32)": "0x9373beffa93eeb3de59c5fe1cad2a76c5369e1db21c37f2b4fc4518a39d1ecdc",
+      "exists": true
+    }
+  },
+  "logs": [],
+  "getLogsCalls": 160,
+  "discoveredQuestionIds": {},
+  "verdict": {
+    "code": "DISPUTED_BLOCKED",
+    "summary": "Answer cuoi la NO. Bi chan boi dispute / arbitration; khong execute duoc.",
+    "moduleEnabled": true,
+    "questionExists": true,
+    "result": "NO (0)",
+    "isFinalized": true,
+    "proposalExecutedLogs": 0,
+    "executionSuccessLogs": 0
+  }
+}
